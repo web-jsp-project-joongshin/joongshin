@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+body{
+	margin: 0 340px;
+}
+
+#app #app-body {
+	height: 100%;
+	position: relative;
+	flex-grow: 1;
+	
+}
+
+#app #app-body, #app #app-header {
+	opacity: 0;
+	transition: opacity .3s ease-in;
+}
+
+* {
+	word-break: break-word;
+
+}
+
+*, :after, :before {
+	box-sizing: border-box;
+}
+
+div {
+	display: block;
+}
+
+.container-md, .container.container-md {
+    width: 39.375rem;
+}
+
+h1 {
+    line-height: 3.125rem;
+    font-size: 2.125rem;
+}
+
+.profile-image {
+    position: relative;
+    width: 6.25rem;
+    height: 6.25rem;
+    margin: 0px auto;
+}
+
+.user-profile-picture {
+    position: relative;
+}
+
+.h-100 {
+    height: 100%!important;
+}
+
+.user-profile-picture div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 0.0625rem solid #f2f2f2;
+    overflow: hidden;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: #e1e1e1;
+}
+
+.camera-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+img {
+    border-style: none;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+section {
+    font-size: 1rem;
+    margin: 3rem 0px 5.125rem;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+.sign-container {
+    background: transparent;
+    border: 0px;
+    border-radius: 8px;
+    padding: 1.25rem 1rem;
+}
+
+.sign-container.has-button {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.75rem 0.75rem 0.75rem;
+}
+
+.sign-container.danger {
+    background-color: rgb(255, 242, 243);
+}
+
+.header {
+    flex: 1 1 0%;
+}
+
+.title {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.875rem;
+}
+
+.sign-container.danger .title {
+    color: rgb(250, 89, 99);
+}
+
+.title span {
+    padding-left: 0.5rem;
+    white-space: pre-line;
+}
+
+.sign-container.danger .btn-action {
+    color: rgb(255, 255, 255);
+    background-color: rgb(250, 89, 99);
+    border-color: rgb(250, 89, 99);
+}
+
+.account-info {
+    margin-bottom: 3rem;
+}
+
+ul {
+    padding: 0;
+}
+
+dl, ol, ul {
+    margin-top: 0;
+}
+
+.item-container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0px 1rem 0.5rem;
+    border-bottom: 0.0625rem solid rgb(242, 242, 242);
+}
+
+.item {
+    flex: 1 1 0%;
+    color: rgb(50, 50, 50);
+}
+
+.item-title {
+    color: rgb(181, 181, 181);
+}
+
+.item-info {
+    padding-top: 0.25rem;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
