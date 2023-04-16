@@ -9,7 +9,7 @@
 <link href="../../static/css/mypage-css-jin/user-mypage.css" rel="stylesheet" type="text/css"/>
 
 </head>
-<body>
+<body> 
 	<div id="app-body">
 		<div class="container container-md">
 			<div class="mypage-container">
