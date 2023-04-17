@@ -67,11 +67,24 @@ form {
 	padding-left: .3215rem;
 }
 
-.col-12 {
+.col-12, .col-14 {
 	flex: 0 0 100%;
 	max-width: 100%;
 	position: relative;
 	width: 100%;
+}
+
+.col-14 {
+	margin-top: 25px;
+}
+
+.notice {
+	margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-size: .75rem;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #999!important;
 }
 
 fieldset {
@@ -109,7 +122,8 @@ fieldset {
 }
 
 .legend-text {
-	font-size: 1rem;
+	font-size: 0.94rem; /* 강사님께서 폰트 사이즈 0.7로 하라 하셨는데 클래스명을 잘못 입력해서 적용이 안되서 0.7로 해보니 너무 작아서 0.94로 수정하였음
+	강사님께 개인적으로 질문 해서 수정하도록 하겠습니다. */
 	padding-bottom: .375rem;
 	font-weight: 500;
 	padding-top: 0 !important;
@@ -300,6 +314,10 @@ section {
 	border: initial;
 }
 
+.input-check{
+	margin-top: 17px;
+}
+
 .terms-container {
 	height: 100%;
 	min-height: 9rem;
@@ -339,10 +357,26 @@ ul li {
 .term-item, .custom-checkbox {
 	height: 100%;
 	min-height: unset;
-	padding-left: 2rem;
+	padding-left: 0.7rem;
 	cursor: pointer;
 	position: relative;
 	display: block;
+}
+
+.all-check-font {
+	display: block;
+    margin-top: -0.125rem;
+    margin-left: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #323232;
+}
+
+.custom-control-label{
+	position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+    cursor: pointer;
 }
 
 label {
@@ -351,6 +385,36 @@ label {
 	margin-bottom: 0;
 	vertical-align: top;
 	cursor: pointer;
+}
+
+p{
+	display: block;
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.term-label{
+	font-size: .875rem;
+    color: #737373;
+    cursor: pointer;
+}
+
+.btn-detail{
+	border: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: .875rem;
+    color: #b5b5b5 !important;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    margin: 0;
+    font-family: inherit;
 }
 
 .searchdiv {
