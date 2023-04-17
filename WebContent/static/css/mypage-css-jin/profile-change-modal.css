@@ -1,0 +1,355 @@
+@charset "UTF-8";
+
+* {
+    word-break: break-word;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal {
+    padding-left: 0!important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+}
+
+.fade {
+    transition: opacity .15s linear;
+}
+
+.modal.show .modal-dialog {
+    transform: none;
+}
+
+.modal .modal-dialog .modal-dialog-centered {
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal.fade .modal-dialog {
+    transition: transform .3s ease-out;
+}
+
+.modal-dialog.modal-select-profile-image {
+    width: 17.5rem;
+}
+
+.modal .modal-dialog {
+    margin: auto;
+}
+
+.modal .modal-content, .modal .modal-header {
+    border-radius: 0;
+    border: none;
+}
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0.0625rem solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+
+.modal-dialog .modal-select-profile-image .modal-content .modal-header {
+    padding: 2.25rem 1rem 0;
+    text-align: center;
+}
+
+.modal .modal-header {
+    padding: 1.75rem 1.75rem 0;
+}
+
+
+.modal-header {
+	
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 0.0625rem solid #e1e1e1;
+    border-top-left-radius: 0.2375rem;
+    border-top-right-radius: 0.2375rem;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.modal .modal-header .modal-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -.0313rem;
+    margin-top: 1.875rem;
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.modal-dialog.modal-select-profile-image .modal-content .modal-body {
+    padding: 1.25rem 1rem;
+}
+
+.modal .modal-body {
+    padding: 1.75rem;
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.file-input {
+    position: relative;
+}
+
+.btn {
+    font-weight: 500;
+    transition: opacity .2s ease-in-out;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #00c7ae;
+    border-color: #00c7ae;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #323232;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 0.0625rem solid transparent;
+    padding: 0.6875rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.file-input .file {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.custom-file, .custom-file-input {
+    position: relative;
+    width: 100%;
+    height: calc(1.5em + 1.5rem);
+}
+
+.custom-file {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.file-input .file input {
+    cursor: pointer;
+}
+.custom-file-input {
+    z-index: 2;
+    margin: 0;
+    opacity: 0;
+}
+
+.custom-file, .custom-file-input {
+    position: relative;
+    width: 100%;
+    height: calc(1.5em + 1.5rem);
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+input[type="file" i] {
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    align-items: baseline;
+    color: inherit;
+    text-overflow: ellipsis;
+    white-space: pre;
+    text-align: start !important;
+    padding: initial;
+    border: initial;
+    overflow: hidden !important;
+}
+
+.custom-file-label {
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.custom-control-label:before, .custom-file-label, .custom-select {
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.custom-file-label, .custom-file-label:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.6875rem 1rem;
+    line-height: 1.5;
+    color: #323232;
+}
+
+.custom-file-label {
+    left: 0;
+    z-index: 1;
+    height: calc(1.5em + 1.5rem);
+    font-weight: 400;
+    background-color: #fff;
+    border: 0.0625rem solid #e1e1e1;
+    border-radius: 0.25rem;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.d-block {
+    display: block!important;
+}
+
+.custom-file-label:after {
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    height: calc(1.5em + 1.375rem);
+    content: "Browse";
+    background-color: #f2f2f2;
+    border-left: inherit;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.custom-file-label, .custom-file-label:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.6875rem 1rem;
+    line-height: 1.5;
+    color: #323232;
+}
+
+.btn {
+    font-weight: 500;
+    transition: opacity .2s ease-in-out;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #00c7ae;
+    border-color: #00c7ae;
+}
+
+.modal-dialog.modal-select-profile-image .modal-content .modal-body .btn-block+.btn-block {
+    margin-top: 0.75rem;
+}
+
+.modal-dialog.modal-select-profile-image .modal-content .modal-body .btn-cancel {
+    padding: 0;
+    height: 1.125rem;
+    font-size: .75rem;
+    color: #b5b5b5;
+    background: none;
+    border: none;
+}
+
+.modal-backdrop {
+    opacity: .5;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
