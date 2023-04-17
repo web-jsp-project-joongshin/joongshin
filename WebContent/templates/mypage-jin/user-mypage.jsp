@@ -15,7 +15,7 @@
 			<div class="mypage-container">
 				<h1 class="mypage-title">마이페이지</h1>
 				<div data-v-e86fae02="" class="profile-container underline">
-					<a href="/mypage/account-info" class="">
+					<a href="./user-mypage-account.jsp" class="">
 						<div class="thumb">
 							<div class="user-profile-picture h-100">
 								<div data-name="image" class="is-square"
