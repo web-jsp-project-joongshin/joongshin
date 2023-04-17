@@ -50,21 +50,6 @@ body {
 	opacity: 1;
 }
 
-#app #app-body {
-	height: 100%;
-	position: relative;
-	flex-grow: 1;
-}
-
-#app #app-body, #app #app-header {
-	opacity: 0;
-	transition: opacity .3s ease-in;
-}
-
-div {
-	display: block;
-}
-
 .container-fluid.container-md, .container-md, .container.container-md {
 	max-width: 39.375rem
 }

@@ -38,61 +38,74 @@
 						<a href="/" class="btn btn-action btn-secondary btn-block"
 							target="_self"> 성별 입력하기 </a>
 					</div>
-					<ul class="account-info">
-						<li class="item-container"><div class="item">
-								<div class="item-title">이름</div>
-								<div class="item-info">kimjin</div>
+					<ul  class="account-info">
+						<div class="item">
+								 <a  href="./name-change.jsp"
+							class="item-container"><div  class="item">
+								<div  class="item-title">이름</div>
+								<div  class="item-info">kimjin</div>
 							</div>
-							<div>
-								<img
+							<div >
+								<img 
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
-							</div></li>
-						<a href="./email-change.jsp" class="item-container"><div
-								class="item">
-								<div class="item-title">이메일</div>
-								<div class="item-info">
-									<!---->
-									<span>kimjin9822@naver.com</span>
+							</div></a>
+							</li>
+						<a  href="./email-change.jsp"
+							class="item-container"><div  class="item">
+								<div  class="item-title">이메일</div>
+								<div  class="item-info">
+									<span >kimjin9822@naver.com</span>
 								</div>
 							</div>
-							<div>
-								<img
+							<div >
+								<img 
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
 							</div></a>
-						<a href="./password-change.jsp" class="item-container"><div
-								class="item">
-								<div class="item-title">비밀번호</div>
-								<div class="item-info">•••••••</div>
+						<a 
+							href="./password-change.jsp"
+							class="item-container"><div  class="item">
+								<div  class="item-title">비밀번호</div>
+								<div  class="item-info">•••••••</div>
 							</div>
-							<div>
-								<img
+							<div >
+								<img 
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
 							</div></a>
-						<li class="item-container"><div class="item">
-								<div class="item-title">휴대전화 번호</div>
-								<div class="item-info">01098224849</div>
+						
+						<a 
+							href="./phonenumber-change-modal.jsp"
+							class="item-container">
+						<div
+								 class="item">
+								<div  class="item-title">휴대전화 번호</div>
+								<div  class="item-info">01098224849</div>
 							</div>
-							<div>
-								<img
+							<div >
+								<img 
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
-							</div></li>
+							</div></a>
+							
 					</ul>
 					<ul data-testid="resume-account" class="resume-account">
-						<li class="item-container"><div
-								data-testid="resume-account-text" class="item">이력서 수정</div>
+					<a 
+							href="./resume-change.jsp"
+							class="item-container">
+					<div data-testid="resume-account-text" class="item">이력서 수정</div>
 							<div>
 								<img
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
-							</div></li>
-					</ul>
+							</div>
+					</a></ul>
 					<ul data-testid="delete-account" class="delete-account">
-						<li class="item-container"><div
-								data-testid="delete-account-text" class="item">계정 탈퇴</div>
+					<a 
+							href="./account-delete-modal.jsp"
+							class="item-container">
+						<div data-testid="delete-account-text" class="item">계정 탈퇴</div>
 							<div>
 								<img
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
-							</div></li>
-					</ul>
+							</div>
+					</a></ul>
 				</section>
 				<!---->
 			</main>
