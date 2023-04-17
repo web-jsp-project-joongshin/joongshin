@@ -186,7 +186,7 @@ h3 {
 }
 
 .profile-overview .info .info-section-header .share-button{
-	background: url('../../static/image/share.svg') no-repeat 50%/contain;
+	background: url('../../static/image/junior-profile/share.svg') no-repeat 50%/contain;
 }
 
 .profile-overview .info .info-section-sub-header {
@@ -223,7 +223,7 @@ h3 {
     position: absolute;
     left: 0.0625rem;
     top: 0.125rem;
-    background-image: url('../../static/image/ping.svg');
+    background-image: url('../../static/image/junior-profile/ping.svg');
 }
 
 .profile-overview .info .introduce {

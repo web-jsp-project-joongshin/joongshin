@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../../static/css/junior-profile.css" />
+<link rel="stylesheet" href="../../static/css/junior-profile/junior-profile.css" />
 <title>권지안 고수의 아동미술 레슨 서비스, 서울 성북구 - 숨고, 숨은고수</title>
 </head>
 <body>
@@ -639,7 +639,7 @@
 		</div>
 	</div>
 </body>
-<script src="../static/js/junior-profile.js"></script>
+<script src="../static/js/junior-profile/junior-profile.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script type="text/javascript">
 	
