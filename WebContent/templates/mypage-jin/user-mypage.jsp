@@ -7,7 +7,6 @@
 <link data-vue-meta="1" rel="icon" type="image/png" sizes="32x32" href="https://static.cdn.soomgo.com/static/favicon-32x32.png?webp=1">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 <link href="../../static/css/mypage-css-jin/user-mypage.css" rel="stylesheet" type="text/css"/>
-
 </head>
 <body> 
 	<div id="app-body">
