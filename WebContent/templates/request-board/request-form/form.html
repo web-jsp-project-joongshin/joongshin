@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+
+<body class="">
+    <div></div>
+    <header class="header">
+        <!-- 홈화면으로 돌아가는 로고 버튼 -->
+        <div class="logo">
+            <a href="https://soomgo.com/">
+                <img src="//theme.zdassets.com/theme_assets/1602623/4d297a6ea95ee8aaf64e1b1505634fa403af54fe.png"
+                    alt="로고">
+            </a>
+        </div>
+        <!-- 게시글 목록으로 돌아가는 링크-->
+        <div class="nav-wrapper">
+            <span class="icon-menu"></span>
+            <nav class="user-nav" id="user-nav">
+                <a title="홈" href="/hc/ko">자주묻는질문</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main role="main">
+        <div class="container-divider"></div>
+        <div class="container">
+            <nav class="sub-nav">
+                <ol class="breadcrumbs">
+                    <li title="자주묻는질문 - 숨고 : 숨은고수"><a href="/hc/ko">자주묻는질문 - 숨고 : 숨은고수</a></li>
+                    <li title="문의 등록">문의 등록</li>
+                </ol>
+                <form role="search" class="search" data-search="" action="/hc/ko/search" accept-charset="UTF-8"
+                    method="get">
+                    <input name="utf8" type="hidden" value="✓" autocomplete="off">
+                    <input type="search" name="query" id="query" placeholder="검색" aria-label="검색">
+                </form>
+            </nav>
+
+            <h1>문의 등록</h1>
+            <div class="form">
+                <form id="new_request" class="request-form" data-form="" data-form-type="request"
+                    action="/hc/ko/requests" accept-charset="UTF-8" method="post">
+                    <input name="utf8" type="hidden" value="✓" autocomplete="off">
+                    <!-- <input type="hidden" name="authenticity_token" value="hc:requests:client:x4NRfJjWvQZrLaWzqGxUx2akyeWMEdeNqQFX7JVHy6flsg_HUW8VUPyTwxQH_LmdGvkA_fizxIqNaV2L2IQxtA" data-hc-status="ready"> -->
+                    <div class="form-field string required request_email">
+                        <label for="request_email">이메일 주소</label>
+                        <input type="text" name="request[anonymous_requester_email]" id="request_email"
+                            aria-required="true">
+                    </div>
+                    <!-- 제목 -->
+                    <div class="form-field string  required  request_subject">
+                        <label id="request_subject_label" for="request_subject">제목</label>
+                        <input type="text" name="request[subject]" id="request_subject" maxlength="150" size="150"
+                            aria-required="true" aria-labelledby="request_subject_label">
+                    </div>
+                    <div class="suggestion-list" data-hc-class="searchbox" data-hc-suggestion-list="true"></div>
+                    <!-- 설명 -->
+                    <div class="form-field text  required  request_description">
+                        <label id="request_description_label" for="request_description">설명</label>
+                        <textarea name="request[description]" id="request_description" aria-required="true"
+                            aria-describedby="request_description_hint"
+                            aria-labelledby="request_description_label"></textarea>
+                        <input type="hidden" name="request[description_mimetype]" id="request_description_mimetype"
+                            value="text/plain" style="display: none;" autocomplete="off">
+                        <p id="request_description_hint">요청에 관한 세부 정보를 입력하세요.</p>
+                    </div>
+
+                    <!-- 이메일 -->
+                    <div class="form-field string  required  request_custom_fields_70987527">
+                        <label id="request_custom_fields_70987527_label" for="request_custom_fields_70987527">숨고 가입
+                            이메일</label>
+                        <input type="text" name="request[custom_fields][70987527]" id="request_custom_fields_70987527"
+                            aria-required="true" aria-describedby="request_custom_fields_70987527_hint"
+                            aria-labelledby="request_custom_fields_70987527_label">
+
+                        <p id="request_custom_fields_70987527_hint">숨고 가입 이메일을 입력하세요.</p>
+                    </div>
+
+                    <!-- 휴대폰 번호 -->
+                    <div class="form-field string  required  request_custom_fields_71442508">
+                        <label id="request_custom_fields_71442508_label" for="request_custom_fields_71442508">숨고 가입
+                            휴대폰 번호</label>
+                        <input type="text" name="request[custom_fields][71442508]" id="request_custom_fields_71442508"
+                            aria-required="true" aria-describedby="request_custom_fields_71442508_hint"
+                            aria-labelledby="request_custom_fields_71442508_label">
+
+                        <p id="request_custom_fields_71442508_hint">숨고 가입 휴대폰 번호를 입력하세요.</p>
+                    </div>
+
+                    <!-- 첨부파일 -->
+                    <div class="form-field">
+                        <label for="request-attachments">첨부 파일</label>
+                        <div id="upload-dropzone" class="upload-dropzone">
+                            <input type="file" multiple="true" id="request-attachments" data-fileupload="true"
+                                data-dropzone="upload-dropzone" data-error="upload-error"
+                                data-create-url="/hc/ko/request_uploads" data-name="request[attachments][]"
+                                data-pool="request-attachments-pool" data-delete-confirm-msg=""
+                                aria-describedby="upload-error">
+                            <span>
+                                <a>파일 추가</a> 또는 파일을 여기로 드래그
+                            </span>
+                        </div>
+
+                        <div id="upload-error" class="notification notification-error notification-inline"
+                            style="display: none;">
+                            <span data-upload-error-message=""></span>
+                        </div>
+
+                        <ul id="request-attachments-pool" class="upload-pool" data-template="upload-template"></ul>
+
+                        <script type="text/html" id="upload-template">
+
+                                  <li class="upload-item" data-upload-item>
+                                    <a class="upload-link" target="_blank" data-upload-link></a>
+                                    <p class="upload-path" data-upload-path></p>
+                                    <p class="upload-path" data-upload-size></p>
+                                    <p data-upload-issue class="notification notification-alert notification-inline" aria-hidden="true"></p>
+                                    <span class="upload-remove" data-upload-remove></span>
+                                    <div class="upload-progress" data-upload-progress></div>
+                                    <input type="hidden">
+                                  </li>
+                                  </script>
+                    </div>
+                    <footer><input type="submit" name="commit" value="제출"></footer>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- / -->
+    <script src="//static.zdassets.com/hc/assets/ko.29849816fa1a05db5228.js"></script>
+    <script src="https://soomgohelp.zendesk.com/auth/v2/host/without_iframe.js" data-brand-id="5040867"
+        data-return-to="https://help.soomgo.com/hc/ko/requests/new" data-theme="hc" data-locale="ko"
+        data-auth-origin="5040867,true,true"></script>
+
+    <script type="text/javascript">
+        HelpCenter = {};
+        HelpCenter.account = { "subdomain": "soomgohelp", "environment": "production", "name": "숨고" };
+        HelpCenter.user = { "identifier": "da39a3ee5e6b4b0d3255bfef95601890afd80709", "email": null, "name": "", "role": "anonymous", "avatar_url": "https://assets.zendesk.com/hc/assets/default_avatar.png", "is_admin": false, "organizations": [], "groups": [] };
+    </script>
+
+    <script src="//static.zdassets.com/hc/assets/moment-4ef0d82f9fc65c8a28f659aa3430955f.js"></script>
+    <script src="//static.zdassets.com/hc/assets/hc_enduser-72ea9c8e0185dd6c21008a1e827304ff.js"></script>
+
+
+    <!-- <iframe id="_hjSafeContext_74772397" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank"
+        style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe> -->
+</body>
+
+
+</html>
