@@ -1,0 +1,191 @@
+@charset "EUC-KR";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    box-sizing: border-box;
+    border: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+textarea {
+    box-sizing: border-box;
+}
+
+.wrap {
+    display: flex;
+}
+
+header.navi-bar {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    min-width: 232px;
+    max-width: 288px;
+    background-color: #494949;
+}
+
+.logo {
+    width: 106px;
+    height: 36px;
+    margin: 20px auto;
+    background-image: url("../../../static/image/icons/logo.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.navi-container {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.navi-box {
+    margin-bottom: 40px;
+}
+
+.flex-line {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 82%;
+    margin: 0 30px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
+
+.board-icon {
+    background-image: url("../../../static/image/icons/board.png");
+}
+
+.message-icon {
+    background-image: url("../../../static/image/icons/message.png");
+}
+
+.navi-title {
+    font-weight: bold;
+    color: white;
+    @media (max-width: 1275px) {
+        font-size: 14px
+    }
+}
+
+.arrow {
+    width: 10px;
+    height: 10px;
+    background-image: url("../../../static/image/icons/arrow.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: auto;
+    cursor: pointer;
+    transform: rotate(0deg);
+}
+
+.list li {
+    list-style-type: none;
+    padding: 6px;
+    color: white;
+    @media (max-width: 1275px) {
+        font-size: 14px
+    }
+}
+
+.list li:hover {
+    cursor: pointer;
+    padding: 6px;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.inquiries-list li:first-child {
+    color: #00C7AE;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px 50px 50px 50px;
+}
+
+.main-title-box {
+    width: 90%;
+    margin-bottom: 40px;
+}
+
+.main-container {
+    background-color: white;
+    width: 60%;
+    min-width: 1040px;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.line {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-box {
+    width: 80%;
+    margin-left: auto;
+}
+
+.info-box {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(180, 180, 180, 0.3);
+    border-radius: 10px;
+}
+
+.long-info {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.answer-box {
+    width: 100%;
+    height: 300px;
+    resize: none;
+    border: 1px solid rgb(180, 180, 180);
+    padding: 10px;
+    outline: none;
+}
+
+.answer-btn {
+    width: 80%;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-top: 30px;
+    background-color: #00C7AE;
+    color: white;
+    cursor: pointer;
+}
