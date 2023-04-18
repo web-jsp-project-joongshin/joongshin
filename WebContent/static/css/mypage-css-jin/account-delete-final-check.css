@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+#check-btn { display: none; }
+#check-btn:checked ~ .menubars { display: block; } 
+.menubars { display: none; }
+
 body {
 	  font-family: 'Noto Sans KR', sans-serif;
     font-size: 1rem;

@@ -124,14 +124,46 @@
 							</ol>
 						</div>
 					</article>
+					
+					
+												<input type="radio" name="apply" value="방문접수" onclick="div_show(this.value,'divshow');"> 방문접수
+
+<input type="radio" name="apply" value="현장접수" onclick="div_show(this.value,'divshow');"> 현장접수 
+<div id="divshow" style="display:none;">
+   현장접수 내용
+</div>
+
+<script>
+
+function div_show(s,ss){
+
+if(s == "현장접수"){
+
+      document.getElementById(ss).style.display = ""; 
+
+    }else{
+
+      document.getElementById(ss).style.display = "none"; 
+
+    }
+
+}
+
+</script>
+									 
+					
+					
+					
 					<article >
 						<h3 >탈퇴 사유</h3>
 						<ul  data-testid="delete-answer-section"
 							class="answer-section">
 							<li  class="answer-item"><div
 									 class="radio-group">
-									<input  id="radio-text-0" type="radio"
-										data-testid="delete-reason-radio-1" value="1"><label
+
+									 
+									 
+									<input  id="radio-text-0" type="radio" delete-reason-radio-1" value="1"><label
 										 for="radio-text-0"><span
 										 class="radio"></span><span
 										 class="text"> 알림이 너무 많이 와요 </span></label>
@@ -353,5 +385,6 @@
 	<!-- 전체 div -->
 	</footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 </html>
