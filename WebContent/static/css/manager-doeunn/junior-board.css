@@ -3,6 +3,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 button {
@@ -22,18 +23,17 @@ input {
 header.navi-bar {
     display: flex;
     flex-direction: column;
-    width: 20%;
     min-width: 232px;
     max-width: 288px;
     height: 100vh;
-    background-color: #494949;
+    background-color: #ECFDFA;
 }
 
 .logo {
     width: 106px;
     height: 36px;
     margin: 20px auto;
-    background-image: url("../../../static/image/icons/logo.svg");
+    background-image: url("../../image/icons/logo.svg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -71,25 +71,24 @@ header.navi-bar {
 }
 
 .board-icon {
-    background-image: url("../../../static/image/icons/board.png");
+    background-image: url("../../image/icons/board.png");
 }
 
 .message-icon {
-    background-image: url("../../../static/image/icons/message.png");
+    background-image: url("../../image/icons/message.png");
 }
 
 .navi-title {
     font-weight: bold;
-    color: white;
     @media (max-width: 1275px) {
-        font-size: 14pxz
+        font-size: 14px
     }
 }
 
 .arrow {
     width: 10px;
     height: 10px;
-    background-image: url("../../../static/image/icons/arrow.png");
+    background-image: url("../../image/icons/arrow.png");
     background-repeat: no-repeat;
     background-size: 100%;
     margin-left: auto;
@@ -100,7 +99,6 @@ header.navi-bar {
 .list li {
     list-style-type: none;
     padding: 6px;
-    color: white;
     @media (max-width: 1275px) {
         font-size: 14px
     }
@@ -158,12 +156,14 @@ section.top-line {
     display: flex;
     align-items: center;
     border-radius: 8px;
+    margin-right: 10px;
 }
+
 
 .search-icon {
     width: 24px;
     height: 24px;
-    background-image: url("../../../static/image/icons/search.png");
+    background-image: url("../../image/icons/search.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -194,15 +194,14 @@ section.content {
 }
 
 .delete-btn {
-    padding: 10px;
+    padding: 12px;
     width: 100px;
-    background-color: rgba(250, 78, 78);
+    background-color:rgb(210, 210, 210);
     border-radius: 6px;
-    color: white;
     font-weight: bold;
     cursor: pointer;
 }
 
 .delete-btn:hover {
-    background-color: rgb(248, 42, 42);
+    background-color: rgb(180, 180, 180);
 }

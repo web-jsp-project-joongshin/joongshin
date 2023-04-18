@@ -6,6 +6,9 @@
 <meta charset="EUC-KR">
 <title>관라지페이지-문의답변</title>
 <link rel="stylesheet" href="../../static/css/manager-doeunn/inquiries-answer.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 </head>
 <body>
    <div class="wrap">

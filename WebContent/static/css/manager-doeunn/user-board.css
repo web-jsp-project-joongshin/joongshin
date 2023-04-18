@@ -3,6 +3,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 button {
@@ -22,11 +23,10 @@ input {
 header.navi-bar {
     display: flex;
     flex-direction: column;
-    width: 20%;
     min-width: 232px;
     max-width: 288px;
     height: 100vh;
-    background-color: #494949;
+    background-color: #ECFDFA;
 }
 
 .logo {
@@ -80,7 +80,6 @@ header.navi-bar {
 
 .navi-title {
     font-weight: bold;
-    color: white;
     @media (max-width: 1275px) {
         font-size: 14px
     }
@@ -100,7 +99,6 @@ header.navi-bar {
 .list li {
     list-style-type: none;
     padding: 6px;
-    color: white;
     @media (max-width: 1275px) {
         font-size: 14px
     }
@@ -158,6 +156,7 @@ section.top-line {
     display: flex;
     align-items: center;
     border-radius: 8px;
+    margin-right: 10px;
 }
 
 .search-icon {
@@ -194,15 +193,14 @@ section.content {
 }
 
 .delete-btn {
-    padding: 10px;
+    padding: 12px;
     width: 100px;
-    background-color: rgb(250, 78, 78);
+    background-color:rgb(210, 210, 210);
     border-radius: 6px;
-    color: white;
     font-weight: bold;
     cursor: pointer;
 }
 
 .delete-btn:hover {
-    background-color: rgb(248, 42, 42);
+    background-color: rgb(180, 180, 180);
 }
