@@ -3,6 +3,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 button {
@@ -26,10 +27,9 @@ textarea {
 header.navi-bar {
     display: flex;
     flex-direction: column;
-    width: 20%;
     min-width: 232px;
     max-width: 288px;
-    background-color: #494949;
+    background-color: #ECFDFA;
 }
 
 .logo {
@@ -83,7 +83,6 @@ header.navi-bar {
 
 .navi-title {
     font-weight: bold;
-    color: white;
     @media (max-width: 1275px) {
         font-size: 14px
     }
@@ -103,7 +102,6 @@ header.navi-bar {
 .list li {
     list-style-type: none;
     padding: 6px;
-    color: white;
     @media (max-width: 1275px) {
         font-size: 14px
     }
@@ -164,13 +162,13 @@ main {
 }
 
 .long-info {
-    height: 300px;
+    height: 200px;
     overflow-y: scroll;
 }
 
 .answer-box {
     width: 100%;
-    height: 300px;
+    height: 200px;
     resize: none;
     border: 1px solid rgb(180, 180, 180);
     padding: 10px;

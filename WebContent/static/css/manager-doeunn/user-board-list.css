@@ -33,7 +33,7 @@ header.navi-bar {
     width: 106px;
     height: 36px;
     margin: 20px auto;
-    background-image: url("../../../static/image/icons/logo.svg");
+    background-image: url("../../image/icons/logo.svg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -71,11 +71,11 @@ header.navi-bar {
 }
 
 .board-icon {
-    background-image: url("../../../static/image/icons/board.png");
+    background-image: url("../../image/icons/board.png");
 }
 
 .message-icon {
-    background-image: url("../../../static/image/icons/message.png");
+    background-image: url("../../image/icons/message.png");
 }
 
 .navi-title {
@@ -88,7 +88,7 @@ header.navi-bar {
 .arrow {
     width: 10px;
     height: 10px;
-    background-image: url("../../../static/image/icons/arrow.png");
+    background-image: url("../../image/icons/arrow.png");
     background-repeat: no-repeat;
     background-size: 100%;
     margin-left: auto;
@@ -112,7 +112,7 @@ header.navi-bar {
     border-radius: 10px;
 }
 
-.inquiries-list li:first-child {
+.board-list li:first-child {
     color: #00C7AE;
 }
 
@@ -145,14 +145,7 @@ section.top-line {
     width: 100%;
     display: flex;
     align-items: center;
-}
-
-.select-option {
-    border: 1px solid rgb(220, 220, 220);
-    outline: none;
-    margin-left: 10px;
-    height: 40px;
-    padding: 0 30px 0 10px;
+    justify-content: space-between;
 }
 
 .search {
@@ -163,12 +156,13 @@ section.top-line {
     display: flex;
     align-items: center;
     border-radius: 8px;
+    margin-right: 10px;
 }
 
 .search-icon {
     width: 24px;
     height: 24px;
-    background-image: url("../../../static/image/icons/search.png");
+    background-image: url("../../image/icons/search.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -199,13 +193,12 @@ section.content {
 }
 
 .delete-btn {
-    padding: 10px;
+    padding: 12px;
     width: 100px;
-    background-color: rgb(210, 210, 210);
+    background-color:rgb(210, 210, 210);
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
-    margin-left: auto;
 }
 
 .delete-btn:hover {
