@@ -5,7 +5,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>관리자페이지-사용자게시판목록</title>
-<link rel="stylesheet" href="../../static/css/manager-doeunn/user-board.css">
+<link rel="stylesheet" href="../../static/css/manager-doeunn/user-board-list.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -23,8 +23,8 @@
 						<div class="arrow"></div>
 					</div>
 					<ul class="board-list list">
-						<li onclick="location.href='userBoard.jsp'">이용자 게시판</li>
-						<li onclick="location.href='juniorBoard.jsp'">주니어 게시판</li>
+						<li onclick="location.href='userBoardList.jsp'">이용자 게시판</li>
+						<li onclick="location.href='juniorBoardList.jsp'">주니어 게시판</li>
 					</ul>
 				</section>
 
