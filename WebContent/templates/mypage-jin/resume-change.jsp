@@ -1,22 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<link data-vue-meta="1" rel="icon" type="image/png" sizes="32x32"
-	href="https://static.cdn.soomgo.com/static/favicon-32x32.png?webp=1">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 <!--폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
-<link href="../../static/css/mypage-css-jin/account-delete-final-check.css" rel="stylesheet" type="text/css"/>
+
+<link href="../../static/css/mypage-css-jin/resume-change.css" rel="stylesheet" type="text/css"/>
 <link href="../../static/css/mypage-css-jin/header-footer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<header id="app-header" class="global-header" data-v-50506024="">
+		<header id="app-header" class="global-header" data-v-50506024="">
 			<div data-v-5f10666f="" data-v-50506024=""
 				class="global-navigation-bar">
 				<!-- 섹션태그때문에 이미지가 나오지 않아서 없애버렸어요 -->
@@ -105,87 +104,88 @@
 
 
 
+
+
+
 	<div id="app-body">
-		<div class="container container-md">
-			<main  class="account-info-container">
-				<h1 >계정 탈퇴</h1>
-				<section >
-					<article >
-						<h3 >숨고 탈퇴 전 꼭 확인해 주세요</h3>
-						<div  class="check-list">
-							<ol >
-								<li >탈퇴시 모든 개인정보가 삭제되며, 구매하신 캐시는 소멸되며
-									환불되지 않습니다.</li>
-								<li >숨고 이용에 불편이 있어 탈퇴를 고민하신다면,
-									support@soomgo.com 또는 <span 
-									class="color-teal">1599-5319</span>로 문의 바랍니다.
-								</li>
-								<li >위 내용을 모두 확인하였고, 탈퇴 완료 시 내용에 동의합니다.</li>
-							</ol>
+		<div class="community-container container">
+			<div class="soomgo-life-container">
+				<section class="write-post-container">
+					<div class="select-subject-header">
+						<div class="subject-header-wrapper">
+							<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgZmlsbD0iIzMyMzIzMiIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTYuNDMuNDNsMS4xMzEgMS4xMzEtNy40MzQgNy40MzUgNy40MzQgNy40MzQtMS4xMzEgMS4xMzEtNy40MzUtNy40MzQtNy40MzQgNy40MzRMLjQzIDE2LjQzbDcuNDM0LTcuNDM0TC40MyAxLjU2MSAxLjU2MS40M2w3LjQzNCA3LjQzNEwxNi40My40M3oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMzcgLTExNCkgdHJhbnNsYXRlKDAgOTQpIHRyYW5zbGF0ZSgzMzcgMjApIi8+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=" alt="뒤로 가기" class="back-button">
+							<select class="post-subject-select-box custom-select sg-text-subhead3 sg-font-medium" id="__BVID__93">
+								<option disabled="disabled" value> 주제 선택 </option>
+								<option value="provider-square"> 고수광장 </option>
+								<option value="qna"> 궁금해요 </option>
+								<option value="how-much"> 얼마예요 </option>
+								<option value="together"> 함께해요 </option>
+								<option value="provider-news"> 고수소식 </option>
+							</select>
+							<button type="button" disabled="disabled" class="btn btn-secondary disabled write-post-submit">등록</button>
 						</div>
-					</article>
-					<article >
-						<h3 >탈퇴 사유</h3>
-						<ul  data-testid="delete-answer-section"
-							class="answer-section">
-							<li  class="answer-item"><div
-									 class="radio-group">
-									<input  id="radio-text-0" type="radio"
-										data-testid="delete-reason-radio-1" value="1"><label
-										 for="radio-text-0"><span
-										 class="radio"></span><span
-										 class="text"> 알림이 너무 많이 와요 </span></label>
-									
-								</div></li>
-							<li  class="answer-item"><div
-									 class="radio-group">
-									<input  id="radio-text-1" type="radio"
-										data-testid="delete-reason-radio-2" value="2"><label
-										 for="radio-text-1"><span
-										 class="radio"></span><span
-										 class="text"> 사용하기 어려워요 </span></label>
-									
-								</div></li>
-							<li  class="answer-item"><div
-									 class="radio-group">
-									<input  id="radio-text-2" type="radio"
-										data-testid="delete-reason-radio-3" value="3"><label
-										 for="radio-text-2"><span
-										 class="radio"></span><span
-										 class="text"> 오류가 많아서 불편해요 </span></label>
-									
-								</div></li>
-							<li  class="answer-item"><div
-									 class="radio-group">
-									<input  id="radio-text-3" type="radio"
-										data-testid="delete-reason-radio-4" value="4"><label
-										 for="radio-text-3"><span
-										 class="radio"></span><span
-										 class="text"> 기타 </span></label>
-									
-								</div></li>
-						</ul>
-					</article>
-					<div  class="validation-wrapper"
-						style="display: none;">
-						<span  class="validation-text">탈퇴 사유를 선택해주세요.</span>
 					</div>
+					<div class="attach-file-wrapper">
+						<div class="attach-file-area">
+							<div class="add-image-icon"></div>
+							<div class="custom-file b-form-file file-input" aria-required="false" aria-invalid="false" id="__BVID__95__BV_file_outer_">
+								<input type="file" name="uploadFile" multiple="multiple" class="custom-file-input" id="__BVID__95" style="z-index: -5;"> 
+								<label data-browse="Browse" class="custom-file-label" for="__BVID__95">
+									<span class="d-block form-file-text" style="pointer-events: none;">No file chosen</span>
+								</label>
+							</div>
+							<span class="image-count sg-text-body2 sg-font-regular">0/15</span>
+						</div>
+					</div>
+					<div class="editor-body-container is-bottom-margin">
+						<div class="editor-body-wrapper">
+							<div class="editor-title-wrapper">
+								<div class="editor-title-container">
+									<label for="post-title-input" class="editor-title-label">
+										<input id="post-title-input" type="text" placeholder="제목을 입력해주세요." value class="post-title-input sg-text-subhead5 sg-font-medium sg-text-gray-900">
+									</label>
+								</div>
+							</div>
+							<div class="divider-wrapper">
+								<hr class="hr-divider">
+							</div>
+							<div class="service-region-wrapper">
+								<button class="category-select-box">
+									<span class="text">(선택) 서비스</span>
+								</button>
+								<button class="category-select-box">
+									<span class="text">(선택) 지역</span>
+								</button>
+							</div>
+							<div class="divider-wrapper">
+								<hr class="hr-divider">
+							</div>
+							<div class="editor-contents">
+								<span class="sg-text-body2 sg-font-regular sg-text-gray-900">
+									<textarea name="post-content" class="editor-contents-textarea"></textarea>
+								</span>
+								<span class="editor-contents-textarea-placeholder sg-text-body2 sg-font-regular sg-text-gray-500">
+									고객이 궁금해하는 요청 서비스 정보나 고수님의 전문성을 보여주는 글을 작성해 보세요.
+									글을 통해 고수님의 지정요청을 높일 수 있어요!
+									주제에 맞지 않는 글이나 커뮤니티 이용정책에 위배되어 일정 수 이상 신고를 받는 경우 글이 숨김 및 삭제될 수 있습니다.
+								</span>
+							</div>
+						</div>
+					</div>		
 				</section>
-				<footer  class="button-group">
-					<a href="javascript:history.go(-1)"
-						class="btn router-link-active btn-outline-primary" target="_self">취소</a>
-					<button  data-testid="delete-complete-btn"
-						type="button" class="btn btn-primary">탈퇴 완료</button>
-				</footer>
-			</main>
+				<div></div>
+			</div>
 		</div>
 	</div>
 	
 	
-				</div>
-		</div>
-
-		<footer>
+	
+	
+	
+	
+	
+	
+			<footer>
 
 			<nav id="app-footer" class="footer-container" data-v-4e4965bd="">
 				<div class="footer-container-row container" data-v-4e4965bd="">
@@ -353,5 +353,4 @@
 	<!-- 전체 div -->
 	</footer>
 </body>
-
 </html>
