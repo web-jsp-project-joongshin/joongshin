@@ -11,7 +11,7 @@
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 </head>
 <body class="home">
-	<div id="app" date-browser="Chrome" data-is-loaded="true" class>
+	<div id="app" date-browser="Chrome" data-is-loaded="true">
 		<div class="__cov-progress"
 			style="background-color: rgb(0, 199, 174); opacity: 0; position: fixed; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s;"></div>
 		<header id="app-header" class="global-header" data-v-50506024="">
