@@ -62,7 +62,7 @@ form {
 	margin-left: -.3125rem;
 }
 
-.col-12, .btn {
+.col-12, .btn-17 {
 	padding-right: .3215rem;
 	padding-left: .3215rem;
 }
@@ -133,7 +133,7 @@ fieldset {
 }
 
 .inputclass {
-	padding: .75rem;
+	padding: .75rem !important;
 	border-radius: 4px;
 	display: block;
 	width: 100%;
@@ -204,7 +204,7 @@ fieldset {
 	margin-bottom: 1.5rem;
 }
 
-.btn {
+.btn-17 {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -237,7 +237,7 @@ fieldset {
 }
 
 .addressnumber, .certificationNumber {
-	padding: .75rem;
+	padding: .75rem !important;
 	border-radius: 4px;
 	display: block;
 	width: 70%;
@@ -263,7 +263,7 @@ fieldset {
 	position: relative;
 	left: 74%;
 	margin: 0;
-	padding: 0.6rem 0.7rem;
+	padding: 0.6rem 0.7rem !important;
 	font-size: 0.8rem;
 	color: #fff;
 	background-color: #00c7ae;
@@ -316,7 +316,7 @@ section {
 }
 
 .input-check {
-	margin-top: 17px;
+	margin-top: 19px;
 }
 
 .terms-container {
@@ -358,7 +358,7 @@ ul li {
 .term-item, .custom-checkbox {
 	height: 100%;
 	min-height: unset;
-	padding-left: 0.7rem;
+	padding-left: 0.65rem;
 	cursor: pointer;
 	position: relative;
 	display: block;
@@ -400,6 +400,7 @@ p {
 	font-size: .875rem;
 	color: #737373;
 	cursor: pointer;
+	margin-left: 2px;
 }
 
 .btn-detail {
@@ -462,6 +463,10 @@ p {
 	text-transform: none;
 	overflow: visible;
 	margin: 0;
+}
+
+.btn-login{
+	margin-left: 5px;
 }
 
 .btntext {
