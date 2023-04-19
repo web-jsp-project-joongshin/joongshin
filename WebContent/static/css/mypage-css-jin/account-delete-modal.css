@@ -1,8 +1,14 @@
 @charset "UTF-8";
 
+.btn-primary {
+    color: #fff;
+    background-color: #00c7ae;
+    border-color: #00c7ae;
+}
+
 body {
     margin: 0;
-    font-family: Noto Sans KR,Malgun Gothic,-apple-system,Segoe UI,Roboto,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -474,11 +480,8 @@ textarea {
     margin: 1.25em auto 0;
 }
 
-.swal2-container.sg-swal .swal2-actions button.btn.swal2-confirm {
-    border-radius: 4px;
-    height: 2.75rem;
-    background-color: #00c7ae;
-    color: #fff;
+.swal2-container.sg-swal .swal2-actions button.btn:hover{
+	background-color: #01c7c3;
 }
 
 .swal2-container.sg-swal .swal2-actions button.btn {
@@ -486,7 +489,9 @@ textarea {
     justify-content: center;
     align-items: center;
     width: 100%;
-    font-size: .875rem;
+    font-size: 1rem;
+    background-color: #00c7ae;
+    color: white;
 }
 
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {

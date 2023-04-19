@@ -6,9 +6,25 @@
 <meta charset="UTF-8">
 <link data-vue-meta="1" rel="icon" type="image/png" sizes="32x32" href="https://static.cdn.soomgo.com/static/favicon-32x32.png?webp=1">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
+<!--폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+
 <link href="../../static/css/mypage-css-jin/gosu-mypage-account.css" rel="stylesheet" type="text/css"/>
+<link href="../../static/css/mypage-css-jin/header-footer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+
+
+
+
+
+
+
+
+
 	<div id="app-body">
 		<div class="container container-md">
 			<main class="account-info-container">
@@ -20,9 +36,11 @@
 							lazy="error"
 							style="background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIHZpZXdCb3g9IjAgMCA3MiA3MiI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBpZD0iYSIgZD0iTTAgMGg3MnY3MkgweiIvPgogICAgICAgIDxwYXRoIGlkPSJjIiBkPSJNMCAwaDcydjcySDB6Ii8+CiAgICA8L2RlZnM+CiAgICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj4KICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjYSIvPgogICAgICAgIDwvbWFzaz4KICAgICAgICA8ZyBtYXNrPSJ1cmwoI2IpIj4KICAgICAgICAgICAgPG1hc2sgaWQ9ImQiIGZpbGw9IiNmZmYiPgogICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjYyIvPgogICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgIDx1c2UgZmlsbD0iI0YyRjJGMiIgeGxpbms6aHJlZj0iI2MiLz4KICAgICAgICAgICAgPHBhdGggZmlsbD0iI0UxRTFFMSIgZD0iTTcwLjY3NyA2Ny4wMzJjLS45NTEtMi44NDQtMi42NzQtNS43MTItNS4yMTUtNy4zODEtNC44OS0zLjIzNi0xMC41ODctNC45NjItMTYuMDk1LTYuODEtMS4zMjktLjQ2NS0yLjY4LS45Ny0zLjg5My0xLjY5LTEuMDg1LS42NDMtMS40OTItMS45Ni0xLjc0My0zLjExNy0uMTEyLS42MTItLjE4LTEuMjQtLjIxNS0xLjg1NyAzLjk5NC01LjQ0OCA2LjY0NC0xNC4zNCA2LjY0NC0yMS42M0M1MC4xNiAxMy4xNzIgNDMuNzEyIDEwIDM1Ljc2IDEwYy03Ljk1NCAwLTE0LjQgMy4xNjYtMTQuNCAxNC41NDMgMCA3LjU1MSAyLjg0IDE2LjgxNCA3LjA3NSAyMi4xOTUtLjAzOS40MjQtLjA5Ljg1LS4xNjYgMS4yNzItLjI1MiAxLjE1Ny0uNjU5IDIuNDUtMS43NDIgMy4wOTItMS4yMTYuNzItMi41NjYgMS4xNzctMy44OTUgMS42NC01LjUwOSAxLjg0OS0xMS4yMDYgMy40NzgtMTYuMDk0IDYuNzE0LTIuNTQyIDEuNjctNC4yNjQgNC43MzItNS4yMTQgNy41NzZDLjM0NiA2OS45ODItLjA1NCA3My42MzguMDA2IDc2LjZoNzEuOTg4Yy4wNi0yLjk2Mi0uMzQtNi42MTctMS4zMTctOS41Njh6IiBtYXNrPSJ1cmwoI2QpIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K&quot;);"></div>
 					</div>
+					<a href="./gosu-profile-change-modal.jsp">
 					<img
 						src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYwMyAtMjg2KSB0cmFuc2xhdGUoNTM1IDIxOCkgdHJhbnNsYXRlKDY4IDY4KSB0cmFuc2xhdGUoMSAxKSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjE1IiBjeT0iMTUiIHI9IjE1IiBmaWxsPSIjRkZGIiBzdHJva2U9IiNGMkYyRjIiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAgMEwxOCAwIDE4IDE4IDAgMTh6IiBvcGFjaXR5PSIuNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNiA2KSIvPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZmlsbD0iI0I1QjVCNSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTEuNCAybDEuNDY0IDEuNTU2SDE1LjRjLjg4IDAgMS42LjcgMS42IDEuNTU1djkuMzMzQzE3IDE1LjMgMTYuMjggMTYgMTUuNCAxNkgyLjZjLS44OCAwLTEuNi0uNy0xLjYtMS41NTZWNS4xMTFjMC0uODU1LjcyLTEuNTU1IDEuNi0xLjU1NWgyLjUzNkw2LjYgMmg0Ljh6TTkgN2MtMS42NTYgMC0zIDEuMzQ0LTMgM3MxLjM0NCAzIDMgMyAzLTEuMzQ0IDMtMy0xLjM0NC0zLTMtM3oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYgNikiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg=="
 						class="camera-icon">
+						</a>
 				</div>
 				<section>
 					<div class="sign-container danger md has-button"
@@ -38,65 +56,88 @@
 						<a href="/" class="btn btn-action btn-secondary btn-block"
 							target="_self"> 성별 입력하기 </a>
 					</div>
-					<ul class="account-info">
-						<li class="item-container"><div class="item">
-								<div class="item-title">이름</div>
-								<div class="item-info">kimjin</div>
+					<ul  class="account-info">
+						<div class="item">
+								 <a  href="./name-change.jsp"
+							class="item-container"><div  class="item">
+								<div  class="item-title">이름</div>
+								<div  class="item-info">kimjin</div>
 							</div>
-							<div>
-								<img
+							<div >
+								<img 
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
-							</div></li>
-						<a href="./email-change.jsp" class="item-container"><div
-								class="item">
-								<div class="item-title">이메일</div>
-								<div class="item-info">
-									<!---->
-									<span>kimjin9822@naver.com</span>
+							</div></a>
+							</li>
+						<a  href="./email-change.jsp"
+							class="item-container"><div  class="item">
+								<div  class="item-title">이메일</div>
+								<div  class="item-info">
+									<span >kimjin9822@naver.com</span>
 								</div>
 							</div>
-							<div>
-								<img
+							<div >
+								<img 
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
 							</div></a>
-						<a href="./password-change.jsp" class="item-container"><div
-								class="item">
-								<div class="item-title">비밀번호</div>
-								<div class="item-info">•••••••</div>
+						<a 
+							href="./password-change.jsp"
+							class="item-container"><div  class="item">
+								<div  class="item-title">비밀번호</div>
+								<div  class="item-info">•••••••</div>
 							</div>
-							<div>
-								<img
+							<div >
+								<img 
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
 							</div></a>
-						<li class="item-container"><div class="item">
-								<div class="item-title">휴대전화 번호</div>
-								<div class="item-info">01098224849</div>
+						
+						<a 
+							href="./"
+							class="item-container">
+						<div
+								 class="item">
+								<div  class="item-title">휴대전화 번호</div>
+								<div  class="item-info">01098224849</div>
 							</div>
-							<div>
-								<img
+							<div >
+								<img 
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
-							</div></li>
+							</div></a>
+							
 					</ul>
 					<ul data-testid="resume-account" class="resume-account">
-						<li class="item-container"><div
-								data-testid="resume-account-text" class="item">이력서 수정</div>
+					<a 
+							href="./resume-change.jsp"
+							class="item-container">
+					<div data-testid="resume-account-text" class="item">이력서 수정</div>
 							<div>
 								<img
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
-							</div></li>
-					</ul>
+							</div>
+					</a></ul>
 					<ul data-testid="delete-account" class="delete-account">
-						<li class="item-container"><div
-								data-testid="delete-account-text" class="item">계정 탈퇴</div>
+					<a 
+							href="./gosu-account-delete-modal.jsp"
+							class="item-container">
+						<div data-testid="delete-account-text" class="item">계정 탈퇴</div>
 							<div>
 								<img
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
-							</div></li>
-					</ul>
+							</div>
+					</a></ul>
 				</section>
 				<!---->
 			</main>
 		</div>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
 </body>
 </html>
