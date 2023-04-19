@@ -5,13 +5,24 @@
 <head>
 <meta charset="UTF-8">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
-<link rel="stylesheet" href="../../static/css/users-wmoon/write.css"/>
+<!--폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
+
+<link href="../../static/css/mypage-css-jin/resume-change.css" rel="stylesheet" type="text/css"/>
+<link href="../../static/css/mypage-css-jin/header-footer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+		
+
+
+
+
+
+
+
 	<div id="app-body">
 		<div class="community-container container">
 			<div class="soomgo-life-container">
@@ -82,5 +93,13 @@
 			</div>
 		</div>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
 </body>
 </html>

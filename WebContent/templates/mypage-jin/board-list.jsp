@@ -7,10 +7,19 @@
 <link data-vue-meta="1" rel="icon" type="image/png" sizes="32x32"
 	href="https://static.cdn.soomgo.com/static/favicon-32x32.png?webp=1">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
+<!--폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+
 <link href="../../static/css/mypage-css-jin/board-list.css" rel="stylesheet" type="text/css"/>
+<link href="../../static/css/mypage-css-jin/header-footer.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
+
+
 	<div id="app-body">
 		<div  class="my-page-community-activity-container">
 			<div  
@@ -25,7 +34,10 @@
 						작성 글</li>
 					<li  
 						class="tab sg-text-body2 sg-font-regular sg-text-gray-400">
-						작성 댓글</li>
+					<a href="./message-list.jsp">
+						작성 댓글</a></li>
+						
+						
 				</ul>
 				<section  class="community-content-section white">
 					<article  
@@ -42,5 +54,7 @@
 			</div>
 		</div>
 	</div>
+	
+
 </body>
 </html>
