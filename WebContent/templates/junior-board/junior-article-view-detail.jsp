@@ -9,8 +9,6 @@
 <title>글 상세보기</title>
 </head>
 
-<jsp:include page="../mainpageSeo/header.jsp"/>
-
 <body>
 
 	<!-- 
@@ -155,7 +153,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="../../static/js/junior-board/junior-article-view-detail.js"></script>
-
-<jsp:include page="../mainpageSeo/footer.jsp"/>
 
 </html>
