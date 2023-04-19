@@ -1,14 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>고수 회원가입 페이지</title>
+<title>회원가입</title>
 </head>
 <link href="../../static/css/singupcss-hsw/basic.css" rel="stylesheet">
 <body>
 	<div>
 		<div class="login-page">
-			<h2>고수 회원가입</h2>
+			<h2>회원가입</h2>
 			<div class="card">
 				<form>
 					<div class="form-row">
@@ -73,17 +75,10 @@
 								</div>
 							</fieldset>
 						</div>
-						<div id="selfProduce" class="col-12">
-							<fieldset class="form-group">
-								<legend class="legen-text">간편 이력서</legend>
-								<textarea rows="3" cols="25"
-									placeholder="300자 내외 자신의 경력을 작성해주세요." class="textbox"></textarea>
-							</fieldset>
-						</div>
 						<div id="checkbox" class="col-12">
 							<section>
 								<div class="all-check">
-									<input type="checkbox"> <label class="custom-control-label"><span class="all-check-font">전체동의</span></label>
+									<input type="checkbox"> <label><span>전체동의</span></label>
 								</div>
 								<div class="terms-container">
 									<div>
@@ -93,24 +88,23 @@
 													<input type="checkbox" class="input-check"> <label class="custom-control-label">
 														<p class="term-label">(필수) 이용약관 동의</p>
 													</label>
-												</div>
 												<button type="button" class="btn-detail">보기</button>
+												</div>
 											</li>
 											<li class="term-item">
 												<div class="custom-checkbox">
-													<input type="checkbox" class="input-check"> <label>
-														<p>(필수) 개인정보 수집 및 이용 동의</p>
+													<input type="checkbox" class="input-check"> <label class="custom-control-label">
+														<p class="term-label">(필수) 개인정보 수집 및 이용 동의</p>
 													</label>
+												<button type="button" class="btn-detail">보기</button>
 												</div>
-												<button type="button">보기</button>
 											</li>
 											<li class="term-item">
 												<div class="custom-checkbox">
-													<input type="checkbox" class="input-check"> <label>
-														<p>(필수) 14세 이상입니다.</p>
+													<input type="checkbox" class="input-check"> <label class="custom-control-label">
+														<p class="term-label">(필수) 14세 이상입니다.</p>
 													</label>
 												</div>
-												<button type="button">보기</button>
 											</li>
 										</ul>
 									</div>
@@ -120,6 +114,11 @@
 						<div id="signUpButton" class="col-12">
 							<button type="submit" class="btn-signup">
 								<span class="btntext">회원 가입</span>
+							</button>
+						</div>
+						<div id="signUpButton" class="col-12">
+							<button type="submit" class="btn-signup">
+								<span class="btntext">고수 가입</span>
 							</button>
 						</div>
 					</div>
