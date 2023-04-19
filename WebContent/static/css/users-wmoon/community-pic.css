@@ -22,6 +22,10 @@
 	box-sizing: border-box;
 }
 
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 div {
 	display: block;
 }
@@ -94,6 +98,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     border-radius: 6px;
     border: none;
     background-color: #00c7ae;
+    font-size: 15px;
 }
 
 .btn-group-vertical>.btn, .btn-group>.btn {

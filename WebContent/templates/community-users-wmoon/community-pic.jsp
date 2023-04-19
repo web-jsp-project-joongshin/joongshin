@@ -6,6 +6,10 @@
 <meta charset="UTF-8">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 <link rel="stylesheet" href="../../static/css/users-wmoon/community-pic.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
 </head>
 <body>
 	<div id="app-body">
@@ -18,7 +22,7 @@
 							<div>
 								<div class="write-button-desktop">
 									<div class="dropdown b-dropdown btn-group">
-										<button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-primary" id="__BVID__425__BV_toggle_">
+										<button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-primary" id="__BVID__425__BV_toggle_" onclick="location.href='http://localhost:8090/joongshin/templates/community-users-wmoon/write.jsp'">
 											글쓰기
 										</button>
 										<ul role="menu" tabindex="-1" class="dropdown-menu dropdown-menu-right" aria-labelledby="__BVID__425__BV_toggle_">
@@ -52,10 +56,10 @@
 					</div>
 					<ul class="category">
 						<li class="sg-text-body2 sg-font-regular lg:sg-text-body1 lg:sg-font-regular sg-text-gray-400">
-							<a href="https://soomgo.com/community/soomgo-life/all" class="link-text q"> 숨고생활 </a>
+							<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/community-main.jsp" class="link-text q"> 숨고생활 </a>
 						</li>
 						<li class="sg-text-subhead4 sg-font-bold lg:sg-text-subhead2 lg:sg-font-bold sg-text-gray-900 selected">
-							<a href="https://soomgo.com/community/pro-knowhow/" class="link-text router-link-exact-active router-link-active q b"> 고수의 노하우 </a>
+							<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/community-pic.jsp" class="link-text router-link-exact-active router-link-active q b"> 고수의 노하우 </a>
 						</li>
 					</ul>
 					<article class="pro-knowhow-list">
