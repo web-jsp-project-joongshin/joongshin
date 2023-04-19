@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../../static/css/junior-profile/junior-profile.css" />
+<link rel="stylesheet" href="../../static/css/junior-board/junior-profile.css" />
 <title>권지안 고수의 아동미술 레슨 서비스, 서울 성북구 - 숨고, 숨은고수</title>
 </head>
 
-<jsp:include page="../mainpageSeo/header.jsp"/>
 
 <body>
 	<div id="app-body">
