@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 <link rel="stylesheet" href="../../static/css/users-wmoon/community-pic.css"/>
+
 </head>
 <body>
 	<div id="app-body">
