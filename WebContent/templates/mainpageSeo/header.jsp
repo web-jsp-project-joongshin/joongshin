@@ -6,14 +6,15 @@
 <link data-vue-meta="1" rel="shortcut icon"
 	href="https://static.cdn.soomgo.com/static/favicon.ico">
 <link rel="stylesheet" type="text/css" href="../../static/css/mainpageSeo/mainpage.css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
-<title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 </head>
+
 <body class="home">
-	<div id="app" date-browser="Chrome" data-is-loaded="true">
-		<div class="__cov-progress"
-			style="background-color: rgb(0, 199, 174); opacity: 0; position: fixed; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s;"></div>
+<div id="app" class="webp-bgroup" data-browser="Chrome" data-is-loaded="true">
+<div class="__cov-progress" style="background-color: rgb(0, 199, 174); opacity: 0; position: fixed; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s;"></div>
 		<header id="app-header" class="global-header" data-v-50506024="">
 			<div data-v-5f10666f="" data-v-50506024=""
 				class="global-navigation-bar">
@@ -31,16 +32,16 @@
 							<ul data-v-5f10666f="" class="nav-list">
 								<li data-v-5f10666f="" class="nav-item left-section-item"><a
 									data-v-5f10666f="" href="/category-home?from=web_gnb"
-									class="gnb-link"><span data-v-5f10666f="">서비스요청</span></a></li>
+									class="gnb-link"><span data-v-5f10666f="">커뮤니티</span></a></li>
 								<li data-v-5f10666f="" class="nav-item left-section-item"><a
 									data-v-5f10666f="" href="/search/pro?from=web_gnb"
-									class="gnb-link"><span data-v-5f10666f="">고수찾기</span></a></li>
+									class="gnb-link"><span data-v-5f10666f="">문의 게시판</span></a></li>
 								<li data-v-5f10666f="" class="nav-item left-section-item"><a
 									data-v-5f10666f="" href="/ip/products" class="gnb-link"><span
-										data-v-5f10666f="">마켓</span></a></li>
+										data-v-5f10666f=""></span></a></li>
 								<li data-v-5f10666f="" class="nav-item left-section-item"><a
 									data-v-5f10666f="" href="/community/soomgo-life/?from=web_gnb"
-									class="gnb-link"><span data-v-5f10666f="">커뮤니티</span></a></li>
+									class="gnb-link"><span data-v-5f10666f=""></span></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -95,6 +96,7 @@
 			</div>
 		</header>
 		<!-- 헤더 끝 -->
+		</div>
 		</body>
 </html>
 		

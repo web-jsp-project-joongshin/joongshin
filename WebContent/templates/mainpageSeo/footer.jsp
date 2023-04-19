@@ -6,9 +6,10 @@
 <link data-vue-meta="1" rel="shortcut icon"
 	href="https://static.cdn.soomgo.com/static/favicon.ico">
 <link rel="stylesheet" type="text/css" href="../../static/css/mainpageSeo/mainpage.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
-<meta charset="UTF-8">
-<title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 </head>
 <footer>
 			<nav id="app-footer" class="footer-container" data-v-4e4965bd="">
@@ -32,7 +33,7 @@
 						<ul class="content-list" data-v-4e4965bd="">
 							<li data-v-4e4965bd="" class="open-padding"><span
 								class="text-middle title category" data-v-4e4965bd="">
-									숨고소개 <span class="new-badge" style="display: none;"
+									중신소개 <span class="new-badge" style="display: none;"
 									data-v-4e4965bd="">N</span>
 								<!---->
 							</span>
@@ -64,13 +65,13 @@
 										data-v-4e4965bd=""> 예상금액 <span class="new-badge"
 										style="display: none;" data-v-4e4965bd="">N</span></a><a
 										href="/search/pro?from=footer" class="text-middle category"
-										data-v-4e4965bd=""> 고수찾기 <span class="new-badge"
+										data-v-4e4965bd=""> 주니어찾기 <span class="new-badge"
 										style="display: none;" data-v-4e4965bd="">N</span></a><a
 										href="https://help.soomgo.com/hc/ko/articles/360056329911"
-										class="text-middle category" data-v-4e4965bd=""> 숨고보증 <span
+										class="text-middle category" data-v-4e4965bd=""> 주니어보증 <span
 										class="new-badge" style="display: none;" data-v-4e4965bd="">N</span></a><a
 										href="/questions/" class="text-middle category"
-										data-v-4e4965bd=""> 고수에게묻다 <span class="new-badge"
+										data-v-4e4965bd=""> 주니어에게묻다 <span class="new-badge"
 										style="display: none;" data-v-4e4965bd="">N</span></a><a
 										href="/community/soomgo-life/all"
 										class="text-middle category sr-only" data-v-4e4965bd="">
@@ -80,7 +81,7 @@
 								</div></li>
 							<li data-v-4e4965bd="" class="open-padding"><span
 								class="text-middle title category" data-v-4e4965bd="">
-									고수안내 <span class="new-badge" style="display: none;"
+									주니어안내 <span class="new-badge" style="display: none;"
 									data-v-4e4965bd="">N</span>
 								<!---->
 							</span>
@@ -89,13 +90,13 @@
 										data-v-4e4965bd=""> 이용안내 <span class="new-badge"
 										style="display: none;" data-v-4e4965bd="">N</span></a><a
 										href="https://help.soomgo.com/hc/ko/categories/115001218027"
-										class="text-middle category" data-v-4e4965bd=""> 고수가이드 <span
+										class="text-middle category" data-v-4e4965bd=""> 주니어가이드 <span
 										class="new-badge" style="display: none;" data-v-4e4965bd="">N</span></a><a
 										href="/pro" class="text-middle category" data-v-4e4965bd="">
-										고수가입 <span class="new-badge" style="display: none;"
+										주니어가입 <span class="new-badge" style="display: none;"
 										data-v-4e4965bd="">N</span>
 									</a><a href="/pro-center" class="text-middle category"
-										data-v-4e4965bd=""> 고수센터 <span class="new-badge"
+										data-v-4e4965bd=""> 주니어센터 <span class="new-badge"
 										style="display: none;" data-v-4e4965bd="">N</span></a>
 								</div></li>
 							<li data-v-4e4965bd="" class="open-padding"><span
@@ -152,23 +153,23 @@
 							<a href="https://www.facebook.com/SoomgoKorea/" target="_blank"
 								class="footer-badge" data-v-4e4965bd=""><img
 								src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-facebook.svg"
-								alt="숨고 페이스북 계정" data-v-4e4965bd=""></a><a
+								alt="주니어 페이스북 계정" data-v-4e4965bd=""></a><a
 								href="https://www.instagram.com/soomgo_official/"
 								target="_blank" class="footer-badge" data-v-4e4965bd=""><img
 								src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-instagram.svg"
-								alt="숨고 인스타그램" data-v-4e4965bd=""></a><a
+								alt="주니어 인스타그램" data-v-4e4965bd=""></a><a
 								href="https://blog.naver.com/brave_mobile_mkt/" target="_blank"
 								class="footer-badge" data-v-4e4965bd=""><img
 								src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-naverblog.svg"
-								alt="숨고 블로그" data-v-4e4965bd=""></a><a
+								alt="주니어 블로그" data-v-4e4965bd=""></a><a
 								href="https://post.naver.com/brave_mobile_mkt?isHome=1"
 								target="_blank" class="footer-badge" data-v-4e4965bd=""><img
 								src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-naverpost.svg"
-								alt="숨고 포스트" data-v-4e4965bd=""></a><a
+								alt="주니어 포스트" data-v-4e4965bd=""></a><a
 								href="https://news.soomgo.com" target="_blank"
 								class="footer-badge" data-v-4e4965bd=""><img
 								src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-tistory.svg"
-								alt="숨고 스토리" data-v-4e4965bd=""></a>
+								alt="주니어 스토리" data-v-4e4965bd=""></a>
 						</div>
 					</div>
 				</div>
