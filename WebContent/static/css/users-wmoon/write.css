@@ -26,6 +26,10 @@
 }
 
 
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 div {
     display: block;
 }

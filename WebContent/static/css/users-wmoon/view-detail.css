@@ -19,6 +19,10 @@
     min-height: 100%;
 }
 
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 #app[data-is-loaded=true], #app[data-is-loaded=true] #app-body, #app[data-is-loaded=true] #app-header, #app[data-is-loaded=true] #app-sticky-nav {
 	opacity: 1;
 }
