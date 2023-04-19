@@ -9,9 +9,9 @@
 <title>글 상세보기</title>
 </head>
 
+<%@ include file="../mainpageSeo/header.jsp" %>
 
 <body>
-
 	<!-- 
 		제목 보여주는 sticky header입니다. 
 		스크롤 내리면서 프로필이 보일 때 잠깐 없어졌다 다시 뿅하고 나옵니다. 
