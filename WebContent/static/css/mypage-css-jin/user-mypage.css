@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+
 * {
 	word-break: break-word;
 }
@@ -48,21 +53,6 @@ body {
 
 #app-body, #app-sticky-nav {
 	opacity: 1;
-}
-
-#app #app-body {
-	height: 100%;
-	position: relative;
-	flex-grow: 1;
-}
-
-#app #app-body, #app #app-header {
-	opacity: 0;
-	transition: opacity .3s ease-in;
-}
-
-div {
-	display: block;
 }
 
 .container-fluid.container-md, .container-md, .container.container-md {

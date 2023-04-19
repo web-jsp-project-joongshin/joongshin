@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.btn-primary:hover {
+    background-color: #01c7c3;
+}
+
 * {
     word-break: break-word;
 }
@@ -55,7 +63,7 @@ div {
 }
 
 .modal .modal-content, .modal .modal-header {
-    border-radius: 0;
+    border-radius: 20px;
     border: none;
 }
 

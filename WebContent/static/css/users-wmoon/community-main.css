@@ -30,6 +30,10 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 	display: block;
 }
 
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 * {
 	word-break: break-word;
 }
@@ -340,7 +344,7 @@ li+li {
 }
 
 form {
-	width: 100%;
+	width: 98%;
 	display: block;
 }
 
@@ -386,7 +390,6 @@ img {
 .input-group>.custom-select:not(:first-child), .input-group>.form-control:not(:first-child) {
 	border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    margin-bottom: -14px;
 }
 
 .input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
@@ -493,7 +496,7 @@ li.selected span {
 }
 
 .community-content-layout {
-	width: 37.5rem;
+	width: 37.9rem;
     margin-left: 5.3125rem;
 }
 
@@ -839,3 +842,4 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 .time {
 	margin-right: -340px;
 }
+

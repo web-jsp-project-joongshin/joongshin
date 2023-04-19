@@ -6,6 +6,10 @@
 <meta charset="UTF-8">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 <link rel="stylesheet" href="../../static/css/users-wmoon/view-detail.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
 </head>
 <body>
 	<div id="app-body">
@@ -28,8 +32,8 @@
 							</ol>
 						</div>
 						<div class="post-header-title-wrapper has-service">
-							<p class="post-service-name">이사/입주 청소 업체</p>
-							<h1 data-testid="soomgo-life-post-title" class="post-header-title sg-text-display3 sg-font-bold">오늘도 이사청소</h1>
+							<p class="post-service-name">자격증/기술 주니어</p>
+							<h1 data-testid="soomgo-life-post-title" class="post-header-title sg-text-display3 sg-font-bold">컴퓨터 자격증 가지고 있는 주니어분들 찾습니다</h1>
 							<p class="post-address-info">경기 전체</p>
 						</div>
 						<div class="user-profile-bar-container">
@@ -38,7 +42,7 @@
 									<a class="user-profile-area">
 										<img class="profile-image" data-src="https://static.cdn.soomgo.com/upload/profile/89c0eaab-67ef-4897-938d-0bfa3f67e6d7.jpg" src="https://static.cdn.soomgo.com/upload/profile/89c0eaab-67ef-4897-938d-0bfa3f67e6d7.jpg">
 										<div class="profile-post-info">
-											<span class="user-name sg-text-subhead5 sg-font-medium">곽성광</span>
+											<span class="user-name sg-text-subhead5 sg-font-medium">문우람</span>
 											<span class="post-created-at sg-text-description sg-font-regular">6시간 전 · 조회 19</span>
 										</div>
 									</a>
@@ -63,10 +67,10 @@
 						<div class="body-contents">
 							<p class="text sg-text-body1 sg-font-regular">
 								<span>
-오늘도 
-이사청소 갔다왔습니다~ 
+컴퓨터 하시는분들중에 자격증 
+가지고 계신분들이랑 같이 공부하고 싶어요.	 
 
-아침에 커피한잔으로 일을 시작해요^^							
+아침에 커피랑 오피스 빌려서 같이 일을 시작해요^^							
 								</span>
 							</p>
 						</div>
@@ -176,63 +180,6 @@
 							</div>
 						</div>
 					</div>
-					<section class="recommend-request">
-						<div class="recommend-request-heading">
-							<h2 class="recommend-request-title sg-text-subhead2 sg-font-bold">
-								커뮤니티 인기 서비스 TOP 10
-								바로 견적을 요청해보세요!
-							</h2>
-							<a href="/category-home" class>
-								<span class="recommend-request-view-total sg-text-body2 sg-font-regular sg-text-gray-500"> 전체보기 </span>
-							</a>
-						</div>
-						<div class="recommend-request-popular-service">
-							<ul class="recommend-request-list">
-								<li class="recommend-request-item">
-									<a href="https://soomgo.com/hire/%EB%8F%84%EB%B0%B0-%EC%8B%9C%EA%B3%B5?from=%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0_%EB%B3%B8%EB%AC%B8" class>
-										<span class="recommend-request-chip-item gray-900">도배 시공</span>
-									</a>
-								</li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
-						</div>
-					</section>
-					<section class="popular-post">
-						<div class="popular-post-heading">
-							<h2 class="popular-post-title sg-text-subhead2 sg-font-bold">지금 가장 뜨거운 🔥 커뮤니티 게시글</h2>
-						</div>
-						<div class="popular-post-list-container">
-							<ul class="curation-list">
-								<li class="curation-list-item">
-									<a href="https://soomgo.com/community/soomgo-life/posts/643699dff22d78d3e3ccdc91-%EA%B2%B0%ED%98%BC%EC%8B%9D%EC%A4%80%EB%B9%84" class="curation-list-wrapper">
-										<div class="curation-contents">
-											<p class="topic-name">궁금해요</p>
-											<p class="curation-title">결혼식준비</p>
-											<p class="curation-content">시아버님이 성혼선언문을 읽어주시기로했는데 써주기는 싫다고하셔서요  근데 정말 오글거리게....써서 읽으셨으면 하는데 어떡하면 좋을까요?</p>
-											<div class="curation-reactions">
-												<span class="view-count">
-													1,029
-												</span>
-												<span class="comment-count">
-													15
-												</span>
-											</div>
-										</div>
-									</a>
-									<a></a>
-									<a></a>
-								</li>
-							</ul>
-						</div>
-					</section>
 				</section>
 			</div>
 		</div>

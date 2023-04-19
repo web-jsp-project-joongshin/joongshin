@@ -6,6 +6,47 @@
 <meta charset="UTF-8">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 <link rel="stylesheet" href="../../static/css/users-wmoon/community-main.css"/>
+<<<<<<< HEAD
+
+=======
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<style>
+.modal-open .modal {
+	overflow-x: hidden;
+    overflow-y: auto;
+}
+.modal {
+	padding-left: 0!important;
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+
+.fade {
+	transition: opacity .15s linear;
+}
+
+.modal .modal-dialog.modal-dialog-centered {
+	min-height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal.show .modal-dialog {
+	transform: none;
+	transition: transform .3s ease-out;
+}
+
+</style>
+>>>>>>> community-users/readme-wmoon
 </head>
 <body>
 	<div class="app-body">
@@ -18,7 +59,7 @@
 							<div>
 								<div class="write-button-desktop">
 									<div class="dropdown b-dropdown btn-group" id="__BVID__785">
-										<button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-primary" id="__BVID__785__BV_toggle_">글쓰기</button>
+										<button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-primary" id="__BVID__785__BV_toggle_" onclick="location.href='http://localhost:8090/joongshin/templates/community-users-wmoon/write.jsp'">글쓰기</button>
 										<ul role="menu" tabindex="-1" class="dropdown-menu dropdown-menu-right" aria-labelledby="__BVID__785__BV_toggle_">
 											<li class="dropdown-menu-item">
 												<a href="https://soomgo.com/community/soomgo-life/post/write?topicId=all" class="dropdown-item" role="menuitem" targer="_self">
@@ -50,10 +91,10 @@
 					</div>
 					<ul class="category">
 						<li class="sg-text-subhead4 sg-font-bold lg:sg-text-subhead2 lg:sg-font-bold sg-text-gray-900 selected">
-							<a href="https://soomgo.com/community/soomgo-life/all" class="link-text router-link-active"> 숨고생활 </a>
+							<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/community-main.jsp" class="link-text router-link-active"> 숨고생활 </a>
 						</li>
 						<li class="sg-text-body2 sg-font-regular lg:sg-text-body1 lg:sg-font-regular sg-text-gray-400">
-							<a href="https://soomgo.com/community/pro-knowhow/" class="link-text"> 고수의 노하우 </a>
+							<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/community-pic.jsp" class="link-text"> 고수의 노하우 </a>
 						</li>
 					</ul>
 					<div class="community-layout">
@@ -110,25 +151,44 @@
 							<section class="curation" style="margin-left: 3px; margin-top: 40px;">
 								<div class="curation-header">
 									<h2 class="sg-text-headline sg-font-bold sg-text-gray-900">지금 가장 뜨거운 숨고픽🔥</h2>
-									<span class="curation-page">1/2</span>
 								</div>
 								<div dir="ltr" class="slick-slider slick-initialized">
 									<button type="button" data-role="none" class="slick-arrow slick-prev slick-disabled" style="display: block;">Previous</button>
 									<div class="slick-list" style="margin-left: -9px;">
-										<div class="slick-track" style="width: 1020px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
-											<div tabindex="-1" data-index="0" aria-hidden="false" class="slick-slide slick-active slick-current" style="outline: none; width: 204px;">
+										<div class="slick-track" style="width: 1020px; opacity: 1; transform: translate3d(0px, 0px, 0px); display: flex;">
+											<div tabindex="-1" data-index="0" aria-hidden="false" class="slick-slide slick-active slick-current" style="outline: none; width: 192px; margin: 0 10px 0 0;">
 												<div>
 													<a href="https://soomgo.com/community/soomgo-life/posts/63db8b3ad1becfebc58891bc-%EC%88%A8%EA%B3%A0%EC%83%9D%ED%99%9C-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8---" class style="width: 100%; display: inline-block;">
 														<div class="curation-item admin-post">
 															<p class="topic sg-text-subhead7 sg-font-medium sg-text-gray-500 yu">공지사항</p>
-															<h3 class="sg-text-subhead2 sg-font-bold sg-text-gray-900 are">숨고생활 가이드라인 🤝</h3>
+															<h3 class="sg-text-subhead2 sg-font-bold sg-text-gray-900 are" style="font-size: 16px;">주니어와 이용자들의 생각 🤝</h3>
 															<p class="user-name sg-text-description sg-font-regular sg-text-white"> Soomgo </p>
 														</div>
 													</a>
 												</div>
 											</div>
-											<div></div>
-											<div></div>
+											<div tabindex="-1" data-index="0" aria-hidden="false" class="slick-slide slick-active" style="outline: none; width: 192px; margin: 0 10px 0 0;">
+												<div>
+													<a href="https://soomgo.com/community/soomgo-life/posts/63db8b3ad1becfebc58891bc-%EC%88%A8%EA%B3%A0%EC%83%9D%ED%99%9C-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8---" class style="width: 100%; display: inline-block;">
+														<div class="curation-item admin-post">
+															<p class="topic sg-text-subhead7 sg-font-medium sg-text-gray-500 yu">공지사항</p>
+															<h3 class="sg-text-subhead2 sg-font-bold sg-text-gray-900 are" style="font-size: 16px;">포인트 50만 캐시와 쿠폰 받으세요🎁</h3>
+															<p class="user-name sg-text-description sg-font-regular sg-text-white"> Soomgo </p>
+														</div>
+													</a>
+												</div>
+											</div>
+											<div tabindex="-1" data-index="0" aria-hidden="false" class="slick-slide slick-active" style="outline: none; width: 192px;">
+												<div>
+													<a href="https://soomgo.com/community/soomgo-life/posts/63db8b3ad1becfebc58891bc-%EC%88%A8%EA%B3%A0%EC%83%9D%ED%99%9C-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8---" class style="width: 100%; display: inline-block;">
+														<div class="curation-item admin-post">
+															<p class="topic sg-text-subhead7 sg-font-medium sg-text-gray-500 yu">공지사항</p>
+															<h3 class="sg-text-subhead2 sg-font-bold sg-text-gray-900 are" style="font-size: 16px;">💌내가 오늘 주인공이 되어보세요!</h3>
+															<p class="user-name sg-text-description sg-font-regular sg-text-white"> Soomgo </p>
+														</div>
+													</a>
+												</div>
+											</div>
 											<div></div>
 											<div></div>
 										</div>
@@ -157,13 +217,13 @@
 							<article class="community-feed-list">
 								<ul class="feed-list">
 									<li class="feed-item">
-										<a href="https://soomgo.com/community/soomgo-life/posts/643bc913f22d78d3e3cce3d4-%EC%A4%91%EA%B3%A0%EC%B0%A8-%EA%B5%AC%EC%9E%85-%EC%A0%84%EB%AC%B8%EA%B0%80-%EC%83%81%ED%83%9C-%EC%9E%98%EB%B3%B4%EC%8B%9C%EB%8A%94%EB%B6%84-%EC%9D%B8%EC%B2%9C-%EC%84%9C%EA%B5%AC" class>
-											<p class="topic-name sg-text-description sg-font-regular sg-text-gray-500">고수찾아요 · 중고차 구매</p>
+										<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/view-detail.jsp" class>
+											<p class="topic-name sg-text-description sg-font-regular sg-text-gray-500">고수찾아요 · 컴퓨터 자격증</p>
 											<div class="feed-content service-address-info">
 												<div>
 													<section class="item-wrapper">
-														<h3 class="sg-text-subhead5 sg-font-medium sg-text-gray-900">중고차 구입 전문가.상태 잘보시는분 인천 서구</h3>
-														<p class="content sg-text-body2 sg-font-regular sg-text-gray-500"> 중고차 구입 잘보시는분 찾습니다 전문가 </p>
+														<h3 class="sg-text-subhead5 sg-font-medium sg-text-gray-900">컴퓨터 자격증 가지고 있는 주니어분들 찾습니다</h3>
+														<p class="content sg-text-body2 sg-font-regular sg-text-gray-500">sql이나 Java 자격증 찾습니다 전문가 </p>
 													</section>
 													<p class="sub-information sg-text-description sg-font-regular sg-text-gray-500">인천/서구</p>
 												</div>
@@ -192,5 +252,13 @@
 			</div>
 		</div>
 	</div>
+ 	<!-- <div id="modal search-service-modal___BV_modal_outer_" style="position: absolute; z-index: 1040;">
+		<div role="dialog" aria-describedby="search-service-modal___BV_modal_body_" aria-modal="true" class="modal fade show search-pro-filter-modal" style="display: block;">
+			<div class="modal-dialog modal-md modal-dialog-centered mobile-full-modal"></div>
+		</div>
+	</div> -->
 </body>
+<script>
+
+</script>
 </html>

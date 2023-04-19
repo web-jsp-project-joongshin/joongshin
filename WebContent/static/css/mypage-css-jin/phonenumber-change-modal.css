@@ -1,42 +1,24 @@
 @charset "UTF-8";
 
-body {
-    margin: 0;
-    font-family: Noto Sans KR,Malgun Gothic,-apple-system,Segoe UI,Roboto,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #323232;
-    text-align: left;
-    background-color: #fff;
+.modal{ 
+  position:absolute; width:100%; height:100%; background: rgba(0,0,0,0.8); top:0; left:0; display:none;
 }
 
-.swal2-container.swal2-shown {
-    background-color: rgba(0,0,0,.4);
+.btn-primary:hover {
+    background-color: #38a799;
 }
 
-.swal2-container.swal2-center {
-    align-items: center;
+.btn-primary {
+    color: #fff;
+    background-color: #00c7ae;
+    border-color: #00c7ae;
 }
 
 
-.swal2-container {
-    display: flex;
-    position: fixed;
-    z-index: 1060;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 0.625em;
-    overflow-x: hidden;
-    transition: background-color .1s;
-    background-color: transparent;
-    -webkit-overflow-scrolling: touch;
+body{
+	font-family: 'Noto Sans KR', sans-serif;
 }
+
 
 * {
     word-break: break-word;
@@ -50,453 +32,134 @@ div {
     display: block;
 }
 
-.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal {
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal {
+    padding-left: 0!important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+}
+
+.fade {
+    transition: opacity .15s linear;
+}
+
+.modal.show .modal-dialog {
+    transform: none;
+}
+
+.modal .modal-dialog .modal-dialog-centered {
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal.fade .modal-dialog {
+    transition: transform .3s ease-out;
+}
+
+.modal-dialog.modal-select-profile-image {
+    width: 17.5rem;
+}
+
+.modal .modal-dialog {
     margin: auto;
 }
 
-.swal2-container.sg-swal .swal2-popup {
-    max-width: 17.5rem;
-    padding: 2.25rem 1rem 1.25rem;
-    border-radius: 0;
-}
-
-.swal2-show {
-    -webkit-animation: swal2-show .3s;
-    animation: swal2-show .3s;
-}
-
-.swal2-popup {
-    display: none;
-    position: relative;
-    box-sizing: border-box;
-    flex-direction: column;
-    justify-content: center;
-    width: 32em;
-    max-width: 100%;
-    padding: 1.25em;
+.modal .modal-content, .modal .modal-header {
+    border-radius: 20px;
     border: none;
-    border-radius: 0.3125em;
-    background: #fff;
-    font-family: inherit;
-    font-size: 1rem;
 }
 
-[class^=swal2] {
-    -webkit-tap-highlight-color: transparent;
-}
-
-.swal2-header {
+.modal-dialog-centered {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    min-height: calc(100% - 1rem);
 }
 
-ul {
+
+.modal-dialog .modal-select-profile-image .modal-content .modal-header {
+    padding: 2.25rem 1rem 0;
+    text-align: center;
+}
+
+.modal .modal-header {
+    padding: 1.75rem 1.75rem 0;
+}
+
+
+.modal-header {
+	
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 0.0625rem solid #e1e1e1;
+    border-top-left-radius: 0.2375rem;
+    border-top-right-radius: 0.2375rem;
+}
+
+h5 {
     display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
+    font-weight: bold;
 }
 
-.swal2-progress-steps {
-    align-items: center;
-    margin: 0 0 1.25em;
-    padding: 0;
-    background: inherit;
-    font-weight: 600;
-}
-
-.swal2-icon.swal2-error {
-    border-color: #f27474;
-}
-
-.swal2-icon.swal2-question {
-    border-color: #c9dae1;
-    color: #87adbd;
-}
-
-swal2-icon.swal2-warning {
-    border-color: #facea8;
-    color: #f8bb86;
-}
-
-.swal2-icon.swal2-info {
-    border-color: #9de0f6;
-    color: #3fc3ee;
-}
-
-.swal2-icon.swal2-success {
-    border-color: #a5dc86;
-}
-
-.swal2-icon {
-    position: relative;
-    box-sizing: content-box;
-    justify-content: center;
-    width: 5em;
-    height: 5em;
-    margin: 1.25em auto 1.875em;
-    border: 0.25em solid transparent;
-    border-radius: 50%;
-    font-family: inherit;
-    line-height: 5em;
-    cursor: default;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.swal2-icon.swal2-error .swal2-x-mark {
-    position: relative;
-    flex-grow: 1;
-}
-
-.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
-    left: 1.0625em;
-    transform: rotate(45deg);
-}
-
-.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
-    right: 1em;
-    transform: rotate(-45deg);
-}
-
-.swal2-icon.swal2-error [class^=swal2-x-mark-line] {
-    display: block;
-    position: absolute;
-    top: 2.3125em;
-    width: 2.9375em;
-    height: 0.3125em;
-    border-radius: 0.125em;
-    background-color: #f27474;
-}
-
-.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left] {
-    top: -0.4375em;
-    left: -2.0635em;
-    transform: rotate(-45deg);
-    transform-origin: 3.75em 3.75em;
-    border-radius: 7.5em 0 0 7.5em;
-}
-
-.swal2-icon.swal2-success [class^=swal2-success-circular-line] {
-    position: absolute;
-    width: 3.75em;
-    height: 7.5em;
-    transform: rotate(45deg);
-    border-radius: 50%;
-}
-
-.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip] {
-    top: 2.875em;
-    left: 0.875em;
-    width: 1.5625em;
-    transform: rotate(45deg);
-}
-
-.swal2-icon.swal2-success .swal2-success-ring {
-    position: absolute;
-    z-index: 2;
-    top: -0.25em;
-    left: -0.25em;
-    box-sizing: content-box;
+.modal .modal-header .modal-title {
     width: 100%;
-    height: 100%;
-    border: 0.25em solid rgba(165,220,134,.3);
-    border-radius: 50%;
-}
-
-.swal2-icon.swal2-success .swal2-success-fix {
-    position: absolute;
-    z-index: 1;
-    top: 0.5em;
-    left: 1.625em;
-    width: 0.4375em;
-    height: 5.625em;
-    transform: rotate(-45deg);
-}
-
-.swal2-image {
-    max-width: 100%;
-    margin: 1.25em auto;
-}
-
-img, svg {
-    vertical-align: middle;
-}
-
-img {
-    border-style: none;
-}
-
-.swal2-container.sg-swal .swal2-header .swal2-title {
-    margin-bottom: 1rem;
-    flex-direction: column;
+    text-align: center;
     font-size: 1.5rem;
-    color: #323232;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -.0313rem;
+    margin-top: 1.875rem;
 }
 
-.h4, .swal2-container.sg-swal .swal2-header .swal2-title, h4 {
-    line-height: 2.0625rem;
-    font-weight: 500;
-    letter-spacing: -.025rem;
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
 }
 
-.swal2-title {
+.modal-dialog.modal-select-profile-image .modal-content .modal-body {
+    padding: 1.25rem 1rem;
+}
+
+.modal .modal-body {
+    padding: 1.75rem;
+}
+
+.modal-body {
     position: relative;
-    max-width: 100%;
-    margin: 0 0 0.4em;
-    padding: 0;
-    color: #595959;
-    font-size: 1.875em;
-    font-weight: 600;
-    text-align: center;
-    text-transform: none;
-    word-wrap: break-word;
+    flex: 1 1 auto;
+    padding: 1rem;
 }
 
-.swal2-close {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    right: 0;
-    justify-content: center;
-    width: 1.2em;
-    height: 1.2em;
-    padding: 0;
-    overflow: hidden;
-    transition: color .1s ease-out;
-    border: none;
-    border-radius: 0;
-    outline: initial;
-    background: 0 0;
-    color: #ccc;
-    font-family: serif;
-    font-size: 2.5em;
-    line-height: 1.2;
-    cursor: pointer;
-}
-
-
-.swal2-content {
-    z-index: 1;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    color: #545454;
-    font-size: 1.125em;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
-    word-wrap: break-word;
-}
-
-.p2, .swal2-container.sg-swal .swal2-content #swal2-content {
-    font-size: .9rem;
-    line-height: 1.3125rem;
-    font-weight: 400;
-    letter-spacing: -.0125rem;
-}
-
-.swal2-input {
-    height: 2.625em;
-    padding: 0 0.75em;
-}
-
-.swal2-file, .swal2-input, .swal2-textarea {
-    box-sizing: border-box;
-    width: 100%;
-    transition: border-color .3s,box-shadow .3s;
-    border: 1px solid #d9d9d9;
-    border-radius: 0.1875em;
-    background: inherit;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.06);
-    color: inherit;
-    font-size: 1.125em;
-}
-
-.swal2-file {
-    background: inherit;
-    font-size: 1.125em;
-}
-
-.swal2-file, .swal2-input, .swal2-textarea {
-    box-sizing: border-box;
-    width: 100%;
-    transition: border-color .3s,box-shadow .3s;
-    border: 1px solid #d9d9d9;
-    border-radius: 0.1875em;
-    background: inherit;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.06);
-    color: inherit;
-    font-size: 1.125em;
-}
-
-.swal2-checkbox, .swal2-file, .swal2-input, .swal2-radio, .swal2-select, .swal2-textarea {
-    margin: 1em auto;
-}
-
-button, input {
-    overflow: visible;
-}
-
-button, input, optgroup, select, textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-.swal2-range {
-    margin: 1em auto;
-    background: inherit;
-}
-
-.swal2-range input, .swal2-range output {
-    height: 2.625em;
-    padding: 0;
-    font-size: 1.125em;
-    line-height: 2.625em;
-}
-
-.swal2-range input {
-    width: 80%;
-}
-
-.swal2-select {
-    min-width: 50%;
-    max-width: 100%;
-    padding: 0.375em 0.625em;
-    background: inherit;
-    color: inherit;
-    font-size: 1.125em;
-}
-
-.swal2-checkbox, .swal2-file, .swal2-input, .swal2-radio, .swal2-select, .swal2-textarea {
-    margin: 1em auto;
-}
-
-select {
-    word-wrap: normal;
-}
-
-button, select {
-    text-transform: none;
-}
-
-button, input, optgroup, select, textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-.swal2-checkbox, .swal2-radio {
-    align-items: center;
-    justify-content: center;
-    background: inherit;
-    color: inherit;
-}
-
-.swal2-checkbox, .swal2-file, .swal2-input, .swal2-radio, .swal2-select, .swal2-textarea {
-    margin: 1em auto;
-}
-
-.swal2-checkbox, .swal2-radio {
-    align-items: center;
-    justify-content: center;
-    background: inherit;
-    color: inherit;
-}
-
-.swal2-checkbox, .swal2-file, .swal2-input, .swal2-radio, .swal2-select, .swal2-textarea {
-    margin: 1em auto;
-}
-
-.swal2-checkbox input, .swal2-radio input {
-    margin: 0 0.4em;
-}
-
-input[type=checkbox], input[type=radio] {
-    box-sizing: border-box;
-    padding: 0;
-}
-
-.swal2-textarea {
-    height: 6.75em;
-    padding: 0.75em;
-}
-
-.swal2-file, .swal2-input, .swal2-textarea {
-    box-sizing: border-box;
-    width: 100%;
-    transition: border-color .3s,box-shadow .3s;
-    border: 1px solid #d9d9d9;
-    border-radius: 0.1875em;
-    background: inherit;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.06);
-    color: inherit;
-    font-size: 1.125em;
-}
-
-.swal2-checkbox, .swal2-file, .swal2-input, .swal2-radio, .swal2-select, .swal2-textarea {
-    margin: 1em auto;
-}
-
-textarea {
-    overflow: auto;
-    resize: vertical;
-}
-
-.swal2-validation-message {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 0.625em;
-    overflow: hidden;
-    background: #f0f0f0;
-    color: #666;
-    font-size: 1em;
-    font-weight: 300;
-}
-
-.swal2-actions {
-    display: flex;
-    z-index: 1;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 1.25em auto 0;
-}
-
-.swal2-container.sg-swal .swal2-actions button.btn.swal2-confirm {
-    border-radius: 4px;
-    height: 2.75rem;
-    background-color: #00c7ae;
-    color: #fff;
-}
-
-.swal2-container.sg-swal .swal2-actions button.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    font-size: .875rem;
-}
-
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-    cursor: pointer;
+.file-input {
+    position: relative;
 }
 
 .btn {
     font-weight: 500;
     transition: opacity .2s ease-in-out;
 }
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
 .btn {
     display: inline-block;
     font-weight: 400;
@@ -517,6 +180,8 @@ textarea {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+
+
 [type=button], [type=reset], [type=submit], button {
     -webkit-appearance: button;
 }
@@ -536,19 +201,111 @@ button, input, optgroup, select, textarea {
     line-height: inherit;
 }
 
-.swal2-container.sg-swal .swal2-actions button.btn.swal2-cancel {
-    margin-top: 0.75rem;
-    padding: 0;
-    font-size: .75rem;
-    color: #b5b5b5;
-    height: 1.125rem;
+.file-input .file {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
 }
 
-.swal2-footer {
-    justify-content: center;
-    margin: 1.25em 0 0;
-    padding: 1em 0 0;
-    border-top: 1px solid #eee;
-    color: #545454;
-    font-size: 1em;
+.custom-file, .custom-file-input {
+    position: relative;
+    width: 100%;
+    height: calc(1.5em + 1.5rem);
 }
+
+.custom-file {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.file-input .file input {
+    cursor: pointer;
+}
+.custom-file-input {
+    z-index: 2;
+    margin: 0;
+    opacity: 0;
+}
+
+.custom-file, .custom-file-input {
+    position: relative;
+    width: 100%;
+    height: calc(1.5em + 1.5rem);
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+input[type="file" i] {
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    align-items: baseline;
+    color: inherit;
+    text-overflow: ellipsis;
+    white-space: pre;
+    text-align: start !important;
+    padding: initial;
+    border: initial;
+    overflow: hidden !important;
+}
+
+.custom-file-label {
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.custom-control-label:before, .custom-file-label, .custom-select {
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.custom-file-label, .custom-file-label:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.6875rem 1rem;
+    line-height: 1.5;
+    color: #323232;
+}
+
+.custom-file-label {
+    left: 0;
+    z-index: 1;
+    height: calc(1.5em + 1.5rem);
+    font-weight: 400;
+    background-color: #fff;
+    border: 0.0625rem solid #e1e1e1;
+    border-radius: 0.25rem;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.d-block {
+    display: block!important;
+}
+
+.custom-file-label:after {
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    height: calc(1.5em + 1.375rem);
+    content: "Browse";
+    background-color: #f2f2f2;
+    border-left: inherit;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
