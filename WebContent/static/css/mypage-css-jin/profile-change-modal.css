@@ -4,6 +4,9 @@ body{
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
+.btn-primary:hover {
+    background-color: #01c7c3;
+}
 
 * {
     word-break: break-word;
