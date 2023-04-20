@@ -62,7 +62,7 @@ form {
 	margin-left: -.3125rem;
 }
 
-.col-12, .btn {
+.col-12, .btn-17 {
 	padding-right: .3215rem;
 	padding-left: .3215rem;
 }
@@ -80,11 +80,11 @@ form {
 
 .notice {
 	margin-top: 1.5rem;
-    margin-bottom: 2.5rem;
-    font-size: .75rem;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #999!important;
+	margin-bottom: 2.5rem;
+	font-size: .75rem;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #999 !important;
 }
 
 fieldset {
@@ -122,7 +122,8 @@ fieldset {
 }
 
 .legend-text {
-	font-size: 0.94rem; /* 강사님께서 폰트 사이즈 0.7로 하라 하셨는데 클래스명을 잘못 입력해서 적용이 안되서 0.7로 해보니 너무 작아서 0.94로 수정하였음
+	font-size: 0.94rem;
+	/* 강사님께서 폰트 사이즈 0.7로 하라 하셨는데 클래스명을 잘못 입력해서 적용이 안되서 0.7로 해보니 너무 작아서 0.94로 수정하였음
 	강사님께 개인적으로 질문 해서 수정하도록 하겠습니다. */
 	padding-bottom: .375rem;
 	font-weight: 500;
@@ -132,7 +133,7 @@ fieldset {
 }
 
 .inputclass {
-	padding: .75rem;
+	padding: .75rem !important;
 	border-radius: 4px;
 	display: block;
 	width: 100%;
@@ -203,7 +204,7 @@ fieldset {
 	margin-bottom: 1.5rem;
 }
 
-.btn {
+.btn-17 {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -236,7 +237,7 @@ fieldset {
 }
 
 .addressnumber, .certificationNumber {
-	padding: .75rem;
+	padding: .75rem !important;
 	border-radius: 4px;
 	display: block;
 	width: 70%;
@@ -262,7 +263,7 @@ fieldset {
 	position: relative;
 	left: 74%;
 	margin: 0;
-	padding: 0.6rem 0.7rem;
+	padding: 0.6rem 0.7rem !important;
 	font-size: 0.8rem;
 	color: #fff;
 	background-color: #00c7ae;
@@ -314,8 +315,8 @@ section {
 	border: initial;
 }
 
-.input-check{
-	margin-top: 17px;
+.input-check {
+	margin-top: 19px;
 }
 
 .terms-container {
@@ -357,7 +358,7 @@ ul li {
 .term-item, .custom-checkbox {
 	height: 100%;
 	min-height: unset;
-	padding-left: 0.7rem;
+	padding-left: 0.65rem;
 	cursor: pointer;
 	position: relative;
 	display: block;
@@ -365,18 +366,18 @@ ul li {
 
 .all-check-font {
 	display: block;
-    margin-top: -0.125rem;
-    margin-left: 0.5rem;
-    font-weight: 500;
-    font-size: 1rem;
-    color: #323232;
+	margin-top: -0.125rem;
+	margin-left: 0.5rem;
+	font-weight: 500;
+	font-size: 1rem;
+	color: #323232;
 }
 
-.custom-control-label{
+.custom-control-label {
 	position: relative;
-    margin-bottom: 0;
-    vertical-align: top;
-    cursor: pointer;
+	margin-bottom: 0;
+	vertical-align: top;
+	cursor: pointer;
 }
 
 label {
@@ -387,34 +388,37 @@ label {
 	cursor: pointer;
 }
 
-p{
+p {
 	display: block;
 	margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
 }
 
-.term-label{
+.term-label {
 	font-size: .875rem;
-    color: #737373;
-    cursor: pointer;
+	color: #737373;
+	cursor: pointer;
+	margin-left: 2px;
 }
 
-.btn-detail{
+.btn-detail {
 	border: 0;
-    padding: 0;
-    font-weight: 400;
-    font-size: .875rem;
-    color: #b5b5b5 !important;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    background-color: transparent;
-    margin: 0;
-    font-family: inherit;
+	padding: 0;
+	font-weight: 400;
+	font-size: .875rem;
+	color: #b5b5b5 !important;
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	user-select: none;
+	background-color: transparent;
+	margin: 0;
+	font-family: inherit;
+	float: right;
+	margin-top: 15px;
 }
 
 .searchdiv {
@@ -432,14 +436,13 @@ p{
 
 .line {
 	margin: auto .75rem;
-    width: .0625rem;
-    height: .75rem;
-    background-color: #e1e1e1;
-    display: flex;
-    margin: 11 auto -2rem;
-    font-size: .875rem;
+	width: .0625rem;
+	height: .75rem;
+	background-color: #e1e1e1;
+	display: flex;
+	margin: 11 auto -2rem;
+	font-size: .875rem;
 }
-
 
 .btn-signup, .btn-login {
 	margin-top: .75rem;
@@ -460,6 +463,10 @@ p{
 	text-transform: none;
 	overflow: visible;
 	margin: 0;
+}
+
+.btn-login{
+	margin-left: 5px;
 }
 
 .btntext {
@@ -502,9 +509,9 @@ p{
 	width: 100%;
 	margin-bottom: .75rem;
 	font-weight: 400;
-	background-color: #03c75a; 
-	border-color : #03c75a; 
-	color : #fff;
+	background-color: #03c75a;
+	border-color: #03c75a;
+	color: #fff;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -528,10 +535,10 @@ p{
 
 .col-13 {
 	flex: 0 0 100%;
-    max-width: 100%;
-    position: relative;
-    width: 100%;
-    padding-right: 0.3215rem;
-    padding-left: 0.3215rem;
-    margin: 5px;
+	max-width: 100%;
+	position: relative;
+	width: 100%;
+	padding-right: 0.3215rem;
+	padding-left: 0.3215rem;
+	margin: 5px;
 }
