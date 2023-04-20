@@ -513,7 +513,7 @@ textarea {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: transparent;
+    background-color:  #00c7ae;
     border: 0.0625rem solid transparent;
     padding: 0.6875rem 0.75rem;
     font-size: 1rem;
