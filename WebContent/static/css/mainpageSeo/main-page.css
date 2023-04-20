@@ -140,6 +140,7 @@ a {
 .go-list img[data-v-1b5b0368] {
     width: 1rem;
     margin-top: 0.125rem;
+    margin-left: 0.125rem;
 }
 
 img, svg {
@@ -305,6 +306,7 @@ element.style {
     line-height: 1.5;
     max-height: 3rem;
     -webkit-line-clamp: 2;
+    
 }
 /*아직 면접 이거 놓치면 불합격! 깨짐 */
 /* 
@@ -323,102 +325,186 @@ element.style {
 }
 /*이용자 게시판↑*/
 
-/*배너*/
-
-
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+/*지금 인기 있는 고수*/
+.container[data-v-38e68602]{
+	    width: 60.625rem;
+    margin: auto auto 5rem;
+	
 }
 
-/* 슬라이드 */
+.main-popular-pro[data-v-9e560958] {
+    height: unset;
+}	
 
-section.container {
-  position: relative;
-  width: 100%;
-  height: 54%;
-  overflow: hidden;
-  margin-top: 20px;
+.main-popular-pro .header[data-v-9e560958] {
+    margin-bottom: 1.5rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.main-popular-pro .title[data-v-9e560958] {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin: 0;
+	line-height: 1.5;
+	letter-spacing: normal;
 }
 
-div.banner {
-  width: 13500px;
-  transform: translate(-1500px);
+
+.main-popular-pro .chips[data-v-9e560958] {
+    padding: 0;
+    
+    margin-bottom: 1rem;
 }
 
-div.banner div {
-  width: 1500px;
-  height: 100%;
-  background-size: 50%;
-  float: left;
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
 }
 
-div.arrow {
-  cursor: pointer;
-  position: absolute;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  line-height: 40px;
-  text-align: center;
-  font-size: 2rem;
-  background-color: #0000005c;
-  color: white;
+.main-desktop-slide[data-v-538b8750] {
+    margin: 0 -0.5rem;
 }
 
-div.prev {
-  left: 70px;
-  bottom: 50%;
-  transform: translateY(50%);
+.slick-slider[data-v-3d1a4f76] {
+    position: relative;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
 }
 
-div.next {
-  right: 70px;
-  bottom: 50%;
-  transform: translateY(50%);
+.slick-list, .slick-slider {
+    position: relative;
+    display: block;
 }
 
-div.dots {
-  position: absolute;
-  width: 150px;
-  display: flex;
-  justify-content: space-between;
-  right: 5%;
-  top: 10px;
+.main-desktop-slide[data-v-538b8750] .slick-arrow.slick-prev.slick-disabled {
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
 }
 
-div.dot {
-  cursor: pointer;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 2px solid #313131;
+.main-desktop-slide[data-v-538b8750] .slick-arrow.slick-prev {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxmaWx0ZXIgeD0iLTEyLjUlIiB5PSItMTAlIiB3aWR0aD0iMTI1JSIgaGVpZ2h0PSIxMjUlIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj48ZmVPZmZzZXQgZHk9IjEiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxLjUiIGluPSJzaGFkb3dPZmZzZXRPdXRlcjEiIHJlc3VsdD0ic2hhZG93Qmx1ck91dGVyMSIvPjxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4yIDAiIGluPSJzaGFkb3dCbHVyT3V0ZXIxIi8+PC9maWx0ZXI+PGNpcmNsZSBpZD0iYiIgY3g9IjI0IiBjeT0iMjQiIHI9IjIwIi8+PC9kZWZzPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHVzZSBmaWxsPSIjMDAwIiBmaWx0ZXI9InVybCgjYSkiIHhsaW5rOmhyZWY9IiNiIi8+PHVzZSBmaWxsPSIjRkZGIiB4bGluazpocmVmPSIjYiIvPjxwYXRoIGQ9Ik0xMiAxMmgyNHYyNEgxMnoiLz48cGF0aCBzdHJva2U9IiM4ODgiIHN0cm9rZS13aWR0aD0iMS43IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0yNiAzMWwtNy03IDctNyIvPjwvZz48L3N2Zz4=);
+    left: -1.125rem;
 }
 
-/* 자동무한 슬라이드 */
-
-.rolling_wrap {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  margin-top: 35px;
-  overflow: hidden;
+.main-popular-pro[data-v-9e560958] .slick-arrow {
+    top: 6rem;
 }
 
-.rolling_wrap a {
-  position: absolute;
-  width: 23%;
-  height: 200px;
+.main-desktop-slide[data-v-538b8750] .slick-arrow {
+    width: 3rem;
+    height: 3rem;
+    z-index: 1;
+    top: 4.8125rem;
 }
 
-.rolling_wrap a img {
-  width: 100%;
-  height: 100%;
-  border-radius: 4%;
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button;
 }
 
-.rolling_wrap a:hover {
-  filter: brightness(0.7);
+.slick-next, .slick-next:focus, .slick-next:hover, .slick-prev, .slick-prev:focus, .slick-prev:hover {
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-next, .slick-prev {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    padding: 0;
+    transform: translateY(-50%);
+    border: none;
+}
+
+div Attributes Style {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button {
+	writing-mode: horizontal-tb !important;
+	text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    border-radius: 0;
+}
+
+.slick-list[data-v-3d1a4f76] {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.main-desktop-slide[data-v-538b8750] .slick-list {
+    width: 100%;
+}
+
+.slick-list[data-v-3d1a4f76] {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+element.style {
+    width: 2574px;
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+[data-v-55917fe8] .slick-track {
+    margin-left: 0;
+    margin: 0;
+}
+.slick-track[data-v-e4caeaf8] {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    }
+.slick-track[data-v-e4caeaf8]:after, .slick-track[data-v-e4caeaf8]:before {
+    display: table;
+    content: "";
+}
+.slick-track[data-v-e4caeaf8]:after {
+    clear: both;
 }
 

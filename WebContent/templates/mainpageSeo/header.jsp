@@ -3,8 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link data-vue-meta="1" rel="shortcut icon"
-	href="https://static.cdn.soomgo.com/static/favicon.ico">
+<!-- 로고 -->
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
+
+
 <link rel="stylesheet" type="text/css" href="../../static/css/mainpageSeo/hf.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +25,7 @@
 						<div data-v-5f10666f="" class="logo">
 							<a data-v-5f10666f="" href="/?from=logo" class=""> <img
 								data-v-5f10666f=""
-								src="https://assets.cdn.soomgo.com/icons/icon-navi-logo.svg"
+								src="../../static/image/logo/JOONGSHIN.svg"
 								alt="숨고, 숨은고수">
 							</a>
 						</div>

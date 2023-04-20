@@ -165,8 +165,9 @@ header {
 }
 .desktop-header .logo {
     margin-right: 1.875rem;
+   
 }
-
+s
 a, a:hover {
     text-decoration: none;
 }
@@ -176,10 +177,12 @@ a {
     background-color: transparent;
      
 }
-.desktop-header .logo img{
-    height: 1.6875rem;
-}
 
+
+.desktop-header .logo img {
+    height: 1.6875rem;
+    padding: 3px;
+}
 img, svg {
     vertical-align: middle;
 }
@@ -547,8 +550,8 @@ button, select {
 
 .btn-primary {
     color: #fff;
-    background-color: #00c7ae;
-    border-color: #00c7ae;
+    background-color:#6FB6C0; /*#00c7ae;*/
+    border-color: #6FB6C0;
 }
 
 .btn a {
@@ -674,17 +677,10 @@ p {
     font-size: 1.25rem;
     font-weight: 500;
     font-stretch: normal;
-    color: #00c7ae;
+    color: #6FB6C0;
 }
 
 
-.footer-container-row .col-content p.contact {
-    padding-bottom: 0.1875rem;
-    font-size: 1.25rem;
-    font-weight: 500;
-    font-stretch: normal;
-    color: #00c7ae;
-}
 .footer-container-row .col-content p {
     padding-bottom: 1.875rem;
 }
@@ -700,7 +696,7 @@ p {
     display: inline-block;
     width: 8.5rem;
     height: 2.25rem;
-    background-color: #00c7ae;
+    background-color:#6FB6C0;
     border-radius: 1.28125rem;
     color: #fff;
     font-size: .75rem;
