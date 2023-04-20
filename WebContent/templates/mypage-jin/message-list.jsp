@@ -38,8 +38,11 @@
 				<ul class="tab-list"  >
 					<li class="tab sg-text-body2 sg-font-regular sg-text-gray-400"
 						 >
-						 <a href="./board-list.jsp">
-						 작성 글</a></li>
+						 <a href="./board-list.jsp" style="
+					    text-decoration: none;
+					    color: #2e2e2e;
+					    font-weight: 700;
+					">작성 글</a></li>
 					<li
 						class="tab router-link-exact-active router-link-active sg-text-subhead4 sg-font-bold sg-text-gray-900 selected"
 						 >작성 댓글</li>

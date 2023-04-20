@@ -165,8 +165,7 @@
 					aria-label="Close this dialog" style="display: none;">×</button>
 			</div>
 			<div class="swal2-content">
-				<div id="swal2-content" style="display: block;">안전한 고수님의 활동을
-					위해 휴대폰 본인인증이 필요합니다.</div>
+				<div id="swal2-content" style="display: block;">안전한 고수님의 활동을 위해 <br>휴대폰 본인인증이 필요합니다.</div>
 				<input class="swal2-input" style="display: none;"><input
 					type="file" class="swal2-file" style="display: none;">
 				<div class="swal2-range" style="display: none;">

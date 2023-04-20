@@ -84,7 +84,7 @@
     var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (regex.test(email)) {
       message.innerHTML = "유효한 이메일 주소입니다.";
-      message.style.color = 'red';
+      message.style.color = 'green';
       input.classList.add("is-valid");
       input.classList.remove("is-invalid");
       return true;
