@@ -26,7 +26,7 @@ header.navi-bar {
     min-width: 232px;
     max-width: 288px;
     height: 100vh;
-    background-color: #ECFDFA;
+    background-color: rgba(111, 182, 192, 0.3);
 }
 
 .logo {
@@ -80,6 +80,7 @@ header.navi-bar {
 
 .navi-title {
     font-weight: bold;
+    cursor: pointer;
     @media (max-width: 1275px) {
         font-size: 14px
     }
@@ -174,19 +175,20 @@ section.top-line {
     margin-left: 10px;
 }
 
-section.content {
+table {
     width: 100%;
-    margin: 40px auto 20px;
+    margin: 30px auto;
+    border-collapse: collapse;
 }
 
-.content-line {
-    width: 100%;
-    padding: 20px 5px;
-    border-top: 1px solid rgb(240, 240, 240);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-weight: bold;
+th {
+    background-color: rgb(230, 230, 230);
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    text-overflow: ellipsis;
 }
 
 #check-top {

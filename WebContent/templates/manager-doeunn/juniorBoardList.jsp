@@ -48,24 +48,34 @@
                 <section class="top-line">
                     <div class="search">
                         <div class="search-icon"></div>
-                        <input placeholder="게시글 검색"/>
+                        <input placeholder="게시글 검색" name="search"/>
                     </div>
                     <button type="button" class="delete-btn">게시물 삭제</button>
                 </section>
-                <section class="content">
-                    <div class="content-line top">
-                        <input type="checkbox" name="check-top" id="check-top" size="20"/>
-                        <div>게시물 번호</div>
-                        <div>제목</div>
-                        <div>내용</div>
-                        <div>작성날짜</div>
-                        <div>회원번호</div>
-                    </div>
-                </section>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" class="check-top"/></th>
+                            <th>게시물 번호</th>
+                            <th>제목</th>
+                            <th>내용</th>
+                            <th>작성날짜</th>
+                            <th>회원번호</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"/></td>
+                        <td>1</td>
+                        <td>제목이 들어갈 자리입니다</td>
+                        <td>내용이 들어갈 자리입니다</td>
+                        <td>2023-04-19</td>
+                        <td>21</td>
+                    </tr>
+                </table>
             </form>
         </main>
    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="../../static/js/manager-doeunn/junior-borad.js"></script>
+<script src="../../static/js/manager-doeunn/junior-borad-list.js"></script>
 </html>
