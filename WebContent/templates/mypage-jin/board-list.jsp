@@ -34,7 +34,11 @@
 						작성 글</li>
 					<li  
 						class="tab sg-text-body2 sg-font-regular sg-text-gray-400">
-					<a href="./message-list.jsp">
+					<a href="./message-list.jsp" style="
+					    text-decoration: none;
+					    color: #2e2e2e;
+					    font-weight: 700;
+					">
 						작성 댓글</a></li>
 						
 						

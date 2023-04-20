@@ -16,16 +16,15 @@
 <link href="../../static/css/mypage-css-jin/password-change.css" rel="stylesheet" type="text/css"/>
 <link href="../../static/css/mypage-css-jin/header-footer.css" rel="stylesheet" type="text/css"/>
 
-<style type="text/css">
+<style>
+
+    .is-invalid {
+        border-color: red;
+    }
 </style>
 
 </head>
 <body>
-
-
-
-
-
 
 	<div id="app-body">
 		<div class="container container-md">
@@ -49,7 +48,7 @@
 						  <legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0" id="__BVID__422__BV_label_">기존 비밀번호</legend>
 						  <div>
 						    <div role="group" class="input-group current-password">
-						      <input name="currentPassword" type="password" placeholder="현재 비밀번호를 입력해주세요" autocomplete="off" class="form-control is-invalid" autocapitalize="off" spellcheck="false" data-vv-validate-on="blur" aria-invalid="true" id="__BVID__423">
+						      <input name="currentPassword" type="password" placeholder="현재 비밀번호를 입력해주세요" autocomplete="off" class="form-control" autocapitalize="off" spellcheck="false" data-vv-validate-on="blur" aria-invalid="true" id="ㄷ">
 						      <button type="button" class="btn btn-secondary">표시</button>
 						    </div>
 						    <div id="message"></div>
@@ -62,7 +61,7 @@
 					  <fieldset class="form-group" id="__BVID__424">
 					    <legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0" id="__BVID__424__BV_label_">새로운 비밀번호</legend>
 					    <div>
-					      <input name="password" type="password" placeholder="영문+숫자 조합 8자리 이상 입력해주세요" autocomplete="off" class="form-control is-valid" autocapitalize="off" spellcheck="false" data-vv-validate-on="blur" aria-invalid="true" id="__BVID__425" aria-required="true">
+					      <input name="password" type="password" placeholder="영문+숫자 조합 8자리 이상 입력해주세요" autocomplete="off" class="form-control" autocapitalize="off" spellcheck="false" data-vv-validate-on="blur" aria-invalid="true" id="__BVID__425" aria-required="true">
 					      <div id="passwordMessage"></div>
 					    </div>
 					  </fieldset>
@@ -71,7 +70,7 @@
 					  <fieldset class="form-group" id="__BVID__426">
 					    <legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0" id="__BVID__426__BV_label_">새로운 비밀번호 확인</legend>
 					    <div>
-					      <input name="confirmPassword" type="password" placeholder="비밀번호를 한번 더 입력해주세요" autocomplete="off" class="form-control is-valid" autocapitalize="off" spellcheck="false" aria-invalid="true" id="__BVID__427" aria-required="true">
+					      <input name="confirmPassword" type="password" placeholder="비밀번호를 한번 더 입력해주세요" autocomplete="off" class="form-control" autocapitalize="off" spellcheck="false" aria-invalid="true" id="__BVID__427" aria-required="true">
 					      <div id="confirmPasswordMessage"></div>
 					    </div>
 					  </fieldset>
@@ -105,13 +104,18 @@ const showPasswordButton = document.querySelector('.current-password button');
 function validatePassword() {
   if (currentPasswordInput.value.trim() === '') {
     message.innerText = '비밀번호를 입력해주세요.';
+    message.style.color = 'red';
+    currentPasswordInput.classList.add("is-invalid");
     return true;
   } else if (currentPasswordInput.value !== '1111') {
     message.innerText = '기존 비밀번호와 다릅니다';
+    message.style.color = 'red';
+    currentPasswordInput.classList.add("is-invalid");
     return false;
+  }else{
+	  message.innerHTML = "";
+	  currentPasswordInput.classList.remove("is-invalid");
   }
-  message.innerText = '';
-  return true;
 }
 
 document.querySelector('button[type="submit"]').addEventListener('click', (event) => {
@@ -130,18 +134,20 @@ function validateNewPassword() {
   const newPasswordValue = newPasswordInput.value;
   if (!newPasswordValue) {
     newPasswordMessage.innerText = '비밀번호를 입력해주세요.';
-    newPasswordInput.classList.add('is-invalid');
+    newPasswordMessage.style.color = 'red';
+    newPasswordInput.classList.add("is-invalid");
     
     return false;
   }
   if (!/^(?=.*[a-zA-Z])(?=.*[0-9]).{8,}$/.test(newPasswordValue)) {
     newPasswordMessage.innerText = '영문+숫자 조합 8자리 이상 입력해주세요.';
-    newPasswordInput.classList.add('is-invalid');
+    newPasswordMessage.style.color = 'red';
+    newPasswordInput.classList.add("is-invalid");
     return false;
+  }else{
+	  newPasswordMessage.innerHTML = "";
+	newPasswordInput.classList.remove('is-invalid');
   }
-  newPasswordMessage.innerText = '';
-  newPasswordInput.classList.remove('is-invalid');
-  return true;
 }
 
 
@@ -152,20 +158,19 @@ function validateConfirmPassword() {
   const confirmPasswordValue = confirmPasswordInput.value;
   if (newPasswordValue !== confirmPasswordValue) {
     confirmPasswordMessage.innerText = '비밀번호가 일치하지 않습니다.';
-    confirmPasswordInput.classList.add('is-invalid');
+    confirmPasswordMessage.style.color = 'red';
+    confirmPasswordInput.classList.add("is-invalid");
     return false;
+  }else{
+	  confirmPasswordMessage.innerText = "";
+	  confirmPasswordInput.classList.remove("is-invalid");
+	  
   }
-  confirmPasswordMessage.innerText = '';
-  confirmPasswordInput.classList.remove('is-invalid');
-  return true;
 }
 
 function validatePasswordInputs() {
   return validateNewPassword() && validateConfirmPassword();
 }
-
-
-
 
 currentPasswordInput.addEventListener('blur', validatePassword);
 newPasswordInput.addEventListener('blur', validateNewPassword);
@@ -180,9 +185,5 @@ showPasswordButton.addEventListener('click', () => {
 
 </script>
 
-	
-	
-	
-	
 </body>
 </html>
