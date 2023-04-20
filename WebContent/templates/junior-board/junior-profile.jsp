@@ -8,9 +8,9 @@
 <title>권지안 고수의 아동미술 레슨 서비스, 서울 성북구 - 숨고, 숨은고수</title>
 </head>
 
-<jsp:include page="../mainpageSeo/header.jsp"/>
+<%@ include file="../mainpageSeo/header.jsp" %>
 
-<body>
+<body><div id="app" class="webp-bgroup" data-browser="Chrome" data-is-loaded="true">
 	<div id="app-body">
 		<div class="provider-profile">
 			
@@ -673,6 +673,7 @@
 				</button>
 			</div>
 		</div>
+	</div>
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

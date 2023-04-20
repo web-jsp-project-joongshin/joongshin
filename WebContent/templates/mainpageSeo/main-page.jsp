@@ -15,6 +15,41 @@
 
 <body>
 <%@ include file="header.jsp" %>
+
+<div id="app-body">
+<div class="home" data-v-38e68602="">
+<div class="observer-container" data-v-45a9f2fc="" data-v-38e68602="">
+<div dir="ltr" class="slick-slider slick-initialized" data-v-3d1a4f76="" data-v-55917fe8="" data-v-1438af5a="">
+<div class="slick-list" data-v-3d1a4f76="">
+<!-- 배너 -->
+<section class="container">
+      <div class="banner" style="transform: translate(-12000px); transition: transform 0.7s ease 0s;">
+        <div id="first-temp" style="background-image: url(https://static.cdn.soomgo.com/upload/main-banner/361dbfb8-86c6-494d-be8f-931dc1f7e681.png?webp=1);"></div>
+        <div class="image" style="background-image: url(https://static.cdn.soomgo.com/upload/main-banner/d0053603-2d00-4a82-bf1a-689c29eafc3a.png?webp=1);"></div>
+        <div class="image" style="background-image: url(&quot;2.png&quot;);"></div>
+        <div class="image" style="background-image: url(&quot;3.png&quot;);"></div>
+        <div class="image" style="background-image: url(&quot;4.png&quot;);"></div>
+        <div class="image" style="background-image: url(&quot;5.png&quot;);"></div>
+        <div class="image" style="background-image: url(&quot;6.png&quot;);"></div>
+        <div class="image" style="background-image: url(&quot;7.png&quot;);"></div>
+        <div id="last-temp" style="background-image: url(&quot;1.png&quot;);"></div>
+      </div>
+      <div class="arrow prev">&lt;</div>
+      <div class="arrow next">&gt;</div>
+      i
+      <div class="dots">
+        <div class="dot 1" style="background: rgb(49, 49, 49);"></div>
+        <div class="dot 2" style="background: none;"></div>
+        <div class="dot 3" style="background: none;"></div>
+        <div class="dot 4" style="background: none;"></div>
+        <div class="dot 5" style="background: none;"></div>
+        <div class="dot 6" style="background: none;"></div>
+        <div class="dot 7" style="background: none;"></div>
+      </div>
+    </div>
+    </section>
+<!-- 배너 -->
+
 <!--이용자 커뮤니티  -->
 								<div class="main-community slide-knowhow-list container"
 									data-v-0b8ae29e="" data-v-2590092d="">
@@ -134,17 +169,11 @@
 										</div>
 									</div>
 								</div><!-- 이용자 게시글 닫는태그 -->
-					</div><!-- 배너 닫는 태그 -->
-</div>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>	
+								
+					</div>
+					</div>
 <%@ include file="footer.jsp" %>
 </body>
-
-
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+ <script type="text/javascript" src="../../static/js/main-page.js"></script>
 </html>

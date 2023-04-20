@@ -9,10 +9,9 @@
 <title>글 상세보기</title>
 </head>
 
-<jsp:include page="../mainpageSeo/header.jsp"/>
+<%@ include file="../mainpageSeo/header.jsp" %>
 
 <body>
-
 	<!-- 
 		제목 보여주는 sticky header입니다. 
 		스크롤 내리면서 프로필이 보일 때 잠깐 없어졌다 다시 뿅하고 나옵니다. 
@@ -156,6 +155,6 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="../../static/js/junior-board/junior-article-view-detail.js"></script>
 
-<jsp:include page="../mainpageSeo/footer.jsp"/>
+
 
 </html>
