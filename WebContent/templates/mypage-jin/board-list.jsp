@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link data-vue-meta="1" rel="icon" type="image/png" sizes="32x32"
-	href="https://static.cdn.soomgo.com/static/favicon-32x32.png?webp=1">
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 <!--폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,11 +13,10 @@
 
 
 <link href="../../static/css/mypage-css-jin/board-list.css" rel="stylesheet" type="text/css"/>
-<link href="../../static/css/mypage-css-jin/header-footer.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
-
+<%@ include file="../mainpageSeo/header.jsp" %>
 
 	<div id="app-body">
 		<div  class="my-page-community-activity-container">
@@ -34,21 +32,30 @@
 						작성 글</li>
 					<li  
 						class="tab sg-text-body2 sg-font-regular sg-text-gray-400">
-					<a href="./message-list.jsp">
+					<a href="./message-list.jsp" style="
+					    text-decoration: none;
+					    color: #2e2e2e;
+					    font-weight: 700;
+					">
 						작성 댓글</a></li>
 						
 						
 				</ul>
-				<section  class="community-content-section white">
-					<article  
-						class="no-items align-self-center text-center no-items">
-						<i ><img 
-							
-							src="https://assets.cdn.soomgo.com/icons/icon-coupon-empty.svg"
-							alt="empty"></i>
-						<h3 >작성 글이 없습니다</h3>
-						<p  class="help-block p2">생활서비스에 대한<br> 정보와 질문을 올려보세요!</p>
-						
+				<article class="pro-knowhow-list">
+						<ul>
+							<li class="pro-knowhow-list-item">
+								<section class="item-wrapper">
+									<a href="https://soomgo.com/community/pro-knowhow/752--%EC%8B%9C%EA%B0%84-%EA%B0%80%EB%8A%94-%EC%A4%84-%EB%AA%A8%EB%A5%B4%EB%8A%94-%EC%88%98%EC%97%85--%EB%A7%8C%EB%93%9C%EB%8A%94-%EA%B3%A0%EC%88%98">
+										<figure class= "image-wrapper">
+											<img alt="커버 이미지" class="content-image" src="https://static.cdn.soomgo.com/upload/talkboard/f075fba9-b4bd-4611-b21b-3dfda78f4c05.jpg" lazy="loaded">
+										</figure>
+										<h3 class="content-title">'시간 가는 줄 모르는 수업' 만드는 고수</h3>
+										<p class="content-writer">권지안</p>
+									</a>
+								</section>
+							</li>
+						</ul>
+						<div></div>
 					</article>
 				</section>
 			</div>
@@ -57,4 +64,5 @@
 	
 
 </body>
+<jsp:include page="../mainpageSeo/footer.jsp"/>
 </html>

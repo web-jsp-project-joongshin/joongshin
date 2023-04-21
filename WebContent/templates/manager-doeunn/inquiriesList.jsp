@@ -48,7 +48,7 @@
                 <section class="top-line">
                     <div class="search">
                         <div class="search-icon"></div>
-                        <input placeholder="문의글 검색"/>
+                        <input placeholder="문의글 검색" name="search"/>
                     </div>
                     <select name="select-option" class="select-option">
                         <option value="all">전체</option>
@@ -56,17 +56,28 @@
                     </select>
                     <button type="button" class="delete-btn">문의글 삭제</button>
                 </section>
-                <section class="content">
-                    <div class="content-line top">
-                        <input type="checkbox" name="check-top" id="check-top" size="20" style="width: 30px; text-align: center;"/>
-                        <div style="width: 80px; text-align: center;">문의 번호</div>
-                        <div style="width: 250px; text-align: center;">제목</div>
-                        <div style="width: 300px; text-align: center;">내용</div>
-                        <div>작성날짜</div>
-                        <div>답변날짜</div>
-                        <div>상태</div>
-                    </div>
-                </section>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" class="check-top"/></th>
+                            <th>문의 번호</th>
+                            <th>제목</th>
+                            <th>내용</th>
+                            <th>작성날짜</th>
+                            <th>답변날짜</th>
+                            <th>상태</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"/></td>
+                        <td>1</td>
+                        <td>제목이 들어갈 자리입니다</td>
+                        <td>내용이 들어갈 자리입니다</td>
+                        <td>2023-04-19</td>
+                        <td>2023-04-19</td>
+                        <td class="pending">답변완료</td>
+                    </tr>
+                </table>
             </form>
         </main>
    </div>

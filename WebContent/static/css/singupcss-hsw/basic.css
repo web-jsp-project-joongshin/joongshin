@@ -1,4 +1,4 @@
-@charset "EUC-KR";
+@charset "UTF-8";
 
 * {
 	box-sizing: border-box;
@@ -16,6 +16,7 @@ body {
 	color: #323232;
 	text-align: left;
 	background-color: #fff;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 .login-page {
@@ -62,7 +63,7 @@ form {
 	margin-left: -.3125rem;
 }
 
-.col-12, .btn {
+.col-12, .btn-17 {
 	padding-right: .3215rem;
 	padding-left: .3215rem;
 }
@@ -74,17 +75,14 @@ form {
 	width: 100%;
 }
 
-.col-14 {
-	margin-top: 25px;
-}
 
 .notice {
 	margin-top: 1.5rem;
-    margin-bottom: 2.5rem;
-    font-size: .75rem;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #999!important;
+	margin-bottom: 2.5rem;
+	font-size: .75rem;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #999 !important;
 }
 
 fieldset {
@@ -122,8 +120,9 @@ fieldset {
 }
 
 .legend-text {
-	font-size: 0.94rem; /* °­»ç´Ô²²¼­ ÆùÆ® »çÀÌÁî 0.7·Î ÇÏ¶ó ÇÏ¼Ì´Âµ¥ Å¬·¡½º¸íÀ» Àß¸ø ÀÔ·ÂÇØ¼­ Àû¿ëÀÌ ¾ÈµÇ¼­ 0.7·Î ÇØº¸´Ï ³Ê¹« ÀÛ¾Æ¼­ 0.94·Î ¼öÁ¤ÇÏ¿´À½
-	°­»ç´Ô²² °³ÀÎÀûÀ¸·Î Áú¹® ÇØ¼­ ¼öÁ¤ÇÏµµ·Ï ÇÏ°Ú½À´Ï´Ù. */
+	font-size: 0.94rem;
+	/* ê°•ì‚¬ë‹˜ê»˜ì„œ í°íŠ¸ ì‚¬ì´ì¦ˆ 0.7ë¡œ í•˜ë¼ í•˜ì…¨ëŠ”ë° í´ë˜ìŠ¤ëª…ì„ ì˜ëª» ì…ë ¥í•´ì„œ ì ìš©ì´ ì•ˆë˜ì„œ 0.7ë¡œ í•´ë³´ë‹ˆ ë„ˆë¬´ ì‘ì•„ì„œ 0.94ë¡œ ìˆ˜ì •í•˜ì˜€ìŒ
+	ê°•ì‚¬ë‹˜ê»˜ ê°œì¸ì ìœ¼ë¡œ ì§ˆë¬¸ í•´ì„œ ìˆ˜ì •í•˜ë„ë¡ í•˜ê² ìŠµë‹ˆë‹¤. */
 	padding-bottom: .375rem;
 	font-weight: 500;
 	padding-top: 0 !important;
@@ -132,7 +131,7 @@ fieldset {
 }
 
 .inputclass {
-	padding: .75rem;
+	padding: .75rem !important;
 	border-radius: 4px;
 	display: block;
 	width: 100%;
@@ -167,32 +166,6 @@ fieldset {
 	text-align: center;
 }
 
-.inputpassword {
-	border: .0625rem solid #fa5963;
-	padding-right: 3.125rem;
-	border-top-right-radius: .25rem;
-	border-bottom-right-radius: .25rem;
-	padding: .75rem;
-	border-radius: 4px;
-	position: relative;
-	flex: 1 1 0%;
-	min-width: 0;
-	margin-bottom: 0;
-	display: block;
-	width: 100%;
-	height: calc(1.5em + 1.5rem);
-	font-size: 0.75rem;
-	font-weight: 400;
-	line-height: 1.5;
-	color: #323232;
-	background-color: #fff;
-	background-clip: padding-box;
-	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-	overflow: visible;
-	margin: 0;
-	font-family: inherit;
-}
-
 .input-group {
 	position: relative;
 	display: flex;
@@ -203,7 +176,7 @@ fieldset {
 	margin-bottom: 1.5rem;
 }
 
-.btn {
+.btn-17 {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -236,7 +209,7 @@ fieldset {
 }
 
 .addressnumber, .certificationNumber {
-	padding: .75rem;
+	padding: .75rem !important;
 	border-radius: 4px;
 	display: block;
 	width: 70%;
@@ -262,7 +235,7 @@ fieldset {
 	position: relative;
 	left: 74%;
 	margin: 0;
-	padding: 0.6rem 0.7rem;
+	padding: 0.6rem 0.7rem !important;
 	font-size: 0.8rem;
 	color: #fff;
 	background-color: #00c7ae;
@@ -314,8 +287,8 @@ section {
 	border: initial;
 }
 
-.input-check{
-	margin-top: 17px;
+.inputCheck {
+	margin-top: 19px;
 }
 
 .terms-container {
@@ -357,7 +330,7 @@ ul li {
 .term-item, .custom-checkbox {
 	height: 100%;
 	min-height: unset;
-	padding-left: 0.7rem;
+	padding-left: 0.65rem;
 	cursor: pointer;
 	position: relative;
 	display: block;
@@ -365,18 +338,18 @@ ul li {
 
 .all-check-font {
 	display: block;
-    margin-top: -0.125rem;
-    margin-left: 0.5rem;
-    font-weight: 500;
-    font-size: 1rem;
-    color: #323232;
+	margin-top: -0.125rem;
+	margin-left: 0.5rem;
+	font-weight: 500;
+	font-size: 1rem;
+	color: #323232;
 }
 
-.custom-control-label{
+.custom-control-label {
 	position: relative;
-    margin-bottom: 0;
-    vertical-align: top;
-    cursor: pointer;
+	margin-bottom: 0;
+	vertical-align: top;
+	cursor: pointer;
 }
 
 label {
@@ -387,34 +360,37 @@ label {
 	cursor: pointer;
 }
 
-p{
+p {
 	display: block;
 	margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
 }
 
-.term-label{
+.term-label {
 	font-size: .875rem;
-    color: #737373;
-    cursor: pointer;
+	color: #737373;
+	cursor: pointer;
+	margin-left: 2px;
 }
 
-.btn-detail{
+.btn-detail {
 	border: 0;
-    padding: 0;
-    font-weight: 400;
-    font-size: .875rem;
-    color: #b5b5b5 !important;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    background-color: transparent;
-    margin: 0;
-    font-family: inherit;
+	padding: 0;
+	font-weight: 400;
+	font-size: .875rem;
+	color: #b5b5b5 !important;
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	user-select: none;
+	background-color: transparent;
+	margin: 0;
+	font-family: inherit;
+	float: right;
+	margin-top: 15px;
 }
 
 .searchdiv {
@@ -432,14 +408,13 @@ p{
 
 .line {
 	margin: auto .75rem;
-    width: .0625rem;
-    height: .75rem;
-    background-color: #e1e1e1;
-    display: flex;
-    margin: 11 auto -2rem;
-    font-size: .875rem;
+	width: .0625rem;
+	height: .75rem;
+	background-color: #e1e1e1;
+	display: flex;
+	margin: 11 auto -2rem;
+	font-size: .875rem;
 }
-
 
 .btn-signup, .btn-login {
 	margin-top: .75rem;
@@ -462,8 +437,13 @@ p{
 	margin: 0;
 }
 
+.btn-login{
+	margin-left: 5px;
+}
+
 .btntext {
 	color: #fff;
+
 }
 
 #signUpButton {
@@ -502,9 +482,9 @@ p{
 	width: 100%;
 	margin-bottom: .75rem;
 	font-weight: 400;
-	background-color: #03c75a; 
-	border-color : #03c75a; 
-	color : #fff;
+	background-color: #03c75a;
+	border-color: #03c75a;
+	color: #fff;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -528,10 +508,10 @@ p{
 
 .col-13 {
 	flex: 0 0 100%;
-    max-width: 100%;
-    position: relative;
-    width: 100%;
-    padding-right: 0.3215rem;
-    padding-left: 0.3215rem;
-    margin: 5px;
+	max-width: 100%;
+	position: relative;
+	width: 100%;
+	padding-right: 0.3215rem;
+	padding-left: 0.3215rem;
+	margin: 5px;
 }

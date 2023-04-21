@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link data-vue-meta="1" rel="icon" type="image/png" sizes="32x32"
-	href="https://static.cdn.soomgo.com/static/favicon-32x32.png?webp=1">
+
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 <!--폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,15 +16,7 @@
 <link href="../../static/css/mypage-css-jin/header-footer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-
-
-
-
-
-
-
-
-
+<%@ include file="../mainpageSeo/header.jsp" %>
 
 	<div id="app-body">
 		<div class="my-page-community-activity-container" >
@@ -38,8 +29,11 @@
 				<ul class="tab-list"  >
 					<li class="tab sg-text-body2 sg-font-regular sg-text-gray-400"
 						 >
-						 <a href="./board-list.jsp">
-						 작성 글</a></li>
+						 <a href="./board-list.jsp" style="
+					    text-decoration: none;
+					    color: #2e2e2e;
+					    font-weight: 700;
+					">작성 글</a></li>
 					<li
 						class="tab router-link-exact-active router-link-active sg-text-subhead4 sg-font-bold sg-text-gray-900 selected"
 						 >작성 댓글</li>
@@ -58,14 +52,8 @@
 				</section>
 			</div>
 		</div>
-	</div>
-	
-	
-	
-	
-	
-	
-			
+	</div>	
 	
 </body>
+<jsp:include page="../mainpageSeo/footer.jsp"/>
 </html>

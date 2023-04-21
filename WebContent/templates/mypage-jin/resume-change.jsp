@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
+<title>중고신입 이력서 수정 페이지</title>
 <!--폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,14 +16,8 @@
 <link href="../../static/css/mypage-css-jin/header-footer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-		
-
-
-
-
-
-
-
+<%@ include file="../mainpageSeo/header.jsp" %>
+<!-- 우람님 글쓰기 페이지 가져옴 -->
 	<div id="app-body">
 		<div class="community-container container">
 			<div class="soomgo-life-container">
@@ -93,13 +88,7 @@
 			</div>
 		</div>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
+
 </body>
+<jsp:include page="../mainpageSeo/footer.jsp"/>
 </html>

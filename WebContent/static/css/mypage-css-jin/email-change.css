@@ -65,7 +65,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;
 }
 
-.form-group {
+.form-group111 {
     margin-bottom: 1rem;
 }
 
@@ -101,15 +101,15 @@ legend {
 }
 
 
-.form-control.is-invalid, input.form-control.is-valid, textarea.form-control.is-valid {
+.form-control1.is-invalid, input.form-control1.is-valid, textarea.form-control1.is-valid {
     background-image: none;
 }
 
-.custom-select.is-valid, .form-control.is-valid, .was-validated .custom-select:valid, .was-validated .form-control:valid {
+.custom-select.is-valid, .form-control1.is-valid, .was-validated .custom-select:valid, .was-validated .form-control1:valid {
     border-color: #ccc;
 }
 
-.form-control {
+.form-control1 {
     display: block;
     width: 100%;
     height: calc(1.5em + 1.5rem);
@@ -154,6 +154,7 @@ button, input {
 }
 
 .button-group>.btn {
+	border: 1px solid #6FB6C0;
     max-width: 8.875rem;
     flex: 1;
 }
