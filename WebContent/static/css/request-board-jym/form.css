@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
     box-sizing: border-box;
 }
@@ -95,12 +97,22 @@ h1 {
 
 .search {
     position: relative;
+    
 }
+
 
 form {
     display: block;
     margin-top: 0em;
     max-width: 650px;
+}
+
+#mag{
+	top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    position: absolute;
+    left: 15px;
 }
 
 
@@ -110,7 +122,7 @@ form {
     transform: translateY(-50%);
     background-color: #fff;
     color: #ddd;
-    content: "\1F50D";
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMSkiIHN0cm9rZT0iI0M1QzVDNSIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBjeD0iNi42MTEiIGN5PSI2LjYxMSIgcj0iNS44NjEiLz4KICAgICAgICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Im0xNS4yNSAxNS4yNS00LjI0My00LjI0MyIvPgogICAgPC9nPgo8L3N2Zz4K');
     font-size: 18px;
     position: absolute;
     left: 15px;
@@ -157,6 +169,29 @@ input {
     border-radius: 4px;
 }
 
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: white !important;
+   
+}
+
+textarea.request-description:focus {
+  border: 1px solid #555;
+  border-color: #00c7ae;
+}
+
+input[type=text]:focus {
+  border: 1px solid #555;
+  border-color: #00c7ae;
+}
+
+input[type=search]:focus {
+  border: 1px solid #555;
+  border-color: #00c7ae;
+}
+
+
 .form-field input {
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -173,15 +208,13 @@ input {
     margin-top: 30px;
 }
 
-.request-form textarea {
+.request-form .request_description {
     min-height: 120px;
-}
-
-.form-field textarea {
     vertical-align: middle;
+    
 }
 
-textarea {
+#request_description {
     border: 1px solid #ddd;
     border-radius: 2px;
     resize: vertical;
@@ -255,6 +288,26 @@ p {
     background-color: #fff0f1;
     border: 1px solid #e35b66;
     color: #cc3340;
+    display: none;
+}
+
+
+
+.notification-error::before {
+    border-radius: 50%;
+    border: 1px solid #e35b66;
+    color: #e35b66;
+    content: "!";
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 8px;
+    font-weight: normal;
+    height: 12px;
+    line-height: 12px;
+    margin: -2px 5px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 12px;
 }
 
 .notification {

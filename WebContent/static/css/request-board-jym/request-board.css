@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 body, html {
     height: 100%;
 }
@@ -347,6 +349,7 @@ button{
     color: #fff;
     background-color: #00c7ae;
     border-color: #00c7ae;
+   
 }
 
 button, input{
@@ -592,6 +595,11 @@ form {
     height: 100%;
     background: none;
     font-size: 1rem;
+}
+
+.input:focus{
+	border: 1px solid #555;
+    border-color: #00c7ae;
 }
 
 .input-group>.form-control {
