@@ -331,7 +331,7 @@ li .link-text {
 }
 
 li+li {
-	margin-left: 1.25rem;
+	/* margin-left: 1.25rem; */
 }
 
 .community-layout {
@@ -841,5 +841,21 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 .time {
 	margin-right: -340px;
+}
+
+
+.search-pro-filter-modal .tabs .nav-link.active:before {
+	content: "";
+    position: absolute;
+    height: 0.125rem;
+    background-color: #00c7ae;
+    left: 0.375rem;
+    right: 0.375rem;
+    bottom: 0.125rem;
+    width: calc(100% - 0.75rem);
+}
+
+*, :after, :before {
+	box-sizing: border-box;
 }
 
