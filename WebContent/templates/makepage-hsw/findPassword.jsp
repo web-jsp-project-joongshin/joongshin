@@ -1,15 +1,130 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../../static/css/mainpageSeo/hf.css">
+<meta charset="EUC-KR">
+<title>비밀번호 찾기</title>
+</head>
+<link href="../../static/css/singupcss-hsw/basic.css" rel="stylesheet">
+<link data-vue-meta="1" rel="shortcut icon"
+	href="https://static.cdn.soomgo.com/static/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../../static/css/mainpageSeo/mainpage.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<body>
+<header id="app-header" class="global-header" data-v-50506024="">
+			<div data-v-5f10666f="" data-v-50506024=""
+				class="global-navigation-bar">
+				<!-- 섹션태그때문에 이미지가 나오지 않아서 없애버렸어요 -->
+				<div data-v-5f10666f="" class="desktop-header">
+					<div data-v-5f10666f="" class="left-section">
+						<div data-v-5f10666f="" class="logo">
+							<a data-v-5f10666f="" href="/?from=logo" class=""> <img
+								data-v-5f10666f=""
+								src="https://assets.cdn.soomgo.com/icons/icon-navi-logo.svg"
+								alt="숨고, 숨은고수">
+							</a>
+						</div>
+						<nav data-v-5f10666f="">
+							<ul data-v-5f10666f="" class="nav-list">
+								<li data-v-5f10666f="" class="nav-item left-section-item"><a
+									data-v-5f10666f="" href="/category-home?from=web_gnb"
+									class="gnb-link"><span data-v-5f10666f="">서비스요청</span></a></li>
+								<li data-v-5f10666f="" class="nav-item left-section-item"><a
+									data-v-5f10666f="" href="/search/pro?from=web_gnb"
+									class="gnb-link"><span data-v-5f10666f="">고수찾기</span></a></li>
+								<li data-v-5f10666f="" class="nav-item left-section-item"><a
+									data-v-5f10666f="" href="/ip/products" class="gnb-link"><span
+										data-v-5f10666f="">마켓</span></a></li>
+								<li data-v-5f10666f="" class="nav-item left-section-item"><a
+									data-v-5f10666f="" href="/community/soomgo-life/?from=web_gnb"
+									class="gnb-link"><span data-v-5f10666f="">커뮤니티</span></a></li>
+							</ul>
+						</nav>
+					</div>
+					<!--  					 로고,문자열 네개까지 ↑ -->
+					<div data-v-5f10666f="" class="center-section">
+						<div data-v-63f85165="" data-v-5f10666f=""
+							class="service-searcher-desktop">
+							<form data-v-668330c4="" data-v-63f85165=""
+								class="global-search-bar">
+								<div data-v-668330c4="" role="group" class="input-group">
+									<div data-v-668330c4="" class="input-group-prepend">
+										<img data-v-668330c4=""
+											src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQgNCkiIHN0cm9rZT0iI0I1QjVCNSIgc3Ryb2tlLXdpZHRoPSIxLjYiPgogICAgICAgICAgICA8Y2lyY2xlIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGN4PSI2LjUiIGN5PSI2LjUiIHI9IjYuNSIvPgogICAgICAgICAgICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIGQ9Im0xMS41IDExLjUgNSA1Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+											alt="검색 아이콘">
+									</div>
+									<input data-v-668330c4="" type="text"
+										placeholder="어떤 서비스가 필요하세요?" autocomplete="off"
+										class="form-control" maxlength="" id="__BVID__142">
 
-</head>
-<footer>
+									<div data-v-668330c4="" class="input-group-append">
+										<img data-v-668330c4=""
+											src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhl…wMDYiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo="
+											alt="검색어 삭제 아이콘" style="display: none;">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- 로그인 회원가입 고수가입 전↑ -->
+					<div data-v-5f10666f="" class="right-section">
+						<nav data-v-5f10666f="">
+							<ul data-v-5f10666f="" class="nav-list">
+								<li data-v-5f10666f="" class="nav-item right-section-item"><a
+									data-v-5f10666f="" href="/login" class="gnb-link"><span
+										data-v-5f10666f="">로그인</span></a> <!----></li>
+								<li data-v-5f10666f="" class="nav-item right-section-item"><a
+									data-v-5f10666f=""
+									href="/sign-up?from=gnb&amp;entry_point=signup_cta"
+									class="gnb-link"><span data-v-5f10666f="">회원가입</span></a> <!----></li>
+							</ul>
+						</nav>
+						<button data-v-5f10666f="" type="button"
+							class="btn pro-signup-btn right-section-item btn-primary btn-primary2">
+							<a data-v-5f10666f="" href="/pro?entry_point=signup_cta" class="">고수가입</a>
+						</button>
+						<!---->
+					</div>
+
+				</div>
+				<!-- 헤더 전체 div 닫는부분 -->
+				<!-- 없애버린 세션 태그 닫는자리 -->
+			</div>
+		</header>
+	<div>
+		<div class="find">
+			<h2>비밀번호 찾기</h2>
+			<div class="card">
+				<form>
+					<div class="form-row">
+						<div id="email" class="col-12">
+							<fieldset class="form-group">
+								<legend class="legen-text">가입한 이메일 주소를 입력해주세요</legend>
+								<div>
+									<input name="email" type="email"
+										placeholder="example@joongsin.com" maxlength="30"
+										class="inputclass">
+									<div class="col-14">
+										<small class="notice">가입하신 이메일 주소를 입력해주시면 <br>새로운 비밀번호를 설정 가능한 링크를 보내드립니다.</small> 
+									</div>
+									<!-- 입력창 마우스로 클릭시 등장하게 스크립트 작성 -->
+								</div>
+							</fieldset>
+						</div>
+						<div id="sendEmail" class="col-12">
+							<button type="submit" class="btn-signup">
+								<span class="btntext">이메일 전송하기</span>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer>
 			<nav id="app-footer" class="footer-container" data-v-4e4965bd="">
 				<div class="footer-container-row container" data-v-4e4965bd="">
 					<div class="col-content margin-bottom" data-v-4e4965bd="">
@@ -31,7 +146,7 @@
 						<ul class="content-list" data-v-4e4965bd="">
 							<li data-v-4e4965bd="" class="open-padding"><span
 								class="text-middle title category" data-v-4e4965bd="">
-									중신소개 <span class="new-badge" style="display: none;"
+									숨고소개 <span class="new-badge" style="display: none;"
 									data-v-4e4965bd="">N</span>
 								<!---->
 							</span>
@@ -63,13 +178,13 @@
 										data-v-4e4965bd=""> 예상금액 <span class="new-badge"
 										style="display: none;" data-v-4e4965bd="">N</span></a><a
 										href="/search/pro?from=footer" class="text-middle category"
-										data-v-4e4965bd=""> 주니어찾기 <span class="new-badge"
+										data-v-4e4965bd=""> 고수찾기 <span class="new-badge"
 										style="display: none;" data-v-4e4965bd="">N</span></a><a
 										href="https://help.soomgo.com/hc/ko/articles/360056329911"
-										class="text-middle category" data-v-4e4965bd=""> 주니어보증 <span
+										class="text-middle category" data-v-4e4965bd=""> 숨고보증 <span
 										class="new-badge" style="display: none;" data-v-4e4965bd="">N</span></a><a
 										href="/questions/" class="text-middle category"
-										data-v-4e4965bd=""> 주니어에게묻다 <span class="new-badge"
+										data-v-4e4965bd=""> 고수에게묻다 <span class="new-badge"
 										style="display: none;" data-v-4e4965bd="">N</span></a><a
 										href="/community/soomgo-life/all"
 										class="text-middle category sr-only" data-v-4e4965bd="">
@@ -79,7 +194,7 @@
 								</div></li>
 							<li data-v-4e4965bd="" class="open-padding"><span
 								class="text-middle title category" data-v-4e4965bd="">
-									주니어안내 <span class="new-badge" style="display: none;"
+									고수안내 <span class="new-badge" style="display: none;"
 									data-v-4e4965bd="">N</span>
 								<!---->
 							</span>
@@ -88,13 +203,13 @@
 										data-v-4e4965bd=""> 이용안내 <span class="new-badge"
 										style="display: none;" data-v-4e4965bd="">N</span></a><a
 										href="https://help.soomgo.com/hc/ko/categories/115001218027"
-										class="text-middle category" data-v-4e4965bd=""> 주니어가이드 <span
+										class="text-middle category" data-v-4e4965bd=""> 고수가이드 <span
 										class="new-badge" style="display: none;" data-v-4e4965bd="">N</span></a><a
 										href="/pro" class="text-middle category" data-v-4e4965bd="">
-										주니어가입 <span class="new-badge" style="display: none;"
+										고수가입 <span class="new-badge" style="display: none;"
 										data-v-4e4965bd="">N</span>
 									</a><a href="/pro-center" class="text-middle category"
-										data-v-4e4965bd=""> 주니어센터 <span class="new-badge"
+										data-v-4e4965bd=""> 고수센터 <span class="new-badge"
 										style="display: none;" data-v-4e4965bd="">N</span></a>
 								</div></li>
 							<li data-v-4e4965bd="" class="open-padding"><span
@@ -151,23 +266,23 @@
 							<a href="https://www.facebook.com/SoomgoKorea/" target="_blank"
 								class="footer-badge" data-v-4e4965bd=""><img
 								src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-facebook.svg"
-								alt="주니어 페이스북 계정" data-v-4e4965bd=""></a><a
+								alt="숨고 페이스북 계정" data-v-4e4965bd=""></a><a
 								href="https://www.instagram.com/soomgo_official/"
 								target="_blank" class="footer-badge" data-v-4e4965bd=""><img
 								src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-instagram.svg"
-								alt="주니어 인스타그램" data-v-4e4965bd=""></a><a
+								alt="숨고 인스타그램" data-v-4e4965bd=""></a><a
 								href="https://blog.naver.com/brave_mobile_mkt/" target="_blank"
 								class="footer-badge" data-v-4e4965bd=""><img
 								src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-naverblog.svg"
-								alt="주니어 블로그" data-v-4e4965bd=""></a><a
+								alt="숨고 블로그" data-v-4e4965bd=""></a><a
 								href="https://post.naver.com/brave_mobile_mkt?isHome=1"
 								target="_blank" class="footer-badge" data-v-4e4965bd=""><img
 								src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-naverpost.svg"
-								alt="주니어 포스트" data-v-4e4965bd=""></a><a
+								alt="숨고 포스트" data-v-4e4965bd=""></a><a
 								href="https://news.soomgo.com" target="_blank"
 								class="footer-badge" data-v-4e4965bd=""><img
 								src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-tistory.svg"
-								alt="주니어 스토리" data-v-4e4965bd=""></a>
+								alt="숨고 스토리" data-v-4e4965bd=""></a>
 						</div>
 					</div>
 				</div>
@@ -175,6 +290,5 @@
 	</div>
 	<!-- 전체 div -->
 	</footer>
-
 </body>
 </html>

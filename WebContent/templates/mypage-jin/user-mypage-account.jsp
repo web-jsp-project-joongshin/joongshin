@@ -11,8 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
-	rel="stylesheet">
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
 
 <link href="../../static/css/mypage-css-jin/profile-change-modal.css"
@@ -22,39 +21,118 @@
 <link href="../../static/css/mypage-css-jin/user-mypage-account.css"
 	rel="stylesheet" type="text/css" />
 
+<style type="text/css">
+.image-container {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+/* mystyle.css */
+/* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+        }
+        
+        .close {
+        	margin-top: 20px
+            justify-content: center;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            
+            
+            .custom-file-input {
+			  position: absolute;
+			  left: 0;
+			  top: 0;
+			  width: 100%;
+			  height: 100%;
+			  opacity: 0;
+			  z-index: -1;
+			}
+            
+</style>
+
+
 </head>
 <body>
 
 
-
-
-
 	<div id="app-body">
-		<div class="container container-md">
+		<div class="container container-md image add-image">
 			<main class="account-info-container">
 				<h1>계정 설정</h1>
-				<div class="profile-image" id="modal_btn">
+				<div class=" profile-image " id="modal_btn">
 					<div class="user-profile-picture h-100">
-						<div data-name="image" class=""
+						<div data-name="image"  class="image"
 							data-src="https://dmmj3ljielax6.cloudfront.net/upload/profile-default/soomgo_99.jpg?h=320&amp;w=320"
 							lazy="loaded"
 							style="background-image: url(&quot;https://dmmj3ljielax6.cloudfront.net/upload/profile-default/soomgo_99.jpg?h=320&amp;w=320&quot;);"></div>
-					</div id="modal_btn"> 
-					<a href="./profile-change-modal.jsp">
-					<img
+					</div > 
+					<img data-v-13e78340=""
 						src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYwMyAtMjg2KSB0cmFuc2xhdGUoNTM1IDIxOCkgdHJhbnNsYXRlKDY4IDY4KSB0cmFuc2xhdGUoMSAxKSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjE1IiBjeT0iMTUiIHI9IjE1IiBmaWxsPSIjRkZGIiBzdHJva2U9IiNGMkYyRjIiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAgMEwxOCAwIDE4IDE4IDAgMTh6IiBvcGFjaXR5PSIuNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNiA2KSIvPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZmlsbD0iI0I1QjVCNSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTEuNCAybDEuNDY0IDEuNTU2SDE1LjRjLjg4IDAgMS42LjcgMS42IDEuNTU1djkuMzMzQzE3IDE1LjMgMTYuMjggMTYgMTUuNCAxNkgyLjZjLS44OCAwLTEuNi0uNy0xLjYtMS41NTZWNS4xMTFjMC0uODU1LjcyLTEuNTU1IDEuNi0xLjU1NWgyLjUzNkw2LjYgMmg0Ljh6TTkgN2MtMS42NTYgMC0zIDEuMzQ0LTMgM3MxLjM0NCAzIDMgMyAzLTEuMzQ0IDMtMy0xLjM0NC0zLTMtM3oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYgNikiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg=="
 						class="camera-icon">
-						</a>
 			 	</div>
+			 	
+			 	
+			 	
+			 	
+			 	<!-- 이미지 변경 모달 -->
+			 	<div  id="__BVID__420___BV_modal_outer_" class="modal"
+					style="position: absolute; z-index: 1040;">
+					<div id="__BVID__420" role="dialog"
+						aria-labelledby="__BVID__420___BV_modal_title_"
+						aria-describedby="__BVID__420___BV_modal_body_"
+						class="modal fade show" aria-modal="true" style="display: block;">
+						<div
+							class="modal-dialog modal-md modal-dialog-centered modal-select-profile-image">
+							<span tabindex="0"></span>
+							<div id="__BVID__420___BV_modal_content_" tabindex="-1"
+								class="modal-content">
+								<div class="profile-image">
+								<div class="user-profile-picture h-100">
+									<div data-name="image" class="image-container"
+										data-src="https://dmmj3ljielax6.cloudfront.netNone?h=320&amp;w=320"
+										lazy="error"
+										style="background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIHZpZXdCb3g9IjAgMCA3MiA3MiI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBpZD0iYSIgZD0iTTAgMGg3MnY3MkgweiIvPgogICAgICAgIDxwYXRoIGlkPSJjIiBkPSJNMCAwaDcydjcySDB6Ii8+CiAgICA8L2RlZnM+CiAgICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj4KICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjYSIvPgogICAgICAgIDwvbWFzaz4KICAgICAgICA8ZyBtYXNrPSJ1cmwoI2IpIj4KICAgICAgICAgICAgPG1hc2sgaWQ9ImQiIGZpbGw9IiNmZmYiPgogICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjYyIvPgogICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgIDx1c2UgZmlsbD0iI0YyRjJGMiIgeGxpbms6aHJlZj0iI2MiLz4KICAgICAgICAgICAgPHBhdGggZmlsbD0iI0UxRTFFMSIgZD0iTTcwLjY3NyA2Ny4wMzJjLS45NTEtMi44NDQtMi42NzQtNS43MTItNS4yMTUtNy4zODEtNC44OS0zLjIzNi0xMC41ODctNC45NjItMTYuMDk1LTYuODEtMS4zMjktLjQ2NS0yLjY4LS45Ny0zLjg5My0xLjY5LTEuMDg1LS42NDMtMS40OTItMS45Ni0xLjc0My0zLjExNy0uMTEyLS42MTItLjE4LTEuMjQtLjIxNS0xLjg1NyAzLjk5NC01LjQ0OCA2LjY0NC0xNC4zNCA2LjY0NC0yMS42M0M1MC4xNiAxMy4xNzIgNDMuNzEyIDEwIDM1Ljc2IDEwYy03Ljk1NCAwLTE0LjQgMy4xNjYtMTQuNCAxNC41NDMgMCA3LjU1MSAyLjg0IDE2LjgxNCA3LjA3NSAyMi4xOTUtLjAzOS40MjQtLjA5Ljg1LS4xNjYgMS4yNzItLjI1MiAxLjE1Ny0uNjU5IDIuNDUtMS43NDIgMy4wOTItMS4yMTYuNzItMi41NjYgMS4xNzctMy44OTUgMS42NC01LjUwOSAxLjg0OS0xMS4yMDYgMy40NzgtMTYuMDk0IDYuNzE0LTIuNTQyIDEuNjctNC4yNjQgNC43MzItNS4yMTQgNy41NzZDLjM0NiA2OS45ODItLjA1NCA3My42MzguMDA2IDc2LjZoNzEuOTg4Yy4wNi0yLjk2Mi0uMzQtNi42MTctMS4zMTctOS41Njh6IiBtYXNrPSJ1cmwoI2QpIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K&quot;);"></div>
+								</div>
+				
+							</div>
+								<div id="__BVID__420___BV_modal_body_" class="modal-body">
+									<button type="button" class="btn file-input btn-primary btn-block">
+									  사진 등록하기
+									  <div class="custom-file b-form-file file" id="__BVID__424__BV_file_outer_">
+									    <input type="file" accept="jpg,jpeg,png,gif,bmp,jpeg2000" class="custom-file-input" id="__BVID__424">
+									    <label data-browse="Browse" class="custom-file-label" for="__BVID__424">
+									      <span class="d-block form-file-text" style="pointer-events: none;">No file chosen</span>
+									    </label>
+									  </div>
+									</button>
 
-
-
-
-
-
-
-
-
+									<button  type="button" onclick="defaultImageBtn()"
+									    class="btn btn-primary btn-block">
+									    기본 이미지로 등록
+									</button>
+									<div class="close" style=" margin-top: 15px; margin-left: 105px;">취소</div>
+								</div>
+								
+							</div>
+							<span tabindex="0"></span>
+						</div>
+					</div>
+					<div id="__BVID__420___BV_modal_backdrop_" class="modal-backdrop"></div>
+				</div>
+			 	
+			 	
+			 	
+			 	
+			 	
 				<section>
 
 					<ul class="account-info">
@@ -84,48 +162,24 @@
 									<div class="item-info">•••••••</div>
 								</div>
 								<div>
+
 									<img
 										src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
-								</div></a> <a href="./" class="item-container">
-								<div class="item btn2">
-									<div class="item-title">휴대전화 번호</div>
-									<div class="item-info">01098224849</div>
-								</div>
-								<div>
-									<img
-										src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
-								</div>
-							</a>
+								</div></a> 
+							
 					</ul>
 					
-					
-					
-					
-					
-					
-					
-					
-
-
-					<ul data-testid="delete-account" class="delete-account btn3">
-						<a href="./account-delete-modal.jsp" class="item-container"><div
-								data-testid="delete-account-text" class="item">계정 탈퇴</div>
+				<a href="./account-delete-final-check.jsp">
+					<div data-testid="delete-account" class="delete-account btn3">
+						<div  data-testid="delete-account-text" class="item">계정 탈퇴</div>
 							<div>
 								<img
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
-							</div></a>
-					</ul>
+							</div>
+					</div>
+				</a>
+							
 				</section>
-
-
-
-
-
-
-
-
-
-	
 				
 			</main>
 		</div>
@@ -136,4 +190,85 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!-- 프로필 모달 이미지 변경-->
+<script type="text/javascript">
+//Modal을 가져옵니다.
+var modals = document.getElementsByClassName("modal");
+// Modal을 띄우는 클래스 이름을 가져옵니다.
+var btns = document.getElementsByClassName("btn");
+// Modal을 닫는 close 클래스를 가져옵니다.
+var spanes = document.getElementsByClassName("close");
+var funcs = [];
+ 
+// Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
+function Modal(num) {
+  return function() {
+    // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
+    btns[num].onclick =  function() {
+        modals[num].style.display = "block";
+        console.log(num);
+    };
+ 
+    // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
+    spanes[num].onclick = function() {
+        modals[num].style.display = "none";
+    };
+  };
+}
+ 
+// 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
+for(var i = 0; i < btns.length; i++) {
+  funcs[i] = Modal(i);
+}
+ 
+// 원하는 Modal 수만큼 funcs 함수를 호출합니다.
+for(var j = 0; j < btns.length; j++) {
+  funcs[j]();
+}
+ 
+// Modal 영역 밖을 클릭하면 Modal을 닫습니다.
+window.onclick = function(event) {
+  if (event.target.className == "modal") {
+      event.target.style.display = "none";
+  }
+};
+
+
+	</script>
+<script type="text/javascript">
+
+const image_div = document.querySelectorAll('div.image');
+const cancel_div = document.querySelector('div.cancel');
+const input_file = document.querySelector('#attach');
+
+cancel_div.addEventListener('click', () => {
+  input_file.value = '';
+  image_div[0].style.display = 'block';
+  image_div[1].style.display = 'none';
+  cancel_div.style.display = 'none';
+});
+
+// input type file인 객체는 파일 업로드 시 change 이벤트가 발생한다.
+input_file.addEventListener('change', (e) => {
+  // 이 때 e객체로 업로드된 파일의 정보를 가져올 수 있다(e.target.files[0]).
+  // console.log(e.target.files[0]);
+
+  // 하지만 change 이벤트 객체만으로는 해당 파일의 경로를 알 수 없기 때문에
+  // FileReader객체가 필요하다.
+  let reader = new FileReader();
+
+  // reader객체의 readAsDataURL()메소드를 사용하여 파일의 정보를 전달해주면,
+  reader.readAsDataURL(e.target.files[0]);
+  // 모든 파일의 정보를 읽어왔을 때 onload 이벤트가 발생한다.
+  reader.onload = (e) => {
+    image_div[1].style.display = 'block';
+    image_div[1].style.backgroundImage = `url('${e.target.result}')`;
+    image_div[0].style.display = 'none';
+    cancel_div.style.display = 'block';
+  };
+});
+
+
+</script>
+
 </html>

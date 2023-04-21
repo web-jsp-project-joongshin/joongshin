@@ -13,7 +13,8 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
 	rel="stylesheet">
-
+	
+	
 <link
 	href="../../static/css/mypage-css-jin/account-delete-final-check.css"
 	rel="stylesheet" type="text/css" />
@@ -22,7 +23,6 @@
 </head>
 <body>
 
-	<%@ include file="../mainpageSeo/header.jsp"%>
 	<div id="app-body">
 		<div class="container container-md">
 			<main class="account-info-container">
@@ -41,27 +41,24 @@
 						</div>
 					</article>
 
-
-
-
-
-
 					<article>
 						<h3>탈퇴 사유</h3>
 						<ul data-testid="delete-answer-section" class="answer-section">
-							<li class="answer-item"><div class="radio-group">
+							<li class="answer-item" style="border: 0px;"><div class="radio-group">
 
 
 									<div id="nav">
-									<input class="menu" id="radio-text-0 a" type="radio"
-										delete-reason-radio-1" value="0"/>
+									
 										<label class="check"
-										for="radio-text-0"><span class="radio"></span>
+										for="radio-text-0"><input type="radio" name="radio-button" id="radio-button-1">
+
 										<span
 										class="text"> 알림이 너무 많이 와요 </span></label>
+										
+										
 
 
-									<div data-v-30a01857="" class="description-wrapper">
+									<div id="hidden-div-1" class="description-wrapper" style="display: none;">
 										<span data-v-30a01857="">너무 많은 알림을 받는다면, <span
 											class="color-teal">알림설정</span>에서 알림 제한 시간을 정할 수 있어요.
 										</span>
@@ -71,14 +68,16 @@
 
 								</div></li>
 							
-							<li class="answer-item menu"><div class="radio-group">
-									<input id="radio-text-1" type="radio"
-										data-testid="delete-reason-radio-2" value="2"><label
-										for="radio-text-1"><span class="radio"></span><span
+							<li class="answer-item menu" style="border: 0px;"><div class="radio-group">
+										<label class="check"
+										for="radio-text-0"><input type="radio" name="radio-button" id="radio-button-2">
+
+								
+										<span class="radio"></span><span
 										class="text"> 사용하기 어려워요 </span></label>
 
-									<div data-v-30a01857="" class="description-wrapper">
-										<span data-v-30a01857="">어떤 부분에서 사용이 어려우신가요? <span
+									<div id="hidden-div-2" class="description-wrapper" style="display: none;">
+										<span data-v-30a01857="">어떤 부분에서 사용이 어려우신가요?<br> <span
 											class="color-teal">고객센터</span>에 문의해주시면 자세하게 알려드릴게요.
 										</span>
 									</div>
@@ -86,13 +85,13 @@
 
 
 								</div></li>
-							<li class="answer-item menu"><div class="radio-group">
-									<input id="radio-text-2" type="radio"
-										data-testid="delete-reason-radio-3" value="3"><label
-										for="radio-text-2"><span class="radio"></span><span
+							<li class="answer-item menu" style="border: 0px;"><div class="radio-group">
+										<label class="check"
+										for="radio-text-0"><input type="radio" name="radio-button" id="radio-button-3">
+											</span><span
 										class="text"> 오류가 많아서 불편해요 </span></label>
 
-									<div data-v-30a01857="" class="description-wrapper">
+									<div id="hidden-div-3" class="description-wrapper" style="display: none;">
 										<span data-v-30a01857="">불편사항을 <span class="color-teal">고객센터</span>에
 											알려주시면 최대한 빨리 해결해드릴게요.
 										</span>
@@ -100,26 +99,24 @@
 
 
 								</div></li>
-							<li class="answer-item menu"><div class="radio-group">
-									<input id="radio-text-3" type="radio"
-										data-testid="delete-reason-radio-4" value="4"><label
-										for="radio-text-3"><span class="radio"></span><span
+							<li class="answer-item menu" style="border: 0px;"><div class="radio-group">
+									<label class="check"
+										for="radio-text-0"><input type="radio" name="radio-button" id="radio-button-4">
+											<span class="radio"></span><span
 										class="text"> 기타 </span></label>
 
-									<div data-v-30a01857="" class="textarea-wrapper">
+									<div id="hidden-div-4" class="description-wrapper" style="display: none;">
 										<textarea data-v-30a01857="" name="accountDeleteReason"
 											placeholder="떠나게 되어 아쉽네요. 이유를 자세히 알려주실 수 있나요?" rows="2"
 											wrap="soft" class="textarea form-control"
 											data-testid="account-delete-reason"
 											data-vv-validate-on="blur" maxlength="500"
 											aria-invalid="false" id="__BVID__423"></textarea>
-										<div data-v-30a01857="" class="validation-wrapper"
+										<div data-v-30a01857="" class="description-wrapper"
 											style="display: none;">
 											<span data-v-30a01857="" class="validation-text"></span>
 										</div>
 										<div data-v-30a01857="" class="textarea-length">
-											<span data-v-30a01857="" class="current-length">0</span><span
-												data-v-30a01857="" class="max-length"> /500자</span>
 										</div>
 									</div>
 
@@ -142,15 +139,26 @@
 		</div>
 	</div>
 
+<script type="text/javascript">
+
+const radioButtons = document.getElementsByName("radio-button");
+const hiddenDivs = document.querySelectorAll('[id^="hidden-div-"]');
+
+for (let i = 0; i < radioButtons.length; i++) {
+  radioButtons[i].addEventListener("click", function() {
+    for (let j = 0; j < hiddenDivs.length; j++) {
+      if (hiddenDivs[j].id === "hidden-div-" + (i+1)) {
+        hiddenDivs[j].style.display = "block";
+      } else {
+        hiddenDivs[j].style.display = "none";
+      }
+    }
+  });
+}
+
+
+</script>
 
 </body>
-<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$("#nav div.description-wrapper").hide();
-		$("#nav input.menu").click(function(){
-			$("input",this).slideToggle("fast");
-		});
-	});
-</script>
+
 </html>

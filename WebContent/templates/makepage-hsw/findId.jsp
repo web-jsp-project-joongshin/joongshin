@@ -1,20 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="EUC-KR">
+<title>아이디 찾기</title>
+</head>
+<link href="../../static/css/singupcss-hsw/basic.css" rel="stylesheet">
 <link data-vue-meta="1" rel="shortcut icon"
 	href="https://static.cdn.soomgo.com/static/favicon.ico">
 <link rel="stylesheet" type="text/css" href="../../static/css/mainpageSeo/mainpage.css">
-
-<meta charset="UTF-8">
-<title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
-</head>
-<body class="home">
-	<div id="app" date-browser="Chrome" data-is-loaded="true" class>
-		<div class="__cov-progress"
-			style="background-color: rgb(0, 199, 174); opacity: 0; position: fixed; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s;"></div>
-		<header id="app-header" class="global-header" data-v-50506024="">
+<link data-vue-meta="1" rel="shortcut icon"
+	href="https://static.cdn.soomgo.com/static/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../../static/css/mainpageSeo/mainpage.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<body>
+<header id="app-header" class="global-header" data-v-50506024="">
 			<div data-v-5f10666f="" data-v-50506024=""
 				class="global-navigation-bar">
 				<!-- 섹션태그때문에 이미지가 나오지 않아서 없애버렸어요 -->
@@ -94,14 +97,55 @@
 				<!-- 없애버린 세션 태그 닫는자리 -->
 			</div>
 		</header>
-		<!-- 헤더 끝 -->
-
-
+	<div>
+		<div class="find">
+			<h2>아이디 찾기</h2>
+			<div class="card">
+				<form>
+					<div class="form-row">
+						<div id="name" class="col-12">
+							<fieldset class="form-group">
+								<legend class="legen-text">이름</legend>
+								<div>
+									<input name="username" type="text" placeholder="이름(실명)을 입력해주세요"
+										maxlength="7" class="inputclass">
+									<div class="invalid-feedback">이름을 입력해주세요.</div>
+									<!-- 입력창 마우스로 클릭시 등장하게 스크립트 작성 -->
+								</div>
+							</fieldset>
+						</div>
+						<div id="number" class="col-12">
+							<fieldset class="form-group">
+								<legend class="legend-text">가입시 등록한 휴대전화 번호를 입력해주세요.</legend>
+								<div>
+									<input name="phoneNumber" type="number"
+										placeholder="010-XXXX-XXXX" maxlength="11" class="inputclass">
+								</div>
+							</fieldset>
+						</div>
+						<div id="certificationNumber" class="col-12">
+							<fieldset class="form-group">
+								<legend class="legen-text">인증번호</legend>
+								<div>
+									<div class="input-group">
+										<input name="address" type="text" placeholder="인증번호" size="6"
+											class="certificationNumber">
+										<button class="btn-certificationNumber">인증번호</button>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div id="phoneCertification" class="col-12">
+							<button type="submit" class="btn-signup">
+								<span class="btntext">휴대폰 인증</span>
+							</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
-
-		<footer>
-
+	</div>
+	<footer>
 			<nav id="app-footer" class="footer-container" data-v-4e4965bd="">
 				<div class="footer-container-row container" data-v-4e4965bd="">
 					<div class="col-content margin-bottom" data-v-4e4965bd="">
@@ -267,6 +311,5 @@
 	</div>
 	<!-- 전체 div -->
 	</footer>
-
 </body>
 </html>
