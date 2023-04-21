@@ -26,14 +26,14 @@ header.navi-bar {
     min-width: 232px;
     max-width: 288px;
     height: 100vh;
-    background-color: rgba(111, 182, 192, 0.3);
+    background-color: rgba(111, 182, 192, 0.15);
 }
 
 .logo {
-    width: 106px;
+    width: 160px;
     height: 36px;
-    margin: 20px auto;
-    background-image: url("../../../static/image/icons/logo.svg");
+    margin: 33px auto 20px;
+    background-image: url("../../../static/image/logo/JOONGSHIN.svg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
