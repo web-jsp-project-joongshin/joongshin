@@ -1,21 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="form.css">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/request-board-jym/form.css">
+    <title>문의</title>
 </head>
 
-<body class="">
+<body>
     <div></div>
     <header class="header">
         <!-- 홈화면으로 돌아가는 로고 버튼 -->
         <div class="logo">
             <a href="https://soomgo.com/">
-                <img src="//theme.zdassets.com/theme_assets/1602623/4d297a6ea95ee8aaf64e1b1505634fa403af54fe.png"
+                <img src='new_logo.svg'
                     alt="로고">
             </a>
         </div>
@@ -39,6 +41,7 @@
                 </ol>
                 <form role="search" class="search" data-search="" action="/hc/ko/search" accept-charset="UTF-8"
                     method="get">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMSkiIHN0cm9rZT0iI0M1QzVDNSIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBjeD0iNi42MTEiIGN5PSI2LjYxMSIgcj0iNS44NjEiLz4KICAgICAgICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Im0xNS4yNSAxNS4yNS00LjI0My00LjI0MyIvPgogICAgPC9nPgo8L3N2Zz4K" alt="커뮤니티 검색 아이콘" class="search" id="mag">
                     <input name="utf8" type="hidden" value="✓" autocomplete="off">
                     <input type="search" name="query" id="query" placeholder="검색" aria-label="검색">
                 </form>
@@ -46,53 +49,55 @@
 
             <h1>문의 등록</h1>
             <div class="form">
-                <form id="new_request" class="request-form" data-form="" data-form-type="request"
+                <form id="new_request" class="request-form" name="request-form" data-form-type="request"
                     action="/hc/ko/requests" accept-charset="UTF-8" method="post">
                     <input name="utf8" type="hidden" value="✓" autocomplete="off">
                     <!-- <input type="hidden" name="authenticity_token" value="hc:requests:client:x4NRfJjWvQZrLaWzqGxUx2akyeWMEdeNqQFX7JVHy6flsg_HUW8VUPyTwxQH_LmdGvkA_fizxIqNaV2L2IQxtA" data-hc-status="ready"> -->
+<!--                     이메일 주소 입력 창 -->
                     <div class="form-field string required request_email">
                         <label for="request_email">이메일 주소</label>
                         <input type="text" name="request[anonymous_requester_email]" id="request_email"
                             aria-required="true">
+                        <div id="request_email_error" class="notification notification-error notification-inline"></div>
                     </div>
-                    <!-- 제목 -->
+                    
+                    <!-- 제목 입력  -->
                     <div class="form-field string  required  request_subject">
                         <label id="request_subject_label" for="request_subject">제목</label>
                         <input type="text" name="request[subject]" id="request_subject" maxlength="150" size="150"
                             aria-required="true" aria-labelledby="request_subject_label">
+                        <div id="request_subject_error" class="notification notification-error notification-inline"></div>
                     </div>
+                    
                     <div class="suggestion-list" data-hc-class="searchbox" data-hc-suggestion-list="true"></div>
                     <!-- 설명 -->
-                    <div class="form-field text  required  request_description">
+                    <div class="form-field required  request_description">
                         <label id="request_description_label" for="request_description">설명</label>
-                        <textarea name="request[description]" id="request_description" aria-required="true"
-                            aria-describedby="request_description_hint"
-                            aria-labelledby="request_description_label"></textarea>
-                        <input type="hidden" name="request[description_mimetype]" id="request_description_mimetype"
-                            value="text/plain" style="display: none;" autocomplete="off">
+                        
+                        <textarea type="text" name="request[description]" id="request_description" class="request_description" style="border-radius: 4px;"></textarea>
+                        
+                        <div id="request_description_error" class="notification notification-error notification-inline"></div>
                         <p id="request_description_hint">요청에 관한 세부 정보를 입력하세요.</p>
                     </div>
 
                     <!-- 이메일 -->
                     <div class="form-field string  required  request_custom_fields_70987527">
-                        <label id="request_custom_fields_70987527_label" for="request_custom_fields_70987527">숨고 가입
+                        <label id="request_custom_fields" for="request_custom_fields_70987527">숨고 가입
                             이메일</label>
-                        <input type="text" name="request[custom_fields][70987527]" id="request_custom_fields_70987527"
-                            aria-required="true" aria-describedby="request_custom_fields_70987527_hint"
-                            aria-labelledby="request_custom_fields_70987527_label">
-
+                        <input type="text" name="request_email" id="request_email">
+						<div id="request_soomgo_email_error" class="notification notification-error notification-inline"></div>
                         <p id="request_custom_fields_70987527_hint">숨고 가입 이메일을 입력하세요.</p>
                     </div>
 
                     <!-- 휴대폰 번호 -->
                     <div class="form-field string  required  request_custom_fields_71442508">
-                        <label id="request_custom_fields_71442508_label" for="request_custom_fields_71442508">숨고 가입
+                        <label id="request_number" for="request_number">숨고 가입
                             휴대폰 번호</label>
-                        <input type="text" name="request[custom_fields][71442508]" id="request_custom_fields_71442508"
-                            aria-required="true" aria-describedby="request_custom_fields_71442508_hint"
-                            aria-labelledby="request_custom_fields_71442508_label">
-
-                        <p id="request_custom_fields_71442508_hint">숨고 가입 휴대폰 번호를 입력하세요.</p>
+                        <input type="text" name="request_number" id="request_number"
+                            aria-required="true">
+                        <div id="request_soomgo_number_error" class="notification notification-error notification-inline"></div>
+			
+                        <p id="request_number_hint">숨고 가입 휴대폰 번호를 입력하세요.</p>
                     </div>
 
                     <!-- 첨부파일 -->
@@ -129,24 +134,19 @@
                                   </li>
                                   </script>
                     </div>
-                    <footer><input type="submit" name="commit" value="제출"></footer>
+                    <footer><input type="submit" name="commit" value="제출" onclick="goJoin()"></footer>
                 </form>
             </div>
         </div>
     </main>
 
     <!-- / -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="//static.zdassets.com/hc/assets/ko.29849816fa1a05db5228.js"></script>
-    <script src="https://soomgohelp.zendesk.com/auth/v2/host/without_iframe.js" data-brand-id="5040867"
-        data-return-to="https://help.soomgo.com/hc/ko/requests/new" data-theme="hc" data-locale="ko"
-        data-auth-origin="5040867,true,true"></script>
-
-    <script type="text/javascript">
-        HelpCenter = {};
-        HelpCenter.account = { "subdomain": "soomgohelp", "environment": "production", "name": "숨고" };
-        HelpCenter.user = { "identifier": "da39a3ee5e6b4b0d3255bfef95601890afd80709", "email": null, "name": "", "role": "anonymous", "avatar_url": "https://assets.zendesk.com/hc/assets/default_avatar.png", "is_admin": false, "organizations": [], "groups": [] };
-    </script>
-
+    <script src="https://soomgohelp.zendesk.com/auth/v2/host/without_iframe.js"
+        data-return-to="https://help.soomgo.com/hc/ko/requests/new" data-locale="ko"></script>
+	<script src="../../static/js/request-board-jym/form.js"></script>
+  
     <script src="//static.zdassets.com/hc/assets/moment-4ef0d82f9fc65c8a28f659aa3430955f.js"></script>
     <script src="//static.zdassets.com/hc/assets/hc_enduser-72ea9c8e0185dd6c21008a1e827304ff.js"></script>
 

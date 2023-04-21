@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    font-family: Noto Sans KR,Malgun Gothic,-apple-system,Segoe UI,Roboto,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #323232;
+    text-align: left;
+    background-color: #fff;
+}
+
+.instant-purchase-product-detail .flex-aside.left .product-explanation  {
+    margin-bottom: 0.25rem;
+}
+
+#explanation{
+    width: 970px;
+    margin: auto;
+}
+
+section {
+    padding: 2rem 0;
+    background: #fff;
+    display: block;
+}
+
+#product-provider {
+    padding-bottom: 2rem;
+}
+
+.product-provider .provider-overview {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.no-gutters>[class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.col-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+
+.product-provider .provider-profile {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 10px;
+    margin-right: 0.75rem;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    word-break: break-word;
+    box-sizing: border-box;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.product-provider .provider-name {
+    width: 100%;
+    font-size: .875rem;
+    font-weight: 500;
+    flex: 1;
+    margin-bottom: 0.3125rem;
+}
+
+.product-provider .provider-review {
+    display: flex;
+    align-items: center;
+}
+
+
+.provider-review ul {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    display: table-row;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.star-rate.readonly li {
+    cursor: default;
+}
+
+#star-rate{
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+}
+
+.product-provider .provider-review .review-count {
+    font-size: .75rem;
+    margin-left: 0.25rem;
+    color: #737373;
+}
+
+.product-provider .share-button-wrapper {
+    display: flex;
+}
+
+.product-provider .share-button-wrapper .share-button {
+    -ms-grid-row-align: center;
+    align-self: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0iTTQuMDggMTUuNlYyMWgxNS44NHYtNS40TTYuMjQgOC41NzVMMTIgM2w1Ljc2IDUuNTc1TTEyIDE1LjZWMy4wMDIiIHN0cm9rZT0iIzMyMzIzMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSIvPjwvZz48L3N2Zz4=) no-repeat 50%/contain;
+}
+
+.btn {
+    font-weight: 500;
+    transition: opacity .2s ease-in-out;
+    display: inline-block;
+    font-weight: 400;
+    color: #323232;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 0.0625rem solid transparent;
+    padding: 0.6875rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s;
+}
+
+.product-provider .provider-process-type span {
+    width: 4.375rem;
+    margin-right: 1rem;
+    font-size: .875rem;
+    color: #737373;
+}
+
+.product-provider .provider-process-type span+span {
+    flex: 1;
+    width: inherit;
+    margin-right: 0;
+    color: inherit;
+}
+
+.instant-purchase-product-detail .flex-aside.left .product-description {
+    padding-bottom: 2rem;
+}
+
+* {
+    word-break: break-word;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.description {
+    margin-bottom: 0;
+    font-size: .875rem;
+    line-height: 1.71;
+    white-space: pre-line;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.collapse-toggle {
+    margin-top: 0.5rem;
+}
+
+.btn-outline-primary.border-gray {
+    font-weight: 400;
+    border-color: #e1e1e1;
+}

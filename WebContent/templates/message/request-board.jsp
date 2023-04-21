@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main-board.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/request-board-jym/request-board.css">
     <title>숨고</title>
 </head>
 
@@ -151,7 +153,7 @@
                         </div>
 
                         <!-- 카테고리, 지워질 부분 -->
-                        <ul class="category">
+<!--                         <ul class="category">
                             <li id="lifestyle"
                                 class="sg-text-subhead4 sg-font-bold lg:sg-text-subhead2 lg:sg-font-bold sg-text-gray-900 selected"
                                 data-v-6e81a396="" data-v-433a6418=""><a href="/community/soomgo-life/"
@@ -161,11 +163,11 @@
                                 <a data-v-6e81a396="" href="/community/pro-knowhow/" class="link-text"> 고수의 노하우 </a>
                             </li>
                         </ul>
-
+ -->
                         <div class="questions-layout">
 
                             <!-- 컨텐트 카테고리 -->
-                            <div id="joongshin-topic-layout">
+                            <!-- <div id="joongshin-topic-layout">
                                 <div id="observer-container">
                                     <section class="topic-filter-section">
                                         <ul class="topic">
@@ -231,7 +233,7 @@
                                     </section>
                                 </div>
                             </div>
-
+ -->
                             <!-- 본문 리스트 -->
                             <div class="questions-content-layout">
                                 <!-- 문의 게시판 내부 검색창 -->
@@ -253,7 +255,7 @@
                                         </div>
                                     </form>
                                 </div>
-                                <!-- 큐레이션 '지금 가장 뜨거운 숨고픽' -->
+                                <!-- 베너 '지금 가장 뜨거운 숨고픽' -->
                                 <section class="curation">
                                     <div class="curation-header">
                                         <h2 class="sg-text-headline sg-font-bold sg-text-gray-900">지금 가장 뜨거운 숨고픽🔥</h2>
@@ -354,7 +356,7 @@
                                                 </div>
                                                 <div tabindex="-1" data-index="4" aria-hidden="true" class="slick-slide"
                                                     style="outline: none; width: 204px;">
-                                                    <div data-v-e4caeaf8=""><a
+                                                    <div><a
                                                             href="/community/soomgo-life/posts/643a44cbf22d78d3e3cce226-%EC%88%A0-%EA%B0%90%EC%A0%95%EA%B0%80%EC%9D%98%EB%A2%B0?from=curation"
                                                             class="" data-testid="curation-item" tabindex="-1"
                                                             style="width: 100%; display: inline-block;">
@@ -437,7 +439,7 @@
                                                             <h3>
                                                                 주방 선반장 상부장 장공사
                                                                 소규모인테리어</h3>
-                                                            <p>
+                                                            <p class="content">
                                                                 사진과 깉이 선반장
                                                                 일부 변경 시공하고 싶습니다. 콘센트 증설 포함 냉장고장이나 식세기장으로 주방 장 공사 하시는 쪽에
                                                                 견적및 문의드리고 싶습니다. </p>
