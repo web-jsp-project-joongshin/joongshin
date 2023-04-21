@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.btn-primary:hover {
+    background-color: #01c7c3;
+}
+
 * {
     word-break: break-word;
 }
@@ -55,7 +63,7 @@ div {
 }
 
 .modal .modal-content, .modal .modal-header {
-    border-radius: 0;
+    border-radius: 20px;
     border: none;
 }
 
@@ -143,6 +151,7 @@ h5 {
 }
 
 .btn {
+	margin-bottom: -5px;
     font-weight: 500;
     transition: opacity .2s ease-in-out;
 }
@@ -169,7 +178,7 @@ h5 {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: transparent;
+    background-color: #3ad199;
     border: 0.0625rem solid transparent;
     padding: 0.6875rem 0.75rem;
     font-size: 1rem;
@@ -345,10 +354,7 @@ label {
 }
 
 .modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1040;
+
     width: 100vw;
     height: 100vh;
     background-color: #000;

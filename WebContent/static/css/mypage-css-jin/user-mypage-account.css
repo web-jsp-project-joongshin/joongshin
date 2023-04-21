@@ -1,38 +1,97 @@
 @charset "UTF-8";
 
-body{
-	margin: 0 340px;
+
+body {
+	margin: 0;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #323232;
+	text-align: left;
+	background-color: #fff;
 }
 
-#app #app-body {
-	height: 100%;
-	position: relative;
-	flex-grow: 1;
-	
-}
-
-#app #app-body, #app #app-header {
-	opacity: 0;
-	transition: opacity .3s ease-in;
-}
 
 * {
 	word-break: break-word;
-
 }
 
 *, :after, :before {
 	box-sizing: border-box;
 }
 
+#app #app-body {
+	height: 100%;
+	position: relative;
+	flex-grow: 1;
+}
+
+#app #app-body, #app #app-header {
+	opacity: 0;
+	transition: opacity .3s ease-in;
+}
 div {
 	display: block;
 }
 
-.container-md, .container.container-md {
-    width: 39.375rem;
+#app {
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	opacity: 0;
+	min-height: 100%;
 }
 
+
+#app-body, #app-sticky-nav {
+	opacity: 1;
+}
+
+.container-fluid.container-md, .container-md, .container.container-md {
+	max-width: 39.375rem
+}
+
+.container-fluid, .container-lg, .container-md, .container-sm,
+	.container-xl {
+	width: 100%;
+	padding-right: 0.9375rem;
+	padding-left: 0.9375rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.mypage-container .mypage-title {
+	font-size: 2.125rem;
+	padding: 3.125rem 0;
+}
+
+.underline {
+	border-bottom: 0.0625rem solid;
+	border-color: #f2f2f2;
+}
+
+.profile-container {
+	padding: 1rem 0;
+	margin-bottom: 1.25rem;
+}
+
+.profile-container a {
+	display: flex;
+	align-items: center;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+a {
+	color: #323232;
+	background-color: transparent;
+}
 h1 {
     line-height: 3.125rem;
     font-size: 2.125rem;
@@ -43,6 +102,7 @@ h1 {
     width: 6.25rem;
     height: 6.25rem;
     margin: 0px auto;
+    margin-top: 20px;
 }
 
 .user-profile-picture {

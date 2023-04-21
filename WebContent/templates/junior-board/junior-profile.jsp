@@ -4,13 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../../static/css/junior-profile/junior-profile.css" />
+<link rel="stylesheet" href="../../static/css/junior-board/junior-profile.css" />
 <title>권지안 고수의 아동미술 레슨 서비스, 서울 성북구 - 숨고, 숨은고수</title>
 </head>
-<body>
+
+<%@ include file="../mainpageSeo/header.jsp" %>
+
+<body><div id="app" class="webp-bgroup" data-browser="Chrome" data-is-loaded="true">
 	<div id="app-body">
 		<div class="provider-profile">
-
+			
+			<!-- 블러 처리된 헤더 이미지입니다. -->
 			<div class="profile-header"
 				style="background-image: url(https://dmmj3ljielax6.cloudfront.net/upload/profile/916903d0-2127-40b3-9b9c-04f54881a030.jpg?webp=1);"
 			>
@@ -18,17 +22,31 @@
 			</div>
 
 			<div class="container">
+			
+				<!-- 
+					규격 맞추는 div입니다. 
+					no-gutters 안쪽에 크게 2가지 div가 있습니다.
+					 
+					 - profile-section : 왼쪽의 넓은 부분으로, 프로필 정보를 나열해놓은 부분입니다.
+					 - aside-section : 오른쪽의 좁은 부분으로, sticky태그가 붙어 header와 함께 움직이는 profile-aside div가 보여지는 공간입니다.
+				 -->
 				<div class="no-gutters">
+				
 					<div class="profile-section">
+					
+						<!-- 프로필 정보를 담는 div입니다. -->
 						<div class="profile-body">
-							<!---->
+							
+							<!-- 주니어에 관한 간략한 프로필입니다. -->
 							<div class="profile-overview">
-								<!---->
+								
+								<!-- 좌측 상단의 프로필 이미지입니다. -->
 								<div class="thumb">
 									<div class="junior-profile-picture">
 										<div class="is-square" style="background-image: url(https://dmmj3ljielax6.cloudfront.net/upload/profile/916903d0-2127-40b3-9b9c-04f54881a030.jpg?h=320&amp;w=320&amp;webp=1);"></div>
 									</div>
 								</div>
+								
 								<div class="info">
 									<div class="info-section-header">
 										<h1 class="nickname">권지안</h1>
@@ -66,6 +84,8 @@
 											</span>
 											<!---->
 										</div>
+										
+										<!-- 프로질 정보 믿의 리뷰 별점과 경력을 간략히 보여주는 상자 div입니다. -->
 										<div class="statistics-info">
 											<!---->
 											<div class="statistics-info-item">
@@ -86,9 +106,11 @@
 									</div>
 								</div>
 							</div>
-							<!---->
+							
+							<!-- 아래 div는 역할은 모르겠는데 클론코딩 때 있어서 내버려 두었습니다. 앞으로도 종종 있으니 빈 div는 무시해주세요. -->
 							<div class="background-block"></div>
-							<!---->
+							
+							<!-- 소 헤더로, 인덱싱이 되어 있습니다. 스크롤 시 헤더와 함께 이동합니다. -->
 							<ul class="sticky-nav has-price">
 								<li tab-id="about" class="about active">
 									<span>고수 정보</span></li>
@@ -103,7 +125,17 @@
 								<li tab-id="community" class="community">
 									<span>커뮤니티</span></li>
 							</ul>
-							<!---->
+							
+							<!-- 
+								observer-container는 여러 가지 정보를 담은 가장 중요한 div입니다. 
+								8개의 section으로 나누어져 있지만, 아래 3개는 미사용 예정이므로 삭제될 것 같습니다. 
+								 - about : 상세정보 제공
+								 - portfolio : 사진, 클릭 시 modal로 상세보기 -> 클릭 시 게시글 상세보기로 대체예정
+								 - photos : 사진 및 동영상, 클릭 시 뷰어 modal
+								 - reviews
+								 - FAQ
+								 
+							 -->
 							<div class="observer-container">
 								<section id="about">
 								
@@ -485,9 +517,10 @@
 									</div>
 								</section>
 								
-								<section data-observe="market" style="display: none;" id="market">
-									<!---->
-								</section>
+								<!-- 빈 섹션입니다. -->
+								<section data-observe="market" style="display: none;" id="market"></section>
+								
+								<!-- 삭제 예정입니다. -->
 								<section data-observe="community" style="" id="community">
 									<div class="profile-knowhow">
 										<h2>고수의 노하우</h2>
@@ -587,6 +620,8 @@
 										</ul>
 									</div>
 								</section>
+								
+								<!-- 빈 섹션입니다. -->
 								<section data-observe="activity" style="display: none;" id="activity"></section>
 								<!---->
 							</div>
@@ -594,6 +629,7 @@
 						</div>
 					</div>
 					
+					<!-- 바로 견적을 낼 수 있는 편의성 div입니다. 이 부분은 쪽지 보내기로 대체할 예정입니다. -->
 					<div class="aside-section">
 						<aside class="user-profile-aside">
 							<div class="target-request-banner">
@@ -623,7 +659,8 @@
 			</div>
 
 			<div class="v-portal" style="display: none;"></div>
-
+			
+			<!-- 하단에 sticky로 붙어있는 고수 찜하기 버튼의 div입니다. 필요가 없다면 삭제 예정입니다. -->
 			<div class="pro-bucket-button-wrapper">
 				<!---->
 				<button type="button" class="btn pro-bucket-btn btn-secondary">
@@ -635,13 +672,11 @@
 					<span class="btn-text">찜한 고수</span>
 				</button>
 			</div>
-
 		</div>
 	</div>
+	</div>
 </body>
-<script src="../static/js/junior-profile/junior-profile.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script type="text/javascript">
-	
-</script>
+<script src="../../static/js/junior-board/junior-profile.js"></script>
+<jsp:include page="../mainpageSeo/footer.jsp"/>
 </html>
