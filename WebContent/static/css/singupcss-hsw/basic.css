@@ -1,4 +1,4 @@
-@charset "EUC-KR";
+@charset "UTF-8";
 
 * {
 	box-sizing: border-box;
@@ -16,6 +16,7 @@ body {
 	color: #323232;
 	text-align: left;
 	background-color: #fff;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 .login-page {
@@ -74,9 +75,6 @@ form {
 	width: 100%;
 }
 
-.col-14 {
-	margin-top: 25px;
-}
 
 .notice {
 	margin-top: 1.5rem;
@@ -123,8 +121,8 @@ fieldset {
 
 .legend-text {
 	font-size: 0.94rem;
-	/* °­»ç´Ô²²¼­ ÆùÆ® »çÀÌÁî 0.7·Î ÇÏ¶ó ÇÏ¼Ì´Âµ¥ Å¬·¡½º¸íÀ» Àß¸ø ÀÔ·ÂÇØ¼­ Àû¿ëÀÌ ¾ÈµÇ¼­ 0.7·Î ÇØº¸´Ï ³Ê¹« ÀÛ¾Æ¼­ 0.94·Î ¼öÁ¤ÇÏ¿´À½
-	°­»ç´Ô²² °³ÀÎÀûÀ¸·Î Áú¹® ÇØ¼­ ¼öÁ¤ÇÏµµ·Ï ÇÏ°Ú½À´Ï´Ù. */
+	/* ê°•ì‚¬ë‹˜ê»˜ì„œ í°íŠ¸ ì‚¬ì´ì¦ˆ 0.7ë¡œ í•˜ë¼ í•˜ì…¨ëŠ”ë° í´ë˜ìŠ¤ëª…ì„ ì˜ëª» ì…ë ¥í•´ì„œ ì ìš©ì´ ì•ˆë˜ì„œ 0.7ë¡œ í•´ë³´ë‹ˆ ë„ˆë¬´ ì‘ì•„ì„œ 0.94ë¡œ ìˆ˜ì •í•˜ì˜€ìŒ
+	ê°•ì‚¬ë‹˜ê»˜ ê°œì¸ì ìœ¼ë¡œ ì§ˆë¬¸ í•´ì„œ ìˆ˜ì •í•˜ë„ë¡ í•˜ê² ìŠµë‹ˆë‹¤. */
 	padding-bottom: .375rem;
 	font-weight: 500;
 	padding-top: 0 !important;
@@ -166,32 +164,6 @@ fieldset {
 
 .invalid-feedback2 {
 	text-align: center;
-}
-
-.inputpassword {
-	border: .0625rem solid #fa5963;
-	padding-right: 3.125rem;
-	border-top-right-radius: .25rem;
-	border-bottom-right-radius: .25rem;
-	padding: .75rem;
-	border-radius: 4px;
-	position: relative;
-	flex: 1 1 0%;
-	min-width: 0;
-	margin-bottom: 0;
-	display: block;
-	width: 100%;
-	height: calc(1.5em + 1.5rem);
-	font-size: 0.75rem;
-	font-weight: 400;
-	line-height: 1.5;
-	color: #323232;
-	background-color: #fff;
-	background-clip: padding-box;
-	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-	overflow: visible;
-	margin: 0;
-	font-family: inherit;
 }
 
 .input-group {
@@ -315,7 +287,7 @@ section {
 	border: initial;
 }
 
-.input-check {
+.inputCheck {
 	margin-top: 19px;
 }
 
@@ -471,6 +443,7 @@ p {
 
 .btntext {
 	color: #fff;
+
 }
 
 #signUpButton {
