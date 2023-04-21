@@ -73,7 +73,6 @@ button {
 *, :after, :before {
     box-sizing: border-box;
 }
-사용자 에이전트 스타일시트
 button {
     appearance: auto;
     writing-mode: horizontal-tb !important;
@@ -132,39 +131,7 @@ body {
     text-align: left;
     background-color: #fff;
 }
-style 속성 {
-    --gnb-height: 72px;
-}
-:root {
-    --blue: #4785ff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #ff3131;
-    --orange: #fd7e14;
-    --yellow: #ffce21;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #999;
-    --gray-dark: #525252;
-    --primary: #00c7ae;
-    --secondary: #e1e1e1;
-    --success: #00c7ae;
-    --info: #17a2b8;
-    --warning: #ffce21;
-    --danger: #ff3131;
-    --light: #fafafa;
-    --dark: #525252;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 36rem;
-    --breakpoint-md: 48rem;
-    --breakpoint-lg: 62rem;
-    --breakpoint-xl: 75rem;
-    --font-family-sans-serif: "Noto Sans KR","Malgun Gothic",-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-}
+
 html {
     font-family: sans-serif;
     line-height: 1.15;
@@ -186,14 +153,47 @@ html {
     box-sizing: border-box;
 }
 
-.modal{ 
-  position:absolute; width:100%; height:100%; background: rgba(0,0,0,0.8); top:0; left:0; display:none;
-}
 
 
 .modal-open .modal {
 	overflow-x: hidden;
     overflow-y: auto;
+}
+
+.modal {
+     position: absolute;
+     top: 0;
+     left: 0;
+
+     width: 100%;
+     height: 100%;
+
+     display: none;
+
+     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal.show {
+     display: block;
+}
+
+.modal_body {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+
+     width: 400px;
+     height: 600px;
+
+     padding: 40px;
+
+     text-align: center;
+
+     background-color: rgb(255, 255, 255);
+     border-radius: 10px;
+     box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+
+     transform: translateX(-50%) translateY(-50%);
 }
 
 
@@ -257,7 +257,6 @@ html {
 }
 
 .search-pro-filter-modal .tabs .nav-tabs {
-	width: 26.25rem;
 	border: none;
     position: fixed;
     z-index: 1;
@@ -307,11 +306,33 @@ ul li {
 	text-decoration: none;
 }
 
+/*여기까지 일단 복사했음*/
+.search-pro-filter-modal .tabs .nav-link.active:before {
+	content: "";
+    position: absolute;
+    height: 0.125rem;
+    background-color: #00c7ae;
+    left: 0.375rem;
+    right: 0.375rem;
+    bottom: 0.125rem;
+    width: calc(100% - 0.75rem);
+}
+
+*, :after, :before {
+	box-sizing: border-box;
+}
+
+.search-pro-filter-modal .tabs .nav-tabs {
+	margin-top: -292px;
+    margin-left: -38px;
+}
+
+
 </style>
 </head>
 <body>
    <section class="service-area-filter all fixed" style="margin-top: 80px;">
-		<button type="button" class="btn btn-none chip-btn filter-btn">
+		<button type="button" class="btn btn-none chip-btn filter-btn btn-open-popup">
 			<span>서비스</span>
 		</button>								
 		<button type="button" class="btn btn-none chip-btn filter-btn">
@@ -320,7 +341,7 @@ ul li {
 	</section>
 		
 	<div id="search-service-modal___BV_modal_outer_" class="modal" style="position: absolute; z-index: 1040;">
-		<div role="dialog" aria-describedby="search-service-modal___BV_modal_body_" aria-modal="true" class="modal fade show search-pro-filter-modal" style="display: block;">
+		<div id="search-service-modal" role="dialog" aria-describedby="search-service-modal___BV_modal_body_" aria-modal="true" class="modal modal_body fade show search-pro-filter-modal" style="display: block;">
 			<div class="modal-dialog modal-md modal-dialog-centered mobile-full-modal">
 				<span tabindex="0"></span>
 				<div id="search-service-modal___BV_modal_content_" tabindex="-1" class="modal-content">
@@ -329,10 +350,16 @@ ul li {
 							<div>
 								<ul role="tablist" class="nav nav-tabs" id="__BVID__7018__BV_tab_controls_">
 									<li class="nav-item">
-										<a class="nav-link active" id="__BVID__7019___BV_tab_button__"></a>
+										<a class="nav-link active" id="__BVID__7019___BV_tab_button__">
+											서비스
+										</a>
 									</li>
-									<li></li>
-									<button></button>
+									<li class="nav-item">
+										<a class="nav-link" id="__BVID__7019___BV_tab_button__">
+											지역
+										</a>
+									</li>
+									<button class="btn btn-none"></button>
 								</ul>
 							</div>
 							<div></div>
@@ -342,22 +369,34 @@ ul li {
 				<span></span>
 			</div>
 		</div>
+		<!-- <div class="modal">
+	      <div class="modal_body">Modal</div>
+	    </div> -->
 	</div>
 	
-	
-	<button>모달창</button>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-    $(function(){ 
-    	  $("button").click(function(){
-    	    $(".modal").fadeIn();
-    	  });
-    	  
-    	  $(".modal_content").click(function(){
-    	    $(".modal").fadeOut();
-    	  });
-    	  
-    	});
-    </script>
+<script>
+const body = document.querySelector('body');
+const modal = document.querySelector('.modal');
+const btnOpenPopup = document.querySelector('.btn-open-popup');
+
+btnOpenPopup.addEventListener('click', () => {
+  modal.classList.toggle('show');
+
+  if (modal.classList.contains('show')) {
+    body.style.overflow = 'hidden';
+  }
+});
+
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.classList.toggle('show');
+
+    if (!modal.classList.contains('show')) {
+      body.style.overflow = 'auto';
+    }
+  }
+});
+</script>
 </html>

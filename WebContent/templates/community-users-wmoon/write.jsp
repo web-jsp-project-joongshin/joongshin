@@ -9,7 +9,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-
+<style>
+	
+</style>
 </head>
 <body>
 	<div id="app-body">
@@ -27,14 +29,14 @@
 								<option value="together"> 함께해요 </option>
 								<option value="provider-news"> 고수소식 </option>
 							</select>
-							<button type="button" disabled="disabled" class="btn btn-secondary disabled write-post-submit">등록</button>
+							<button type="submit" id="submit" style="background: white; border: none;" disabled="disabled">등록</button>
 						</div>
 					</div>
 					<div class="attach-file-wrapper">
 						<div class="attach-file-area">
-							<div class="add-image-icon"></div>
+							<div class="add-image-icon" onchange="loadFile(this)"></div>
 							<div class="custom-file b-form-file file-input" aria-required="false" aria-invalid="false" id="__BVID__95__BV_file_outer_">
-								<input type="file" name="uploadFile" multiple="multiple" class="custom-file-input" id="__BVID__95" style="z-index: -5;"> 
+								<input type="file" name="uploadFile" class="custom-file-input" id="__BVID__95" style="z-index: -5;"> 
 								<label data-browse="Browse" class="custom-file-label" for="__BVID__95">
 									<span class="d-block form-file-text" style="pointer-events: none;">No file chosen</span>
 								</label>
@@ -58,18 +60,15 @@
 								<button class="category-select-box">
 									<span class="text">(선택) 서비스</span>
 								</button>
-								<button class="category-select-box">
-									<span class="text">(선택) 지역</span>
-								</button>
 							</div>
 							<div class="divider-wrapper">
 								<hr class="hr-divider">
 							</div>
 							<div class="editor-contents">
 								<span class="sg-text-body2 sg-font-regular sg-text-gray-900">
-									<textarea name="post-content" class="editor-contents-textarea"></textarea>
+									<textarea id="reco" onfocus="this.span=''" class="editor-contents-textarea"></textarea>
 								</span>
-								<span class="editor-contents-textarea-placeholder sg-text-body2 sg-font-regular sg-text-gray-500">
+								<span id="tab" class="editor-contents-textarea-placeholder sg-text-body2 sg-font-regular sg-text-gray-500">
 									고객이 궁금해하는 요청 서비스 정보나 고수님의 전문성을 보여주는 글을 작성해 보세요.
 									글을 통해 고수님의 지정요청을 높일 수 있어요!
 									주제에 맞지 않는 글이나 커뮤니티 이용정책에 위배되어 일정 수 이상 신고를 받는 경우 글이 숨김 및 삭제될 수 있습니다.
@@ -83,4 +82,33 @@
 		</div>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+
+//textarea에 글씨 넣으면 버튼 활성화
+$(document).ready(function () {
+    $('#reco').on('input change', function () {
+        if ($("#reco").val() != '')  {
+            $('#submit').prop('disabled', false);
+            $('#submit').css('color', '#00c7ae');
+        }
+        else {
+            $('#submit').prop('disabled', true);
+        }
+    });
+});
+
+//span text 없애는 코드
+$(document).ready(function() {
+
+    $('#reco').focusout(function() {
+      if ($(this).val() == '') {
+        $('#tab').text('글자를 입력해주세요');
+        $(this).focus();
+      } else {
+        $('#tab').empty();
+      }
+    });
+  });
+</script>
 </html>
