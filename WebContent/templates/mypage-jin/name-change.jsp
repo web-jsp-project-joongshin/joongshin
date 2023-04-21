@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link data-vue-meta="1" rel="icon" type="image/png" sizes="32x32"
-	href="https://static.cdn.soomgo.com/static/favicon-32x32.png?webp=1">
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 <!--폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,14 +13,19 @@
 
 
 <link href="../../static/css/mypage-css-jin/name-change.css" rel="stylesheet" type="text/css"/>
-<link href="../../static/css/mypage-css-jin/header-footer.css" rel="stylesheet" type="text/css"/>
+
+<style>
+    .is-invalid {
+        border-color: red;
+    }
+    .is-valid {
+  border-color:green;
+}
+</style>
 
 </head>
 <body>
-		
-
-
-
+<%@ include file="../mainpageSeo/header.jsp" %>
 
 	<div id="app-body">
 		<div class="container container-md">
@@ -40,42 +44,62 @@
 					</div>
 					
 				</div>
+				
+				<!-- 이름 입력창 -->
 				<section  >
-					<fieldset  class="form-group text-field"
-						id="__BVID__156">
-						<legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0"
-							id="__BVID__156__BV_label_">이름</legend>
+					<fieldset  class="form-group11 text-field">
+						<legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0">이름</legend>
 						<div>
-							<input  name="username" type="text"
-								placeholder="이름(실명)을 입력해주세요" autocomplete="off"
-								class="form-control is-valid" autocapitalize="off"
-								spellcheck="true" maxlength="7" data-vv-validate-on="blur"
-								aria-invalid="false" id="__BVID__157" aria-required="true">
-							<div  class="invalid-feedback"></div>
+						<!-- 이름을 입력하고 빈값이 있으면 메세지 출력 -->
+							<input type="text" id="name" 
+								placeholder="이름(실명)을 입력해주세요" 
+								class="form-control1" 
+								spellcheck="true" 
+								/>
 						</div>
+								<div id="message"></div>
 					</fieldset>
 				</section>
 				<footer  class="button-group">
 					<a  href="javascript:history.go(-1)"
 						class="btn btn-cancel btn-active btn-outline-secondary"
-						target="_self">취소</a>
-					<button  type="button" class="btn btn-primary">수정
-						완료</button>
+						target="_self" style="color: #6FB6C0;">취소</a>
+					<button  type="button" class="btn btn-primary" onclick="validateName()">수정 완료</button>
 				</footer>
 			</main>
 		</div>
 	</div>
+
 	
 	
+	<script type="text/javascript">
 	
+	function validateName() {
+		  var name = document.getElementById("name").value.trim();
+		  var message = document.getElementById("message");
+		  var input = document.getElementById("name");
+			/* 이름 빈값일시 출력 */
+		  if (name == "") {
+		    message.innerHTML = "변경할 이름을 입력해주세요.";
+		    message.style.color = 'red';
+		    input.classList.add("is-invalid");
+		    input.classList.remove("is-valid");
+		    return false;
+		    /* 빈값아니면 원상태로 복귀 */
+		  } else {
+		    input.classList.remove("is-invalid");
+		    input.classList.add("is-valid");
+		    message.innerHTML = "";
+		  }
+		}
+
+		var emailInput = document.getElementById("name");
+		/* blur로 정보 즉시 반영 */
+		emailInput.addEventListener("blur", validateName);
+
 	
+	</script>	
 	
-	
-	
-	
-	
-	
-	
-		
 </body>
+<jsp:include page="../mainpageSeo/footer.jsp"/>
 </html>

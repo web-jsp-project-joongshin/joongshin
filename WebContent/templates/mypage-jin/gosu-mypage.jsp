@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link data-vue-meta="1" rel="icon" type="image/png" sizes="32x32"
-	href="https://static.cdn.soomgo.com/static/favicon-32x32.png?webp=1">
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 <!--폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,13 +19,8 @@
 <link href="../../static/css/mypage-css-jin/header-footer.css"
 	rel="stylesheet" type="text/css" />
 
-
-
-
-
-
-
-
+<body>
+<%@ include file="../mainpageSeo/header.jsp" %>
 
 	<div id="app-body">
 		<div class="container container-md">
@@ -71,8 +65,8 @@
 
 							</div>
 
-							<div class="arrow">
-								<span class="right-arrow"><img
+							<div class="arrow1">
+								<span class="right-arrow1"><img
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg"></span>
 							</div> </a></li>
 
@@ -85,20 +79,15 @@
 
 							</div>
 
-							<div class="arrow">
-								<span class="right-arrow"><img
+							<div class="arrow1">
+								<span class="right-arrow1"><img
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg"></span>
 							</div> </a></li>
-
 				</ul>
 			</div>
 		</div>
 	</div>
 
-
-
-
-
-	
 </body>
+<jsp:include page="../mainpageSeo/footer.jsp"/>
 </html>

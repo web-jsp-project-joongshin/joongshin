@@ -5,10 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../static/css/junior-board/junior-profile.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <title>권지안 고수의 아동미술 레슨 서비스, 서울 성북구 - 숨고, 숨은고수</title>
 </head>
-
-<jsp:include page="../mainpageSeo/header.jsp"/>
 
 <body>
 	<div id="app-body">
@@ -674,8 +675,9 @@
 			</div>
 		</div>
 	</div>
+	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="../../static/js/junior-board/junior-profile.js"></script>
-<jsp:include page="../mainpageSeo/footer.jsp"/>
+
 </html>

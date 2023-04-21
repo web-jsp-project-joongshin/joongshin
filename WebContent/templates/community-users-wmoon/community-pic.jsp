@@ -6,12 +6,9 @@
 <meta charset="UTF-8">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 <link rel="stylesheet" href="../../static/css/users-wmoon/community-pic.css"/>
-<<<<<<< HEAD
-=======
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
->>>>>>> community-users/readme-wmoon
 
 </head>
 <body>

@@ -29,14 +29,14 @@ header.navi-bar {
     flex-direction: column;
     min-width: 232px;
     max-width: 288px;
-    background-color: #ECFDFA;
+    background-color: rgba(111, 182, 192, 0.15);
 }
 
 .logo {
-    width: 106px;
+    width: 160px;
     height: 36px;
-    margin: 20px auto;
-    background-image: url("../../../static/image/icons/logo.svg");
+    margin: 33px auto 20px;
+    background-image: url("../../../static/image/logo/JOONGSHIN.svg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -83,6 +83,7 @@ header.navi-bar {
 
 .navi-title {
     font-weight: bold;
+    cursor: pointer;
     @media (max-width: 1275px) {
         font-size: 14px
     }
@@ -125,6 +126,7 @@ main {
     flex-direction: column;
     align-items: flex-start;
     padding: 5px 50px 50px 50px;
+    margin-left: 30px;
 }
 
 .main-title-box {

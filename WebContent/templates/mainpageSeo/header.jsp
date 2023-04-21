@@ -3,9 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link data-vue-meta="1" rel="shortcut icon"
-	href="https://static.cdn.soomgo.com/static/favicon.ico">
-<link rel="stylesheet" type="text/css" href="../../static/css/mainpageSeo/mainpage.css">
+<!-- 로고 -->
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
+
+
+<link rel="stylesheet" type="text/css" href="../../static/css/mainpageSeo/hf.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -13,7 +15,6 @@
 </head>
 
 <body class="home">
-<div id="app" class="webp-bgroup" data-browser="Chrome" data-is-loaded="true">
 <div class="__cov-progress" style="background-color: rgb(0, 199, 174); opacity: 0; position: fixed; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s;"></div>
 		<header id="app-header" class="global-header" data-v-50506024="">
 			<div data-v-5f10666f="" data-v-50506024=""
@@ -24,7 +25,7 @@
 						<div data-v-5f10666f="" class="logo">
 							<a data-v-5f10666f="" href="/?from=logo" class=""> <img
 								data-v-5f10666f=""
-								src="https://assets.cdn.soomgo.com/icons/icon-navi-logo.svg"
+								src="../../static/image/logo/JOONGSHIN.svg"
 								alt="숨고, 숨은고수">
 							</a>
 						</div>
@@ -36,12 +37,7 @@
 								<li data-v-5f10666f="" class="nav-item left-section-item"><a
 									data-v-5f10666f="" href="/search/pro?from=web_gnb"
 									class="gnb-link"><span data-v-5f10666f="">문의 게시판</span></a></li>
-								<li data-v-5f10666f="" class="nav-item left-section-item"><a
-									data-v-5f10666f="" href="/ip/products" class="gnb-link"><span
-										data-v-5f10666f=""></span></a></li>
-								<li data-v-5f10666f="" class="nav-item left-section-item"><a
-									data-v-5f10666f="" href="/community/soomgo-life/?from=web_gnb"
-									class="gnb-link"><span data-v-5f10666f=""></span></a></li>
+						
 							</ul>
 						</nav>
 					</div>

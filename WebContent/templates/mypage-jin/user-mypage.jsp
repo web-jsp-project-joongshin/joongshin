@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link data-vue-meta="1" rel="icon" type="image/png" sizes="32x32" href="https://static.cdn.soomgo.com/static/favicon-32x32.png?webp=1">
-<title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
+<title>중고신입 일반 유저 마이 페이지</title>
 <!--폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,16 +16,15 @@
 <link href="../../static/css/mypage-css-jin/header-footer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body> 
-		
+<%@ include file="../mainpageSeo/header.jsp" %>
 
-
-
-
+<!-- 마이페이지 -->
 	<div id="app-body">
 		<div class="container container-md">
 			<div class="mypage-container">
 				<h1 class="mypage-title">마이페이지</h1>
 				<div data-v-e86fae02="" class="profile-container underline">
+				<!-- a태그 계정 설정으로 이동 -->
 					<a href="./user-mypage-account.jsp">
 						<div class="thumb">
 							<div class="user-profile-picture h-100">
@@ -51,6 +50,8 @@
 					</a> 
 					</div>
 				
+				
+				<!-- 작성글/ 쪽지 확인 -->
 				<ul class="underline" style="font-weight: 900; font-size: 1.3rem;">
 					<li class="main-menu">커뮤니티 <a role="button"> </a>
 					</li>
@@ -63,7 +64,7 @@
 
 						</div>
 
-							<div class="arrow">
+							<div class="arrow1">
 								<span class="right-arrow"><img
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg"></span>
 							</div> </a></li>
@@ -77,7 +78,7 @@
 
 							</div>
 
-							<div class="arrow">
+							<div class="arrow1">
 								<span class="right-arrow"><img
 									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg"></span>
 							</div> </a></li>
@@ -87,12 +88,7 @@
 				</div>
 			</div>
 		</div>
-
-	
-	
-	
-	
-	
 	
 </body>
+<jsp:include page="../mainpageSeo/footer.jsp"/>
 </html>

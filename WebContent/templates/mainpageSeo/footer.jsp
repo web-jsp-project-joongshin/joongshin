@@ -3,9 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link data-vue-meta="1" rel="shortcut icon"
-	href="https://static.cdn.soomgo.com/static/favicon.ico">
-<link rel="stylesheet" type="text/css" href="../../static/css/mainpageSeo/mainpage.css">
+<link rel="stylesheet" type="text/css" href="../../static/css/mainpageSeo/hf.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">

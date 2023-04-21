@@ -4,15 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet"
-	href="../../static/css/junior-board/junior-article-view-detail.css">
+<link rel="stylesheet" href="../../static/css/junior-board/junior-article-view-detail.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <title>글 상세보기</title>
 </head>
 
-<jsp:include page="../mainpageSeo/header.jsp"/>
-
 <body>
-
 	<!-- 
 		제목 보여주는 sticky header입니다. 
 		스크롤 내리면서 프로필이 보일 때 잠깐 없어졌다 다시 뿅하고 나옵니다. 
@@ -155,7 +154,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="../../static/js/junior-board/junior-article-view-detail.js"></script>
-
-<jsp:include page="../mainpageSeo/footer.jsp"/>
 
 </html>

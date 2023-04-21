@@ -23,8 +23,8 @@
                         <div class="arrow"></div>
                     </div>
                     <ul class="board-list list">
-                        <li onclick="location.href='userBoard.jsp'">이용자 게시판</li>
-						<li onclick="location.href='juniorBoard.jsp'">주니어 게시판</li>
+                        <li onclick="location.href='userBoardList.jsp'">이용자 게시판</li>
+						<li onclick="location.href='juniorBoardList.jsp'">주니어 게시판</li>
                     </ul>
                </section>
 
