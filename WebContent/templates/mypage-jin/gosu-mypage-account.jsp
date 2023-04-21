@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link data-vue-meta="1" rel="icon" type="image/png" sizes="32x32"
-	href="https://static.cdn.soomgo.com/static/favicon-32x32.png?webp=1">
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 <!--폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,36 +21,10 @@
 <link href="../../static/css/mypage-css-jin/user-mypage-account.css"
 	rel="stylesheet" type="text/css" />
 
-<style type="text/css">
-.image-container {
-	width: 100%;
-	height: auto;
-	text-align: center;
-}
-
-/* mystyle.css */
-/* The Modal (background) */
-.modal {
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
-}
-
-.close {
-	margin-top: 20px justify-content: center;
-}
-
-.close:hover, .close:focus {
-	color: black;
-	text-decoration: none;
-	cursor: pointer;
-}
-</style>
-
-
 </head>
 <body>
-
+<%@ include file="../mainpageSeo/header.jsp" %>
+<!-- 일반 유저 계정설정에서 이력서만 추가됨 -->
 	<div id="app-body">
 		<div class="container container-md">
 			<main class="account-info-container">
@@ -157,10 +130,7 @@
 										src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
 								</div></a>
 					</ul>
-
-
-
-					<ul data-testid="resume-account" class="resume-account">
+		<ul data-testid="resume-account" class="resume-account">
 						<a href="./resume-change.jsp" class="item-container">
 							<div data-testid="resume-account-text" class="item">이력서 수정</div>
 							<div>
@@ -187,9 +157,9 @@
 		</div>
 	</div>
 
-
-
 </body>
+<jsp:include page="../mainpageSeo/footer.jsp"/>
+
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <!-- 프로필 모달 이미지 변경-->
@@ -235,8 +205,5 @@ window.onclick = function(event) {
   }
 };
 
-
 	</script>
 </html>
-
-

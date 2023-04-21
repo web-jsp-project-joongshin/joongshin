@@ -4,9 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link data-vue-meta="1" rel="icon" type="image/png" sizes="32x32"
-	href="https://static.cdn.soomgo.com/static/favicon-32x32.png?webp=1">
-<title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
+<title>중고신입 일반 유저 계정설정 페이지</title>
 <!--폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,49 +20,11 @@
 <link href="../../static/css/mypage-css-jin/user-mypage-account.css"
 	rel="stylesheet" type="text/css" />
 
-<style type="text/css">
-.image-container {
-  width: 100%;
-  height: auto;
-  text-align: center;
-}
-
-/* mystyle.css */
-/* The Modal (background) */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-        }
-        
-        .close {
-        	margin-top: 20px
-            justify-content: center;
-        }
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-            
-            
-            .custom-file-input {
-			  position: absolute;
-			  left: 0;
-			  top: 0;
-			  width: 100%;
-			  height: 100%;
-			  opacity: 0;
-			  z-index: -1;
-			}
-            
-</style>
-
-
 </head>
 <body>
+<%@ include file="../mainpageSeo/header.jsp" %>
 
-
+<!-- 계정 설정 -->
 	<div id="app-body">
 		<div class="container container-md image add-image">
 			<main class="account-info-container">
@@ -128,11 +89,10 @@
 					</div>
 					<div id="__BVID__420___BV_modal_backdrop_" class="modal-backdrop"></div>
 				</div>
-			 	
-			 	
-			 	
-			 	
-			 	
+
+
+
+				<!-- 이름, 이메일, 비밀번호 -->
 				<section>
 
 					<ul class="account-info">
@@ -169,15 +129,15 @@
 							
 					</ul>
 					
-				<a href="./account-delete-final-check.jsp">
-					<div data-testid="delete-account" class="delete-account btn3">
-						<div  data-testid="delete-account-text" class="item">계정 탈퇴</div>
+					
+					
+				<!-- 계정 탈퇴 -->
+				<a href="./account-delete-final-check.jsp" class="item-container">
+							<div data-testid="delete-account-text" class="item">계정 탈퇴</div>
 							<div>
-								<img
-									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
+								<img src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
 							</div>
-					</div>
-				</a>
+						</a>
 							
 				</section>
 				
@@ -186,89 +146,52 @@
 	</div>
 
 
-
 </body>
+<jsp:include page="../mainpageSeo/footer.jsp"/>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<!-- 프로필 모달 이미지 변경-->
+<!--  프로필 모달 이미지 변경 -->
 <script type="text/javascript">
-//Modal을 가져옵니다.
+/* Modal 가져옴  */
 var modals = document.getElementsByClassName("modal");
-// Modal을 띄우는 클래스 이름을 가져옵니다.
+/* Modal을 띄우는 클래스 이름을 가져옴 */
 var btns = document.getElementsByClassName("btn");
-// Modal을 닫는 close 클래스를 가져옵니다.
+/* Modal을 닫는 close 클래스를 가져옴 */
 var spanes = document.getElementsByClassName("close");
 var funcs = [];
  
-// Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
+/* Modal을 띄우고 닫는 취소 이벤트 정의 함수 */
 function Modal(num) {
   return function() {
-    // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
+   /*  해당 클래스의 내용을 클릭하면 Modal나옴 */
     btns[num].onclick =  function() {
         modals[num].style.display = "block";
         console.log(num);
     };
  
-    // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
+    /*  취소를 클릭하면 Modal 닫음 */
     spanes[num].onclick = function() {
         modals[num].style.display = "none";
     };
   };
 }
  
-// 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
+/* 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의 */
 for(var i = 0; i < btns.length; i++) {
   funcs[i] = Modal(i);
 }
  
-// 원하는 Modal 수만큼 funcs 함수를 호출합니다.
+/* 원하는 Modal 수만큼 funcs 함수를 호출하는데 모달 다 지워서 필요없어짐 */
 for(var j = 0; j < btns.length; j++) {
   funcs[j]();
 }
  
-// Modal 영역 밖을 클릭하면 Modal을 닫습니다.
+/* Modal 영역 밖을 클릭하면 Modal 닫음 */
 window.onclick = function(event) {
   if (event.target.className == "modal") {
       event.target.style.display = "none";
   }
 };
-
-
-	</script>
-<script type="text/javascript">
-
-const image_div = document.querySelectorAll('div.image');
-const cancel_div = document.querySelector('div.cancel');
-const input_file = document.querySelector('#attach');
-
-cancel_div.addEventListener('click', () => {
-  input_file.value = '';
-  image_div[0].style.display = 'block';
-  image_div[1].style.display = 'none';
-  cancel_div.style.display = 'none';
-});
-
-// input type file인 객체는 파일 업로드 시 change 이벤트가 발생한다.
-input_file.addEventListener('change', (e) => {
-  // 이 때 e객체로 업로드된 파일의 정보를 가져올 수 있다(e.target.files[0]).
-  // console.log(e.target.files[0]);
-
-  // 하지만 change 이벤트 객체만으로는 해당 파일의 경로를 알 수 없기 때문에
-  // FileReader객체가 필요하다.
-  let reader = new FileReader();
-
-  // reader객체의 readAsDataURL()메소드를 사용하여 파일의 정보를 전달해주면,
-  reader.readAsDataURL(e.target.files[0]);
-  // 모든 파일의 정보를 읽어왔을 때 onload 이벤트가 발생한다.
-  reader.onload = (e) => {
-    image_div[1].style.display = 'block';
-    image_div[1].style.backgroundImage = `url('${e.target.result}')`;
-    image_div[0].style.display = 'none';
-    cancel_div.style.display = 'block';
-  };
-});
-
-
 </script>
+
 
 </html>

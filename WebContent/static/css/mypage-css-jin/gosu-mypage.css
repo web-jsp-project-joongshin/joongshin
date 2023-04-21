@@ -415,7 +415,7 @@ img {
 }
 
 .tooltip-balloon.bottom:after, .tooltip-balloon.top:after {
-    left: var(--arrowPositionLeft);
+    left: var(--arrow111PositionLeft);
     transform: translateX(-50%);
     border-left: 0.3125rem solid transparent;
     border-right: 0.3125rem solid transparent;
