@@ -8,8 +8,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<!-- 로고 -->
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
 
-<title>숨고:숨은고수 - 800만명이 선택</title>
+<title>중신:주니어의 스펙업사이트 </title>
 
 </head>
 
@@ -18,43 +20,494 @@
 
 <div id="app-body">
 <div class="home" data-v-38e68602="">
-<div class="observer-container" data-v-45a9f2fc="" data-v-38e68602="">
-<div dir="ltr" class="slick-slider slick-initialized" data-v-3d1a4f76="" data-v-55917fe8="" data-v-1438af5a="">
-<div class="slick-list" data-v-3d1a4f76="">
+
+
 <!-- 배너 -->
-<section class="container">
-      <div class="banner" style="transform: translate(-12000px); transition: transform 0.7s ease 0s;">
-        <div id="first-temp" style="background-image: url(https://static.cdn.soomgo.com/upload/main-banner/361dbfb8-86c6-494d-be8f-931dc1f7e681.png?webp=1);"></div>
-        <div class="image" style="background-image: url(https://static.cdn.soomgo.com/upload/main-banner/d0053603-2d00-4a82-bf1a-689c29eafc3a.png?webp=1);"></div>
-        <div class="image" style="background-image: url(&quot;2.png&quot;);"></div>
-        <div class="image" style="background-image: url(&quot;3.png&quot;);"></div>
-        <div class="image" style="background-image: url(&quot;4.png&quot;);"></div>
-        <div class="image" style="background-image: url(&quot;5.png&quot;);"></div>
-        <div class="image" style="background-image: url(&quot;6.png&quot;);"></div>
-        <div class="image" style="background-image: url(&quot;7.png&quot;);"></div>
-        <div id="last-temp" style="background-image: url(&quot;1.png&quot;);"></div>
-      </div>
-      <div class="arrow prev">&lt;</div>
-      <div class="arrow next">&gt;</div>
-      i
-      <div class="dots">
-        <div class="dot 1" style="background: rgb(49, 49, 49);"></div>
-        <div class="dot 2" style="background: none;"></div>
-        <div class="dot 3" style="background: none;"></div>
-        <div class="dot 4" style="background: none;"></div>
-        <div class="dot 5" style="background: none;"></div>
-        <div class="dot 6" style="background: none;"></div>
-        <div class="dot 7" style="background: none;"></div>
-      </div>
-    </div>
-    </section>
-<!-- 배너 -->
+			<div class="observer-container" data-v-45a9f2fc="" data-v-38e68602="">
+				<div data-observe="banner" class="main-banner" data-v-1438af5a=""
+					data-v-38e68602="" data-v-45a9f2fc="" id="banner">
+					<div dir="ltr" class="slick-slider slick-initialized"
+						data-v-3d1a4f76="" data-v-55917fe8="" data-v-1438af5a="">
+						<div class="slick-list" data-v-3d1a4f76="">
+							<div class="slick-track"
+								style="width: 14550px; opacity: 1; transform: translate3d(-2910px, 0px, 0px);"
+								data-v-e4caeaf8="" data-v-3d1a4f76="">
+								<div tabindex="-1" data-index="-1" aria-hidden="true"
+									class="slick-slide slick-cloned" style="width: 970px;"
+									data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a href="https://soomgoletter.stibee.com/" target="_self"
+												data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/361dbfb8-86c6-494d-be8f-931dc1f7e681.png"
+												alt="숨고레터 구독하기" class="banner-image" data-v-e4caeaf8=""
+												data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+								<div tabindex="-1" data-index="0" aria-hidden="true"
+									class="slick-slide" style="outline: none; width: 970px;"
+									data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a href="https://soomgo.com/event/313" target="_self"
+												data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/763fe1db-12ea-4c95-9438-ad557f7cbebf.png"
+												alt="광고 구좌 출시 이벤트" class="banner-image" data-v-e4caeaf8=""
+												data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+								<div tabindex="-1" data-index="1" aria-hidden="true"
+									class="slick-slide" style="outline: none; width: 970px;"
+									data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a href="https://soomgo.com/event/208" target="_self"
+												data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/022ccc4d-b623-4a3b-82d9-b6a3a782ff68.png"
+												alt="얼리버드 에어컨 청소 이벤트 앵콜" class="banner-image"
+												data-v-e4caeaf8="" data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+								<div tabindex="-1" data-index="2" aria-hidden="false"
+									class="slick-slide slick-active slick-current"
+									style="outline: none; width: 970px;" data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a href="https://soomgo.com/event/206" target="_blank"
+												data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/ab0172e9-13f2-4156-a376-8fcce625ff00.png"
+												alt="소상공인 응원 프로젝트" class="banner-image" data-v-e4caeaf8=""
+												data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+								<div tabindex="-1" data-index="3" aria-hidden="true"
+									class="slick-slide" style="outline: none; width: 970px;"
+									data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a
+												href="https://soomgo.com/curations/8c0b0800-acd8-11ed-b4c6-f57049c3b7a1"
+												target="_self" data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/d81096a3-0bcc-4ec3-8f51-d41cc076d3b4.png"
+												alt="심부름 런칭 안내" class="banner-image" data-v-e4caeaf8=""
+												data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+								<div tabindex="-1" data-index="4" aria-hidden="true"
+									class="slick-slide" style="outline: none; width: 970px;"
+									data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a href=" /portfolio?from=main" target="_self"
+												data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/e1384777-e070-44e7-891c-4f2ec7650a2f.png"
+												alt="포트폴리오 전용 목록 진입 창구 배너" class="banner-image"
+												data-v-e4caeaf8="" data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+								<div tabindex="-1" data-index="5" aria-hidden="true"
+									class="slick-slide" style="outline: none; width: 970px;"
+									data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a href="https://soomgo.com/event/160" target="_self"
+												data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/291c9480-4a91-4272-8b96-1538a84a5e60.png"
+												alt=" 안전한 거래를 위한 7가지 습관" class="banner-image"
+												data-v-e4caeaf8="" data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+								<div tabindex="-1" data-index="6" aria-hidden="true"
+									class="slick-slide" style="outline: none; width: 970px;"
+									data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a href="https://soomgoletter.stibee.com/" target="_self"
+												data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/361dbfb8-86c6-494d-be8f-931dc1f7e681.png"
+												alt="숨고레터 구독하기" class="banner-image" data-v-e4caeaf8=""
+												data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+								<div tabindex="-1" data-index="7" aria-hidden="true"
+									class="slick-slide slick-cloned" style="width: 970px;"
+									data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a href="https://soomgo.com/event/313" target="_self"
+												data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/763fe1db-12ea-4c95-9438-ad557f7cbebf.png"
+												alt="광고 구좌 출시 이벤트" class="banner-image" data-v-e4caeaf8=""
+												data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+								<div tabindex="-1" data-index="8" aria-hidden="true"
+									class="slick-slide slick-cloned" style="width: 970px;"
+									data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a href="https://soomgo.com/event/208" target="_self"
+												data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/022ccc4d-b623-4a3b-82d9-b6a3a782ff68.png"
+												alt="얼리버드 에어컨 청소 이벤트 앵콜" class="banner-image"
+												data-v-e4caeaf8="" data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+								<div tabindex="-1" data-index="9" aria-hidden="true"
+									class="slick-slide slick-cloned" style="width: 970px;"
+									data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a href="https://soomgo.com/event/206" target="_blank"
+												data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/ab0172e9-13f2-4156-a376-8fcce625ff00.png"
+												alt="소상공인 응원 프로젝트" class="banner-image" data-v-e4caeaf8=""
+												data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+								<div tabindex="-1" data-index="10" aria-hidden="true"
+									class="slick-slide slick-cloned" style="width: 970px;"
+									data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a
+												href="https://soomgo.com/curations/8c0b0800-acd8-11ed-b4c6-f57049c3b7a1"
+												target="_self" data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/d81096a3-0bcc-4ec3-8f51-d41cc076d3b4.png"
+												alt="심부름 런칭 안내" class="banner-image" data-v-e4caeaf8=""
+												data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+								<div tabindex="-1" data-index="11" aria-hidden="true"
+									class="slick-slide slick-cloned" style="width: 970px;"
+									data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a href=" /portfolio?from=main" target="_self"
+												data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/e1384777-e070-44e7-891c-4f2ec7650a2f.png"
+												alt="포트폴리오 전용 목록 진입 창구 배너" class="banner-image"
+												data-v-e4caeaf8="" data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+								<div tabindex="-1" data-index="12" aria-hidden="true"
+									class="slick-slide slick-cloned" style="width: 970px;"
+									data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a href="https://soomgo.com/event/160" target="_self"
+												data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/291c9480-4a91-4272-8b96-1538a84a5e60.png"
+												alt=" 안전한 거래를 위한 7가지 습관" class="banner-image"
+												data-v-e4caeaf8="" data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+								<div tabindex="-1" data-index="13" aria-hidden="true"
+									class="slick-slide slick-cloned" style="width: 970px;"
+									data-v-e4caeaf8="">
+									<div data-v-e4caeaf8="">
+										<div tabindex="-1" class="banner-item"
+											style="width: 100%; display: inline-block;"
+											data-v-e4caeaf8="" data-v-1438af5a="">
+											<a href="https://soomgoletter.stibee.com/" target="_self"
+												data-v-e4caeaf8="" data-v-1438af5a=""><img
+												src="https://static.cdn.soomgo.com/upload/main-banner/361dbfb8-86c6-494d-be8f-931dc1f7e681.png"
+												alt="숨고레터 구독하기" class="banner-image" data-v-e4caeaf8=""
+												data-v-1438af5a=""></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!---->
+					
+				</div>
+				<!---->
+			</div>
+
+			<!-- 배너 끝 -->
+
+
+
+<!-- 인기 주니어 게시글 배너-->
+					<div class="main-service container no-mobile-padding"
+						data-v-b89d6118="" data-v-38e68602="">
+
+				<section class="header short-bottom" data-v-0b8ae29e="">
+				<h2 class="title" data-v-0b8ae29e="">주니어 게시판 목록</h2>
+				<a href="/community/soomgo-life/" data-testid="community-home"
+					class="go-list" data-v-1b5b0368="" data-v-0b8ae29e=""><span
+					data-v-1b5b0368="">전체보기</span><img
+					src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAgMEgxNlYxNkgweiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwNTMuMDAwMDAwLCAtMjAyLjAwMDAwMCkgdHJhbnNsYXRlKDQ4NS4wMDAwMDAsIDE4OC4wMDAwMDApIHRyYW5zbGF0ZSg1NjguMDAwMDAwLCAxNC4wMDAwMDApIi8+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggc3Ryb2tlPSIjMDBDN0FFIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNMTEgMTNMNiA4IDExIDMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMDUzLjAwMDAwMCwgLTIwMi4wMDAwMDApIHRyYW5zbGF0ZSg0ODUuMDAwMDAwLCAxODguMDAwMDAwKSB0cmFuc2xhdGUoNTY4LjAwMDAwMCwgMTQuMDAwMDAwKSB0cmFuc2xhdGUoOC41MDAwMDAsIDguMDAwMDAwKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC04LjUwMDAwMCwgLTguMDAwMDAwKSIvPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+					data-v-1b5b0368=""></a></section>
+
+				<div data-v-538b8750="" data-v-b89d6118=""
+							class="main-desktop-slide">
+							<div data-v-3d1a4f76="" data-v-55917fe8="" data-v-538b8750=""
+								dir="ltr" class="slick-slider slick-initialized">
+								<button data-v-21137603="" data-v-3d1a4f76="" type="button"
+									data-role="none" class="slick-arrow slick-prev slick-disabled"
+									style="display: block;">Previous</button>
+								<div data-v-3d1a4f76="" class="slick-list">
+									<div data-v-e4caeaf8="" data-v-3d1a4f76="" class="slick-track"
+										style="width: 1976px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+										<div data-v-e4caeaf8="" tabindex="-1" data-index="0"
+											aria-hidden="false"
+											class="slick-slide slick-active slick-current"
+											style="outline: none; width: 247px;">
+											<div data-v-e4caeaf8="">
+												<a data-v-b89d6118=""
+													href="/hire/%EC%98%81%EC%96%B4?from=%EC%9D%B8%EA%B8%B0%EC%84%9C%EB%B9%84%EC%8A%A4"
+													class="" tabindex="-1" data-v-e4caeaf8=""
+													style="width: 100%; display: inline-block;"><div
+														data-v-24b630b2="" data-v-b89d6118=""
+														data-testid="main-service-card" class="main-service-card">
+														<img data-v-24b630b2="" alt="영어 과외" class="service-image"
+															data-src="https://dmmj3ljielax6.cloudfront.net/upload/service/05389ab5-c05d-45c8-abe1-d0b90019cb75.png?webp=1"
+															src="https://dmmj3ljielax6.cloudfront.net/upload/service/05389ab5-c05d-45c8-abe1-d0b90019cb75.png?webp=1"
+															lazy="loaded">
+														<p data-v-24b630b2="" class="service-name">영어 과외</p>
+														<div data-v-24b630b2="" class="request-count">
+															<img data-v-24b630b2=""
+																src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+																alt="요청서 아이콘" class="request-icon"><span
+																data-v-24b630b2="">811,994</span>명 요청
+														</div>
+													</div></a>
+											</div>
+										</div>
+										<div data-v-e4caeaf8="" tabindex="-1" data-index="1"
+											aria-hidden="false" class="slick-slide slick-active"
+											style="outline: none; width: 247px;">
+											<div data-v-e4caeaf8="">
+												<a data-v-b89d6118=""
+													href="/hire/%ED%8D%BC%EC%8A%A4%EB%84%90%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D?from=%EC%9D%B8%EA%B8%B0%EC%84%9C%EB%B9%84%EC%8A%A4"
+													class="" tabindex="-1" data-v-e4caeaf8=""
+													style="width: 100%; display: inline-block;"><div
+														data-v-24b630b2="" data-v-b89d6118=""
+														data-testid="main-service-card" class="main-service-card">
+														<img data-v-24b630b2="" alt="퍼스널트레이닝(PT)"
+															class="service-image"
+															data-src="https://dmmj3ljielax6.cloudfront.net/upload/service/6a497fde-2ba4-4a59-977c-41ce3be83e08.png?webp=1"
+															src="https://dmmj3ljielax6.cloudfront.net/upload/service/6a497fde-2ba4-4a59-977c-41ce3be83e08.png?webp=1"
+															lazy="loaded">
+														<p data-v-24b630b2="" class="service-name">퍼스널트레이닝(PT)</p>
+														<div data-v-24b630b2="" class="request-count">
+															<img data-v-24b630b2=""
+																src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+																alt="요청서 아이콘" class="request-icon"><span
+																data-v-24b630b2="">527,532</span>명 요청
+														</div>
+													</div></a>
+											</div>
+										</div>
+										<div data-v-e4caeaf8="" tabindex="-1" data-index="2"
+											aria-hidden="false" class="slick-slide slick-active"
+											style="outline: none; width: 247px;">
+											<div data-v-e4caeaf8="">
+												<a data-v-b89d6118=""
+													href="/hire/%EB%B3%B4%EC%BB%AC?from=%EC%9D%B8%EA%B8%B0%EC%84%9C%EB%B9%84%EC%8A%A4"
+													class="" tabindex="-1" data-v-e4caeaf8=""
+													style="width: 100%; display: inline-block;"><div
+														data-v-24b630b2="" data-v-b89d6118=""
+														data-testid="main-service-card" class="main-service-card">
+														<img data-v-24b630b2="" alt="보컬 레슨" class="service-image"
+															data-src="https://dmmj3ljielax6.cloudfront.net/upload/service/85e81b4b-4b9e-4b45-b9ac-950a342788bc.png?webp=1"
+															src="https://dmmj3ljielax6.cloudfront.net/upload/service/85e81b4b-4b9e-4b45-b9ac-950a342788bc.png?webp=1"
+															lazy="loaded">
+														<p data-v-24b630b2="" class="service-name">보컬 레슨</p>
+														<div data-v-24b630b2="" class="request-count">
+															<img data-v-24b630b2=""
+																src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+																alt="요청서 아이콘" class="request-icon"><span
+																data-v-24b630b2="">333,224</span>명 요청
+														</div>
+													</div></a>
+											</div>
+										</div>
+										<div data-v-e4caeaf8="" tabindex="-1" data-index="3"
+											aria-hidden="false" class="slick-slide slick-active"
+											style="outline: none; width: 247px;">
+											<div data-v-e4caeaf8="">
+												<a data-v-b89d6118=""
+													href="/hire/%EC%9A%95%EC%8B%A4-%EB%A6%AC%EB%AA%A8%EB%8D%B8%EB%A7%81?from=%EC%9D%B8%EA%B8%B0%EC%84%9C%EB%B9%84%EC%8A%A4"
+													class="" tabindex="-1" data-v-e4caeaf8=""
+													style="width: 100%; display: inline-block;"><div
+														data-v-24b630b2="" data-v-b89d6118=""
+														data-testid="main-service-card" class="main-service-card">
+														<img data-v-24b630b2="" alt="욕실/화장실 리모델링"
+															class="service-image"
+															data-src="https://dmmj3ljielax6.cloudfront.net/upload/service/65e4e1e8-5727-4479-b5d1-1f70a69ec446.png?webp=1"
+															src="https://dmmj3ljielax6.cloudfront.net/upload/service/65e4e1e8-5727-4479-b5d1-1f70a69ec446.png?webp=1"
+															lazy="loaded">
+														<p data-v-24b630b2="" class="service-name">욕실/화장실 리모델링</p>
+														<div data-v-24b630b2="" class="request-count">
+															<img data-v-24b630b2=""
+																src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+																alt="요청서 아이콘" class="request-icon"><span
+																data-v-24b630b2="">295,114</span>명 요청
+														</div>
+													</div></a>
+											</div>
+										</div>
+										<div data-v-e4caeaf8="" tabindex="-1" data-index="4"
+											aria-hidden="true" class="slick-slide"
+											style="outline: none; width: 247px;">
+											<div data-v-e4caeaf8="">
+												<a data-v-b89d6118=""
+													href="/hire/%EB%8F%84%EB%B0%B0-%EC%9E%A5%ED%8C%90-%EC%8B%9C%EA%B3%B5?from=%EC%9D%B8%EA%B8%B0%EC%84%9C%EB%B9%84%EC%8A%A4"
+													class="" tabindex="-1" data-v-e4caeaf8=""
+													style="width: 100%; display: inline-block;"><div
+														data-v-24b630b2="" data-v-b89d6118=""
+														data-testid="main-service-card" class="main-service-card">
+														<img data-v-24b630b2="" alt="도배장판 시공"
+															class="service-image"
+															data-src="https://dmmj3ljielax6.cloudfront.net/upload/service/5e866667-7c33-4156-93f5-ac62d127a325.png?webp=1"
+															src="https://dmmj3ljielax6.cloudfront.net/upload/service/5e866667-7c33-4156-93f5-ac62d127a325.png?webp=1"
+															lazy="loaded">
+														<p data-v-24b630b2="" class="service-name">도배장판 시공</p>
+														<div data-v-24b630b2="" class="request-count">
+															<img data-v-24b630b2=""
+																src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+																alt="요청서 아이콘" class="request-icon"><span
+																data-v-24b630b2="">281,658</span>명 요청
+														</div>
+													</div></a>
+											</div>
+										</div>
+										<div data-v-e4caeaf8="" tabindex="-1" data-index="5"
+											aria-hidden="true" class="slick-slide"
+											style="outline: none; width: 247px;">
+											<div data-v-e4caeaf8="">
+												<a data-v-b89d6118=""
+													href="/hire/%EC%A0%84%EA%B8%B0-%EB%B0%B0%EC%84%A0-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC?from=%EC%9D%B8%EA%B8%B0%EC%84%9C%EB%B9%84%EC%8A%A4"
+													class="" tabindex="-1" data-v-e4caeaf8=""
+													style="width: 100%; display: inline-block;"><div
+														data-v-24b630b2="" data-v-b89d6118=""
+														data-testid="main-service-card" class="main-service-card">
+														<img data-v-24b630b2="" alt="전기 배선 설치 및 수리"
+															class="service-image"
+															data-src="https://dmmj3ljielax6.cloudfront.net/upload/service/featured_service_59ac9a8b-868c-4358-b8a4-d2319b91f7d6.jpg?webp=1"
+															src="https://dmmj3ljielax6.cloudfront.net/upload/service/featured_service_59ac9a8b-868c-4358-b8a4-d2319b91f7d6.jpg?webp=1"
+															lazy="loaded">
+														<p data-v-24b630b2="" class="service-name">전기 배선 설치 및
+															수리</p>
+														<div data-v-24b630b2="" class="request-count">
+															<img data-v-24b630b2=""
+																src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+																alt="요청서 아이콘" class="request-icon"><span
+																data-v-24b630b2="">215,691</span>명 요청
+														</div>
+													</div></a>
+											</div>
+										</div>
+										<div data-v-e4caeaf8="" tabindex="-1" data-index="6"
+											aria-hidden="true" class="slick-slide"
+											style="outline: none; width: 247px;">
+											<div data-v-e4caeaf8="">
+												<a data-v-b89d6118=""
+													href="/hire/%EC%A7%91-%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4?from=%EC%9D%B8%EA%B8%B0%EC%84%9C%EB%B9%84%EC%8A%A4"
+													class="" tabindex="-1" data-v-e4caeaf8=""
+													style="width: 100%; display: inline-block;"><div
+														data-v-24b630b2="" data-v-b89d6118=""
+														data-testid="main-service-card" class="main-service-card">
+														<img data-v-24b630b2="" alt="집 인테리어" class="service-image"
+															data-src="https://dmmj3ljielax6.cloudfront.net/upload/service/9ae39f56-4786-4d98-b03a-06540f927899.png?webp=1"
+															src="https://dmmj3ljielax6.cloudfront.net/upload/service/9ae39f56-4786-4d98-b03a-06540f927899.png?webp=1"
+															lazy="loaded">
+														<p data-v-24b630b2="" class="service-name">집 인테리어</p>
+														<div data-v-24b630b2="" class="request-count">
+															<img data-v-24b630b2=""
+																src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+																alt="요청서 아이콘" class="request-icon"><span
+																data-v-24b630b2="">275,987</span>명 요청
+														</div>
+													</div></a>
+											</div>
+										</div>
+										<div data-v-e4caeaf8="" tabindex="-1" data-index="7"
+											aria-hidden="true" class="slick-slide"
+											style="outline: none; width: 247px;">
+											<div data-v-e4caeaf8="">
+												<a data-v-b89d6118=""
+													href="/hire/%EC%88%98%ED%95%99?from=%EC%9D%B8%EA%B8%B0%EC%84%9C%EB%B9%84%EC%8A%A4"
+													class="" tabindex="-1" data-v-e4caeaf8=""
+													style="width: 100%; display: inline-block;"><div
+														data-v-24b630b2="" data-v-b89d6118=""
+														data-testid="main-service-card" class="main-service-card">
+														<img data-v-24b630b2="" alt="수학 과외" class="service-image"
+															data-src="https://dmmj3ljielax6.cloudfront.net/upload/service/95b493f1-8ef3-43a2-b8bb-e9bfda642968.png?webp=1"
+															src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+															lazy="loading">
+														<p data-v-24b630b2="" class="service-name">수학 과외</p>
+														<div data-v-24b630b2="" class="request-count">
+															<img data-v-24b630b2=""
+																src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+																alt="요청서 아이콘" class="request-icon"><span
+																data-v-24b630b2="">219,621</span>명 요청
+														</div>
+													</div></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button data-v-21137603="" data-v-3d1a4f76="" type="button"
+									data-role="none" class="slick-arrow slick-next"
+									style="display: block;">Next</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- 인기 주니어 게시글 배너끝-->
 
 <!--이용자 커뮤니티  -->
 								<div class="main-community slide-knowhow-list container"
 									data-v-0b8ae29e="" data-v-2590092d="">
 									<section class="header short-bottom" data-v-0b8ae29e="">
-									<h2 class="title" data-v-0b8ae29e="">숨고 커뮤니티에 물어보세요</h2>
+									<h2 class="title" data-v-0b8ae29e="">이용자 게시판 목록</h2>
 									<a href="/community/soomgo-life/" data-testid="community-home"
 										class="go-list" data-v-1b5b0368="" data-v-0b8ae29e=""><span
 										data-v-1b5b0368="">전체보기</span><img
@@ -179,13 +632,14 @@
 							data-v-9e560958="">
 							<section class="header" data-v-45a9f2fc="" data-v-9e560958="">
 							<h2 class="title" data-v-45a9f2fc="" data-v-9e560958="">지금
-								인기 있는 고수</h2>
+								인기 있는 주니어</h2>
 							<a href="/search/pro?from=main_best_pro" class="go-list"
 								data-v-1b5b0368="" data-v-9e560958="" data-v-45a9f2fc=""><span
 								data-v-1b5b0368="">전체보기</span><img
 								src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAgMEgxNlYxNkgweiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwNTMuMDAwMDAwLCAtMjAyLjAwMDAwMCkgdHJhbnNsYXRlKDQ4NS4wMDAwMDAsIDE4OC4wMDAwMDApIHRyYW5zbGF0ZSg1NjguMDAwMDAwLCAxNC4wMDAwMDApIi8+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggc3Ryb2tlPSIjMDBDN0FFIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNMTEgMTNMNiA4IDExIDMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMDUzLjAwMDAwMCwgLTIwMi4wMDAwMDApIHRyYW5zbGF0ZSg0ODUuMDAwMDAwLCAxODguMDAwMDAwKSB0cmFuc2xhdGUoNTY4LjAwMDAwMCwgMTQuMDAwMDAwKSB0cmFuc2xhdGUoOC41MDAwMDAsIDguMDAwMDAwKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC04LjUwMDAwMCwgLTguMDAwMDAwKSIvPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
 								data-v-1b5b0368=""></a></section>
-							<section class="chips" data-v-45a9f2fc="" data-v-9e560958=""></section>
+								
+								
 							<div data-v-538b8750="" data-v-9e560958=""
 								class="main-desktop-slide" data-v-45a9f2fc="">
 								<div data-v-3d1a4f76="" data-v-55917fe8="" data-v-538b8750=""
@@ -200,6 +654,7 @@
 												aria-hidden="true" class="slick-slide"
 												style="outline: none; width: 198px;">
 												<div data-v-e4caeaf8="">
+												<!-- 주변 고수 만나보기 -->
 													<a data-v-4bc78e36="" data-v-9e560958=""
 														href="/search/pro/%EB%8F%84%EB%B0%B0-%EC%8B%9C%EA%B3%B5/address/%ED%99%88-%EB%A6%AC%EB%B9%99--%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4/review_count?from=main_best_pro"
 														class="" tabindex="-1" data-v-e4caeaf8=""
@@ -649,13 +1104,177 @@
 								</div>
 							</div>
 						</div>
-						<!---->
-					</div>
+					
+					</div>	<!--인기있는 주니어 베너 끝-->
+					<div data-v-078941e3="" data-v-38e68602="" class="main-app-banner container"></div>
+					
+					
+					<!-- 분야 -->
+					<div data-v-a9f85b62="" data-v-38e68602=""
+						class="main-pro-locations container no-mobile-padding">
+						<div data-v-a9f85b62="" class="header">
+							<h2 data-v-a9f85b62="" class="title">분야</h2>
+							<div data-v-a9f85b62="" class="desc">
+								믿을 수 있는 전문가를<br data-v-a9f85b62="" class="d-none d-sm-block">
+								중신 단 한 곳에서 찾으세요
+							</div>
+						</div>
+						<ul data-v-a9f85b62="" class="location-list">
+							<li data-v-a9f85b62="" class="location-item"><a
+								data-v-a9f85b62="" href="/a.%EC%84%9C%EC%9A%B8" class="">음악</a></li>
+							<li data-v-a9f85b62="" class="location-item"><a
+								data-v-a9f85b62="" href="/a.%EC%84%B8%EC%A2%85" class="">미술</a></li>
+							<li data-v-a9f85b62="" class="location-item"><a
+								data-v-a9f85b62="" href="/a.%EA%B0%95%EC%9B%90" class="">입시</a></li>
+							
+							<li data-v-a9f85b62="" class="location-item"><a
+								data-v-a9f85b62="" href="/a.%EB%8C%80%EA%B5%AC" class="">건강</a></li>
+							<li data-v-a9f85b62="" class="location-item"><a
+								data-v-a9f85b62="" href="/a.%EC%A0%84%EB%B6%81" class="">미용</a></li>
+							<li data-v-a9f85b62="" class="location-item"><a
+								data-v-a9f85b62="" href="/a.%EA%B2%BD%EB%82%A8" class="">알바</a></li>
+							<li data-v-a9f85b62="" class="location-item"><a
+								data-v-a9f85b62="" href="/a.%EC%9A%B8%EC%82%B0" class="">개발</a></li>
+							<li data-v-a9f85b62="" class="location-item"><a
+								data-v-a9f85b62="" href="/a.%EA%B4%91%EC%A3%BC" class="">기타</a></li>
+							
+						</ul>
+					</div><!-- 분야 -->
+					
+					<!-- 전문가로 활동하시나요? 주니어 가입 -->
+					<div data-v-322fbd30="" data-v-38e68602=""
+						class="main-pro-info container no-mobile-margin">
+						<div data-v-322fbd30="" class="header">
+							<p data-v-322fbd30="" class="title">
+								전문가로 활동하시나요?<br data-v-322fbd30=""> 중신에서 새로운 고객을 <br
+									data-v-322fbd30="" class="d-none d-sm-block">만나보세요
+							</p>
+							<div data-v-322fbd30="" class="pro-signup-btn">
+								<a data-v-322fbd30="" href="/pro" class="btn btn-primary"
+									target="_self">고수가입</a>
+							</div>
+						</div>
+						<div data-v-3d1a4f76="" data-v-55917fe8="" data-v-322fbd30=""
+							dir="ltr" class="slick-slider slick-initialized">
+							<button data-v-21137603="" data-v-3d1a4f76="" type="button"
+								data-role="none" class="slick-arrow slick-prev"
+								style="display: block;">Previous</button>
+							<div data-v-3d1a4f76="" class="slick-list">
+								<div data-v-e4caeaf8="" data-v-3d1a4f76="" class="slick-track"
+									style="width: 1923px; opacity: 1; transform: translate3d(-1282px, 0px, 0px);">
+									<div data-v-e4caeaf8="" tabindex="-1" data-index="0"
+										aria-hidden="true" class="slick-slide"
+										style="outline: none; width: 641px;">
+										<div data-v-e4caeaf8="">
+											<div data-v-322fbd30="" data-v-e4caeaf8="" tabindex="-1"
+												style="width: 100%; display: inline-block;">
+												<div data-v-322fbd30="" data-v-e4caeaf8=""
+													class="pro-info-slide">
+													<img data-v-322fbd30="" data-v-e4caeaf8=""
+														src="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-1.png"
+														srcset="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-1.png 1x, https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-1@2x.png 2x, https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-1@3x.png 3x"
+														alt="고객의 요청서를 무료로 받으세요" class="image">
+													<p data-v-322fbd30="" data-v-e4caeaf8="" class="desc">고객의
+														요청서를 무료로 받으세요</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div data-v-e4caeaf8="" tabindex="-1" data-index="1"
+										aria-hidden="true" class="slick-slide"
+										style="outline: none; width: 641px;">
+										<div data-v-e4caeaf8="">
+											<div data-v-322fbd30="" data-v-e4caeaf8="" tabindex="-1"
+												style="width: 100%; display: inline-block;">
+												<div data-v-322fbd30="" data-v-e4caeaf8=""
+													class="pro-info-slide">
+													<img data-v-322fbd30="" data-v-e4caeaf8=""
+														src="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-2.png"
+														srcset="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-2.png 1x, https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-2@2x.png 2x, https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-2@3x.png 3x"
+														alt="조건이 맞는 고객에게 견적을 보내세요" class="image">
+													<p data-v-322fbd30="" data-v-e4caeaf8="" class="desc">조건이
+														맞는 고객에게 견적을 보내세요</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div data-v-e4caeaf8="" tabindex="-1" data-index="2"
+										aria-hidden="false"
+										class="slick-slide slick-active slick-current"
+										style="outline: none; width: 641px;">
+										<div data-v-e4caeaf8="">
+											<div data-v-322fbd30="" data-v-e4caeaf8="" tabindex="-1"
+												style="width: 100%; display: inline-block;">
+												<div data-v-322fbd30="" data-v-e4caeaf8=""
+													class="pro-info-slide">
+													<img data-v-322fbd30="" data-v-e4caeaf8=""
+														src="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-3.png"
+														srcset="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-3.png 1x, https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-3@2x.png 2x, https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-3@3x.png 3x"
+														alt="채팅, 전화로 빠르게 상담하고 거래하세요" class="image">
+													<p data-v-322fbd30="" data-v-e4caeaf8="" class="desc">채팅,
+														전화로 빠르게 상담하고 거래하세요</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button data-v-21137603="" data-v-3d1a4f76="" type="button"
+								data-role="none" class="slick-arrow slick-next slick-disabled"
+								style="display: block;">Next</button>
+							<ul data-v-3d1a4f76="" class="slick-dots" style="display: block;">
+								<li class=""><button>1</button></li>
+								<li class=""><button>2</button></li>
+								<li class="slick-active"><button>3</button></li>
+							</ul>
+						</div>
+					</div><!-- 전문가로 활동하시나요? 주니어 가입 끝-->
 
 				</div>
 					</div>
 <%@ include file="footer.jsp" %>
 </body>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
- <script type="text/javascript" src="../../static/js/main-page.js"></script>
+ <script >
+//선언 
+ //슬라이드전체를 감싼 div
+ const kingbanner = document.quertSelector('.slick-track');
+ // slick-slide 각각 배너들
+ const slides = document.querySelectorAll('.slick-slide');
+ // 왼쪽 버튼
+ const backBtn = document.querySelector('.slick-prev');
+ // 오른쪽 버튼
+ const nextBtn = document.querySelector('.slick-next');
+ const hidden = document.querySelectorAll('aria-hidden');
+ // count 초기화
+  count = 0;
+ 
+ const imagePaths = {
+	 'https://dmmj3ljielax6.cloudfront.net/upload/service/05389ab5-c05d-45c8-abe1-d0b90019cb75.png'
+	 'https://dmmj3ljielax6.cloudfront.net/upload/service/6a497fde-2ba4-4a59-977c-41ce3be83e08.png'
+	 'https://dmmj3ljielax6.cloudfront.net/upload/service/85e81b4b-4b9e-4b45-b9ac-950a342788bc.png'
+	 'https://dmmj3ljielax6.cloudfront.net/upload/service/65e4e1e8-5727-4479-b5d1-1f70a69ec446.png'
+	 'https://dmmj3ljielax6.cloudfront.net/upload/service/5e866667-7c33-4156-93f5-ac62d127a325.png'
+	 'https://dmmj3ljielax6.cloudfront.net/upload/service/featured_service_59ac9a8b-868c-4358-b8a4-d2319b91f7d6.jpg'
+	 'https://dmmj3ljielax6.cloudfront.net/upload/service/9ae39f56-4786-4d98-b03a-06540f927899.png'
+	 'https://dmmj3ljielax6.cloudfront.net/upload/service/95b493f1-8ef3-43a2-b8bb-e9bfda642968.png'
+			 
+ }
+
+ /*이미지 */
+   kingbanner.forEach((div, i) => {
+   const imagepath = imagePaths[i];
+   div.style.backgroundImage = `url(${imagepath})`;
+ });
+ 
+ backBtn.addEventListener('click',function() {
+	 clearIntervar(slide);
+	 kingbanner.style.transform	 = "translate(" + (-247 * --count) + "px)";
+	 kingbanner.style.transition = "transform 0.3s";
+ }
+
+ nextBtn.addEventListener('click',function() {
+	 
+ }
+ </script>
 </html>
