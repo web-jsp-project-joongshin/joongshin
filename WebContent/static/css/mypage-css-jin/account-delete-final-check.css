@@ -219,6 +219,7 @@ input[type=radio]+label {
 }
 
 .button-group>.btn {
+	border: 1px solid #6FB6C0;
     max-width: 8.875rem;
     flex: 1;
 }

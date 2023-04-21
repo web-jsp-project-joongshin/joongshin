@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link data-vue-meta="1" rel="icon" type="image/png" sizes="32x32"
-	href="https://static.cdn.soomgo.com/static/favicon-32x32.png?webp=1">
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 <!--폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +25,7 @@
 
 </head>
 <body>
-
+<%@ include file="../mainpageSeo/header.jsp" %>
 
 	<div id="app-body">
 		<div class="container container-md">
@@ -37,9 +36,9 @@
 					<fieldset  class="form-group text-field">
 						<legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0">이메일</legend>
 						<div>
-							<input  type="text" id="email"
+							<input type="text" id="email"
 								placeholder="변경할 이메일을 입력해주세요" 
-								class="form-control" 
+								class="form-control1" 
 								spellcheck="true" 
 								 >
 						</div>
@@ -50,7 +49,7 @@
 				<footer  class="button-group">
 					<a  href="javascript:history.go(-1)"
 						class="btn btn-cancel btn-active btn-outline-secondary"
-						target="_self">취소</a>
+						target="_self"  style="color: #6FB6C0;">취소</a>
 					<button  type="button" class="btn btn-primary" onclick="validateEmail()">수정
 						완료</button>
 				</footer>
@@ -103,4 +102,5 @@
 
 	
 </body>
+<jsp:include page="../mainpageSeo/footer.jsp"/>
 </html>

@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link data-vue-meta="1" rel="icon" type="image/png" sizes="32x32"
-	href="https://static.cdn.soomgo.com/static/favicon-32x32.png?webp=1">
+
 <title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
 <!--폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,15 +16,7 @@
 <link href="../../static/css/mypage-css-jin/header-footer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-
-
-
-
-
-
-
-
-
+<%@ include file="../mainpageSeo/header.jsp" %>
 
 	<div id="app-body">
 		<div class="my-page-community-activity-container" >
@@ -61,14 +52,8 @@
 				</section>
 			</div>
 		</div>
-	</div>
-	
-	
-	
-	
-	
-	
-			
+	</div>	
 	
 </body>
+<jsp:include page="../mainpageSeo/footer.jsp"/>
 </html>
