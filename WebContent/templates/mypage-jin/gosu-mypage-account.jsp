@@ -11,9 +11,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
-
-<link href="../../static/css/mypage-css-jin/profile-change-modal.css" rel="stylesheet" type="text/css" />
-<link href="../../static/css/mypage-css-jin/account-delete-modal.css" rel="stylesheet" type="text/css" />
 <link href="../../static/css/mypage-css-jin/user-mypage-account.css" rel="stylesheet" type="text/css" />
 
 </head>

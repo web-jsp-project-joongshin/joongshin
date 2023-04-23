@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>������������-���Ǹ��</title>
+<meta charset="UTF-8">
+<title>관리자페이지-문의목록</title>
 <link rel="stylesheet" href="../../static/css/manager-doeunn/inquiries-list.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,67 +15,67 @@
         <header class="navi-bar">
             <div class="logo"></div>
             <div class="navi-container">
-                <!-- navi-box �ϳ��� ū ī�װ��� �ϳ��� �ش��մϴ�-->
+                <!-- navi-box 하나가 큰 카테고리 하나에 해당합니다-->
                <section class="navi-box">
                     <div class="flex-line">
                         <div class="icon board-icon"></div>
-                        <div class="navi-title">Ŀ�´�Ƽ ����</div>
+                        <div class="navi-title">커뮤니티 관리</div>
                         <div class="arrow"></div>
                     </div>
                     <ul class="board-list list">
-                        <li onclick="location.href='userBoardList.jsp'">�̿��� �Խ���</li>
-						<li onclick="location.href='juniorBoardList.jsp'">�ִϾ� �Խ���</li>
+                        <li onclick="location.href='userBoardList.jsp'">이용자 게시판</li>
+						<li onclick="location.href='juniorBoardList.jsp'">주니어 게시판</li>
                     </ul>
                </section>
 
                <section class="navi-box">
                     <div class="flex-line">
                         <div class="icon message-icon"></div>
-                        <div class="navi-title">���� ����</div>
+                        <div class="navi-title">문의 관리</div>
                         <div class="arrow"></div>
                     </div>
                     <ul class="inquiries-list list">
-                        <li onclick="location.href='inquiriesList.jsp'">��ü ���Ǹ��</li>
+                        <li onclick="location.href='inquiriesList.jsp'">전체 문의목록</li>
                     </ul>
                </section>
             </div>
         </header>
         <main>
             <div class="main-title-box">
-                <h3>��ü ���Ǹ��</h3>
+                <h3>전체 문의목록</h3>
             </div>
             <form class="main-container">
                 <section class="top-line">
                     <div class="search">
                         <div class="search-icon"></div>
-                        <input placeholder="���Ǳ� �˻�" name="search"/>
+                        <input placeholder="문의글 검색" name="search"/>
                     </div>
                     <select name="select-option" class="select-option">
-                        <option value="all">��ü</option>
-                        <option value="waiting">���</option>
+                        <option value="all">전체</option>
+                        <option value="waiting">대기</option>
                     </select>
-                    <button type="button" class="delete-btn">���Ǳ� ����</button>
+                    <button type="button" class="delete-btn">문의글 삭제</button>
                 </section>
                 <table border="1">
                     <thead>
                         <tr>
                             <th><input type="checkbox" class="check-top"/></th>
-                            <th>���� ��ȣ</th>
-                            <th>����</th>
-                            <th>����</th>
-                            <th>�ۼ���¥</th>
-                            <th>�亯��¥</th>
-                            <th>����</th>
+                            <th>문의 번호</th>
+                            <th>제목</th>
+                            <th>내용</th>
+                            <th>작성날짜</th>
+                            <th>답변날짜</th>
+                            <th>상태</th>
                         </tr>
                     </thead>
                     <tr>
                         <td><input type="checkbox" class="checkbox"/></td>
                         <td>1</td>
-                        <td>������ �� �ڸ��Դϴ�</td>
-                        <td>������ �� �ڸ��Դϴ�</td>
+                        <td>제목이 들어갈 자리입니다</td>
+                        <td>내용이 들어갈 자리입니다</td>
                         <td>2023-04-19</td>
                         <td>2023-04-19</td>
-                        <td class="pending">�亯�Ϸ�</td>
+                        <td class="pending">답변완료</td>
                     </tr>
                 </table>
             </form>

@@ -13,7 +13,6 @@
 
 
 <link href="../../static/css/mypage-css-jin/gosu-mypage.css" rel="stylesheet" type="text/css" />
-<link href="../../static/css/mypage-css-jin/header-footer.css" rel="stylesheet" type="text/css" />
 
 <body>
 <%@ include file="../mainpageSeo/header.jsp" %>

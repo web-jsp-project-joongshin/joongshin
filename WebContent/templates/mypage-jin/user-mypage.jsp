@@ -13,7 +13,6 @@
 
 
 <link href="../../static/css/mypage-css-jin/user-mypage.css" rel="stylesheet" type="text/css"/>
-<link href="../../static/css/mypage-css-jin/header-footer.css" rel="stylesheet" type="text/css"/>
 </head>
 <body> 
 <%@ include file="../mainpageSeo/header.jsp" %>

@@ -1,4 +1,5 @@
-/*怨듯룷�쓽 愿묎퀬諛곕꼫*/
+@charset "UTF-8";
+
 .main-banner[data-v-1438af5a] {
     max-width: 60.625rem;
     height: 17.5rem;
@@ -29,10 +30,7 @@
     position: absolute;
     color: #fff;
 }
-/*怨듯룷�쓽 愿묎퀬諛곕꼫 �걹*/
 
-
-/* 二쇰땲�뼱 寃뚯떆湲�*/
 .main-service .header[data-v-0b8ae29e] {
 	display: flex;
     align-items: center;
@@ -75,11 +73,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-/*�씤湲� �엳�뒗 二쇰땲�뼱 寃뚯떆湲� �걹*/
-
-
-/*�씠�슜�옄 寃뚯떆臾�*/
 .main-community.slide-knowhow-list[data-v-0b8ae29e] {
     height: auto;
     padding-left: 0;
@@ -88,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .container[data-v-2590092d] {
     width: 60.625rem;
-    margin: auto auto 5rem;
+    margin: auto auto 2rem;
     padding-left: 0;
     padding-right: 0;
 }
@@ -122,6 +115,7 @@ html {
 
 .main-community .header.short-bottom[data-v-0b8ae29e] {
     margin-bottom: 1rem;
+    margin-top: 20px;
 }
 
 .main-community .header[data-v-0b8ae29e] {
@@ -335,8 +329,7 @@ p {
     border-radius: 8px;
     margin-bottom: 0.5rem;
     border: 0.0625rem solid #e2e2e2;
-    /*�궗吏� 源⑥쭚*/
-    /*width: 20.875rem;*/
+
     height: 8.75rem;
     margin: 0 1.25rem 0 0;
 }
@@ -360,14 +353,7 @@ element.style {
     -webkit-line-clamp: 2;
     
 }
-/*�븘吏� 硫댁젒 �씠嫄� �넃移섎㈃ 遺덊빀寃�! 源⑥쭚 */
-/* 
-.line-clamp[data-v-a3afae98] {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-*/
+
 
 .knowhow-container .knowhow-card-slide .card-desc .title[data-v-292a6694] {
     font-weight: 500;
@@ -375,9 +361,7 @@ element.style {
     margin-bottom: 1.5rem;
         color: #323232;
 }
-/*�씠�슜�옄 寃뚯떆�뙋�넁*/
 
-/*吏�湲� �씤湲� �엳�뒗 怨좎닔*/
 .container[data-v-38e68602]{
     margin: 1rem auto;
 	
@@ -739,10 +723,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
     cursor: pointer;
 }
-/*�씤湲� 二쇰땲�뼱 踰좊꼫 �걹*/
 
-
-/*遺꾩빞*/
 .main-pro-locations[data-v-a9f85b62] {
     display: flex;
     justify-content: space-between;
@@ -801,8 +782,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     line-height: 2.25rem;
     text-align: center;
 }
-/*遺꾩빞 �걹*/
-/*�쟾臾멸�濡� �솢�룞�븯�떆�굹�슂?*/
+
 .main-pro-info[data-v-322fbd30] {
     background-color: #fff;
     display: flex;
@@ -1019,5 +999,4 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     outline: none;
     background: transparent;
 }
-/*�쟾臾멸�濡� �솢�룞�븯�떆�굹�슂? �걹*/
 
