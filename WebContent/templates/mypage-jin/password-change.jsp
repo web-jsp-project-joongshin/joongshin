@@ -13,7 +13,6 @@
 
 
 <link href="../../static/css/mypage-css-jin/password-change.css" rel="stylesheet" type="text/css"/>
-<link href="../../static/css/mypage-css-jin/header-footer.css" rel="stylesheet" type="text/css"/>
 
 <style>
 /* 잘못된 값 입력시 배경 빨강으로 만들어줌 */

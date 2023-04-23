@@ -15,12 +15,12 @@
 </head>
 
 <body class="home">
-<div class="__cov-progress" style="background-color: rgb(0, 199, 174); opacity: 0; position: fixed; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s;"></div>
-		<header id="app-header" class="global-header" data-v-50506024="">
+<div class="h__cov-progress" style="background-color: rgb(0, 199, 174); opacity: 0; position: fixed; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s;"></div>
+		<header id="app-header" class="h_global-header" data-v-50506024="">
 			<div data-v-5f10666f="" data-v-50506024=""
-				class="global-navigation-bar">
+				class="h-global-navigation-bar">
 				<!-- 섹션태그때문에 이미지가 나오지 않아서 없애버렸어요 -->
-				<div data-v-5f10666f="" class="desktop-header">
+				<div data-v-5f10666f="" class="h-desktop-header">
 					<div data-v-5f10666f="" class="left-section">
 						<div data-v-5f10666f="" class="logo">
 							<a data-v-5f10666f="" href="/?from=logo" class=""> <img
@@ -44,20 +44,20 @@
 					<!--  					 로고,문자열 네개까지 ↑ -->
 					<div data-v-5f10666f="" class="center-section">
 						<div data-v-63f85165="" data-v-5f10666f=""
-							class="service-searcher-desktop">
+							class="h-service-searcher-desktop">
 							<form data-v-668330c4="" data-v-63f85165=""
 								class="global-search-bar">
-								<div data-v-668330c4="" role="group" class="input-group">
-									<div data-v-668330c4="" class="input-group-prepend">
+								<div data-v-668330c4="" role="group" class="h-input-group">
+									<div data-v-668330c4="" class="h-input-group-prepend">
 										<img data-v-668330c4=""
 											src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQgNCkiIHN0cm9rZT0iI0I1QjVCNSIgc3Ryb2tlLXdpZHRoPSIxLjYiPgogICAgICAgICAgICA8Y2lyY2xlIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGN4PSI2LjUiIGN5PSI2LjUiIHI9IjYuNSIvPgogICAgICAgICAgICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIGQ9Im0xMS41IDExLjUgNSA1Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
 											alt="검색 아이콘">
 									</div>
 									<input data-v-668330c4="" type="text"
 										placeholder="어떤 서비스가 필요하세요?" autocomplete="off"
-										class="form-control" maxlength="" id="__BVID__142">
+										class="h-form-control" maxlength="" id="__BVID__142">
 
-									<div data-v-668330c4="" class="input-group-append">
+									<div data-v-668330c4="" class="h-input-group-append">
 										<img data-v-668330c4=""
 											src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhl…wMDYiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo="
 											alt="검색어 삭제 아이콘" style="display: none;">
@@ -80,7 +80,7 @@
 							</ul>
 						</nav>
 						<button data-v-5f10666f="" type="button"
-							class="btn pro-signup-btn right-section-item btn-primary btn-primary2">
+							class="h-btn pro-signup-h-btn right-section-item h-btn-primary h-btn-primary2">
 							<a data-v-5f10666f="" href="/pro?entry_point=signup_cta" class="">고수가입</a>
 						</button>
 						<!---->
