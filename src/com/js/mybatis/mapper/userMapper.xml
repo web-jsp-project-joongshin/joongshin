@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 리고 회원 로그인을 처리하는 기능을 수행합니다. 
+이 XML 파일은 MyBatis 프레임워크에서 사용되며, 
+Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 수 있도록 돕습니다. -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- SQL 쿼리를 포함하고 있으며, 이를 Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 수 있도록 돕는다.  -->
+<mapper namespace="user">
+	<!-- 
+	<insert id="insert">
+		insert into tbl_user
+		(user_identification, user_password, user_name, user_birth, user_phone, user_email)
+		values(#{userIdentification}, #{userPassword}, #{userName}, #{userBirth}, #{userPhone}, #{userEmail})
+	</insert>
+	
+	<select id="selectIdentification" resultType="string">
+		select user_identification from tbl_user where user_identification = #{userIdentification}
+	</select>
+	
+	<select id="selectEmail" resultType="string">
+		select user_email from tbl_user where user_email = #{userEmail}
+	</select>
+	
+	<select id="login" resultType="long">
+		select user_id from tbl_user 
+		where user_identification = #{userIdentification} and user_password = #{userPassword}
+	</select>
+	 -->
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
