@@ -11,7 +11,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
-
 <link href="../../static/css/mypage-css-jin/board-list.css" rel="stylesheet" type="text/css"/>
 
 </head>
@@ -23,23 +22,14 @@
 			<div  
 				class="community-activity-container">
 				<section  class="community-title-section">
-					<h1  class="community-activity-title">숨고생활
-						작성글/댓글</h1>
+					<h1  class="community-activity-title">숨고생활 작성글/댓글</h1>
 				</section>
-				<ul   class="tab-list">
-					<li  
-						class="tab router-link-exact-active router-link-active sg-text-subhead4 sg-font-bold sg-text-gray-900 selected">
+				<ul class="tab-list">
+					<li class="tab router-link-exact-active router-link-active sg-text-subhead4 sg-font-bold sg-text-gray-900 selected">
 						작성 글</li>
-					<li  
-						class="tab sg-text-body2 sg-font-regular sg-text-gray-400">
-					<a href="./message-list.jsp" style="
-					    text-decoration: none;
-					    color: #2e2e2e;
-					    font-weight: 700;
-					">
+					<li class="tab sg-text-body2 sg-font-regular sg-text-gray-400">
+					<a href="./message-list.jsp" style="text-decoration: none; color: #2e2e2e; font-weight: 700;">
 						작성 댓글</a></li>
-						
-						
 				</ul>
 				<article class="pro-knowhow-list">
 						<ul>
@@ -61,7 +51,6 @@
 			</div>
 		</div>
 	</div>
-	
 
 </body>
 <jsp:include page="../mainpageSeo/footer.jsp"/>

@@ -49,46 +49,41 @@
 						</div>
 					</a> 
 					</div>
-				
-				
 				<!-- 작성글/ 쪽지 확인 -->
 				<ul class="underline" style="font-weight: 900; font-size: 1.3rem;">
 					<li class="main-menu">커뮤니티 <a role="button"> </a>
 					</li>
-					<li class="sub-menu-container soomgo-life-activities"><a
-						href="./board-list.jsp" class="sub-menu-list">
-						<div class="sub-content">
-							<div class="sub-menu">
-								<span class="sub-menu-title">숨고생활 작성글</span>
+					<li class="sub-menu-container soomgo-life-activities">
+						<a href="./board-list.jsp" class="sub-menu-list">
+							<div class="sub-content">
+								<div class="sub-menu">
+									<span class="sub-menu-title">숨고생활 작성글</span>
+								</div>
 							</div>
-
-						</div>
-
-							<div class="arrow1">
-								<span class="right-arrow"><img
-									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg"></span>
-							</div> </a></li>
-
-					<li class="sub-menu-container soomgo-life-activities"><a
-						href="./message-list.jsp" class="sub-menu-list"><div
-								class="sub-content">
+								<div class="arrow1">
+									<span class="right-arrow">
+									<img src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
+								</span>
+								</div> 
+						</a>
+					</li>
+					<li class="sub-menu-container soomgo-life-activities">
+					<a href="./message-list.jsp" class="sub-menu-list">
+						<div class="sub-content">
 								<div class="sub-menu">
 									<span class="sub-menu-title">숨고생활 쪽지</span>
 								</div>
-
 							</div>
-
 							<div class="arrow1">
-								<span class="right-arrow"><img
-									src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg"></span>
-							</div> </a></li>
-					</ul>
-				
-				
+								<span class="right-arrow"><img src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
+								</span>
+							</div> 
+						</a>
+					</li>
+				</ul>
 				</div>
 			</div>
 		</div>
-	
 </body>
 <jsp:include page="../mainpageSeo/footer.jsp"/>
 </html>
