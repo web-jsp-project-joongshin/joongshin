@@ -1,4 +1,4 @@
-/*공포의 광고배너*/
+/*怨듯룷�쓽 愿묎퀬諛곕꼫*/
 .main-banner[data-v-1438af5a] {
     max-width: 60.625rem;
     height: 17.5rem;
@@ -29,10 +29,10 @@
     position: absolute;
     color: #fff;
 }
-/*공포의 광고배너 끝*/
+/*怨듯룷�쓽 愿묎퀬諛곕꼫 �걹*/
 
 
-/* 주니어 게시글*/
+/* 二쇰땲�뼱 寃뚯떆湲�*/
 .main-service .header[data-v-0b8ae29e] {
 	display: flex;
     align-items: center;
@@ -76,10 +76,10 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/*인기 있는 주니어 게시글 끝*/
+/*�씤湲� �엳�뒗 二쇰땲�뼱 寃뚯떆湲� �걹*/
 
 
-/*이용자 게시물*/
+/*�씠�슜�옄 寃뚯떆臾�*/
 .main-community.slide-knowhow-list[data-v-0b8ae29e] {
     height: auto;
     padding-left: 0;
@@ -335,7 +335,7 @@ p {
     border-radius: 8px;
     margin-bottom: 0.5rem;
     border: 0.0625rem solid #e2e2e2;
-    /*사진 깨짐*/
+    /*�궗吏� 源⑥쭚*/
     /*width: 20.875rem;*/
     height: 8.75rem;
     margin: 0 1.25rem 0 0;
@@ -360,7 +360,7 @@ element.style {
     -webkit-line-clamp: 2;
     
 }
-/*아직 면접 이거 놓치면 불합격! 깨짐 */
+/*�븘吏� 硫댁젒 �씠嫄� �넃移섎㈃ 遺덊빀寃�! 源⑥쭚 */
 /* 
 .line-clamp[data-v-a3afae98] {
     display: -webkit-box;
@@ -375,12 +375,11 @@ element.style {
     margin-bottom: 1.5rem;
         color: #323232;
 }
-/*이용자 게시판↑*/
+/*�씠�슜�옄 寃뚯떆�뙋�넁*/
 
-/*지금 인기 있는 고수*/
+/*吏�湲� �씤湲� �엳�뒗 怨좎닔*/
 .container[data-v-38e68602]{
-    
-    margin: auto auto 5rem;
+    margin: 1rem auto;
 	
 }
 
@@ -713,7 +712,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 .main-pro-card .sub-info .avg-response-time.has-career[data-v-7cbc9828]::before {
-    content: "·";
+    content: "쨌";
     margin: 0px 0.25rem;
 }
 
@@ -740,10 +739,10 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
     cursor: pointer;
 }
-/*인기 주니어 베너 끝*/
+/*�씤湲� 二쇰땲�뼱 踰좊꼫 �걹*/
 
 
-/*분야*/
+/*遺꾩빞*/
 .main-pro-locations[data-v-a9f85b62] {
     display: flex;
     justify-content: space-between;
@@ -802,8 +801,8 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     line-height: 2.25rem;
     text-align: center;
 }
-/*분야 끝*/
-/*전문가로 활동하시나요?*/
+/*遺꾩빞 �걹*/
+/*�쟾臾멸�濡� �솢�룞�븯�떆�굹�슂?*/
 .main-pro-info[data-v-322fbd30] {
     background-color: #fff;
     display: flex;
@@ -1002,7 +1001,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     left: 0;
     width: 20px;
     height: 20px;
-    content: "•";
+    content: "��";
     text-align: center;
     opacity: .25;
     color: #000;
@@ -1020,5 +1019,5 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     outline: none;
     background: transparent;
 }
-/*전문가로 활동하시나요? 끝*/
+/*�쟾臾멸�濡� �솢�룞�븯�떆�굹�슂? �걹*/
 
