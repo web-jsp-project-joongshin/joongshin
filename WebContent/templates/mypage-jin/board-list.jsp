@@ -25,7 +25,7 @@
 					<h1  class="community-activity-title">숨고생활 작성글/댓글</h1>
 				</section>
 				<ul class="tab-list">
-					<li class="tab router-link-exact-active router-link-active sg-text-subhead4 sg-font-bold sg-text-gray-900 selected">
+					<li class="tab router-link-exact-active router-link-active sg-text-subhead4 sg-font-bold sg-text-gray-900 selected" style = "color: blue">
 						작성 글</li>
 					<li class="tab sg-text-body2 sg-font-regular sg-text-gray-400">
 					<a href="./message-list.jsp" style="text-decoration: none; color: #2e2e2e; font-weight: 700;">

@@ -14,6 +14,7 @@
 </style>
 </head>
 <body>
+
 	<div id="app-body">
 		<div class="community-container container">
 			<div class="soomgo-life-container">

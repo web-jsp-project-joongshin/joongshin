@@ -325,6 +325,7 @@ ul li.parent:after {
 </style>
 </head>
 <body>
+<%@ include file="../mainpageSeo/header.jsp" %>
 	<div class="app">
 		<div class="app-body">
 			<div class="community-container container">

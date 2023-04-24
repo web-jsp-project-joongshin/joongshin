@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -6,13 +6,16 @@
 <meta charset="UTF-8">
 <title>로그인</title>
 </head>
-<link href="../../static/css/singupcss-hsw/basic.css" rel="stylesheet">
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
+
 <!-- 개인 css -->
+<link href="../../static/css/singupcss-hsw/basic.css" rel="stylesheet">
+<!-- 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-<!-- 폰트 -->
 <body>
+<%@ include file="../mainpageSeo/header.jsp" %>
 	<div>
 		<div class="login-page">
 			<h2>로그인</h2>
@@ -53,22 +56,14 @@
 						<div class="line"></div>
 						<a href="join.jsp" class="search">회원가입</a>
 						</div>
-						<div id="startKakao" class="col-13">
-							<button type="submit" class="btn-kakao">
-								<span class="btnkakao">카카오로 시작</span>
-							</button>
-						</div>
-						<div id="startNaver" class="col-13">
-							<button type="submit" class="btn-naver">
-								<span class="btnNaver">네이버로 시작</span>
-							</button>
-						</div>
+						
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
 </body>
+<%@ include file="../mainpageSeo/footer.jsp" %>
 <script>
 /* 이메일 */
 function emailInput() {
@@ -142,4 +137,5 @@ function passwordInput() {
 var passwordboxInput = document.getElementById("password");
 passwordboxInput.addEventListener("blur", passwordInput);
 </script>
+
 </html>

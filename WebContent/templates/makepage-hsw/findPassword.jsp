@@ -6,13 +6,13 @@
 <meta charset="UTF-8">
 <title>비밀번호 찾기</title>
 </head>
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
+
 <link href="../../static/css/singupcss-hsw/basic.css" rel="stylesheet">
 <!-- 개인 css -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
-	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <!-- 폰트 -->
 
 <style>
@@ -21,8 +21,10 @@
 }
 </style>
 <body>
+<%@ include file="../mainpageSeo/header.jsp" %>
+
 	<div>
-		<div class="find">
+		<div class="find" style="padding: 5rem;">
 			<h2>비밀번호 찾기</h2>
 			<div class="card">
 				<form>
@@ -100,4 +102,6 @@ function emailInput() {
 	var emailboxInput = document.getElementById("email");
 	emailboxInput.addEventListener("blur", emailInput);
 </script>
+
+<%@ include file="../mainpageSeo/footer.jsp" %>
 </html>

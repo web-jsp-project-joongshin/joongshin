@@ -6,14 +6,14 @@
 <meta charset="UTF-8">
 <title>아이디 찾기</title>
 </head>
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
+
 <link href="../../static/css/singupcss-hsw/basic.css" rel="stylesheet">
 <!-- 개인 css -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
-	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <!-- 폰트 -->
 
 <style>
@@ -23,8 +23,10 @@
 </style>
 
 <body>
+<%@ include file="../mainpageSeo/header.jsp" %>
+
 	<div>
-		<div class="find">
+		<div class="find" style="padding: 5rem;">
 			<h2>아이디 찾기</h2>
 			<div class="card">
 				<form>
@@ -43,7 +45,7 @@
 							<fieldset class="form-group">
 								<legend class="legend-text">가입시 등록한 휴대전화 번호를 입력해주세요.</legend>
 								<div>
-									<input name="phoneNumber" type="number"
+									<input name="phoneNumber" type="text"
 										placeholder="010-XXXX-XXXX" maxlength="11" class="inputclass"
 										id="number">
 								</div>
@@ -117,5 +119,7 @@
 		var numberboxInput = document.getElementById("number");
 		numberboxInput.addEventListener("blur", numberInput);
 	</script>
+	
+<%@ include file="../mainpageSeo/footer.jsp" %>
 </body>
 </html>
