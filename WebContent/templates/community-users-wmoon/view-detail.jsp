@@ -12,6 +12,7 @@
 
 </head>
 <body>
+	<%@ include file="../mainpageSeo/header.jsp" %>
 	<div id="app-body">
 		<div class="community-container container">
 			<div class="soomgo-life-container">
@@ -184,5 +185,6 @@
 			</div>
 		</div>
 	</div>
+	<%@ include file="../mainpageSeo/footer.jsp" %>
 </body>
 </html>
