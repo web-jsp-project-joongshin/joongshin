@@ -11,7 +11,7 @@ import com.js.user.domain.UserVO;
 public class BoardFileDAO {
 	public SqlSession sqlSession;
 	
-	public JuniorUserDAO() {
+	public BoardFileDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 

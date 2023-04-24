@@ -8,10 +8,10 @@ import org.apache.ibatis.session.SqlSession;
 import com.js.mybatis.config.MyBatisConfig;
 import com.js.user.domain.UserVO;
 
-public class UserDAO {
+public class AdminUserDAO {
 	public SqlSession sqlSession;
 	
-	public UserDAO() {
+	public AdminUserDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	

@@ -11,7 +11,7 @@ import com.js.user.domain.UserVO;
 public class BoardCommentDAO {
 	public SqlSession sqlSession;
 	
-	public JuniorUserDAO() {
+	public BoardCommentDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	

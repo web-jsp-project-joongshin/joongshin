@@ -11,7 +11,7 @@ import com.js.user.domain.UserVO;
 public class BoardRecommendDAO {
 	public SqlSession sqlSession;
 	
-	public JuniorUserDAO() {
+	public BoardRecommendDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 
