@@ -5,8 +5,6 @@
 <head>
 <!-- 로고 -->
 <link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
-
-
 <link rel="stylesheet" type="text/css" href="../../static/css/mainpageSeo/hf.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
