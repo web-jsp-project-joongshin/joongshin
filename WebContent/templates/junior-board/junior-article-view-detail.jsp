@@ -11,6 +11,8 @@
 <title>글 상세보기</title>
 </head>
 
+<%@ include file="../mainpageSeo/header.jsp" %>
+
 <body>
 	<!-- 
 		제목 보여주는 sticky header입니다. 
@@ -154,5 +156,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="../../static/js/junior-board/junior-article-view-detail.js"></script>
-
+<%@ include file="../mainpageSeo/footer.jsp" %>
 </html>

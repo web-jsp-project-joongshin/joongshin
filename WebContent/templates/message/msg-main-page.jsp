@@ -8,11 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../static/css/message-jym/msg-main-page.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/mainpageSeo/hf.css">
     <title>chat</title>
 </head>
 
 <body>
-
     <div id="app-body">
         <!-- 채팅페이지 바디 -->
         <div class="chat-list">
@@ -342,17 +342,11 @@
                                 </div>
                             </div>
                         </li>
-
-
-
-
-
                     </ul>
+                    
                 </div>
             </div>
         </div>
     </div>
-
 </body>
-
 </html>
