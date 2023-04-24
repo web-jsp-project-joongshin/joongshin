@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
-<title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
+<title>계정 탈퇴</title>
 <!--폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

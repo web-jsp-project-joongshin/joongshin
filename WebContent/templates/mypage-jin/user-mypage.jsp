@@ -18,7 +18,7 @@
 <%@ include file="../mainpageSeo/header.jsp" %>
 
 <!-- 마이페이지 -->
-	<div id="app-body">
+	<div id="app-body" style="padding: 30px">
 		<div class="container container-md">
 			<div class="mypage-container">
 				<h1 class="mypage-title">마이페이지</h1>

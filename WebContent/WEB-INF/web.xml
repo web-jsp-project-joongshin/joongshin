@@ -12,7 +12,7 @@
   </welcome-file-list>
 <!--  -->  
   <servlet>
-  <servlet-name>user</servlet-name>
+  <servlet-name>User</servlet-name>
   <servlet-class>com.js.user.UserFrontController</servlet-class>
   </servlet>
   

@@ -81,7 +81,7 @@
 						</nav>
 						<button data-v-5f10666f="" type="button"
 							class="h-btn pro-signup-h-btn right-section-item h-btn-primary h-btn-primary2">
-							<a data-v-5f10666f="" href="/pro?entry_point=signup_cta" class="">고수가입</a>
+							<a data-v-5f10666f="" href="/pro?entry_point=signup_cta" class="">주니어 가입</a>
 						</button>
 						<!---->
 					</div>
