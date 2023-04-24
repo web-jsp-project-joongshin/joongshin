@@ -8,7 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../static/css/message-jym/msg-main-page.css">
-    <link rel="stylesheet" type="text/css" href="../../static/css/mainpageSeo/hf.css">
     <title>chat</title>
 </head>
 
@@ -39,8 +38,8 @@
                         <div class="col-12">
                             <div class="chat-filter-wrapper">
                                 <ul class="chat-filter">
-                                    <li class="chat-filter-item selected" onClick="location.href='msg-main-page.jsp'"> 보낸 채팅 </li>
-                                    <li class="chat-filter-item" onClick="location.href='received-msg-main.jsp'"> 받은 채팅 </li>
+                                    <li class="chat-filter-item selected"> 보낸 채팅 </li>
+                                    <li class="chat-filter-item"> 받은 채팅 </li>
                                     
                                 </ul>
                             </div>
@@ -346,7 +345,11 @@
                     
                 </div>
             </div>
+        
+        	
         </div>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="../../static/js/message-jym/msg-list.js"></script>
 </html>

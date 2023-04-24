@@ -23,7 +23,7 @@ public class BoardRecommendController implements Action {
 		Result result = new Result();
 		
 		PrintWriter out = resp.getWriter();
-		out.print(result.toString());
+		//out.print(result.toString());
 		out.close();
 		
 		return null;

@@ -1,4 +1,3 @@
-/*필요한 서비스 메서드 창고*/
 package com.js.adminUser.dao;
 
 import java.util.HashMap;
@@ -15,7 +14,6 @@ public class AdminUserDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-//	로그인
 	public Long login(String memberIdentification, String memberPassword) {
 		HashMap<String, String> loginMap = new HashMap<String, String>();
 		loginMap.put("memberIdentification", memberIdentification);

@@ -59,6 +59,7 @@
   	<url-pattern>*.board</url-pattern>
   </servlet-mapping>
   
+<<<<<<< HEAD
 
   <servlet>
   	<servlet-name>BoardTag</servlet-name>
@@ -108,5 +109,27 @@
   
   
   
+=======
+  <servlet>
+  	<servlet-name>Message</servlet-name>
+  	<servlet-class>com.js.message.MessageFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Message</servlet-name>
+  	<url-pattern>*.message</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+  	<servlet-name>msg-list</servlet-name>
+  	<jsp-file>/templates/message/msg-list.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>msg-list</servlet-name>
+  	<url-pattern>/msg-list</url-pattern>
+  </servlet-mapping>
+  
+>>>>>>> 8529a8b5992bbe111df8e15bbf3d526c0eb3e115
 </web-app> 
   

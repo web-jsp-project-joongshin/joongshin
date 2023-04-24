@@ -1,4 +1,3 @@
-/*필요한 서비스 메서드 창고*/
 package com.js.recommend.dao;
 
 import java.util.HashMap;
