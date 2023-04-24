@@ -1,4 +1,4 @@
-/*�봽濡좏듃 而⑦듃濡ㅻ윭�뿉�꽌 �븘�꽣留곷릺�뼱 �꽆�뼱���꽌 �씠硫붿씪 �솗�씤�빐二쇰뒗 而⑦듃濡ㅻ윭*/
+/*프론트 컨트롤러에서 필터링되어 넘어와서 이메일 확인해주는 컨트롤러*/
 package com.js.adminUser.controller;
 
 import java.io.IOException;

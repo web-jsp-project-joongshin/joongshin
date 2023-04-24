@@ -1,3 +1,4 @@
+
 package com.js.boardTag.controller;
 
 import java.io.IOException;
@@ -23,7 +24,7 @@ public class BoardTagController implements Action {
 		
 		
 		PrintWriter out = resp.getWriter();
-		//out.print(result.toString());
+		out.print(result.toString());
 		out.close();
 		
 		return null;
