@@ -25,6 +25,11 @@ Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 �
 		where user_identification = #{userIdentification} and user_password = #{userPassword}
 	</select>
 	 -->
+	 
+	 <!-- 문우람이꺼 입니다 -->
+	 <select id="checkId" resultType="JuniorUserDTO">
+	 	select 
+	 </select>
 </mapper>
 
 
