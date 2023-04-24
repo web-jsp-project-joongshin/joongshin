@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="message">
+	<insert id="insert">
+		INSERT INTO tbl_message
+		(send_user_id, recieve_user_id, message_contents)
+		VALUES(#{sendUserId}, #{recieveUserId}, #{messageContents})
+	</insert>
+	
+	<select id="selectListBySendUserId" resultType="messageDTO">
+		SELECT message_id, send_user_id, recieve_user_id, r.user_name, message_contents
+		FROM tbl_user r join tbl_message m
+		on r.user_id = m.recieve_user_id
+		where send_user_id = #{sendUserId}
+	</select>
+	
+	<select id="selectListByReceiveUserId" resultType="messageDTO">
+		SELECT message_id, send_user_id, s.user_name, recieve_user_id, message_contents
+		FROM tbl_user s join tbl_message m
+		on s.user_id = m.recieve_user_id
+		where recieve_user_id = #{receiveUserId}
+	</select>
+</mapper>

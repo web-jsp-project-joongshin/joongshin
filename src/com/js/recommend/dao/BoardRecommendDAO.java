@@ -1,4 +1,3 @@
-/*필요한 서비스 메서드 창고*/
 package com.js.recommend.dao;
 
 import java.util.HashMap;
@@ -11,7 +10,7 @@ import com.js.user.domain.UserVO;
 public class BoardRecommendDAO {
 	public SqlSession sqlSession;
 	
-	public JuniorUserDAO() {
+	public BoardRecommendDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 

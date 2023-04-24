@@ -31,5 +31,26 @@
   	<servlet-name>Board</servlet-name>
   	<url-pattern>*.board</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Message</servlet-name>
+  	<servlet-class>com.js.message.MessageFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Message</servlet-name>
+  	<url-pattern>*.message</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+  	<servlet-name>msg-list</servlet-name>
+  	<jsp-file>/templates/message/msg-list.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>msg-list</servlet-name>
+  	<url-pattern>/msg-list</url-pattern>
+  </servlet-mapping>
+  
 </web-app> 
   

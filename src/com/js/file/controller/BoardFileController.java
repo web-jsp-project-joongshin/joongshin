@@ -23,7 +23,7 @@ public class BoardFileController implements Action {
 		
 		
 		PrintWriter out = resp.getWriter();
-		out.print(result.toString());
+		//out.print(result.toString());
 		out.close();
 		
 		return null;
