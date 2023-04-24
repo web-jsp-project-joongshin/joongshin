@@ -1,4 +1,4 @@
-/*필요한 서비스 메서드 창고*/
+/*�븘�슂�븳 �꽌鍮꾩뒪 硫붿꽌�뱶 李쎄퀬*/
 package com.js.file.dao;
 
 import java.util.HashMap;
@@ -11,7 +11,7 @@ import com.js.user.domain.UserVO;
 public class BoardFileDAO {
 	public SqlSession sqlSession;
 	
-	public JuniorUserDAO() {
+	public BoardFileDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 

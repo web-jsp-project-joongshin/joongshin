@@ -1,4 +1,4 @@
-/*ìœ ì € ê¸°ë³¸ ì†ì„± ì •ë³´ ì°½ê³ */
+/*?œ ?? ê¸°ë³¸ ?†?„± ? •ë³? ì°½ê³ */
 package com.js.recommend.domain;
 
 public class BoardRecommendVO {
