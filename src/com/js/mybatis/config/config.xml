@@ -11,6 +11,8 @@
 	<typeAliases>
 		<typeAlias type="com.js.board.domain.BoardVO" alias="boardVO"/>
 		<typeAlias type="com.js.board.domain.BoardDTO" alias="boardDTO"/>
+		<typeAlias type="com.js.message.domain.MessageVO" alias="messageVO"/>
+		<typeAlias type="com.js.message.domain.MessageDTO" alias="messageDTO"/>
 	</typeAliases>
 
 	<environments default="mysql">
@@ -18,7 +20,7 @@
 			<transactionManager type="JDBC"/>
 			<dataSource type="POOLED">
 				<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-				<property name="url" value="jdbc:mysql://localhost:3306/app"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/js"/>
 				<property name="username" value="root"/>
 				<property name="password" value="1234"/>
 			</dataSource>
@@ -28,6 +30,7 @@
 	<mappers>
 		<mapper resource="com/js/mybatis/mapper/userMapper.xml"/>
 		<mapper resource="com/js/mybatis/mapper/boardMapper.xml"/>
+		<mapper resource="com/js/mybatis/mapper/messageMapper.xml"/>
 	</mappers>
 </configuration>
 
