@@ -2,9 +2,7 @@
 package com.js.boardTag.dao;
 
 import java.util.HashMap;
-
 import org.apache.ibatis.session.SqlSession;
-
 import com.js.mybatis.config.MyBatisConfig;
 import com.js.user.domain.UserVO;
 

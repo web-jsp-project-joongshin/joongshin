@@ -7,10 +7,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../static/css/message-jym/msg-main-page.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/message-jym/msg-main-page.css">
     <title>chat</title>
 </head>
-
 <body>
     <div id="app-body">
         <!-- 채팅페이지 바디 -->
@@ -39,10 +38,10 @@
                             <div class="chat-filter-wrapper">
                                 <ul class="chat-filter">
                                     <li class="chat-filter-item ${receive ? '' : 'selected'}">
-                                    	<a href="javascript:location.href='${pageContext.request.contextPath}/messageListOk.message?userId=3&receive=false'"> 보낸 채팅 </a>
-                                   	</li>
+                                       <a href="javascript:location.href='${pageContext.request.contextPath}/MessageListOk.message?userId=3&receive=false'"> 보낸 채팅 </a>
+                                      </li>
                                     <li class="chat-filter-item ${receive ? 'selected' : ''}"> 
-                                    	<a href="javascript:location.href='${pageContext.request.contextPath}/messageListOk.message?userId=3&receive=true'" onclick="console.log('딸깍')"> 받은 채팅 </a>
+                                       <a href="javascript:location.href='${pageContext.request.contextPath}/MessageListOk.message?userId=3&receive=true'" onclick="console.log('딸깍')"> 받은 채팅 </a>
                                     </li>
                                 </ul>
                             </div>
@@ -50,7 +49,7 @@
                     </section>
                 </div>
             </div>
-<!-- 			바디  -->
+<!--          바디  -->
             <div class="page-body">
                 <div class="container">
                     <ul class="row"></ul>
@@ -61,8 +60,8 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
-	console.log(`${receive}`);
-	let messages = `${messages}`;
+   console.log(`${receive}`);
+   let messages = `${messages}`;
 </script>
-<script src="../../static/js/message-jym/msg-list.js"></script>
+<script src="${pageContext.request.contextPath}/static/message/msg-list.js"></script>
 </html>

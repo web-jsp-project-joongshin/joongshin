@@ -3,15 +3,13 @@ package com.js.juniorUser.domain;
 
 public class JuniorUserDTO {
 	private Long userId;
-	private int juniorYears;
-	private String resume;
 	private String userEmail;
 	private String userPassword;
 	private String username;
 	private String userAddress;
-	private String userPhoneumber;
-	
-	
+	private String userPhonenumber;
+	private String resume;
+	private int juniorYears;
 	
 	public JuniorUserDTO() {;}
 	
@@ -57,12 +55,13 @@ public class JuniorUserDTO {
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
 	}
-	public String getUserPhoneumber() {
-		return userPhoneumber;
+	public String getUserPhonenumber() {
+		return userPhonenumber;
 	}
-	public void setUserPhoneumber(String userPhoneumber) {
-		this.userPhoneumber = userPhoneumber;
+	public void setUserPhonenumber(String userPhonenumber) {
+		this.userPhonenumber = userPhonenumber;
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -73,10 +72,11 @@ public class JuniorUserDTO {
 		result = prime * result + ((userEmail == null) ? 0 : userEmail.hashCode());
 		result = prime * result + ((userId == null) ? 0 : userId.hashCode());
 		result = prime * result + ((userPassword == null) ? 0 : userPassword.hashCode());
-		result = prime * result + ((userPhoneumber == null) ? 0 : userPhoneumber.hashCode());
+		result = prime * result + ((userPhonenumber == null) ? 0 : userPhonenumber.hashCode());
 		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -113,10 +113,10 @@ public class JuniorUserDTO {
 				return false;
 		} else if (!userPassword.equals(other.userPassword))
 			return false;
-		if (userPhoneumber == null) {
-			if (other.userPhoneumber != null)
+		if (userPhonenumber == null) {
+			if (other.userPhonenumber != null)
 				return false;
-		} else if (!userPhoneumber.equals(other.userPhoneumber))
+		} else if (!userPhonenumber.equals(other.userPhonenumber))
 			return false;
 		if (username == null) {
 			if (other.username != null)
@@ -129,7 +129,7 @@ public class JuniorUserDTO {
 	public String toString() {
 		return "JuniorUserDTO [userId=" + userId + ", juniorYears=" + juniorYears + ", resume=" + resume
 				+ ", userEmail=" + userEmail + ", userPassword=" + userPassword + ", username=" + username
-				+ ", userAddress=" + userAddress + ", userPhoneumber=" + userPhoneumber + "]";
+				+ ", userAddress=" + userAddress + ", userPhonenumber=" + userPhonenumber + "]";
 	}
 	
 	

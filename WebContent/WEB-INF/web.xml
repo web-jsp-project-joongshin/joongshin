@@ -21,7 +21,7 @@
   </servlet-mapping>
   
   
-<!-- <servlet>
+ <servlet>
   	<servlet-name>AdminUser</servlet-name>
   	<servlet-class>com.js.adminUser.AdminUserFrontController</servlet-class>
   </servlet>
@@ -32,7 +32,8 @@
   </servlet-mapping>
   
   
-	<servlet>
+
+<servlet>
   	<servlet-name>JuniorUser</servlet-name>
   	<servlet-class>com.js.juniorUser.JuniorUserFrontController</servlet-class>
   </servlet>
@@ -40,8 +41,7 @@
    <servlet-mapping>
   	<servlet-name>JuniorUser</servlet-name>
   	<url-pattern>*.JuniorUser</url-pattern>
-  </servlet-mapping>  
-
+  </servlet-mapping>   
    
   <servlet>
   	<servlet-name>Board</servlet-name>
@@ -99,10 +99,6 @@
   	<url-pattern>*.boardRecommend</url-pattern>
   </servlet-mapping>
   
-  
-  
-  
-
   <servlet>
   	<servlet-name>Message</servlet-name>
   	<servlet-class>com.js.message.MessageFrontController</servlet-class>
@@ -121,7 +117,7 @@
   <servlet-mapping>
   	<servlet-name>msg-list</servlet-name>
   	<url-pattern>/msg-list</url-pattern>
-  </servlet-mapping> -->
+  </servlet-mapping> 
   
 
 </web-app> 
