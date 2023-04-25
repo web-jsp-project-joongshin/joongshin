@@ -20,6 +20,7 @@ Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 �
 		select user_id from tbl_user 
 		where user_email = #{userEmail} and user_password = #{userPassword}
 	</select>
+
 </mapper>
 
 
