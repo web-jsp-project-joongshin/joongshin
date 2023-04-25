@@ -42,7 +42,7 @@ public class UserFrontController extends HttpServlet {
 		} else if(target.equals("loginOk")) {
 			result = new LoginOkController().execute(req, resp);
 			
-		} else if(target.equals(“logout”)){
+		} else if(target.equals("logOut")){
 			req.getSession().invalidate();
 			result = new Result();
 			result.setPath("templates/makepage-hsw/login.jsp");
