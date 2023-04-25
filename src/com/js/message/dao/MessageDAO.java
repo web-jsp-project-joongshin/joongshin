@@ -19,6 +19,10 @@ public class MessageDAO {
 		sqlSession.insert("message.insert", messageVO);
 	}
 	
+	public MessageDTO selectOne(Long messageId) {
+		return sqlSession.selectOne("message.selectOne", messageId);
+	}
+	
 	public List<MessageDTO> selectListBySendUserId(Long sendUserId) {
 		return sqlSession.selectList("message.selectListBySendUserId", sendUserId);
 	}
