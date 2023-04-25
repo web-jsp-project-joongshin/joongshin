@@ -26,7 +26,7 @@ function showMessageList() {
 	                <div class="divider"></div>
 	                <div class="row quote-info">
 	                    <div class="updated-at">
-	                        <p>2022. 07. 25</p>
+	                        <p>2023. 04. 25</p>
 	                    </div>
 	                </div>
 	            </div>

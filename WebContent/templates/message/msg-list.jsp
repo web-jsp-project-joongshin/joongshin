@@ -39,10 +39,10 @@
                             <div class="chat-filter-wrapper">
                                 <ul class="chat-filter">
                                     <li class="chat-filter-item ${receive ? '' : 'selected'}">
-                                    	<a href="javascript:location.href='${pageContext.request.contextPath}/MessageListOk.message?userId=3&receive=false'"> 보낸 채팅 </a>
+                                    	<a href="javascript:location.href='${pageContext.request.contextPath}/messageListOk.message?userId=3&receive=false'"> 보낸 채팅 </a>
                                    	</li>
                                     <li class="chat-filter-item ${receive ? 'selected' : ''}"> 
-                                    	<a href="javascript:location.href='${pageContext.request.contextPath}/MessageListOk.message?userId=3&receive=true'" onclick="console.log('딸깍')"> 받은 채팅 </a>
+                                    	<a href="javascript:location.href='${pageContext.request.contextPath}/messageListOk.message?userId=3&receive=true'" onclick="console.log('딸깍')"> 받은 채팅 </a>
                                     </li>
                                 </ul>
                             </div>

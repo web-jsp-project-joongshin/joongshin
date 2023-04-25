@@ -32,18 +32,15 @@
   </servlet-mapping>
   
   
-<!-- <servlet>
-  	<servlet-name>juniorUser</servlet-name>
+	<servlet>
+  	<servlet-name>JuniorUser</servlet-name>
   	<servlet-class>com.js.juniorUser.JuniorUserFrontController</servlet-class>
   </servlet>
   
    <servlet-mapping>
   	<servlet-name>JuniorUser</servlet-name>
   	<url-pattern>*.JuniorUser</url-pattern>
-  </servlet-mapping>   -->
-  
-  
-   
+  </servlet-mapping>  
    
   <servlet>
   	<servlet-name>Board</servlet-name>
