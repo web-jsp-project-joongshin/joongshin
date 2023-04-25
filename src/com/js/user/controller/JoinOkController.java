@@ -22,7 +22,7 @@ public class JoinOkController implements Action{
 		
 		userVO.setUserEmail(req.getParameter("userEmail"));
 		userVO.setUserPassword(req.getParameter("userPassword"));
-		userVO.setUsername(req.getParameter("userName"));
+		userVO.setUsername(req.getParameter("userUsername"));
 		
 	  
 		
