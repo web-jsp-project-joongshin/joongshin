@@ -2,43 +2,43 @@
 package com.js.recommend.domain;
 
 public class BoardRecommendVO {
-	private int recId; /*개인 번호 pk*/
-	private int boardId;
-	private int userId;
+	private Long recId; /*개인 번호 pk*/
+	private Long boardId;
+	private Long userId;
 	
 	
-	public BoardRecommendVO() {
-		
-	}
-	
-	public int getRecId() {
+	public BoardRecommendVO() {;}
+
+
+	public Long getRecId() {
 		return recId;
 	}
 
+	public void setRecId(Long recId) {
+		this.recId = recId;
+	}
 
-
-	public int getBoardId() {
+	public Long getBoardId() {
 		return boardId;
 	}
 
+	public void setBoardId(Long boardId) {
+		this.boardId = boardId;
+	}
 
-
-	public int getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-
-
-	@Override
-	public String toString() {
-		return "BoardRecommendVO [recId=" + recId + ", boardId=" + boardId + ", userId=" + userId + "]";
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + recId;
+		result = prime * result + ((boardId == null) ? 0 : boardId.hashCode());
 		return result;
 	}
 
@@ -51,12 +51,16 @@ public class BoardRecommendVO {
 		if (getClass() != obj.getClass())
 			return false;
 		BoardRecommendVO other = (BoardRecommendVO) obj;
-		if (recId != other.recId)
+		if (boardId == null) {
+			if (other.boardId != null)
+				return false;
+		} else if (!boardId.equals(other.boardId))
 			return false;
 		return true;
 	}
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "BoardRecommendVO [recId=" + recId + ", boardId=" + boardId + ", userId=" + userId + "]";
+	}
 }

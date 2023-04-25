@@ -22,7 +22,4 @@
 		from tbl_member m join tbl_board b
 		where board_id = #{boardId}
 	</select>
-	
-	 
-
 </mapper>
