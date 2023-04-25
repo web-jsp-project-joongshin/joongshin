@@ -1,74 +1,49 @@
-const $msgTabButtons = $('li.chat-filter-item');
-const $comments = $('.page-body .container ul.row li');
+const $msgList = $('.page-body .container ul.row');
 
-$.ajax({
-	url: "sendMessageListOk.message",
-	data: {userId: "3"},
-	async: false,
-	success: function(result) {
-		//console.log(result);
-		result = JSON.parse(result);
+showMessageList();
 
-		$comments.each(function(i, li) {
-			let $proStatus = $(li).find('.chat-item section .service-info .pro-status');
-			let $lastMessage = $(li).find('.chat-item .last-message');
-			let messageVO = result[i];
-
-			$proStatus.children('h5').text(messageVO.userName);
-			$lastMessage.children('p').text(messageVO.messageContents);
-		});
-	}
-});
-
-$msgTabButtons.each((i, btn) => {
-	$(btn).on('click', function() {
-		if($(this).is('selected')) return;
-		
-		$msgTabButtons.eq(i == 0 ? 1 : 0).removeClass('selected');
-		$(this).addClass('selected');
-		
-		if(i == 0) {
-			$.ajax({
-				url: "sendMessageListOk.message",
-				data: {userId: "3"},
-				async: false,
-				success: function(result) {
-					//console.log(result);
-					result = JSON.parse(result);
+function showMessageList() {
+	messages = JSON.parse(messages);
+	console.log(messages);
+	let text = '';
 	
-					$comments.each(function(i, li) {
-						let $proStatus = $(li).find('.chat-item section .service-info .pro-status');
-						let $lastMessage = $(li).find('.chat-item .last-message');
-						let messageVO = result[i];
+	messages.forEach(msg => {
+		text += `
+			<li data-name="chat-list" class="col-12">
+	            <div class="chat-item">
+	                <div class="badge-list"></div>
 
-						$proStatus.children('h5').text(messageVO.userName);
-						$lastMessage.children('p').text(messageVO.messageContents);
-					});
-				}
-			});
-		}
-		
-		if(i == 1) {
-			$.ajax({
-				url: "receivedMessageListOk.message",
-				data: {userId: "3"},
-				async: false,
-				success: function(result) { 
-					//console.log(result);
-					result = JSON.parse(result);
-					
-					$comments.each(function(i, li) {
-						let $proStatus = $(li).find('.chat-item section .service-info .pro-status');
-						let $lastMessage = $(li).find('.chat-item .last-message');
-						let messageVO = result[i];
-
-						$proStatus.children('h5').text(messageVO.userName);
-						$lastMessage.children('p').text(messageVO.messageContents);
-					});
-				}
-			});
-		}
+	                <section class="row user-info align-items-start">
+	                    <div class="service-info col">
+	                        <div class="pro-status">
+	                            <h5> ${msg.userName} </h5>
+	                        </div>
+	                    </div>
+	                </section>
+	                <div class="row last-message">
+	                    <p>${msg.messageContents}</p>
+	                </div>
+	                <div class="divider"></div>
+	                <div class="row quote-info">
+	                    <div class="updated-at">
+	                        <p>2022. 07. 25</p>
+	                    </div>
+	                </div>
+	            </div>
+	        </li>
+		`
 	});
-});
-
+	
+	if(messages.length == 0){
+		text += `
+			<li>
+		        <div>
+					쪽지 기록이 없습니다.
+				</div>
+			</li>
+		`
+	}
+	
+	$msgList.append(text);
+}
 
