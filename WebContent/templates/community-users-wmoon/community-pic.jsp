@@ -12,6 +12,7 @@
 
 </head>
 <body>
+	<%@ include file="../mainpageSeo/header.jsp" %>
 	<div id="app-body">
 		<div class="community-container container">
 			<div class="pro-knowhow-container">
@@ -83,5 +84,6 @@
 			</div>
 		</div>
 	</div>
+	<%@ include file="../mainpageSeo/footer.jsp" %>
 </body>
 </html>

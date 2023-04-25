@@ -10,7 +10,8 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-<!--  -->  
+  
+<!-- user -->  
   <servlet>
   <servlet-name>User</servlet-name>
   <servlet-class>com.js.user.UserFrontController</servlet-class>
@@ -22,6 +23,32 @@
   <url-pattern>*.user</url-pattern>
   </servlet-mapping>
   
+  
+<servlet>
+  	<servlet-name>AdminUser</servlet-name>
+  	<servlet-class>com.js.adminUser.AdminUserFrontController</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  	<servlet-name>AdminUser</servlet-name>
+  	<url-pattern>*.adminUser</url-pattern>
+  </servlet-mapping>
+  
+  
+<servlet>
+  	<servlet-name>juniorUser</servlet-name>
+  	<servlet-class>com.js.juniorUser.JuniorUserFrontController</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  	<servlet-name>JuniorUser</servlet-name>
+  	<url-pattern>*.JuniorUser</url-pattern>
+  </servlet-mapping>  
+  
+  
+   
+  <!-- board -->  
+   
   <servlet>
   	<servlet-name>Board</servlet-name>
   	<servlet-class>com.js.board.BoardFrontController</servlet-class>
@@ -32,6 +59,56 @@
   	<url-pattern>*.board</url-pattern>
   </servlet-mapping>
   
+
+
+  <servlet>
+  	<servlet-name>BoardTag</servlet-name>
+  	<servlet-class>com.js.boardTag.BoardTagFrontController</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  	<servlet-name>BoardTag</servlet-name>
+  	<url-pattern>*.boardTag</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+  	<servlet-name>BoardComment</servlet-name>
+  	<servlet-class>com.js.boardTag.BoardCommentFrontController</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  	<servlet-name>BoardComment</servlet-name>
+  	<url-pattern>*.boardComment</url-pattern>
+  </servlet-mapping>
+  
+
+  <servlet>
+  	<servlet-name>BoardFile</servlet-name>
+  	<servlet-class>com.js.boardFile.BoardFileFrontController</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  	<servlet-name>BoardFile</servlet-name>
+  	<url-pattern>*.boardFile</url-pattern>
+  </servlet-mapping>
+  
+
+   <servlet>
+  	<servlet-name>BoardRecommend</servlet-name>
+  	<servlet-class>com.js.recommend.BoardRecommendFrontController</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  	<servlet-name>BoardRecommend</servlet-name>
+  	<url-pattern>*.boardRecommend</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+
   <servlet>
   	<servlet-name>Message</servlet-name>
   	<servlet-class>com.js.message.MessageFrontController</servlet-class>
@@ -52,5 +129,6 @@
   	<url-pattern>/msg-list</url-pattern>
   </servlet-mapping>
   
+
 </web-app> 
   

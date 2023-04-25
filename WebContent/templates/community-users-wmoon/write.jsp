@@ -9,12 +9,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-<style>
-	
-</style>
 </head>
 <body>
-
+	<%@ include file="../mainpageSeo/header.jsp" %>
 	<div id="app-body">
 		<div class="community-container container">
 			<div class="soomgo-life-container">
@@ -67,12 +64,9 @@
 							</div>
 							<div class="editor-contents">
 								<span class="sg-text-body2 sg-font-regular sg-text-gray-900">
-									<textarea id="reco" onfocus="this.span=''" class="editor-contents-textarea"></textarea>
-								</span>
-								<span id="tab" class="editor-contents-textarea-placeholder sg-text-body2 sg-font-regular sg-text-gray-500">
-									고객이 궁금해하는 요청 서비스 정보나 고수님의 전문성을 보여주는 글을 작성해 보세요.
-									글을 통해 고수님의 지정요청을 높일 수 있어요!
-									주제에 맞지 않는 글이나 커뮤니티 이용정책에 위배되어 일정 수 이상 신고를 받는 경우 글이 숨김 및 삭제될 수 있습니다.
+									<textarea id="reco" onfocus="this.span=''" class="editor-contents-textarea" placeholder="고객이 궁금해하는 요청 서비스 정보나 고수님의 전문성을 보여주는 글을 작성해 보세요.
+글을 통해 고수님의 지정요청을 높일 수 있어요!
+주제에 맞지 않는 글이나 커뮤니티 이용정책에 위배되어 일정 수 이상 신고를 받는 경우 글이 숨김 및 삭제될 수 있습니다."></textarea>
 								</span>
 							</div>
 						</div>
@@ -82,34 +76,8 @@
 			</div>
 		</div>
 	</div>
+	<%@ include file="../mainpageSeo/footer.jsp" %>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-
-//textarea에 글씨 넣으면 버튼 활성화
-$(document).ready(function () {
-    $('#reco').on('input change', function () {
-        if ($("#reco").val() != '')  {
-            $('#submit').prop('disabled', false);
-            $('#submit').css('color', '#00c7ae');
-        }
-        else {
-            $('#submit').prop('disabled', true);
-        }
-    });
-});
-
-//span text 없애는 코드
-$(document).ready(function() {
-
-    $('#reco').focusout(function() {
-      if ($(this).val() == '') {
-        $('#tab').text('글자를 입력해주세요');
-        $(this).focus();
-      } else {
-        $('#tab').empty();
-      }
-    });
-  });
-</script>
+<script src="../../static/js/community-wmoon/write.js"></script>
 </html>

@@ -1,15 +1,41 @@
-let modalCheck;
-function showWarnModal(modalMessage){
-    modalCheck = false;
-    $("div#content-wrap").html(modalMessage)
-    $("div.warn-modal").css("animation", "popUp 0.5s");
-    $("div.modal").css("display", "flex").hide().fadeIn(500);
-    setTimeout(function(){modalCheck = true;}, 500);
-}
+const body = document.querySelector('body');
+const modal = document.querySelector('.modal');
+const btnOpenPopup = document.querySelector('.btn-open-popup');
+const modal2 = document.querySelector('.modal2');
+const btnOpenPopup2 = document.querySelector('.btn-open-popup2');
 
-$("div.modal").on("click", function(){
-    if(modalCheck){
-        $("div.warn-modal").css("animation", "popDown 0.5s");
-        $("div.modal").fadeOut(500);
-    }
+btnOpenPopup.addEventListener('click', () => {
+  modal.classList.toggle('show');
+
+  if (modal.classList.contains('show')) {
+    body.style.overflow = 'hidden';
+  }
 });
+
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.classList.toggle('show');
+
+    if (!modal.classList.contains('show')) {
+      body.style.overflow = 'auto';
+    }
+  }
+});
+
+btnOpenPopup2.addEventListener('click', () => {
+	  modal2.classList.toggle('show');
+
+	  if (modal2.classList.contains('show')) {
+	    body.style.overflow = 'hidden';
+	  }
+	});
+
+	modal2.addEventListener('click', (event) => {
+	  if (event.target === modal2) {
+	    modal2.classList.toggle('show');
+
+	    if (!modal2.classList.contains('show')) {
+	      body.style.overflow = 'auto';
+	    }
+	  }
+	});
