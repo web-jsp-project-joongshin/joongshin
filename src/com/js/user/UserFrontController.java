@@ -30,19 +30,22 @@ public class UserFrontController extends HttpServlet {
 			
 		} else if(target.equals("join")){
 			result = new Result();
-			result.setPath("templates/member/join.jsp");
+			result.setPath("templates/makepage-hsw/join.jsp");
 			
 		} else if(target.equals("joinOk")){
 			result = new JoinOkController().execute(req, resp);
 			
 		} else if(target.equals("login")){
-			result = new LoginController().execute(req, resp);
+			result = new Result();
+			result.setPath("templates/makepage-hsw/login.jsp");
 			
 		} else if(target.equals("loginOk")) {
 			result = new LoginOkController().execute(req, resp);
 			
-		} else if(target.equals("logout")) {
-			result = new LogoutController().execute(req, resp);
+		} else if(target.equals(“logout”)){
+			req.getSession().invalidate();
+			result = new Result();
+			result.setPath("templates/makepage-hsw/login.jsp");
 		}
 		
 		if(result != null) {

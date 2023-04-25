@@ -23,8 +23,7 @@ public class JoinOkController implements Action{
 		userVO.setUserEmail(req.getParameter("userEmail"));
 		userVO.setUserPassword(req.getParameter("userPassword"));
 		userVO.setUsername(req.getParameter("userName"));
-		userVO.setUserAddress(req.getParameter("userAddress"));
-		userVO.setUserPhoneumber(req.getParameter("userPhonenumber"));
+		
 	  
 		
 		userDAO.insert(userVO);

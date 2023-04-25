@@ -17,26 +17,21 @@ public class UserDAO {
 	
 //	회원가입
 	public void insert(UserVO userVO) {
-		sqlSession.insert("member.insert", userVO);
-	}
-	
-//	아이디 중복검사
-	public String selectIdentification(String memberIdentification) {
-		return sqlSession.selectOne("member.selectIdentification", memberIdentification);
+		sqlSession.insert("user.insert", userVO);
 	}
 	
 //	이메일 중복검사
-	public String selectEmail(String memberEmail) {
-		return sqlSession.selectOne("member.selectEmail", memberEmail);
+	public String selectEmail(String userEmail) {
+		return sqlSession.selectOne("user.selectEmail", userEmail);
 	}
 	
 //	로그인
-	public Long login(String memberIdentification, String memberPassword) {
+	public Long login(String userEmail, String userPassword) {
 		HashMap<String, String> loginMap = new HashMap<String, String>();
-		loginMap.put("memberIdentification", memberIdentification);
-		loginMap.put("memberPassword", memberPassword);
+		loginMap.put("userEmail", userEmail);
+		loginMap.put("userPassword", userPassword);
 		
-		return sqlSession.selectOne("member.login", loginMap);
+		return sqlSession.selectOne("user.login", loginMap);
 	}
 }
 
