@@ -1,13 +1,30 @@
-const $msgList = $('.page-body .container ul.row');
+const $msgContainer = $('.page-body .container ul.row');
+const $selectionTabs = $('.chat-filter .chat-filter-item');
+const $msgList = $('.page-body .container ul.row li');
+
+messagesJSONArray = JSON.parse(messages);
 
 showMessageList();
 
+$selectionTabs.eq(0).on('click', function() {
+	location.href = path + "/messageListOk.message?userId=3&receive=false";
+});
+
+$selectionTabs.eq(1).on('click', function() {
+	location.href = path + "/messageListOk.message?userId=3&receive=true";
+});
+
+$msgList.each(function(i, li) {
+	$(li).on('click', function() {
+		location.href = path + "/messageOk.message?messageId=" + messagesJSONArray[i].messageId;
+	});
+});
+
 function showMessageList() {
-	messages = JSON.parse(messages);
-	console.log(messages);
+	//console.log(messages);
 	let text = '';
 	
-	messages.forEach(msg => {
+	messagesJSONArray.forEach(msg => {
 		text += `
 			<li data-name="chat-list" class="col-12">
 	            <div class="chat-item">
@@ -44,6 +61,6 @@ function showMessageList() {
 		`
 	}
 	
-	$msgList.append(text);
+	$msgContainer.append(text);
 }
 
