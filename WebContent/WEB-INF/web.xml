@@ -36,7 +36,7 @@
   
   
 <servlet>
-  	<servlet-name>juniorUser</servlet-name>
+  	<servlet-name>JuniorUser</servlet-name>
   	<servlet-class>com.js.juniorUser.JuniorUserFrontController</servlet-class>
   </servlet>
   
