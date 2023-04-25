@@ -15,7 +15,12 @@ public class MessageFrontController extends FrontControllerAdapter<MessageFrontC
 	protected MessageFrontController getFrontController() {return this;}
 	
 	@Branch
-	public Result MessageListOk(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+	public Result messageListOk(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		return new MessageListOkController().execute(req, resp);
+	}
+	
+	@Branch
+	public Result messageOk(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		return new MessageListOkController().execute(req, resp);
 	}
 }
