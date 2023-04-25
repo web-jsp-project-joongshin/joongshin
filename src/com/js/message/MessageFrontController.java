@@ -1,14 +1,11 @@
 package com.js.message;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import com.js.Result;
-import com.js.message.controller.ReceivedMessageListOkController;
-import com.js.message.controller.SendMessageListOkController;
+import com.js.message.controller.MessageListOkController;
 import com.js.util.Branch;
 import com.js.util.FrontControllerAdapter;
 
@@ -18,12 +15,7 @@ public class MessageFrontController extends FrontControllerAdapter<MessageFrontC
 	protected MessageFrontController getFrontController() {return this;}
 	
 	@Branch
-	public Result sendMessageListOk(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		return new SendMessageListOkController().execute(req, resp);
-	}
-	
-	@Branch
-	public Result receivedMessageListOk(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		return new ReceivedMessageListOkController().execute(req, resp);
+	public Result MessageListOk(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		return new MessageListOkController().execute(req, resp);
 	}
 }
