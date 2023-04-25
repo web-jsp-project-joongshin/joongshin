@@ -1,5 +1,4 @@
 /*
- 유저 프론트 컨트롤러 => 요청에 맞는 컨트롤러나 뷰를 호출,필요한 처리 수행 
  * */
 package com.js.user;
 import java.io.IOException;
@@ -42,7 +41,7 @@ public class UserFrontController extends HttpServlet {
 		} else if(target.equals("loginOk")) {
 			result = new LoginOkController().execute(req, resp);
 			
-		} else if(target.equals(“logout”)){
+		} else if(target.equals("")){
 			req.getSession().invalidate();
 			result = new Result();
 			result.setPath("templates/makepage-hsw/login.jsp");
