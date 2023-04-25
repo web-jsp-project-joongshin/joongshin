@@ -1,5 +1,4 @@
 /*
- 유저 프론트 컨트롤러 => 요청에 맞는 컨트롤러나 뷰를 호출,필요한 처리 수행 
  * */
 package com.js.user;
 import java.io.IOException;
@@ -30,19 +29,22 @@ public class UserFrontController extends HttpServlet {
 			
 		} else if(target.equals("join")){
 			result = new Result();
-			result.setPath("templates/member/join.jsp");
+			result.setPath("templates/makepage-hsw/join.jsp");
 			
 		} else if(target.equals("joinOk")){
 			result = new JoinOkController().execute(req, resp);
 			
 		} else if(target.equals("login")){
-			result = new LoginController().execute(req, resp);
+			result = new Result();
+			result.setPath("templates/makepage-hsw/login.jsp");
 			
 		} else if(target.equals("loginOk")) {
 			result = new LoginOkController().execute(req, resp);
 			
-		} else if(target.equals("logout")) {
-			result = new LogoutController().execute(req, resp);
+		} else if(target.equals("")){
+			req.getSession().invalidate();
+			result = new Result();
+			result.setPath("templates/makepage-hsw/login.jsp");
 		}
 		
 		if(result != null) {

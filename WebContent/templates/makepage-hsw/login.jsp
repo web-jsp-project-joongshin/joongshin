@@ -14,6 +14,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<style>
+/* 이메일 유효성 검사 실패시 테두리 red */
+    .is-invalid {
+        border-color: red;
+    }
+</style>
 <body>
 <%@ include file="../mainpageSeo/header.jsp" %>
 	<div>
@@ -22,28 +28,28 @@
 			<div class="card">
 				<form>
 					<div class="form-row">
-						<div id="emailBox" class="col-12">
-							<fieldset class="form-group">
-								<legend class="legen-text">이메일</legend>
-								<div>
-									<input name="email" type="email"
-										placeholder="example@joongsin.com" maxlength="30"
-										class="inputclass" id="email">
-									<div id="message2"></div>
-								</div>
-							</fieldset>
-						</div>
-						<div id="passwordBox" class="col-12">
-							<fieldset class="form-group">
-								<legend class="legen-text">비밀번호</legend>
-								<div class="input-group">
-									<input name="password" type="password"
-										placeholder="영문+숫자 조합 8자리 이상 입력해주세요." class="inputclass" id="password">
-									<button type="button" class="btn-17" id="passwordButton">표시</button>
-									<div id="message3"></div>
-								</div>
-							</fieldset>
-						</div>
+						 <div id="emailBox" class="col-12">
+		                    <fieldset class="form-group">
+		                        <legend class="legen-text">이메일</legend>
+		                        <input name="email" type="email"
+		                            placeholder="example@joongsin.com" maxlength="30"
+		                            class="inputclass" id="email">
+		                       <div id="message2"></div>
+		                    </fieldset>
+		                </div>
+		
+		                <div id="passwordBox" class="col-12">
+		                    <fieldset class="form-group">
+		                        <legend class="legen-text">비밀번호</legend>
+		                        <div class="input-group password">
+		                            <input name="password" type="password"
+		                                placeholder="영문+숫자 조합 8자리 이상 입력해주세요." class="inputclass" id="password">
+		                            <button type="button" class="btn-17" id="password-toggle">표시</button>
+		                            <div id="message3"></div>
+		                        </div>
+		                        
+		                    </fieldset>
+		                </div>
 						<div id="loginButton" class="col-12">
 							<button type="submit" class="btn-login">
 								<span class="btntext">회원 가입</span>
@@ -136,6 +142,45 @@ function passwordInput() {
 }
 var passwordboxInput = document.getElementById("password");
 passwordboxInput.addEventListener("blur", passwordInput);
+
+function checkSelect()  {
+	  const checkboxes 
+	    = document.querySelectorAll('input[name="term"]');
+	  const checked 
+	    = document.querySelectorAll('input[name="term"]:checked');
+	  const selectAll 
+	    = document.querySelector('input[name="selectall"]');
+	  
+	  if(checkboxes.length === checked.length)  {
+	    selectAll.checked = true;
+	  }else {
+	    selectAll.checked = false;
+	  }
+
+	}
+
+	function selectAll(selectAll)  {
+	  const checkboxes 
+	     = document.getElementsByName('term');
+	  
+	  checkboxes.forEach((checkbox) => {
+	    checkbox.checked = selectAll.checked
+	  })
+	}
+	
+	/* 비밀번호 표시 */
+	var passwordInput = document.getElementById("password");
+	var passwordToggle = document.getElementById("password-toggle");
+	
+	passwordToggle.addEventListener("click", function() {
+	  if (passwordInput.type === "password") {
+	    passwordInput.type = "text";
+	    passwordToggle.innerHTML = "표시";
+	  } else {
+	    passwordInput.type = "password";
+	    passwordToggle.innerHTML = "표시";
+	  }
+});
 </script>
 
 </html>

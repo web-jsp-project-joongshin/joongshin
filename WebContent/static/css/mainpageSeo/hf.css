@@ -302,9 +302,9 @@ button, input, optgroup, select, textarea {
     font-size: inherit;
     line-height: inherit;
 }
-input[type="text" i] {
+/* input[type="text" i] {
     padding: 1px 2px;
-}
+} */
 input {
     writing-mode: horizontal-tb !important;
    /*

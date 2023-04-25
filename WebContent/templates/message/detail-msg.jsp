@@ -101,5 +101,9 @@
         </article>
     </section>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+	const message = `${message}`;
+</script>
+<script src="../../static/js/message-jym/detail-msg.js"></script>
 </html>

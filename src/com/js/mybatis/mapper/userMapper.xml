@@ -5,16 +5,12 @@ Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 �
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- SQL 쿼리를 포함하고 있으며, 이를 Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 수 있도록 돕는다.  -->
 <mapper namespace="user">
-	<!-- 
+	
 	<insert id="insert">
 		insert into tbl_user
-		(user_identification, user_password, user_name, user_birth, user_phone, user_email)
-		values(#{userIdentification}, #{userPassword}, #{userName}, #{userBirth}, #{userPhone}, #{userEmail})
+		(user_username, user_email, user_password)
+		values(${userUsername}, ${userEmail}, ${userPassword})
 	</insert>
-	
-	<select id="selectIdentification" resultType="string">
-		select user_identification from tbl_user where user_identification = #{userIdentification}
-	</select>
 	
 	<select id="selectEmail" resultType="string">
 		select user_email from tbl_user where user_email = #{userEmail}
@@ -22,17 +18,9 @@ Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 �
 	
 	<select id="login" resultType="long">
 		select user_id from tbl_user 
-		where user_identification = #{userIdentification} and user_password = #{userPassword}
+		where user_email = #{userEmail} and user_password = #{userPassword}
 	</select>
-	 -->
-	 
-	 <!-- 문우람이꺼 입니다 -->
-	 <!-- select id="checkId" resultType="JuniorUserDTO">
-	 	select count(user_id) from tbl
-	 </select> -->
-	 
-	 
-	 
+
 </mapper>
 
 
