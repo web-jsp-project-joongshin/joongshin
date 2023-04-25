@@ -30,7 +30,7 @@ public class MessageListOkController implements Action{
 		Boolean isReceivedMsgList = Boolean.valueOf(req.getParameter("receive"));
 		
 		messages = isReceivedMsgList 
-				? dao.selectListByReceiveUserId(userId) 
+				? dao.selectListByReceiveUserId(userId)
 				: dao.selectListBySendUserId(userId);
 		
 		JSONArray jsonResult = new JSONArray(messages.stream()
