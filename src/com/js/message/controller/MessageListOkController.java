@@ -25,7 +25,7 @@ public class MessageListOkController implements Action{
 		MessageDAO dao = new MessageDAO();
 		Result result = new Result();
 		
-		//TODO ¼¼¼Ç¿¡¼­ user id °¡Á®¿À±â
+		//TODO ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ user id ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		Long userId = Long.valueOf(req.getParameter("userId"));
 		Boolean isReceivedMsgList = Boolean.valueOf(req.getParameter("receive"));
 		

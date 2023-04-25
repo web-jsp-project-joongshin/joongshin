@@ -7,7 +7,7 @@ public class UserVO {
 	private String userPassword;
 	private String username;
 	private String userAddress;
-	private String userPhoneumber;
+	private String userPhonenumber;
 	
 	public UserVO() {;}
 
@@ -51,19 +51,19 @@ public class UserVO {
 		this.userAddress = userAddress;
 	}
 
-	public String getUserPhoneumber() {
-		return userPhoneumber;
+	public String getUserPhonenumber() {
+		return userPhonenumber;
 	}
 
-	public void setUserPhoneumber(String userPhoneumber) {
-		this.userPhoneumber = userPhoneumber;
+	public void setUserPhonenumber(String userPhonenumber) {
+		this.userPhonenumber = userPhonenumber;
 	}
 
 	@Override
 	public String toString() {
 		return "MemberVO [userId=" + userId + ", userIdentification="  + ", userEmail=" + userEmail
 				+ ", userPassword=" + userPassword + ", username=" + username + ", userAddress=" + userAddress
-				+ ", userPhoneumber=" + userPhoneumber + "]";
+				+ ", userPhonenumber=" + userPhonenumber + "]";
 	}
 
 	@Override

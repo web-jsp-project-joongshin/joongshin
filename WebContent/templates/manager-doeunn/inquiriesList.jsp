@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,6 +78,24 @@
                         <td>2023-04-19</td>
                         <td>2023-04-19</td>
                         <td class="pending">답변완료</td>
+                        <div id="paging-wrap">
+		                	<c:if test="${prev}">
+			                	<a href="${pageContext.request.contextPath}/listOk.board?page=${startPage - 1}" class="paging paging-move"><img src="/static/images/prev.png" width="15px"></a>
+		                	</c:if>
+		                	<c:forEach var="i" begin="${startPage}" end="${endPage}">
+		                		<c:choose>
+		                			<c:when test="${i eq page}">
+					                	<a href="javascript:void(0)" class="paging paging-checked"><c:out value="${i}"/></a>
+		                			</c:when>
+		                			<c:otherwise>
+					                    <a href="${pageContext.request.contextPath}/listOk.board?page=${i}" class="paging"><c:out value="${i}"/></a>
+		                			</c:otherwise>
+		                		</c:choose>
+		                	</c:forEach>
+		                	<c:if test="${next}">
+	                    		<a href="${pageContext.request.contextPath}/listOk.board?page=${endPage + 1}" class="paging paging-move"><img src="/static/images/next.png" width="15px"></a>
+                			</c:if>
+                		</div>
                     </tr>
                 </table>
             </form>

@@ -24,6 +24,15 @@ public SqlSession sqlSession;
 		return sqlSession.selectList("board.selectAll");
 	}
 	
+	
+	public List<BoardDTO> boardSelectAll() {
+		return sqlSession.selectList("board.boardId");
+	}
+	
+	//아이디 검사
+	public boolean checkId(String boardId) {
+		return (Integer)sqlSession.selectOne("user_id", boardId) == 1;
+	} 
 }
 
 

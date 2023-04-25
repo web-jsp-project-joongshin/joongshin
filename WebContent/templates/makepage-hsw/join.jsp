@@ -23,7 +23,7 @@
 <body>
 <%@ include file="../mainpageSeo/header.jsp" %>
 
-    <main id="join">
+<main id="join">
         <div class="modal">
             <div class="warn-modal">
                 <div id="content-wrap"></div>
@@ -31,16 +31,15 @@
         </div>
         <section id="join-container">
             <article>
-                <form action="${pageContext.request.contextPath}/joinOk.user" name="join" method="post">
+                <form action="${pageContext.request.contextPath}/joinOk.member" name="join" method="post">
                     <div class="join">
                         <div class="info-container info-container-first">
                             <label>이름</label>
                             <span>
-                                <input type="text" id="name" name="userName" autocomplete="off" placeholder="이름">
+                                <input type="text" id="id" name="userUsername" autocomplete="off" placeholder="이름">
                             </span>
                             <p class="help"></p>
                         </div>
-                        
                         <div class="info-container">
                             <label>비밀번호</label>
                             <span>
@@ -59,12 +58,29 @@
                             <span>
                                 <div class="email-wrap">
                                     <div class="email-first">
-                                        <input type="text" autocomplete="off" placeholder="이메일">
+                                        <input type="text" autocomplete="off" placeholder="이메일 앞자리">
+                                    </div>
+                                    <span id="seperator">@</span>
+                                    <div class="email-last">
+                                        <input type="text" autocomplete="off" placeholder="이메일 뒷자리">
                                     </div>
                                     <input type="hidden" name="userEmail">
                                 </div>
                             </span>
                             <p class="help"></p>
+                            <div class="email-select-wrap">
+                                <select class="email">
+                                    <option value="">직접입력</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="hanmail.net">hanmail.net</option>
+                                    <option value="nate.com">nate.com</option>
+                                    <option value="hotmail.com">hotmail.com</option>
+                                    <option value="gmail.com">gmail.com</option>
+                                </select>
+                                <img src="${pageContext.request.contextPath}/static/image/icons/arrow.png" width="16px" style="display: inline-block;">
+                            </div>
+                            <p class="help"></p>
+                            
                         </div>
                         <button type="button" class="next1" onclick="send()">완료</button>
                     </div>
