@@ -1,14 +1,14 @@
-/*유저 기본 속성 정보 창고*/
 package com.js.comment.domain;
 
-public class BoardCommentVO {
+public class BoardCommentDTO {
 	private Long commentId;
 	private Long boardId;
 	private Long userId;
 	private String commentComments;
 	private String commentRegisterDate;
+	private String boardTitle;
 	
-	public BoardCommentVO() {;}
+	public BoardCommentDTO() {;}
 
 	public Long getCommentId() {
 		return commentId;
@@ -50,10 +50,19 @@ public class BoardCommentVO {
 		this.commentRegisterDate = commentRegisterDate;
 	}
 
+	public String getBoardTitle() {
+		return boardTitle;
+	}
+
+	public void setBoardTitle(String boardTitle) {
+		this.boardTitle = boardTitle;
+	}
+
 	@Override
 	public String toString() {
-		return "BoardCommentVO [commentId=" + commentId + ", boardId=" + boardId + ", userId=" + userId
-				+ ", commentComments=" + commentComments + ", commentRegisterDate=" + commentRegisterDate + "]";
+		return "BoardCommentDTO [commentId=" + commentId + ", boardId=" + boardId + ", userId=" + userId
+				+ ", commentComments=" + commentComments + ", commentRegisterDate=" + commentRegisterDate
+				+ ", boardTitle=" + boardTitle + "]";
 	}
 
 	@Override
@@ -72,7 +81,7 @@ public class BoardCommentVO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		BoardCommentVO other = (BoardCommentVO) obj;
+		BoardCommentDTO other = (BoardCommentDTO) obj;
 		if (commentId == null) {
 			if (other.commentId != null)
 				return false;
@@ -80,6 +89,5 @@ public class BoardCommentVO {
 			return false;
 		return true;
 	}
-
 
 }
