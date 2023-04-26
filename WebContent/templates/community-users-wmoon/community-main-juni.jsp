@@ -55,10 +55,10 @@
 							</section>
 						</div>
 						<ul class="category">
-							<li class="sg-text-subhead4 sg-font-bold lg:sg-text-subhead2 lg:sg-font-bold sg-text-gray-900 selected">
+							<li class="sg-text-subhead4  lg:sg-text-subhead2 lg:sg-font-bold sg-text-gray-900">
 								<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/community-main.jsp" class="link-text router-link-active"> 이용자 게시글 </a>
 							</li>
-							<li class="sg-text-body2 sg-font-regular lg:sg-text-body1 lg:sg-font-regular sg-text-gray-400">
+							<li class="sg-text-body2 sg-font-regular sg-font-bold lg:sg-text-body1 lg:sg-font-regular sg-text-gray-400 selected">
 								<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/community-main-juni.jsp" class="link-text"> 주니어 게시글 </a>
 							</li>
 						</ul>
@@ -115,19 +115,16 @@
 								</div>
 
 								<article class="community-feed-list">
-								
 									<ul class="feed-list">
 										<li class="feed-item">
 											<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/view-detail.jsp" class>
 												<div class="feed-content service-address-info">
 													<div>
 														<section class="item-wrapper">
-															<h3 class="sg-text-subhead5 sg-font-medium sg-text-gray-900">${board.boardTitle}</h3>
-															<p class="content sg-text-body2 sg-font-regular sg-text-gray-500">sql이나 Java 자격증 찾습니다 전문가</p>
+															<h3 class="sg-text-subhead5 sg-font-medium sg-text-gray-900">컴퓨터 자격증 가지고 있는 주니어분들 찾습니다</h3>
+															<p class="content sg-text-body2 sg-font-regular sg-text-gray-500">sql이나 Java 자격증 찾습니다 전문가 </p>
 														</section>
-														<p data-v-23814058="" class="sub-information sg-text-description sg-font-regular sg-text-gray-500"></p>
 													</div>
-											
 												</div>
 												<div class="feed-footer">
 													<div class="user-interaction">
@@ -143,7 +140,31 @@
 										<li></li>
 										<li></li>
 									</ul>
-									
+									<ul class="feed-list">
+										<li class="feed-item">
+											<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/view-detail.jsp" class>
+												<div class="feed-content service-address-info">
+													<div>
+														<section class="item-wrapper">
+															<h3 class="sg-text-subhead5 sg-font-medium sg-text-gray-900">컴퓨터 자격증 가지고 있는 주니어분들 찾습니다</h3>
+															<p class="content sg-text-body2 sg-font-regular sg-text-gray-500">sql이나 Java 자격증 찾습니다 전문가 </p>
+														</section>
+													</div>
+												</div>
+												<div class="feed-footer">
+													<div class="user-interaction">
+														<span class="like sg-text-description sg-font-regular sg-text-gray-300">2</span>
+														<span class="comment sg-text-description sg-font-regular sg-text-gray-300">1</span>
+													</div>
+													<span class="sg-text-description sg-font-regular sg-text-gray-300 time">25분 전</span>
+												</div>
+											</a>
+										</li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
 									<div></div>
 								</article>
 							</div>
@@ -224,14 +245,5 @@
 	</div>
 	<%@ include file="../mainpageSeo/footer.jsp" %>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/mainpageSeo/board-list.js"></script>
-
 <script src="../../static/js/community-wmoon/modal.js"></script>
-<script>
-let boards = `${boards}`;
-let contextPath = `${pageContext.request.contextPath}`;
-</script>
-<script src="${pageContext.request.contextPath}/static/js/mainpageSeo/list.js"></script>
 </html>

@@ -33,7 +33,7 @@ public class ListOkController implements Action {
 		JSONArray jsonArray = new JSONArray();
 		boardDAO.selectAll().stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
 		req.setAttribute("boards", jsonArray.toString());
-		result.setPath("templates/board/list.jsp");
+		result.setPath("templates/community-users-wmoon/community-main.jsp");
 		return result;
 	}
 }
