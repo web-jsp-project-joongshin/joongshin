@@ -1,22 +1,27 @@
 const $msgContainer = $('.page-body .container ul.row');
 const $selectionTabs = $('.chat-filter .chat-filter-item');
+
+let messagesJSONArray;
+
+if(messages) {
+	messagesJSONArray = JSON.parse(messages);
+	
+	showMessageList();	
+}
+
 const $msgList = $('.page-body .container ul.row li');
 
-messagesJSONArray = JSON.parse(messages);
-
-showMessageList();
-
 $selectionTabs.eq(0).on('click', function() {
-	location.href = path + "/messageListOk.message?userId=3&receive=false";
+	location.href = path + "/messageListOk.message?receive=false";
 });
 
 $selectionTabs.eq(1).on('click', function() {
-	location.href = path + "/messageListOk.message?userId=3&receive=true";
+	location.href = path + "/messageListOk.message?receive=true";
 });
 
 $msgList.each(function(i, li) {
 	$(li).on('click', function() {
-		location.href = path + "/messageOk.message?messageId=" + messagesJSONArray[i].messageId;
+		location.href = path + "/messageOk.message?receive=" + (i == 1) + "&messageId=" + messagesJSONArray[i].messageId;
 	});
 });
 
@@ -43,7 +48,7 @@ function showMessageList() {
 	                <div class="divider"></div>
 	                <div class="row quote-info">
 	                    <div class="updated-at">
-	                        <p>2023. 04. 25</p>
+	                        <p>${msg.messageUpdateDatetime}</p>
 	                    </div>
 	                </div>
 	            </div>
