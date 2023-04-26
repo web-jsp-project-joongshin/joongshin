@@ -119,6 +119,15 @@
   	<url-pattern>/msg-list</url-pattern>
   </servlet-mapping> 
   
-
+  <servlet>
+  	<servlet-name>Mypage</servlet-name>
+  	<servlet-class>com.js.mypage.MypageFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Mypage</servlet-name>
+  	<url-pattern>*.mypage</url-pattern>
+  </servlet-mapping>
+  
 </web-app> 
   
