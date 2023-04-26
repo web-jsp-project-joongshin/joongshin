@@ -31,16 +31,44 @@
         </div>
         <section id="join-container">
             <article>
-                <form action="${pageContext.request.contextPath}/joinOk.member" name="join" method="post">
-                    <div class="join">
-                        <div class="info-container info-container-first">
+                <h2 id="title">
+                        중신 회원가입
+                    </h2>
+                
+                
+                <form action="${pageContext.request.contextPath}/joinOk.user" name="join" method="post">
+                    
+                    <div class="info">
+                        <div class="info-container">
                             <label>이름</label>
                             <span>
-                                <input type="text" id="id" name="userUsername" autocomplete="off" placeholder="이름">
+                                <input type="text" id="name" name="userName" autocomplete="off" placeholder="영문 혹은 한글, 2~20자">
                             </span>
                             <p class="help"></p>
                         </div>
+                        
                         <div class="info-container">
+                            <label>휴대폰 번호</label>
+                            <span>
+                                <input type="text" id="phone" name="userPhonenumber" autocomplete="off" placeholder="예) 01000000000">
+                            </span>
+                            <p class="help"></p>
+                        </div>
+                        <button type="button" class="next1" onclick="goJoin()">다음</button>
+                    </div>
+                    <div class="join">
+                        <div class="basic-info-container">
+                            <h3>기본 정보</h3>
+                            <dl>
+                                <dt>이름</dt>
+                                <dd></dd>
+                                
+                                <dt>휴대폰 번호</dt>
+                                <dd></dd>
+                            </dl>
+                        </div>
+
+                        <div class="info-container info-container-first">
                             <label>비밀번호</label>
                             <span>
                                 <div class="password">
@@ -77,10 +105,8 @@
                                     <option value="hotmail.com">hotmail.com</option>
                                     <option value="gmail.com">gmail.com</option>
                                 </select>
-                                <img src="${pageContext.request.contextPath}/static/image/icons/arrow.png" width="16px" style="display: inline-block;">
                             </div>
                             <p class="help"></p>
-                            
                         </div>
                         <button type="button" class="next1" onclick="send()">완료</button>
                     </div>

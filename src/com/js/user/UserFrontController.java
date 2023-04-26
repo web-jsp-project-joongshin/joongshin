@@ -1,6 +1,7 @@
 /*
  * */
 package com.js.user;
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -22,6 +23,8 @@ public class UserFrontController extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
+		
+		System.out.println(target);
 		Result result = null;
 		
 		if(target.equals("checkEmailOk")) {
@@ -35,20 +38,13 @@ public class UserFrontController extends HttpServlet {
 			result = new JoinOkController().execute(req, resp);
 			
 		} else if(target.equals("login")){
-			result = new Result();
-			result.setPath("templates/makepage-hsw/login.jsp");
+			result = new LoginController().execute(req, resp);
 			
 		} else if(target.equals("loginOk")) {
 			result = new LoginOkController().execute(req, resp);
 			
-
-		} else if(target.equals("logOut")){
-
-		} else if(target.equals("")){
-
-			req.getSession().invalidate();
-			result = new Result();
-			result.setPath("templates/makepage-hsw/login.jsp");
+		} else if(target.equals("logout")) {
+			result = new LogoutController().execute(req, resp);
 		}
 		
 		if(result != null) {
