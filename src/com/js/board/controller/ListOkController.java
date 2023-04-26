@@ -1,17 +1,9 @@
-/*
-execute()" 메소드 내부에서는 "BoardDAO" 객체를 생성하여 
-"selectAll()" 메소드를 호출하여 모든 게시글을 조회합니다.
-조회한 게시글을 "JSONObject"로 변환하고, 이를 "JSONArray"에 추가합니다.
-그리고 이 "JSONArray"를 "boards"라는 이름으로 HTTP 요청 객체에 저장합니다. 
-이후 "Result" 객체를 생성하고, 뷰 페이지의 경로를	
-"templates/board/list.jsp"로 설정하여 반환합니다. 
-이 클래스는 게시판에서 게시글 목록을 출력하는 데 사용됩니다
-이를 통해 웹 애플리케이션에서 게시글 목록을 보여주는 기능을 구현할 수 있습니다.
- */
-
 package com.js.board.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +15,9 @@ import org.json.JSONObject;
 import com.js.Action;
 import com.js.Result;
 import com.js.board.dao.BoardDAO;
+import com.js.board.domain.BoardDTO;
+import com.js.board.domain.Criteria;
+import com.js.board.domain.Search;
 
 public class ListOkController implements Action {
 
@@ -31,9 +26,39 @@ public class ListOkController implements Action {
 		BoardDAO boardDAO = new BoardDAO();
 		Result result = new Result();
 		JSONArray jsonArray = new JSONArray();
-		boardDAO.selectAll().stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
+		String temp = req.getParameter("page");
+		int page = temp == null ? 1 : Integer.parseInt(temp);
+		String sort = req.getParameter("sort");
+		String type = req.getParameter("type");
+		String keyword = req.getParameter("keyword");
+		
+		sort = sort == null ? "recent" : sort; 
+		
+		Search search = new Search(type, keyword);
+//		Criteria criteria = new Criteria(page, boardDAO.getTotal(search), sort);
+		HashMap<String, Object> pagable = new HashMap<String, Object>();
+		pagable.put("types", search.getTypes());
+		pagable.put("keyword", search.getKeyword());
+		pagable.put("sort", sort);
+		
+//		boardDAO.selectAll(pagable).stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
 		req.setAttribute("boards", jsonArray.toString());
-		result.setPath("templates/board/list.jsp");
+//		req.setAttribute("total", boardDAO.getTotal(search));
+		req.setAttribute("page", page);
+		req.setAttribute("sort", sort);
+		req.setAttribute("type", type);
+		req.setAttribute("keyword", keyword);
+		
+		result.setPath("templates/mainpageSeo/main-page.jsp");
 		return result;
 	}
 }
+
+
+
+
+
+
+
+
+

@@ -19,18 +19,16 @@ public class JoinOkController implements Action{
 		UserVO userVO = new UserVO();
 		Result result = new Result();
 	
-		
-		userVO.setUserEmail(req.getParameter("userEmail"));
+		userVO.setUserName(req.getParameter("userName"));
 		userVO.setUserPassword(req.getParameter("userPassword"));
-		userVO.setUsername(req.getParameter("userUsername"));
-		
-	  
+		userVO.setUserEmail(req.getParameter("userEmail"));
+		userVO.setUserPhonenumber(req.getParameter("userPhonenumber"));
+	
 		
 		userDAO.insert(userVO);
 		
 		result.setRedirect(true);
 		result.setPath(req.getContextPath() + "/login.user");
-		
 		return result;
 	}
 }

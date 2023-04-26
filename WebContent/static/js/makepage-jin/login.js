@@ -30,9 +30,8 @@ function send(){
         $password.next().fadeIn(500);
         return;
     }
-	/*비밀번호 암호화*/
-	$password.val(btoa($password.val()));
-
+    
+    
     document.login.submit();
 }
 

@@ -1,25 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- namespace 속성을 이용해 board라는 namespace를 가지고 있다. 
-  이 파일 내에는 SQL문이 작성되며,
- SQL문은 selectAll이라는 id를 가진 쿼리문이 주석 처리되어 있다. 
- 이 쿼리문은 tbl_member 테이블과 tbl_board 테이블을 join하여
- 컬럼을 조회하는 내용이다.  -->
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="board">
+
+	<sql id="search">
+		<trim prefixOverrides="or">
+			<foreach item="type" collection="types">
+				<trim prefix="or">
+					<choose>
+						<when test="type == 'title'.toString()">
+							board_title like concat('%', #{keyword}, '%')
+						</when>
+						<when test="type == 'content'.toString()">
+							board_content like concat('%', #{keyword}, '%')
+						</when>
+						<when test="type == 'writer'.toString()">
+							user_name like concat('%', #{keyword}, '%')
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</sql>
+	
+	<sql id="order">
+		order by
+		<choose>
+			<when test="sort=='recent'.toString()">
+				board_id
+			</when>
+			<otherwise>
+				board_read_count
+			</otherwise>
+		</choose>
+		desc
+	</sql>
+
 	<select id="selectAll" resultType="boardDTO">
-		select board_id, board_title, board_content, board_type, m.user_id, user_name 
-		from tbl_user m join tbl_board b 
-		on m.user_id = b.user_id
+	
+		select board_id,user_id, board_title, board_content
+		from tbl_user m join tbl_board b
+		<trim suffixOverrides="and"> 
+			on m.user_id = b.user_id and
+			<include refid="search"/>
+		</trim>
+			<include refid="order"/>
+		limit #{offset}, #{rowCount}
 	</select>
-	 <insert id="insert">
-	 	insert into test.tbl_test
-	 	board_title, board_content, board_register_date, board_update_date, user_
-	 	values(#{boardTitle}, #{boardContent},#{boardDate},#{userNumber});
-	 </insert>
-	 
-	 <select id="boardSelectAll" resultType="boardDTO">
-		select board_id, board_title, board_content, board_register_date, board_update_date, user_id
-		from tbl_member m join tbl_board b
+	
+	<select id="getTotal" resultType="_int">
+		select distinct count(board_id)
+		from tbl_user m join tbl_board b
+		<trim suffixOverrides="and"> 
+			on m.user_id = b.user_id and
+			<include refid="search"/>
+		</trim>
+	</select>
+	
+	<insert id="insert">
+		insert into tbl_board
+		(board_id, board_title, board_content, user_id)
+		values(#{boardId}, #{boardTitle}, #{boardContent}, #{userId})
+	</insert>
+	
+	<select id="select" resultType="boardDTO">
+		select board_id, board_title, board_content, board_register_date, board_update_date, board_read_count, m.user_id, user_name 
+		from tbl_user m join tbl_board b
+		on m.user_id = b.user_id and board_id = #{boardId}
+	</select>
+	
+	<update id="update">
+		update tbl_board
+		set board_title = #{boardTitle}, board_content = #{boardContent}
 		where board_id = #{boardId}
+	</update>
+	
+	<delete id="delete">
+		delete from tbl_board
+		where board_id = #{boardId}
+	</delete>
+	
+	<update id="updateReadCount">
+		update tbl_board
+		set board_read_count = board_read_count + 1
+		where board_id = #{board_id}
+	</update>
+	
+	<select id="selectCurrentSequence" resultType="long">
+		select last_insert_id()
 	</select>
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
