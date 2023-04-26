@@ -40,26 +40,28 @@
 						</nav>
 					</div>
 					<!--  					 로고,문자열 네개까지 ↑ -->
-					<div data-v-5f10666f="" class="center-section">
+					<div data-v-5f10666f="" class="search-container center-section">
 						<div data-v-63f85165="" data-v-5f10666f=""
 							class="h-service-searcher-desktop">
-							<form data-v-668330c4="" data-v-63f85165=""
-								class="global-search-bar">
+							<form action="${pageContext.request.contextPath}/listOk.board"
+								class="global-search-bar" name="search-form">
 								<div data-v-668330c4="" role="group" class="h-input-group">
-									<div data-v-668330c4="" class="h-input-group-prepend">
-										<img data-v-668330c4=""
-											src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQgNCkiIHN0cm9rZT0iI0I1QjVCNSIgc3Ryb2tlLXdpZHRoPSIxLjYiPgogICAgICAgICAgICA8Y2lyY2xlIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGN4PSI2LjUiIGN5PSI2LjUiIHI9IjYuNSIvPgogICAgICAgICAgICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIGQ9Im0xMS41IDExLjUgNSA1Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
-											alt="검색 아이콘">
+									<div data-v-668330c4="" class="h-input-group-prepend" style="margin: auto;">
+									<div>
+										<select name="type">
+											<option value="board_title&board_content">전체</option>
+											<option value="board_title">제목</option>
+											<option value="board_content">내용</option>
+										</select>
 									</div>
-									<input data-v-668330c4="" type="text"
+										<button type="submit" onclick="" style="border: 0px;">
+											<img src="../../static/image/icons/search.png" style="width: 20px;"/>
+										</button>
+									</div>
+									<input name="keyword" type="text"
 										placeholder="어떤 서비스가 필요하세요?" autocomplete="off"
-										class="h-form-control" maxlength="" id="__BVID__142">
+										class="h-form-control" id="__BVID__142">
 
-									<div data-v-668330c4="" class="h-input-group-append">
-										<img data-v-668330c4=""
-											src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhl…wMDYiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo="
-											alt="검색어 삭제 아이콘" style="display: none;">
-									</div>
 								</div>
 							</form>
 						</div>
@@ -69,17 +71,17 @@
 						<nav data-v-5f10666f="">
 							<ul data-v-5f10666f="" class="nav-list">
 								<li data-v-5f10666f="" class="nav-item right-section-item"><a
-									data-v-5f10666f="" href="/login" class="gnb-link"><span
+									data-v-5f10666f="" href="/login.user" class="gnb-link"><span
 										data-v-5f10666f="">로그인</span></a> <!----></li>
 								<li data-v-5f10666f="" class="nav-item right-section-item"><a
-									data-v-5f10666f=""
-									href="/sign-up?from=gnb&amp;entry_point=signup_cta"
+									
+									href="/join.user"
 									class="gnb-link"><span data-v-5f10666f="">회원가입</span></a> <!----></li>
 							</ul>
 						</nav>
 						<button data-v-5f10666f="" type="button"
 							class="h-btn pro-signup-h-btn right-section-item h-btn-primary h-btn-primary2">
-							<a data-v-5f10666f="" href="/pro?entry_point=signup_cta" class="">주니어 가입</a>
+							<a data-v-5f10666f="" href="/join.juniorUser" class="">주니어 가입</a>
 						</button>
 						<!---->
 					</div>

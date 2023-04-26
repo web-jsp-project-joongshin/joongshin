@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.js.juniorUser.domain.JuniorUserDTO;
 import com.js.mybatis.config.MyBatisConfig;
 import com.js.user.domain.UserVO;
 
@@ -15,6 +16,24 @@ public class JuniorUserDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
+//	회원가입
+	public void insert(JuniorUserDTO juniorUserDTO) {
+		sqlSession.insert("juniorUser.insert", juniorUserDTO);
+	}
+	
+//	이메일 중복검사
+	public String selectEmail(String userEmail) {
+		return sqlSession.selectOne("juniorUser.selectEmail", userEmail);
+	}
+	
+//	로그인
+	public Long login(String userEmail, String userPassword) {
+		HashMap<String, String> loginMap = new HashMap<String, String>();
+		loginMap.put("userEmail", userEmail);
+		loginMap.put("userPassword", userPassword);
+		
+		return sqlSession.selectOne("juniorUser.login", loginMap);
+	}
 
 }
 

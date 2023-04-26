@@ -4,22 +4,9 @@
 Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 수 있도록 돕습니다. -->
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- SQL 쿼리를 포함하고 있으며, 이를 Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 수 있도록 돕는다.  -->
-<mapper namespace="user">
+<mapper namespace="juniorUser">
 	
-	<insert id="insert">
-		insert into tbl_user
-		(user_name, user_email, user_password, user_phonenumber)
-		values(#{userName}, #{userEmail}, #{userPassword}, #{userPhonenumber})
-	</insert>
 	
-	<select id="selectEmail" resultType="string">
-		select user_email from tbl_user where user_email = #{userEmail}
-	</select>
-	
-	<select id="login" resultType="long">
-		select user_id from tbl_user 
-		where user_email = #{userEmail} and user_password = #{userPassword}
-	</select>
 </mapper>
 
 

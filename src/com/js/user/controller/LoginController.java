@@ -43,7 +43,7 @@ public class LoginController implements Action {
 			if(autoLogin) {
 				req.setAttribute("autoLogin", autoLogin);
 			}
-			result.setPath("templates/user/login.jsp");
+			result.setPath("templates/makepage-hsw/login.jsp");
 		}
 		
 		return result;
