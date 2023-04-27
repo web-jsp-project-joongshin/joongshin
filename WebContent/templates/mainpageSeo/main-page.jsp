@@ -537,5 +537,5 @@
 	</script>
 <script src="${pageContext.request.contextPath}/static/js/mainpageSeo/list.js"></script>
 
-<script src="../../static/js/mainpageSeo/main-page.js"></script>
+<script src="/static/js/mainpageSeo/main-page.js"></script>
 </html>

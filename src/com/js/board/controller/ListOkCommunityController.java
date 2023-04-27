@@ -19,7 +19,7 @@ import com.js.board.domain.BoardDTO;
 import com.js.board.domain.Criteria;
 import com.js.board.domain.Search;
 
-public class ListOkController implements Action {
+public class ListOkCommunityController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -27,25 +27,22 @@ public class ListOkController implements Action {
 		Result result = new Result();
 		JSONArray jsonArray = new JSONArray();
 		String temp = req.getParameter("page");
+		int page = temp == null ? 1 : Integer.parseInt(temp);
 		String sort = req.getParameter("sort");
 		String type = req.getParameter("type");
 		String keyword = req.getParameter("keyword");
-		int page = temp == null ? 1 : Integer.parseInt(temp);
 		
-		
-		
-		sort = sort == null ? "recent" : sort;
+		sort = sort == null ? "recent" : sort; 
 		
 		Search search = new Search(type, keyword);
-		Criteria criteria = new Criteria(page, boardDAO.getTotal(search), sort);
+//		Criteria criteria = new Criteria(page, boardDAO.getTotal(search), sort);
 		HashMap<String, Object> pagable = new HashMap<String, Object>();
 		pagable.put("types", search.getTypes());
 		pagable.put("keyword", search.getKeyword());
+		pagable.put("sort", sort);
 		
-		boardDAO.selectAll(pagable).stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
+//		boardDAO.selectAll(pagable).stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
 		req.setAttribute("boards", jsonArray.toString());
-
-
 
 
 //		req.setAttribute("total", boardDAO.getTotal(search));
@@ -53,12 +50,8 @@ public class ListOkController implements Action {
 		req.setAttribute("sort", sort);
 		req.setAttribute("type", type);
 		req.setAttribute("keyword", keyword);
-
-		req.setAttribute("total", boardDAO.getTotal(search));
 		
-
-		System.out.println("hi");
-		result.setPath("templates/mainpageSeo/main-page.jsp");
+		result.setPath("templates/community-users-wmoon/community-main.jsp");
 
 		return result;
 	}
