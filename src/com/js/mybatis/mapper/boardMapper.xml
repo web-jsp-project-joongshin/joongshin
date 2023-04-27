@@ -48,32 +48,44 @@
 		limit #{offset}, #{rowCount}
 	</select> -->
 	
-	
 	<select id="selectAll" resultType="boardDTO">
-		select board_title, board_content, board_register_date, board_type, m.user_id, 
-		from tbl_user m join tbl_board b on m.user_id = b.user_id and
+		select board_id, b.user_id, b.user_name, board_title, board_content, board_type
+		from tbl_user m join tbl_board b
+			on m.user_id = b.user_id
+			order by board_id desc
+			limit 0, 3
+	</select>
+
+	 <insert id="insert">
+	 	insert into test.tbl_test
+	 	board_title, board_content, board_register_date, board_update_date, user_
+	 	values(#{boardTitle}, #{boardContent},#{boardDate},#{userNumber});
+	 </insert>
+	 
+	 <select id="boardSelectAll" resultType="boardDTO">
+		select board_id, board_title, board_content, board_type, m.user_id, m.user_name
+		from tbl_user m join tbl_board b
+		on m.user_id = b.user_id
 	</select>
 	
 
 	<select id="getTotal" resultType="_int">
 		select distinct count(board_id)
 		from tbl_user m join tbl_board b
-		<trim suffixOverrides="and"> 
-			on m.user_id = b.user_id and
-			<include refid="search"/>
-		</trim>
+			on m.user_id = b.user_id
 	</select>
 	
-	<insert id="insert">
+	<!-- <insert id="insert">
 		insert into tbl_board
 		(board_id, board_title, board_content, user_id)
 		values(#{boardId}, #{boardTitle}, #{boardContent}, #{userId})
-	</insert>
+	</insert> -->
 	
-	<select id="select" resultType="boardDTO">
+	<!-- <select id="select" resultType="boardDTO">
 		select board_id, board_title, board_content, board_register_date, board_update_date, board_read_count, m.user_id, user_name 
 		from tbl_user m join tbl_board b
 		on m.user_id = b.user_id and board_id = #{boardId}
+
 	</select>
 	
 	<update id="update">
@@ -91,12 +103,15 @@
 		update tbl_board
 		set board_read_count = board_read_count + 1
 		where board_id = #{board_id}
-	</update>
+	</update> -->
 	
-	<select id="selectCurrentSequence" resultType="long">
+	<!-- <select id="selectCurrentSequence" resultType="long">
 		select last_insert_id()
+<<<<<<< HEAD
 	</select>
 
+=======
+	</select> -->
 </mapper>
 
 

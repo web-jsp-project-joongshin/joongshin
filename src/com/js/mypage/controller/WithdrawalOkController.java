@@ -1,4 +1,4 @@
-package com.js.board.controller;
+package com.js.mypage.controller;
 
 import java.io.IOException;
 
@@ -8,20 +8,20 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.js.Action;
 import com.js.Result;
-import com.js.board.dao.BoardDAO;
+import com.js.mypage.dao.MypageDAO;
 
-public class DetailOkControllerJuni implements Action {
+public class WithdrawalOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		BoardDAO boardDAO = new BoardDAO();
+		MypageDAO mypageDAO = new MypageDAO();
 		Result result = new Result();
-		Long boardId = Long.valueOf(req.getParameter("boardId"));
-//		boardDAO.updateReadCount(boardId);
-//
-//		req.setAttribute("board", boardDAO.select(boardId));
+		String userId = req.getParameter("userId");
 		
-		result.setPath("templates/junior-board/junior-article-view.jsp");
+		mypageDAO.deleteUser(userId);
+		
+		result.setRedirect(true);
+		result.setPath("/");
 		return result;
 	}
 

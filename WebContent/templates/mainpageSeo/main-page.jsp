@@ -41,17 +41,19 @@
     </section>			
 <!-- 배너 끝 -->
 
-<section id="content-wrap">
-        <ul>
-        </ul>
+
         
     </section>
 
 <!--주니어 커뮤니티  -->
+<section id="info-wrap">
+					
+					
 <div class="main-community slide-knowhow-list container"
 	data-v-0b8ae29e="" data-v-2590092d="">
 	<section class="header short-bottom" data-v-0b8ae29e="">
 	<h2 class="title" data-v-0b8ae29e="">주니어 게시판 목록</h2>
+	
 	<a href="/community/soomgo-life/" data-testid="community-home"
 		class="go-list" data-v-1b5b0368="" data-v-0b8ae29e=""><span
 		data-v-1b5b0368="">전체보기</span><img
@@ -59,18 +61,17 @@
 		data-v-1b5b0368=""></a></section>
 	<div data-v-292a6694="" data-v-0b8ae29e=""
 		class="main-community-contents">
+		<h6 class="info">전체 게시글 갯수<br>${total}개</h6>
 		<div data-v-292a6694="" class="desktop-section">
 			<div data-v-292a6694="" class="curation-container half-list" id="content-wrap">
 					
-					
-					
-					
-						
+					<section id="content-wrap">
+					        <ul>
+					        </ul>	
 						
 			</div>
 			<div data-v-292a6694="" class="knowhow-container half-list">
 				<a data-v-292a6694=""
-					href="/community/pro-knowhow/754-%EC%9D%B4%EC%A7%81-%EB%A9%B4%EC%A0%91-%EC%9D%B4%EA%B1%B0-%EB%86%93%EC%B9%98%EB%A9%B4-%EB%B6%88%ED%95%A9%EA%B2%A9-"
 					class="knowhow-card-slide" data-testid="knowhow-item"><img
 					data-v-292a6694="" alt="이직 면접 이거 놓치면 불합격!"
 					class="thumb-image"
@@ -152,15 +153,8 @@
 										data-v-151ddbec="" class="comment-count">9</span>
 								</div>
 							</div>
-							<div data-v-151ddbec="" class="curation-topic-image">
-								<img data-v-151ddbec=""
-									alt="3136B1B5-386B-42E7-8A45-A72E89078C86.jpg"
-									class="topic-thumbnail-image"
-									data-src="https://static.cdn.soomgo.com/upload/media/ef1fd9a3-b1c4-43a5-bd19-368f9ae540b9.jpg?webp=1"
-									src="https://static.cdn.soomgo.com/upload/media/ef1fd9a3-b1c4-43a5-bd19-368f9ae540b9.jpg?webp=1"
-									lazy="loaded">
 							</div></a>
-					</li>
+						</li>
 				</ul>
 			</div>
 			
@@ -518,14 +512,7 @@
 									</div>
 								</div>
 							</div>
-							<button data-v-21137603="" data-v-3d1a4f76="" type="button"
-								data-role="none" class="slick-arrow slick-next slick-disabled"
-								style="display: block;">Next</button>
-							<ul data-v-3d1a4f76="" class="slick-dots" style="display: block;">
-								<li class=""><button>1</button></li>
-								<li class=""><button>2</button></li>
-								<li class="slick-active"><button>3</button></li>
-							</ul>
+							
 						</div>
 					</div><!-- 전문가로 활동하시나요? 주니어 가입 끝-->
 
@@ -536,13 +523,19 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/mainpageSeo/board.js"></script>
+<script>
+	let boards = `${boards}`;
+	console.log(boards);
+	let contextPath = `${pageContext.request.contextPath}`;
+	
+	let $form = $("form[name='page-form']");
+	$("a.change-page").on("click", function(e){
+		e.preventDefault();
+		$form.find("input[name='page']").val($(this).attr("href"));
+		$form.submit();
+	});
+	</script>
 <script src="${pageContext.request.contextPath}/static/js/mainpageSeo/list.js"></script>
 
-<script>
-
-	
-	
-</script>
-<script src="${pageContext.request.contextPath}/static/js/board/list.js"></script>
 <script src="../../static/js/mainpageSeo/main-page.js"></script>
 </html>

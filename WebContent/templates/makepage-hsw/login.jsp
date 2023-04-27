@@ -53,7 +53,7 @@
                         </div>
                         
                         <button type="button" class="login" onclick="send()">로그인</button>
-                        <button type="button" class="join" onclick="location.href='${pageContext.request.contextPath}/join.user'">회원가입</button>
+                        <button type="button" class="join" style="margin-top: 15px;" onclick="location.href='${pageContext.request.contextPath}/join.user'">회원가입</button>
                     </div>
                 </form>
             </article>

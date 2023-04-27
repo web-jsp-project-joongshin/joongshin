@@ -2,8 +2,13 @@
 const radioButtons = document.getElementsByName("radio-button");
 const hiddenDivs = document.querySelectorAll('[id^="hidden-div-"]');
 
+let checkTarget;
+console.log(checkTarget);
+
 for (let i = 0; i < radioButtons.length; i++) {
   radioButtons[i].addEventListener("click", function() {
+  checkTarget = radioButtons[i];
+  console.log(checkTarget);
     for (let j = 0; j < hiddenDivs.length; j++) {
       if (hiddenDivs[j].id === "hidden-div-" + (i+1)) {
         hiddenDivs[j].style.display = "block";

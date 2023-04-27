@@ -85,6 +85,7 @@ public class MessageDTO{
 			return false;
 		MessageDTO other = (MessageDTO) obj;
 		if (messageId == null) {
+			
 			if (other.messageId != null)
 				return false;
 		} else if (!messageId.equals(other.messageId))

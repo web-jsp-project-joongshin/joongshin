@@ -2,23 +2,21 @@
 showList();
 
 function showList(){
-	console.log(boards1);
-	boards1 = JSON.parse(boards1);
+	console.log(juniors);
+	juniors = JSON.parse(juniors);
 	//files = JSON.parse(files);
 	const $table = $("#content-wrap");
 	let text = "";
 	
-	boards1.forEach(board => {
+	juniors.forEach(board => {
 		text += `
 			<tr>	
-		        <td><input type="checkbox" class="checkbox"/></td>
-		        <td>${board.userId}</td>
-		        <td>${board.boardTitle}</td>
-		        <td>${board.boardContent}</td>
-		        <td class="date">` + elapsedTime(board.boardRegisterDate) + `</td>
-		        <td>${board.boardRegisterDate}</td>
-		        <td class="pending">답변완료</td>
-						 
+                <td><input type="checkbox" class="checkbox"/></td>
+                <td>${board.userId}</td>
+                <td>${board.userName}</td>
+                <td>${board.userResume}</td>
+                <td>${board.userCareerYears}</td>
+                <td>${board.boardRegisterDate}</td>
 			`;
 			/*if(files[board.boardId]){
 				text += `<img src="${contextPath}/upload/${files[board.boardId].fileSystemName}" class="preview">`;
@@ -28,7 +26,7 @@ function showList(){
 			`;
 	});
 	
-	if(boards1.length == 0){
+	if(juniors.length == 0){
 		text += `
 			<li>
 		        <div>
