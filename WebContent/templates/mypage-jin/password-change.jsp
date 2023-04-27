@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,11 +25,11 @@
 </head>
 <body>
 <%@ include file="../mainpageSeo/header.jsp" %>
-
 	<div id="app-body">
 		<div class="container container-md">
-			<main  class="account-info-container">
-				<h1 >비밀번호 변경</h1>
+		<form  action="${pageContext.request.contextPath}/myPwChangeOk.mypage?userId=${userId}" name="updatePw" method="post">
+			<main class="account-info-container">
+				<h1>비밀번호 변경</h1>
 				<div  
 					class="sign-container secondary lg" style="display: none;">
 					<div  class="header">
@@ -38,13 +39,13 @@
 						</div>
 					</div>
 				</div>
-				<div   class="form-row">
+				<div class="form-row">
 					<div  class="margin-bottom-24 col-12">
 						<fieldset class="form-group current-password" id="__BVID__422">
 						  <legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0" id="__BVID__422__BV_label_">기존 비밀번호</legend>
 						  <div>
 						    <div role="group" class="input-group1 current-password">
-						      <input name="currentPassword" type="password" placeholder="현재 비밀번호를 입력해주세요" autocomplete="off" class="form-control1" autocapitalize="off" spellcheck="false" data-vv-validate-on="blur" aria-invalid="true" id="">
+						      <input name="currentPassword" type="password" placeholder="현재 비밀번호를 입력해주세요" autocomplete="off" class="form-control1" autocapitalize="off" spellcheck="false" data-vv-validate-on="blur" aria-invalid="true" id="currentPassword" >
 						      <button type="button" class="btn btn-secondary">표시</button>
 						    </div>
 						    <div id="message"></div>
@@ -55,7 +56,7 @@
 					  <fieldset class="form-group" id="__BVID__424">
 					    <legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0" id="__BVID__424__BV_label_">새로운 비밀번호</legend>
 					    <div>
-					      <input name="password" type="password" placeholder="영문+숫자 조합 8자리 이상 입력해주세요" autocomplete="off" class="form-control1" autocapitalize="off" spellcheck="false" data-vv-validate-on="blur" aria-invalid="true" id="__BVID__425" aria-required="true">
+					      <input name="newPassword" id="newPassword" type="password" placeholder="영문+숫자 조합 8자리 이상 입력해주세요" autocomplete="off" class="form-control1" autocapitalize="off" spellcheck="false" data-vv-validate-on="blur" aria-invalid="true" id="__BVID__425" aria-required="true">
 					      <div id="passwordMessage"></div>
 					    </div>
 					  </fieldset>
@@ -64,26 +65,27 @@
 					  <fieldset class="form-group" id="__BVID__426">
 					    <legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0" id="__BVID__426__BV_label_">새로운 비밀번호 확인</legend>
 					    <div>
-					      <input name="confirmPassword" type="password" placeholder="비밀번호를 한번 더 입력해주세요" autocomplete="off" class="form-control1" autocapitalize="off" spellcheck="false" aria-invalid="true" id="__BVID__427" aria-required="true">
+					      <input name="confirmPassword" id="confirmPassword" type="password" placeholder="비밀번호를 한번 더 입력해주세요" autocomplete="off" class="form-control1" autocapitalize="off" spellcheck="false" aria-invalid="true" aria-required="true">
 					      <div id="confirmPasswordMessage"></div>
 					    </div>
 					  </fieldset>
 					</div>
-					
-				</div>
-				<footer  class="button-group">
-					<a  href="javascript:history.go(-1)"
-						class="btn btn-cancel btn-active btn-outline-secondary"
-						target="_self" style="color: #6FB6C0;">취소</a>
-					<button  type="submit" class="btn btn-primary">변경
-						완료</button>
-				</footer>
-			</main>
+					</div>
+					<footer class="button-group">
+						<a href="javascript:history.go(-1)"
+							class="btn btn-cancel btn-active btn-outline-secondary"
+							target="_self" style="color: #6FB6C0;">취소</a>
+						<button type="button" class="btn btn-primary" onclick="submit()">변경 완료</button>
+					</footer>	
+				</main>
+			</form>
 		</div>
 	</div>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="../../static/js/mypage-js-jin/password-change.js"></script>
-
 <jsp:include page="../mainpageSeo/footer.jsp"/>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+	const userId = `${userId}`;
+</script>
+<script src="../../static/js/mypage-js-jin/password-change.js"></script>
 </html>
