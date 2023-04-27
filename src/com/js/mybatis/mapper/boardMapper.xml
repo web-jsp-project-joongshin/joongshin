@@ -49,7 +49,7 @@
 	</select> -->
 	
 	<select id="selectAll" resultType="boardDTO">
-		select board_id, b.user_id, b.user_name, board_title, board_content, board_type
+		select board_id, b.user_id, m.user_name, board_title, board_content, board_type
 		from tbl_user m join tbl_board b
 			on m.user_id = b.user_id
 			order by board_id desc

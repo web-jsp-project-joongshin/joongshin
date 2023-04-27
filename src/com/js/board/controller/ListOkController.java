@@ -57,7 +57,7 @@ public class ListOkController implements Action {
 		req.setAttribute("total", boardDAO.getTotal(search));
 		
 
-		
+		System.out.println("hi");
 		result.setPath("templates/mainpageSeo/main-page.jsp");
 
 		return result;

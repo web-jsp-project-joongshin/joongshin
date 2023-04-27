@@ -16,13 +16,13 @@
 <body>
     <div id="app-body">
         <!-- 채팅페이지 바디 -->
-        <div class="chat-list">
+        <div class="chat-list">	
             <!-- 해더 부분  -->
             <div class="page-header">
                 <div class="container">
                     <section class="page-title">
                         <h3>채팅</h3>
-                        <a href="/pro/chats/edit" class="chat-list-edit-button"> 편집 </a>
+                        <a href="/pro/chats/edit" class="chx`at-list-edit-button"> 편집 </a>
                     </section>
                     <section class="row">
                         <div class="col-12">

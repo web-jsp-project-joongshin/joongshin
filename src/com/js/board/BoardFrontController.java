@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.js.Result;
 import com.js.board.controller.DetailOkController;
-import com.js.board.controller.ListBoardOkController;
 import com.js.board.controller.ListOkCommunityController;
 import com.js.board.controller.ListOkCommunityJuniController;
+import com.js.board.controller.ListOkController;
 
 public class BoardFrontController extends HttpServlet {
 	@Override
@@ -22,7 +22,7 @@ public class BoardFrontController extends HttpServlet {
 		Result result = null;
 
 		if (target.equals("listOk")) {
-			result = new ListBoardOkController().execute(req, resp);
+			result = new ListOkController().execute(req, resp);
 
 		} else if (target.equals("write")) {
 			result = new Result();
