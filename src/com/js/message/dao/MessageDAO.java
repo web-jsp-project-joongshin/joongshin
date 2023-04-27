@@ -24,8 +24,8 @@ public class MessageDAO {
 		return sqlSession.selectOne("message.selectOne", messageData);
 	}
 	
-	public List<MessageDTO> selectListBySendUserId(Long sendUserId) {
-		return sqlSession.selectList("message.selectListBySendUserId", sendUserId);
+	public List<MessageDTO> selectList(Map<String, Object> searchData) {
+		return sqlSession.selectList("message.selectList", searchData);
 	}
 	
 	public List<MessageDTO> selectListByReceiveUserId(Long receiveUserId) {
