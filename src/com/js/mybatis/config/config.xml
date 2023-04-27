@@ -13,6 +13,7 @@
 		<typeAlias type="com.js.board.domain.BoardDTO" alias="boardDTO"/>
 		<typeAlias type="com.js.message.domain.MessageVO" alias="messageVO"/>
 		<typeAlias type="com.js.message.domain.MessageDTO" alias="messageDTO"/>
+		<typeAlias type="com.js.juniorUser.domain.JuniorUserDTO" alias="juniorUserDTO"/>
 	</typeAliases>
 
 	<environments default="mysql">
@@ -31,6 +32,7 @@
 		<mapper resource="com/js/mybatis/mapper/userMapper.xml"/>
 		<mapper resource="com/js/mybatis/mapper/boardMapper.xml"/>
 		<mapper resource="com/js/mybatis/mapper/messageMapper.xml"/>
+		<mapper resource="com/js/mybatis/mapper/juniorMapper.xml"/>
 	</mappers>
 </configuration>
 

@@ -26,7 +26,7 @@ public SqlSession sqlSession;
 	
 	
 	public List<BoardDTO> boardSelectAll() {
-		return sqlSession.selectList("board.boardId");
+		return sqlSession.selectList("board.boardSelectAll");
 	}
 	
 	//아이디 검사

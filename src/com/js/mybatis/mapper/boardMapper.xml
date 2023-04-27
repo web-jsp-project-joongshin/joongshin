@@ -18,8 +18,8 @@
 	 </insert>
 	 
 	 <select id="boardSelectAll" resultType="boardDTO">
-		select board_id, board_title, board_content, board_register_date, board_update_date, user_id
-		from tbl_member m join tbl_board b
-		where board_id = #{boardId}
+		select board_id, board_title, board_content, board_type, m.user_id, m.user_name
+		from tbl_user m join tbl_board b
+		on m.user_id = b.user_id
 	</select>
 </mapper>

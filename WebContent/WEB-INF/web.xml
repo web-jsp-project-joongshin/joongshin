@@ -53,6 +53,27 @@
   	<url-pattern>*.board</url-pattern>
   </servlet-mapping>
   
+  
+  <servlet>
+  	<servlet-name>Admin</servlet-name>
+  	<servlet-class>com.js.board.BoardListFrontController</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  	<servlet-name>Admin</servlet-name>
+  	<url-pattern>*.admin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>JuniorBoard</servlet-name>
+  	<servlet-class>com.js.juniorUser.JuniorListFrontController</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  	<servlet-name>JuniorBoard</servlet-name>
+  	<url-pattern>*.junior</url-pattern>
+  </servlet-mapping>
+  
 
 
   <servlet>
