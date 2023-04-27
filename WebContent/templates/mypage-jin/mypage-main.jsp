@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
 
-<link href="../../static/css/mypage-css-jin/gosu-mypage.css" rel="stylesheet" type="text/css" />
+<link href="../../static/css/mypage-css-jin/mypage-main.css" rel="stylesheet" type="text/css" />
 
 <body>
 <%@ include file="../mainpageSeo/header.jsp" %>
@@ -22,7 +23,7 @@
 			<div class="mypage-container">
 				<h1 class="mypage-title">마이페이지</h1>
 				<div class="profile-container underline">
-					<a href="./gosu-mypage-account.jsp" class=""><div class="thumb">
+					<a href="${pageContext.request.contextPath}/myAccountOk.mypage?userId=${userId}" class=""><div class="thumb">
 							<div class="user-profile-picture h-100">
 								<div data-name="image" class="is-square"
 									data-src="https://dmmj3ljielax6.cloudfront.netNone?h=320&amp;w=320"
@@ -32,10 +33,10 @@
 							</div>
 						<div class="user-info">
 							<div class="user-name">
-								<span class="name-length">kimjin</span><span class="user-type">고수님</span>
+								<span class="name-length"></span><span class="user-type"></span>
 							</div>
 							<div class="user-id">
-								<span class="id-length">kimjin9822@naver.com</span>
+								<span class="id-length"></span>
 							</div>
 						</div>
 						<div class="account-setting">
@@ -47,7 +48,7 @@
 					<li class="main-menu">커뮤니티 <a role="button"> </a>
 					</li>
 					<li class="sub-menu-container soomgo-life-activities">
-						<a href="./board-list.jsp" class="sub-menu-list">
+						<a href="${pageContext.request.contextPath}/myBoardListOk.mypage?userId=${userId}" class="sub-menu-list">
 							<div class="sub-content">
 								<div class="sub-menu">
 									<span class="sub-menu-title">숨고생활 작성글</span>
@@ -60,7 +61,7 @@
 						</a>
 					</li>
 					<li class="sub-menu-container soomgo-life-activities">
-						<a href="./message-list.jsp" class="sub-menu-list">
+						<a href="${pageContext.request.contextPath}/msg-list" class="sub-menu-list">
 							<div class="sub-content">
 								<div class="sub-menu">
 									<span class="sub-menu-title">숨고생활 쪽지</span>
@@ -79,4 +80,19 @@
 
 </body>
 <jsp:include page="../mainpageSeo/footer.jsp"/>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+	const userId = `${userId}`;
+	const userType = `${userType}`
+	const userInfo = JSON.parse(`${userInfo}`);
+	const $userTypeText = $('span.user-type');
+	const $userNameText = $('span.name-length');
+	const $userEmailText = $('span.id-length');
+	console.log(userInfo);
+
+	$userTypeText.prop("innerText", userType == 0 ? '고객님' : '고수님');
+	$userNameText.prop("innerText", userInfo.username);
+	$userEmailText.prop("innerText", userInfo.userEmail);
+</script>
+<script src="${pageContext.request.contextPath}/static/js/mypage-jin/mypage-main.js"></script>
 </html>

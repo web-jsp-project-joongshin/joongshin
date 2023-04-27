@@ -3,6 +3,7 @@ package com.js.message.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -25,8 +26,8 @@ public class MessageListOkController implements Action{
 		MessageDAO dao = new MessageDAO();
 		Result result = new Result();
 		
-		//TODO ���ǿ��� user id ��������
-		Long userId = Long.valueOf(req.getParameter("userId"));
+		//TODO user id 
+		Long userId = Long.valueOf(Optional.ofNullable("3").orElse("0"));
 		Boolean isReceivedMsgList = Boolean.valueOf(req.getParameter("receive"));
 		
 		messages = isReceivedMsgList 

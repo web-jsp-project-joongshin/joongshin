@@ -7,7 +7,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/message-jym/msg-main-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/message-jym/msg-main-page.css">
     <title>chat</title>
 </head>
 <body>
@@ -64,5 +67,5 @@
 	let messages = `${messages}`;
 	let path = `${pageContext.request.contextPath}`;
 </script>
-<script src="${pageContext.request.contextPath}/static/message/msg-list.js"></script>
+<script src="/static/js/message-jym/msg-list.js"></script>
 </html>

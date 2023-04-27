@@ -5,7 +5,8 @@ public class BoardCommentVO {
 	private Long commentId;
 	private Long boardId;
 	private Long userId;
-	private String commmentContents;
+	private String commentComments;
+	private String commentRegisterDate;
 	
 	public BoardCommentVO() {;}
 
@@ -33,25 +34,33 @@ public class BoardCommentVO {
 		this.userId = userId;
 	}
 
-	public String getCommmentContents() {
-		return commmentContents;
+	public String getCommentComments() {
+		return commentComments;
 	}
 
-	public void setCommmentContents(String commmentContents) {
-		this.commmentContents = commmentContents;
+	public void setCommentComments(String commentComments) {
+		this.commentComments = commentComments;
+	}
+
+	public String getCommentRegisterDate() {
+		return commentRegisterDate;
+	}
+
+	public void setCommentRegisterDate(String commentRegisterDate) {
+		this.commentRegisterDate = commentRegisterDate;
 	}
 
 	@Override
 	public String toString() {
 		return "BoardCommentVO [commentId=" + commentId + ", boardId=" + boardId + ", userId=" + userId
-				+ ", commmentContents=" + commmentContents + "]";
+				+ ", commentComments=" + commentComments + ", commentRegisterDate=" + commentRegisterDate + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((boardId == null) ? 0 : boardId.hashCode());
+		result = prime * result + ((commentId == null) ? 0 : commentId.hashCode());
 		return result;
 	}
 
@@ -64,13 +73,13 @@ public class BoardCommentVO {
 		if (getClass() != obj.getClass())
 			return false;
 		BoardCommentVO other = (BoardCommentVO) obj;
-		if (boardId == null) {
-			if (other.boardId != null)
+		if (commentId == null) {
+			if (other.commentId != null)
 				return false;
-		} else if (!boardId.equals(other.boardId))
+		} else if (!commentId.equals(other.commentId))
 			return false;
 		return true;
 	}
 
-	
+
 }

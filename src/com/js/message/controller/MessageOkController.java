@@ -1,6 +1,8 @@
 package com.js.message.controller;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -19,14 +21,16 @@ public class MessageOkController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		resp.setContentType("text/html;charset=utf-8");
 		
+		Map<String, Object> data = new HashMap<>();
 		MessageDAO dao = new MessageDAO();
-		Long messageId = Long.valueOf(req.getParameter("messageId"));
-		MessageDTO message = dao.selectOne(messageId);
+		
+		data.put("messageId", Long.valueOf(req.getParameter("messageId")));
+		data.put("receive", req.getParameter("receive"));		
+		MessageDTO messageDTO = dao.selectOne(data);
 		Result result = new Result();
 		
-		JSONObject jsonResult = new JSONObject(message);
-		
-		req.setAttribute("message", jsonResult.toString());
+		req.setAttribute("userName", messageDTO.getUserName());
+		req.setAttribute("messageContents", messageDTO.getMessageContents());
 		result.setPath("/templates/message/detail-msg.jsp");
 		
 		return result;

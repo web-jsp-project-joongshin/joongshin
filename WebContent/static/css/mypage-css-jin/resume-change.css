@@ -79,9 +79,10 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 .select-subject-header {
-	height: 3.5rem;
+	height: 4rem;
     padding: 1rem 0;
     background-color: #fff;
+    margin-top: 18px;
 }
 
 .select-subject-header .subject-header-wrapper {
@@ -185,11 +186,11 @@ option {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    color: #c5c5c5;
+    color: white;
     background: #fff;
     border: 0;
-    padding: 0 1rem 0 0;
-    cursor: default;
+    padding: 0;
+    background: #6FB6C0;
 }
 
 .btn.btn-outline-secondary, .btn.btn-secondary {
@@ -261,6 +262,7 @@ button {
     margin: 0 -1rem;
     border-top: 0.0625rem solid #f4f4f4;
     border-bottom: 0.0625rem solid #f4f4f4;
+    margin-top: 13px;
 }
 
 .attach-file-wrapper .attach-file-area {
@@ -325,7 +327,12 @@ button {
 
 label {
 	display: inline-block;
-    margin-bottom: 0.5rem;
+	margin-right: 5px;
+}
+
+select {
+	border: none;
+	outline: none;
 }
 
 .d-block {
@@ -454,17 +461,6 @@ hr {
     font-weight: 500;
 }
 
-.service-region-wrapper .category-select-box:after {
-	content: "";
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    margin-left: 0.5rem;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMCAxNmgxNlYwSDB6Ii8+PHBhdGggc3Ryb2tlPSIjODg4IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTEyLjgzIDYuMDAxbC00LjggNC44LTQuOC00LjgiLz48L2c+PC9zdmc+);
-    background-position: 50%;
-    background-repeat: no-repeat;
-}
-
 .service-region-wrapper .category-select-box {
 	display: flex;
     align-items: center;
@@ -506,8 +502,31 @@ textarea {
     z-index: -1;
 }
 
+input, textarea {
+	outline: none;
+}
+
 .sg-text-gray-500 {
 	--tw-text-opacity: 1;
     color: rgba(136,136,136,var(--tw-text-opacity));
 }
 
+.submit-btn-wrapper {
+    display: flex;
+   	align-items: center;
+   	justify-content: center;
+   	margin-bottom: 8rem;
+}
+
+.submit-btn {
+    border: none;
+    box-sizing: border-box;
+    padding: 0.8rem 10rem;
+    border-radius: 8px;
+    background-color: #6FB6C0;
+    color: white;
+}
+
+.submit-btn:hover {
+	background-color: #2baabc;
+}

@@ -20,12 +20,12 @@ public class JuniorUserController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		resp.setContentType("text/html;charset=utf-8");
-		Result result = new Result();
-		
-		
-		PrintWriter out = resp.getWriter();
-		//out.print(result.toString());
-		out.close();
+//		Result result = new Result();
+//		
+//		
+//		PrintWriter out = resp.getWriter();
+//		//out.print(result.toString());
+//		out.close();
 		
 		return null;
 	}
