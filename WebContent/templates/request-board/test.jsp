@@ -13,6 +13,7 @@ function hideDiv(elem) {
 </script>
 </head>
 <body>
+
 <select class="form-control input-lg" onchange="hideDiv(this)" name="category">
   <option value="Iphone">Iphone</option>
   <option value="Mac">Mac</option>

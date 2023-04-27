@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../static/css/request-board-jym/form.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/request-board-jym/form.css">
     <title>문의</title>
 </head>
 
@@ -17,7 +17,7 @@
         <!-- 홈화면으로 돌아가는 로고 버튼 -->
         <div class="logo">
             <a href="https://soomgo.com/">
-                <img src='new_logo.svg'
+                <img src='${pageContext.request.contextPath}/new_logo.svg'
                     alt="로고">
             </a>
         </div>
@@ -49,8 +49,8 @@
 
             <h1>문의 등록</h1>
             <div class="form">
-                <form id="new_request" class="request-form" name="request-form" data-form-type="request"
-                    action="/hc/ko/requests" accept-charset="UTF-8" method="post">
+                <form id="reqWrite" class="request-form" name="reqWritePage" data-form-type="request"
+                    action="${pageContext.request.contextPath}/reqWriteOk.board" accept-charset="UTF-8" method="post">
                     <input name="utf8" type="hidden" value="✓" autocomplete="off">
                     <!-- <input type="hidden" name="authenticity_token" value="hc:requests:client:x4NRfJjWvQZrLaWzqGxUx2akyeWMEdeNqQFX7JVHy6flsg_HUW8VUPyTwxQH_LmdGvkA_fizxIqNaV2L2IQxtA" data-hc-status="ready"> -->
 <!--                     이메일 주소 입력 창 -->
@@ -64,7 +64,7 @@
                     <!-- 제목 입력  -->
                     <div class="form-field string  required  request_subject">
                         <label id="request_subject_label" for="request_subject">제목</label>
-                        <input type="text" name="request[subject]" id="request_subject" maxlength="150" size="150"
+                        <input type="text" name="boardTitle" id="request_subject" maxlength="150" size="150"
                             aria-required="true" aria-labelledby="request_subject_label">
                         <div id="request_subject_error" class="notification notification-error notification-inline"></div>
                     </div>
@@ -74,7 +74,7 @@
                     <div class="form-field required  request_description">
                         <label id="request_description_label" for="request_description">설명</label>
                         
-                        <textarea type="text" name="request[description]" id="request_description" class="request_description" style="border-radius: 4px;"></textarea>
+                        <textarea type="text" name="boardContent" id="request_description" class="request_description" style="border-radius: 4px;"></textarea>
                         
                         <div id="request_description_error" class="notification notification-error notification-inline"></div>
                         <p id="request_description_hint">요청에 관한 세부 정보를 입력하세요.</p>

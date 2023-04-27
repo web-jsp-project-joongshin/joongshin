@@ -10,6 +10,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.js.board.domain.BoardDTO;
+import com.js.board.domain.BoardVO;
 import com.js.mybatis.config.MyBatisConfig;
 
 public class BoardDAO {
@@ -33,6 +34,12 @@ public SqlSession sqlSession;
 	public boolean checkId(String boardId) {
 		return (Integer)sqlSession.selectOne("user_id", boardId) == 1;
 	} 
+	
+	//게시글 추가
+	public void insert(BoardVO boardVO) {
+		sqlSession.insert("board.insert",boardVO);
+	}
+
 }
 
 

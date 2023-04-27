@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.js.Result;
 import com.js.board.controller.DetailOkController;
 import com.js.board.controller.ListOkController;
+import com.js.board.controller.ReqWriteOkController;
 import com.js.board.controller.WriteOkController;
 
 public class BoardFrontController extends HttpServlet{
@@ -23,17 +24,21 @@ public class BoardFrontController extends HttpServlet{
 		if(target.equals("listOk")) {
 			result = new ListOkController().execute(req, resp);
 			
-		} else if(target.equals("write")) {
+		} else if(target.equals("reqWrite")) {
 			result = new Result();
-			result.setPath("templates/board/write.jsp");
+			result.setPath("templates/request-board/form.jsp");
 			
-		} else if(target.equals("writeOk")) {
+		} else if(target.equals("reqBoard")) {
+			result = new Result();
+			result.setPath("templates/request-board/request-board.jsp");
+			
+		}else if(target.equals("writeOk")) {
 			result = new WriteOkController().execute(req, resp);
 			
 		} else if(target.equals("detailOk")) {
 			result = new DetailOkController().execute(req, resp);
 			
-		}
+		} 
 		
 		if(result != null) {
 			if(result.isRedirect()) {
