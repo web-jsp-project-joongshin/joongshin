@@ -1,4 +1,4 @@
-autosize($("textarea"));
+//autosize($("textarea"));
 
 const $search = $("div.search-container input");
 const $upload = $("input.upload");

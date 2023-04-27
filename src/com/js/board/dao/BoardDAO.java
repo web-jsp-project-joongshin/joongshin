@@ -21,9 +21,14 @@ public class BoardDAO {
 		return sqlSession.selectList("board.selectAll", pagable);
 	}
 	
+
+	public List<BoardDTO> boardSelectAll() {
+		return sqlSession.selectList("board.boardSelectAll");
+
 //	전체 게시글 개수 조회
 	public int getTotal(Search search) {
 		return sqlSession.selectOne("board.getTotal", search);
+
 	}
 	
 ////	게시글 추가

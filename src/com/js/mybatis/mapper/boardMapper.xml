@@ -9,6 +9,18 @@
 			order by board_id desc
 			limit 0, 3
 	</select>
+
+	 <insert id="insert">
+	 	insert into test.tbl_test
+	 	board_title, board_content, board_register_date, board_update_date, user_
+	 	values(#{boardTitle}, #{boardContent},#{boardDate},#{userNumber});
+	 </insert>
+	 
+	 <select id="boardSelectAll" resultType="boardDTO">
+		select board_id, board_title, board_content, board_type, m.user_id, m.user_name
+		from tbl_user m join tbl_board b
+		on m.user_id = b.user_id
+
 	
 	<select id="getTotal" resultType="_int">
 		select distinct count(board_id)
@@ -26,6 +38,7 @@
 		select board_id, board_title, board_content, board_register_date, board_update_date, board_read_count, m.user_id, user_name 
 		from tbl_user m join tbl_board b
 		on m.user_id = b.user_id and board_id = #{boardId}
+
 	</select>
 	
 	<update id="update">
