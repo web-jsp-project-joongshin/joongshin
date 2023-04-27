@@ -23,7 +23,7 @@
 			<div class="mypage-container">
 				<h1 class="mypage-title">마이페이지</h1>
 				<div class="profile-container underline">
-					<a href="./gosu-mypage-account.jsp" class=""><div class="thumb">
+					<a href="${pageContext.request.contextPath}/myAccountOk.mypage?userId=${userId}" class=""><div class="thumb">
 							<div class="user-profile-picture h-100">
 								<div data-name="image" class="is-square"
 									data-src="https://dmmj3ljielax6.cloudfront.netNone?h=320&amp;w=320"

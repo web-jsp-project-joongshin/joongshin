@@ -42,4 +42,30 @@ public class MypageDAO {
 	public UserVO getUserInfo(Long userId) {
 		return sqlSession.selectOne("mypage.getUserInfo", userId);
 	}
+	
+//	이름 변경
+	public void updateName(String changeName, String userId) {
+		HashMap<String, Object> changeMap = new HashMap<String, Object>();
+		changeMap.put("changeName", changeName);
+		changeMap.put("userId", userId);
+		sqlSession.update("mypage.updateName", changeMap);
+	}
+	
+//	기존 비밀번호와 일치한지 검사
+	public String selectPassword(Long userId) {
+		return sqlSession.selectOne("mypage.selectPw", userId);
+	}
+	
+//	비밀번호 변경
+	public void updatePassword(String newPassword, String userId) {
+		HashMap<String, Object> changePwMap = new HashMap<String, Object>();
+		changePwMap.put("changePw", newPassword);
+		changePwMap.put("userId", userId);
+		sqlSession.update("mypage.updatePw", changePwMap);
+	}
+	
+//	회원 탈퇴
+	public void deleteUser(String userId) {
+		sqlSession.delete("mypage.deleteUser", userId);
+	}
 }
