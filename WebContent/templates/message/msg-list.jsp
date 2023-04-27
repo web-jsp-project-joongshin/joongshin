@@ -31,8 +31,8 @@
                                         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgc3Ryb2tlPSIjNzM3MzczIiBzdHJva2Utd2lkdGg9IjEuNSI+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMwMSAtMjMzKSB0cmFuc2xhdGUoMjg1IDIyMikgdHJhbnNsYXRlKDE2IDExKSB0cmFuc2xhdGUoMSAxKSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjYuNjExIiBjeT0iNi42MTEiIHI9IjUuODYxIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTE1LjI1IDE1LjI1TDExLjAwNyAxMS4wMDciLz4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=">
                                 </div>
                                 <div class="input-flex-group">
-                                    <input type="search" placeholder="쪽지 상대의 이름 또는 내용으로 검색해보세요." value=""
-                                        class="form-search-text-input form-control" id="__BVID__14">
+                               		 <input type="search" name="keyword" placeholder="쪽지 상대의 이름 또는 내용으로 검색해보세요." value="${keyword}"
+                                       	class="form-search-text-input form-control" id="__BVID__14">
                                 </div>
                                 <!---->
                             </div>
@@ -63,9 +63,9 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
-	console.log(`${receive}`);
 	let messages = `${messages}`;
-	let path = `${pageContext.request.contextPath}`;
+	let keyword = `${keyword}`;
+	let receive = `${receive}`;
 </script>
 <script src="/static/js/message-jym/msg-list.js"></script>
 </html>
