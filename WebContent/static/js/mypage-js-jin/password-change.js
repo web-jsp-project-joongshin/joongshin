@@ -7,33 +7,44 @@ const newPasswordMessage = document.querySelector('#passwordMessage');
 const confirmPasswordMessage = document.querySelector('#confirmPasswordMessage');
 const showPasswordButton = document.querySelector('.current-password button');
 
+let checkPw = false;
+
 /*기존 비밀번호 입력 */
 function validatePassword() {
-  if (currentPasswordInput.value.trim() === '') {
-    message.innerText = '비밀번호를 입력해주세요.';
-    message.style.color = 'red';
-    currentPasswordInput.classList.add("is-invalid");
-    return true;
-  } else if (currentPasswordInput.value !== '1111') {
-    message.innerText = '기존 비밀번호와 다릅니다';
-    message.style.color = 'red';
-    currentPasswordInput.classList.add("is-invalid");
-    return false;
-  }else{
-	  message.innerHTML = "";
-	  currentPasswordInput.classList.remove("is-invalid");
-  }
+  	if (currentPasswordInput.value.trim() === '') {
+	    message.innerText = '비밀번호를 입력해주세요.';
+	    message.style.color = 'red';
+	    currentPasswordInput.classList.add("is-invalid");
+	    return true;
+  	} else {
+		checkPw = false;
+		$.ajax({
+			url: "checkPwOk.mypage",
+			data: {userId: userId, inputUserPassword: currentPasswordInput.value},
+			async: false,
+			success: function(result) {
+				result = JSON.parse(result);
+				if(result.check) {
+					// 일치하다
+					message.innerHTML = "";
+	  				currentPasswordInput.classList.remove("is-invalid");
+					checkPw = true;
+				} else {
+					message.innerText = '기존 비밀번호와 다릅니다';
+				    message.style.color = 'red';
+				    currentPasswordInput.classList.add("is-invalid");
+					checkPw = false;
+				}
+			}
+		})
+	}
 }
 
-document.querySelector('button[type="submit"]').addEventListener('click', (event) => {
-  event.preventDefault();
-  if (!validatePassword() || !validatePasswordInputs()) {
-    return;
-  }
-  // 기존 비밀번호가 맞을 때 변경 로직 추가
-  // ...
-  alert('비밀번호가 변경되었습니다.');
-});
+function submit() {
+	if (validatePassword() && validatePasswordInputs()) {
+    	document.updatePw.submit();
+  	}
+}
 
 /* 새로운 비밀번호 입력 */
 

@@ -31,4 +31,27 @@
 		from tbl_user
 		where user_id = #{userId}
 	</select>
+	
+	<update id="updateName">
+		update tbl_user
+		set user_name = #{changeName}
+		where user_id = #{userId}
+	</update>
+	
+	<select id="selectPw" resultType="string">
+		select user_password 
+		from tbl_user 
+		where user_id = #{userId}
+	</select>
+	
+	<update id="updatePw">
+		update tbl_user
+		set user_password = #{changePw}
+		where user_id = #{userId}
+	</update>
+	
+	<delete id="deleteUser">
+		delete from tbl_user
+		where user_id = #{userId}
+	</delete>
 </mapper>

@@ -13,19 +13,27 @@ import org.json.JSONObject;
 
 import com.js.Action;
 import com.js.Result;
-import com.js.user.dao.UserDAO;
+import com.js.juniorUser.dao.JuniorUserDAO;
 
-public class JuniorUserController implements Action {
+public class CheckEmailOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		resp.setContentType("text/html;charset=utf-8");
-//		Result result = new Result();
-//		
-//		
-//		PrintWriter out = resp.getWriter();
-//		//out.print(result.toString());
-//		out.close();
+		String userEmail = req.getParameter("userEmail");
+		JuniorUserDAO userDAO = new JuniorUserDAO();
+		boolean check = userDAO.selectEmail(userEmail) == null;
+		JSONObject result = new JSONObject();
+		
+		try {
+			result.put("check", check);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		
+		PrintWriter out = resp.getWriter();
+		out.print(result.toString());
+		out.close();
 		
 		return null;
 	}
