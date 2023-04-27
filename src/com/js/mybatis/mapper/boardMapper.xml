@@ -2,14 +2,73 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="board">
 
+	<sql id="search">
+		<trim prefixOverrides="or">
+			<foreach item="type" collection="types">
+				<trim prefix="or">
+					<choose>
+						<when test="type == 'title'.toString()">
+							board_title like concat('%', #{keyword}, '%')
+						</when>
+						<when test="type == 'content'.toString()">
+							board_content like concat('%', #{keyword}, '%')
+						</when>
+						<when test="type == 'writer'.toString()">
+							user_name like concat('%', #{keyword}, '%')
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</sql>
+	
+	<sql id="order">
+		order by
+		<choose>
+			<when test="sort=='recent'.toString()">
+				board_id
+			</when>
+			<otherwise>
+				board_read_count
+			</otherwise>
+		</choose>
+		desc
+	</sql>
+
+<!-- 전체 조회 -->
+<!-- 
 	<select id="selectAll" resultType="boardDTO">
-		select board_id, b.user_id, b.user_name, board_title, board_content, board_type
+		select board_id,user_id, board_title, board_content
+		from tbl_user m join tbl_board b
+		<trim suffixOverrides="and"> 
+			on m.user_id = b.user_id and
+			<include refid="search"/>
+		</trim>
+			<include refid="order"/>
+		limit #{offset}, #{rowCount}
+	</select> -->
+	
+	<select id="selectAll" resultType="boardDTO">
+		select board_id, b.user_id, m.user_name, board_title, board_content, board_type
 		from tbl_user m join tbl_board b
 			on m.user_id = b.user_id
 			order by board_id desc
 			limit 0, 3
 	</select>
+
+	 <insert id="insert">
+	 	insert into test.tbl_test
+	 	board_title, board_content, board_register_date, board_update_date, user_
+	 	values(#{boardTitle}, #{boardContent},#{boardDate},#{userNumber});
+	 </insert>
+	 
+	 <select id="boardSelectAll" resultType="boardDTO">
+		select board_id, board_title, board_content, board_type, m.user_id, m.user_name
+		from tbl_user m join tbl_board b
+		on m.user_id = b.user_id
+	</select>
 	
+
 	<select id="getTotal" resultType="_int">
 		select distinct count(board_id)
 		from tbl_user m join tbl_board b
@@ -26,6 +85,7 @@
 		select board_id, board_title, board_content, board_register_date, board_update_date, board_read_count, m.user_id, user_name 
 		from tbl_user m join tbl_board b
 		on m.user_id = b.user_id and board_id = #{boardId}
+
 	</select>
 	
 	<update id="update">
@@ -47,6 +107,10 @@
 	
 	<!-- <select id="selectCurrentSequence" resultType="long">
 		select last_insert_id()
+<<<<<<< HEAD
+	</select>
+
+=======
 	</select> -->
 </mapper>
 

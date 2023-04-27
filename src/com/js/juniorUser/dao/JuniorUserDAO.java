@@ -2,8 +2,10 @@
 package com.js.juniorUser.dao;
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
+
 
 import com.js.juniorUser.domain.JuniorUserDTO;
 import com.js.mybatis.config.MyBatisConfig;
@@ -15,7 +17,11 @@ public class JuniorUserDAO {
 	public JuniorUserDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
-	
+
+	public List<JuniorUserDTO> selectJuniorAll() {
+		return sqlSession.selectList("user.selectJuniorAll");
+	} 
+
 //	회원가입
 	public void insert(JuniorUserDTO juniorUserDTO) {
 		sqlSession.insert("juniorUser.insert", juniorUserDTO);
@@ -34,6 +40,7 @@ public class JuniorUserDAO {
 		
 		return sqlSession.selectOne("juniorUser.login", loginMap);
 	}
+
 
 }
 

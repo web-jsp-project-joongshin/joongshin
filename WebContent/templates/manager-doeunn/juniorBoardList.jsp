@@ -52,15 +52,15 @@
                     </div>
                     <button type="button" class="delete-btn">게시물 삭제</button>
                 </section>
-                <table border="1">
+                <table border="1" id="content-wrap">
                     <thead>
                         <tr>
                             <th><input type="checkbox" class="check-top"/></th>
                             <th>게시물 번호</th>
-                            <th>제목</th>
+                            <th>이름</th>
                             <th>내용</th>
+                            <th>작업년도</th>
                             <th>작성날짜</th>
-                            <th>회원번호</th>
                         </tr>
                     </thead>
                     <tr>
@@ -77,5 +77,11 @@
    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="../../static/js/manager-doeunn/junior-borad-list.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/manager-doeunn/junior-borad-list.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/manager-doeunn/board.js"></script>
+<script>
+	let juniors = `${juniors}`;
+	let contextPath = `${pageContext.request.contextPath}`;
+</script>
+<script src="${pageContext.request.contextPath}/static/js/manager-doeunn/junior-list.js"></script>
 </html>
