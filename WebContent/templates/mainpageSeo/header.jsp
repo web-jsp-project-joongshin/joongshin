@@ -70,11 +70,10 @@
 					<div data-v-5f10666f="" class="right-section">
 						<nav data-v-5f10666f="">
 							<ul data-v-5f10666f="" class="nav-list">
-								<li data-v-5f10666f="" class="nav-item right-section-item"><a
+								<li data-v-5f10666f="" class="nav-item right-section-item" style="margin-right: 10px;"><a
 									data-v-5f10666f="" href="/login.user" class="gnb-link"><span
 										data-v-5f10666f="">로그인</span></a> <!----></li>
-								<li data-v-5f10666f="" class="nav-item right-section-item"><a
-									
+								<li data-v-5f10666f="" class="nav-item right-section-item" style="margin-right: 10px;"><a
 									href="/join.user"
 									class="gnb-link"><span data-v-5f10666f="">회원가입</span></a> <!----></li>
 							</ul>

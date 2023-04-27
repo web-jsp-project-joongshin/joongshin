@@ -90,8 +90,8 @@
 									>마이페이지</span></a>
 							<!----></li>
 							</form>
-							<li  class="nav-item right-section-item"><a
-								 href="/profile" class="gnb-link"><span style="font-size: 17px;"
+							<li  class="nav-item right-section-item">
+							<a href="${pageContext.request.contextPath}/logout.user"><span style="font-size: 17px;"
 									>로그아웃</span></a>
 							<!----></li>
 						</ul>

@@ -8,9 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.js.Result;
-import com.js.board.controller.DetailOkController;
 import com.js.board.controller.ListOkController;
-import com.js.board.controller.WriteOkController;
 
 public class BoardFrontController extends HttpServlet{
 	@Override
@@ -23,17 +21,7 @@ public class BoardFrontController extends HttpServlet{
 		if(target.equals("listOk")) {
 			result = new ListOkController().execute(req, resp);
 			
-		} else if(target.equals("write")) {
-			result = new Result();
-			result.setPath("templates/board/write.jsp");
-			
-		} else if(target.equals("writeOk")) {
-			result = new WriteOkController().execute(req, resp);
-			
-		} else if(target.equals("detailOk")) {
-			result = new DetailOkController().execute(req, resp);
-			
-		}
+		} 
 		
 		if(result != null) {
 			if(result.isRedirect()) {

@@ -9,9 +9,6 @@
 		private Long boardId;
 		private String boardTitle;
 		private String boardContent;
-		private String boardRegisterDate;
-		private String boardUpdateDate;
-		private Long boardReadCount;
 		private Long userId;
 		private String userName;
 		
@@ -41,29 +38,6 @@
 			this.boardContent = boardContent;
 		}
 	
-		public String getBoardRegisterDate() {
-			return boardRegisterDate;
-		}
-	
-		public void setBoardRegisterDate(String boardRegisterDate) {
-			this.boardRegisterDate = boardRegisterDate;
-		}
-	
-		public String getBoardUpdateDate() {
-			return boardUpdateDate;
-		}
-	
-		public void setBoardUpdateDate(String boardUpdateDate) {
-			this.boardUpdateDate = boardUpdateDate;
-		}
-	
-		public Long getBoardReadCount() {
-			return boardReadCount;
-		}
-	
-		public void setBoardReadCount(Long boardReadCount) {
-			this.boardReadCount = boardReadCount;
-		}
 	
 		public Long getUserId() {
 			return userId;
@@ -84,8 +58,7 @@
 		@Override
 		public String toString() {
 			return "BoardDTO [boardId=" + boardId + ", boardTitle=" + boardTitle + ", boardContent=" + boardContent
-					+ ", boardRegisterDate=" + boardRegisterDate + ", boardUpdateDate=" + boardUpdateDate
-					+ ", boardReadCount=" + boardReadCount + ", userId=" + userId + ", userName=" + userName + "]";
+					+ ", userId=" + userId + ", userName=" + userName + "]";
 		}
 	
 		@Override
