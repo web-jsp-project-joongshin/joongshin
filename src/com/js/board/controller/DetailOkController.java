@@ -21,7 +21,7 @@ public class DetailOkController implements Action {
 //
 //		req.setAttribute("board", boardDAO.select(boardId));
 		
-		result.setPath("templates/board/detail.jsp");
+		result.setPath("templates/community-users-wmoon/view-detail.jsp");
 		return result;
 	}
 

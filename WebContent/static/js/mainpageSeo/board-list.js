@@ -15,7 +15,7 @@ function showList(){
 							 <ul class="feed-list">
 										<li class="feed-item">
 											<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/view-detail.jsp" class>
-												<div class="feed-content service-address-info">   
+									 			<div class="feed-content service-address-info">   
 													<div>
 														<section class="item-wrapper">
 															<h3 class="sg-text-subhead5 sg-font-medium sg-text-gray-900">${board.boardTitle}</h3>

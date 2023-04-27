@@ -115,7 +115,7 @@
 								</div>
 
 								<article class="community-feed-list">
-								
+								<!-- 게시글 forEach자리 
 									<ul class="feed-list">
 										<li class="feed-item">
 											<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/view-detail.jsp" class>
@@ -143,7 +143,7 @@
 										<li></li>
 										<li></li>
 									</ul>
-									
+								-->
 									<div></div>
 								</article>
 							</div>
@@ -226,12 +226,9 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/mainpageSeo/board-list.js"></script>
-
-<script src="../../static/js/community-wmoon/modal.js"></script>
 <script>
-let boards = `${boards}`;
-let contextPath = `${pageContext.request.contextPath}`;
-</script>
-<script src="${pageContext.request.contextPath}/static/js/mainpageSeo/list.js"></script>
+let boards =`${boards}`; </script>
+<!-- <script src="../../static/js/community-wmoon/modal.js"></script>-->
+<script src="${pageContext.request.contextPath}/static/js/mainpageSeo/board.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mainpageSeo/board-list.js"></script>
 </html>

@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.js.Result;
 import com.js.board.controller.DetailOkController;
+import com.js.board.controller.ListOkCommunityController;
+import com.js.board.controller.ListOkCommunityJuniController;
 import com.js.board.controller.ListOkController;
 import com.js.board.controller.WriteOkController;
 
@@ -25,7 +27,7 @@ public class BoardFrontController extends HttpServlet{
 			
 		} else if(target.equals("write")) {
 			result = new Result();
-			result.setPath("templates/board/write.jsp");
+			result.setPath("templates/community-users-wmoon/write.jsp");
 			
 		} else if(target.equals("writeOk")) {
 			result = new WriteOkController().execute(req, resp);
@@ -33,6 +35,12 @@ public class BoardFrontController extends HttpServlet{
 		} else if(target.equals("detailOk")) {
 			result = new DetailOkController().execute(req, resp);
 			
+		}
+		else if(target.equals("listcommunityOk")) {
+			result = new ListOkCommunityController().execute(req, resp);
+		}
+		else if(target.equals("listcommunityjuniOk")) {
+			result = new ListOkCommunityJuniController().execute(req, resp);
 		}
 		
 		if(result != null) {

@@ -19,7 +19,7 @@ import com.js.board.domain.BoardDTO;
 import com.js.board.domain.Criteria;
 import com.js.board.domain.Search;
 
-public class ListOkController implements Action {
+public class ListOkCommunityController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -45,14 +45,13 @@ public class ListOkController implements Action {
 		req.setAttribute("boards", jsonArray.toString());
 
 
-
 //		req.setAttribute("total", boardDAO.getTotal(search));
 		req.setAttribute("page", page);
 		req.setAttribute("sort", sort);
 		req.setAttribute("type", type);
 		req.setAttribute("keyword", keyword);
 		
-		result.setPath("templates/mainpageSeo/main-page.jsp");
+		result.setPath("templates/community-users-wmoon/community-main.jsp");
 
 		return result;
 	}
