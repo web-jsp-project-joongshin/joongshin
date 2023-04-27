@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 	
 	
-<link href="../../static/css/mypage-css-jin/account-delete-final-check.css" rel="stylesheet" type="text/css" />
+<link href="../../static/css/mypage-css-jin/withdrawal.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <%@ include file="../mainpageSeo/header.jsp" %>
@@ -21,14 +21,15 @@
 		<div class="container container-md">
 			<main class="account-info-container">
 				<h1>계정 탈퇴</h1>
+				<form action="${pageContext.request.contextPath}/myWithdrawalOk.mypage?userId=${userId}" name="deleteUser" method="post">
 				<section>
 					<article>
 						<h3>숨고 탈퇴 전 꼭 확인해 주세요</h3>
 						<div class="check-list">
 							<ol>
 								<li>탈퇴시 모든 개인정보가 삭제되며, 구매하신 캐시는 소멸되며 환불되지 않습니다.</li>
-								<li>숨고 이용에 불편이 있어 탈퇴를 고민하신다면, support@soomgo.com 또는 <span
-									class="color-teal">1599-5319</span>로 문의 바랍니다.
+								<li>숨고 이용에 불편이 있어 탈퇴를 고민하신다면, support@joongshin.com 또는 <span
+									class="color-teal">1599-0000</span>로 문의 바랍니다.
 								</li>
 								<li>위 내용을 모두 확인하였고, 탈퇴 완료 시 내용에 동의합니다.</li>
 							</ol>
@@ -90,24 +91,53 @@
 									</div>
 								</div></li>
 						</ul>
-					</article>
-					<div class="validation-wrapper" style="display: none;">
-						<span class="validation-text">탈퇴 사유를 선택해주세요.</span>
-					</div>
-				</section>
-				<footer class="button-group">
-					<a href="javascript:history.go(-1)"
-						class="btn router-link-active btn-outline-primary" target="_self" style="color: #6FB6C0;" >취소</a>
-					<button data-testid="delete-complete-btn" type="button"
-						class="btn btn-primary">탈퇴 완료</button>
-				</footer>
+						</article>
+						<div class="validation-wrapper" style="display: none;">
+							<span class="validation-text">탈퇴 사유를 선택해주세요.</span>
+						</div>
+					</section>
+					<footer class="button-group">
+						<a href="javascript:history.go(-1)"
+							class="btn router-link-active btn-outline-primary" target="_self" style="color: #6FB6C0;" >취소</a>
+						<button type="button" class="btn btn-primary submit-btn" onclick="submitDelete()">탈퇴 완료</button>
+					</footer>
+				</form>
 			</main>
 		</div>
 	</div>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="../../static/js/mypage-js-jin/account-delete-check-radio-button.js"></script>
-
 <jsp:include page="../mainpageSeo/footer.jsp"/>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+	const userId = `${userId}`;
+	
+	/* 버튼 클릭하면 숨겨져있는 요소들 보임 */
+	const radioButtons = document.getElementsByName("radio-button");
+	const hiddenDivs = document.querySelectorAll('[id^="hidden-div-"]');
+
+	var checkTarget;
+	console.log(checkTarget);
+
+	for (let i = 0; i < radioButtons.length; i++) {
+	  radioButtons[i].addEventListener("click", function() {
+	  checkTarget = radioButtons[i];
+	  console.log(checkTarget);
+	    for (let j = 0; j < hiddenDivs.length; j++) {
+	      if (hiddenDivs[j].id === "hidden-div-" + (i+1)) {
+	        hiddenDivs[j].style.display = "block";
+	      } else {
+	        hiddenDivs[j].style.display = "none";
+	      }
+	    }
+	  });
+	}
+	
+	function submitDelete() {
+		if(checkTarget) {
+			document.deleteUser.submit();
+		}
+	}
+	
+</script>
 </html>
