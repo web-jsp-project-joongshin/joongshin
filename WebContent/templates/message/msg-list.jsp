@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +23,7 @@
                 <div class="container">
                     <section class="page-title">
                         <h3>채팅</h3>
-                        <a href="/pro/chats/edit" class="chat-list-edit-button"> 편집 </a>
+                        <!--<a href="/pro/chats/edit" class="chat-list-edit-button"> 편집 </a>-->
                     </section>
                     <section class="row">
                         <div class="col-12">

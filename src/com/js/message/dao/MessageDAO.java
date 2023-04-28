@@ -16,8 +16,8 @@ public class MessageDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	public void insert(MessageVO messageVO) {
-		sqlSession.insert("message.insert", messageVO);
+	public void insert(MessageDTO messageDTO) {
+		sqlSession.insert("message.insert", messageDTO);
 	}
 	
 	public MessageDTO selectOne(Map<String, Object> messageData) {
