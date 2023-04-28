@@ -8,6 +8,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.js.Action;
@@ -29,10 +31,15 @@ public class MessageOkController implements Action {
 		MessageDTO messageDTO = dao.selectOne(data);
 		Result result = new Result();
 		
-		req.setAttribute("userName", messageDTO.getUserName());
-		req.setAttribute("messageContents", messageDTO.getMessageContents());
-		result.setPath("/templates/message/detail-msg.jsp");
+		JSONObject messageJSON = messageDTO.toJSON();
+		try {
+			messageJSON.put("contentsList", new JSONArray(messageDTO.getContentsByLine()));
+			messageJSON.remove("messageContents");
+		} catch (JSONException e) {e.printStackTrace();}
 		
+		req.setAttribute("message", messageJSON.toString());
+		req.setAttribute("userName", messageDTO.getUserName());
+		result.setPath("/templates/message/detail-msg.jsp");
 		return result;
 	}
 

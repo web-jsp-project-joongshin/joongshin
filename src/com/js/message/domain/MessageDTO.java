@@ -1,5 +1,10 @@
 package com.js.message.domain;
 
+import java.util.Arrays;
+import java.util.List;
+
+import org.json.JSONObject;
+
 public class MessageDTO{
 	private Long messageId;
 	private Long sendUserId;
@@ -66,7 +71,15 @@ public class MessageDTO{
 	public void setMessageUpdateDatetime(String messageUpdateDatetime) {
 		this.messageUpdateDatetime = messageUpdateDatetime;
 	}
-
+	
+	public List<String> getContentsByLine() {
+		return Arrays.asList(messageContents.split("\\r\\n"));
+	}
+	
+	public JSONObject toJSON() {
+		return new JSONObject(this);
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
