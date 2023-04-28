@@ -17,7 +17,7 @@
 <body>
     <div id="app-body">
         <!-- 채팅페이지 바디 -->
-        <div class="chat-list">
+        <div class="chat-list">	
             <!-- 해더 부분  -->
             <div class="page-header">
                 <div class="container">

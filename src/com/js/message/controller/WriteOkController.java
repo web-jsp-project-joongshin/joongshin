@@ -1,6 +1,7 @@
 package com.js.message.controller;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -17,14 +18,17 @@ public class WriteOkController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		MessageDAO dao = new MessageDAO();
-		MessageVO messaggeVO = new MessageVO();
+		MessageVO messageVO = new MessageVO();
 		String contents = req.getParameter("contents");
+		Long sendUserId = Long.parseLong(Optional.ofNullable(req.getParameter("sendUserId")).orElse("0"));
+		Long recieveUserId = Long.parseLong(Optional.ofNullable(req.getParameter("receiveUserId")).orElse("0"));
 		
-		messaggeVO.setSendUserId(null);
-		messaggeVO.setRecieveUserId(null);
-		messaggeVO.setMessageContents(contents);
+		messageVO.setSendUserId(sendUserId);
+		messageVO.setRecieveUserId(recieveUserId);
+		messageVO.setMessageContents(contents);
 		
-		dao.insert(null);
+		dao.insert(messageVO);
+		resp.getWriter().print(true);
 		
 		return null;
 	}

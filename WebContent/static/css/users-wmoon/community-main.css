@@ -777,6 +777,15 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 	display: flex;
 }
 
+.feed-item .feed-content > img[data-v-23814058] {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 8px;
+    border: 0.0625rem solid rgb(244, 244, 244);
+}
+
+
+
 .feed-item h3 {
 	display: -webkit-box;
     max-height: 1.57em;

@@ -54,8 +54,6 @@ public class MessageListOkController implements Action{
 			return json;
 		}).forEach(jsonResult::put);
 		
-		
-		
 		req.setAttribute("messages", jsonResult.toString());
 		req.setAttribute("receive", receive.toString());
 		if(!keyword.isEmpty()) req.setAttribute("keyword", keyword);
