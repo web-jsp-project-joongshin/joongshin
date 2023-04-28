@@ -36,7 +36,7 @@
                     </h2>
                 
                 
-                <form action="${pageContext.request.contextPath}/joinOk.user" name="join" method="post">
+                <form action="${pageContext.request.contextPath}/joinOk.juniorUser" name="join" method="post">
                     
                     <div class="info">
                         <div class="info-container">
@@ -111,21 +111,16 @@
                             
                             
                             
-                            
-                            
-                            
-                            
-                            
-                            <p class="help"></p>
                             <div id="selfProduce" class="col-12">
-							<fieldset class="form-group">
+							<fieldset class="form-group" style="border-radius: 10px;">
 								<legend class="legen-text">간편 이력서</legend>
 								<textarea rows="3" cols="25"
-									placeholder="300자 내외 자신의 경력을 작성해주세요." class="textbox"></textarea>
+									placeholder="300자 내외 자신의 경력을 작성해주세요." class="textbox"
+									style="width: 100%; height: 6.25em; border: none; resize: none;"></textarea>
 							</fieldset>
 						</div>
-                        </div>
                         <button type="button" class="next1" onclick="send()">완료</button>
+                        </div>
                     </div>
                 </form>
             </article>

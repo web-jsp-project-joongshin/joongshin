@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,10 +16,38 @@
 
 <title>중신:주니어의 스펙업사이트 </title>
 
+<style type="text/css">
+
+.content-container {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+}
+
+.content {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+</style>
+
 </head>
 
 <body>
-<%@ include file="loginHeader.jsp" %>
+<c:choose>
+  <c:when test='${not empty sessionScope.userId}'>
+    <jsp:include page="../mainpageSeo/loginHeader.jsp"/>
+  </c:when>
+  <c:otherwise>
+    <jsp:include page="../mainpageSeo/header.jsp"/>
+  </c:otherwise>
+</c:choose>
+
+
 
 <div id="app-body">
 <div class="home" data-v-38e68602="">
@@ -52,34 +81,37 @@
 <div class="main-community slide-knowhow-list container"
 	data-v-0b8ae29e="" data-v-2590092d="">
 	<section class="header short-bottom" data-v-0b8ae29e="">
-	<h2 class="title" data-v-0b8ae29e="">주니어 게시판 목록</h2>
+	<h2 class="title" data-v-0b8ae29e="">게시판 목록</h2>
 	
-	<a href="/community/soomgo-life/" data-testid="community-home"
+	<a href="${pageContext.request.contextPath}/templates/community-users-wmoon/community-main.jsp" data-testid="community-home"
 		class="go-list" data-v-1b5b0368="" data-v-0b8ae29e=""><span
 		data-v-1b5b0368="">전체보기</span><img
 		src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAgMEgxNlYxNkgweiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwNTMuMDAwMDAwLCAtMjAyLjAwMDAwMCkgdHJhbnNsYXRlKDQ4NS4wMDAwMDAsIDE4OC4wMDAwMDApIHRyYW5zbGF0ZSg1NjguMDAwMDAwLCAxNC4wMDAwMDApIi8+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggc3Ryb2tlPSIjMDBDN0FFIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNMTEgMTNMNiA4IDExIDMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMDUzLjAwMDAwMCwgLTIwMi4wMDAwMDApIHRyYW5zbGF0ZSg0ODUuMDAwMDAwLCAxODguMDAwMDAwKSB0cmFuc2xhdGUoNTY4LjAwMDAwMCwgMTQuMDAwMDAwKSB0cmFuc2xhdGUoOC41MDAwMDAsIDguMDAwMDAwKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC04LjUwMDAwMCwgLTguMDAwMDAwKSIvPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
 		data-v-1b5b0368=""></a></section>
 	<div data-v-292a6694="" data-v-0b8ae29e=""
 		class="main-community-contents">
-		<h6 class="info">전체 게시글 갯수<br>${total}개</h6>
+		<h6 class="info">전체 게시글 : ${total}개</h6>
 		<div data-v-292a6694="" class="desktop-section">
 			<div data-v-292a6694="" class="curation-container half-list" id="content-wrap">
 					
+					<!-- 게시글 들어오는곳 -->
 					<section id="content-wrap">
 					        <ul>
 					        </ul>	
+						</section>
 						
 			</div>
+			
 			<div data-v-292a6694="" class="knowhow-container half-list">
-				<a data-v-292a6694=""
-					class="knowhow-card-slide" data-testid="knowhow-item"><img
+				<a data-v-292a6694="" href="${pageContext.request.contextPath}/templates/community-users-wmoon/community-main.jsp"
+					class="knowhow-card-slide" data-testid="knowhow-item" style="margin-bottom: 4rem;"><img
 					data-v-292a6694="" alt="이직 면접 이거 놓치면 불합격!"
 					class="thumb-image"
 					data-src="https://static.cdn.soomgo.com/upload/talkboard/daa7675e-e26d-4a0e-ac1f-ad53dc98a46a.png?h=320&amp;w=480&amp;webp=1"
 					src="https://static.cdn.soomgo.com/upload/talkboard/daa7675e-e26d-4a0e-ac1f-ad53dc98a46a.png?h=320&amp;w=480&amp;webp=1"
 					lazy="loaded">
 				<div data-v-292a6694="" class="card-desc">
-						<p data-v-292a6694="" class="service">면접 컨설팅</p>
+						<p data-v-292a6694="" class="service">(광고)면접 컨설팅</p>
 						<div data-v-a3afae98="" data-v-292a6694=""
 							class="collapsed">
 							<div data-v-a3afae98="" class="line-clamp"
@@ -90,8 +122,54 @@
 							<!---->
 						</div>
 						<p data-v-292a6694="" class="author">김주호</p>
-					</div></a><a data-v-292a6694=""
-					href="/community/pro-knowhow/753-%EA%B3%B0%ED%8C%A1%EC%9D%B4-%EC%A0%9C%EA%B1%B0--%EA%B4%91%EA%B3%A0%EC%B2%98%EB%9F%BC-%EC%85%80%ED%94%84%EB%A1%9C-%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C-"
+					</div></a>
+					
+					<a data-v-292a6694="" href="${pageContext.request.contextPath}/templates/community-users-wmoon/community-main.jsp"
+					class="knowhow-card-slide" data-testid="knowhow-item" style="margin-bottom: 4rem;"><img
+					data-v-292a6694="" alt="이직 면접 이거 놓치면 불합격!"
+					class="thumb-image"
+					data-src="https://static.cdn.soomgo.com/upload/talkboard/daa7675e-e26d-4a0e-ac1f-ad53dc98a46a.png?h=320&amp;w=480&amp;webp=1"
+					src="https://static.cdn.soomgo.com/upload/talkboard/daa7675e-e26d-4a0e-ac1f-ad53dc98a46a.png?h=320&amp;w=480&amp;webp=1"
+					lazy="loaded">
+				<div data-v-292a6694="" class="card-desc">
+						<p data-v-292a6694="" class="service">(광고)면접 컨설팅</p>
+						<div data-v-a3afae98="" data-v-292a6694=""
+							class="collapsed">
+							<div data-v-a3afae98="" class="line-clamp"
+								style="line-height: 1.5; max-height: 3rem; -webkit-line-clamp: 2;">
+								<p data-v-292a6694="" data-v-a3afae98="" class="title">이직
+									면접 이거 놓치면 불합격!</p>
+							</div>
+							<!---->
+						</div>
+						<p data-v-292a6694="" class="author">김주호</p>
+					</div></a>
+					
+					<a data-v-292a6694="" href="${pageContext.request.contextPath}/templates/community-users-wmoon/community-main.jsp"
+					class="knowhow-card-slide" data-testid="knowhow-item" style="margin-bottom: 4rem;"><img
+					data-v-292a6694="" alt="이직 면접 이거 놓치면 불합격!"
+					class="thumb-image"
+					data-src="https://static.cdn.soomgo.com/upload/talkboard/daa7675e-e26d-4a0e-ac1f-ad53dc98a46a.png?h=320&amp;w=480&amp;webp=1"
+					src="https://static.cdn.soomgo.com/upload/talkboard/daa7675e-e26d-4a0e-ac1f-ad53dc98a46a.png?h=320&amp;w=480&amp;webp=1"
+					lazy="loaded">
+				<div data-v-292a6694="" class="card-desc">
+						<p data-v-292a6694="" class="service">(광고)면접 컨설팅</p>
+						<div data-v-a3afae98="" data-v-292a6694=""
+							class="collapsed">
+							<div data-v-a3afae98="" class="line-clamp"
+								style="line-height: 1.5; max-height: 3rem; -webkit-line-clamp: 2;">
+								<p data-v-292a6694="" data-v-a3afae98="" class="title">이직
+									면접 이거 놓치면 불합격!</p>
+							</div>
+							<!---->
+						</div>
+						<p data-v-292a6694="" class="author">김주호</p>
+					</div></a>
+					
+					
+					
+					<a data-v-292a6694=""
+					href="${pageContext.request.contextPath}/templates/community-users-wmoon/community-main.jsp"
 					class="knowhow-card-slide" data-testid="knowhow-item"><img
 					data-v-292a6694="" alt="곰팡이 제거, 광고처럼 셀프로 가능할까?"
 					class="thumb-image"
@@ -99,7 +177,7 @@
 					src="https://static.cdn.soomgo.com/upload/talkboard/8a64d04d-c5c6-4cc3-96af-2f1b8875f32a.jpg?h=320&amp;w=480&amp;webp=1"
 					lazy="loaded">
 				<div data-v-292a6694="" class="card-desc">
-						<p data-v-292a6694="" class="service">곰팡이 제거</p>
+						<p data-v-292a6694="" class="service">(광고)곰팡이 제거</p>
 						<div data-v-a3afae98="" data-v-292a6694=""
 							class="collapsed">
 							<div data-v-a3afae98="" class="line-clamp"
@@ -115,11 +193,16 @@
 		</div>
 	</div>
 </div><!-- 이용자 게시글 닫는태그 -->
-<div class="observer-container container no-mobile-padding" data-v-45a9f2fc="" data-v-73846ecc="" data-v-38e68602=""><!----></div>
 
+
+
+<div class="observer-container container no-mobile-padding" data-v-45a9f2fc="" data-v-73846ecc="" data-v-38e68602=""><!----></div>
 								
+
+		
 								
-<!--이용자 커뮤니티  -->
+ <!--이용자 커뮤니티  -->
+ <!--
 <div class="main-community slide-knowhow-list container"
 	data-v-0b8ae29e="" data-v-2590092d="">
 	<section class="header short-bottom" data-v-0b8ae29e="">
@@ -177,7 +260,7 @@
 								<p data-v-292a6694="" data-v-a3afae98="" class="title">이직
 									면접 이거 놓치면 불합격!</p>
 							</div>
-							<!---->
+							
 						</div>
 						<p data-v-292a6694="" class="author">김주호</p>
 					</div></a><a data-v-292a6694=""
@@ -197,15 +280,15 @@
 								<p data-v-292a6694="" data-v-a3afae98="" class="title">곰팡이
 									제거, 광고처럼 셀프로 가능할까?</p>
 							</div>
-							<!---->
+							
 						</div>
 						<p data-v-292a6694="" class="author">도배르만(곰팡이, 단열 전문)</p>
 					</div></a>
 			</div>																				
 		</div>
 	</div>
-</div><!-- 이용자 게시글 닫는태그 -->
-<div class="observer-container container no-mobile-padding" data-v-45a9f2fc="" data-v-73846ecc="" data-v-38e68602=""><!----></div>
+</div> --><!-- 이용자 게시글 닫는태그 -->
+<%-- <div class="observer-container container no-mobile-padding" data-v-45a9f2fc="" data-v-73846ecc="" data-v-38e68602=""><!----></div>
 								
 								
 								
@@ -219,7 +302,8 @@
 							<section class="header" data-v-45a9f2fc="" data-v-9e560958="">
 							<h2 class="title" data-v-45a9f2fc="" data-v-9e560958="">지금
 								인기 있는 주니어</h2>
-							<a href="/search/pro?from=main_best_pro" class="go-list"
+							<a href="${pageContext.request.contextPath}/templates/community-users-wmoon/community-main.jsp"
+							 class="go-list"
 								data-v-1b5b0368="" data-v-9e560958="" data-v-45a9f2fc=""><span
 								data-v-1b5b0368="">전체보기</span><img
 								src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAgMEgxNlYxNkgweiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwNTMuMDAwMDAwLCAtMjAyLjAwMDAwMCkgdHJhbnNsYXRlKDQ4NS4wMDAwMDAsIDE4OC4wMDAwMDApIHRyYW5zbGF0ZSg1NjguMDAwMDAwLCAxNC4wMDAwMDApIi8+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggc3Ryb2tlPSIjMDBDN0FFIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNMTEgMTNMNiA4IDExIDMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMDUzLjAwMDAwMCwgLTIwMi4wMDAwMDApIHRyYW5zbGF0ZSg0ODUuMDAwMDAwLCAxODguMDAwMDAwKSB0cmFuc2xhdGUoNTY4LjAwMDAwMCwgMTQuMDAwMDAwKSB0cmFuc2xhdGUoOC41MDAwMDAsIDguMDAwMDAwKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC04LjUwMDAwMCwgLTguMDAwMDAwKSIvPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
@@ -229,178 +313,27 @@
 							<div data-v-538b8750="" data-v-9e560958=""
 								class="main-desktop-slide" data-v-45a9f2fc="">
 								<div data-v-3d1a4f76="" data-v-55917fe8="" data-v-538b8750=""
-									dir="ltr" class="slick-slider slick-initialized">
+									dir="ltr" class="slick-slider slick-initialized" id="content-wrap-junior">
 									
-									<div data-v-3d1a4f76="" class="slick-list">
-										<div data-v-e4caeaf8="" data-v-3d1a4f76="" class="slick-track"
-											style="width: 100%; opacity: 1;">
-											<div data-v-e4caeaf8="" tabindex="-1" data-index="0"
-												aria-hidden="true" class="slick-slide"
-												style="display:flex; outline: none; width: 198px;">
-												<div data-v-e4caeaf8="">
-												
-											</div>
-											<div data-v-e4caeaf8="" tabindex="-1" data-index="9"
-												aria-hidden="false" class="slick-slide slick-active"
-												style="outline: none; width: 198px;">
-												<div data-v-e4caeaf8="">
-													<a data-v-7cbc9828="" data-v-9e560958=""
-														href="/profile/users/2085479?from=main_best_pro" class=""
-														tabindex="-1" data-v-e4caeaf8=""
-														style="width: 100%; display: inline-block;"><div
-															data-v-7cbc9828="" data-testid="main-pro-card"
-															class="main-pro-card">
-															<section data-v-7cbc9828="" class="header">
-															<div data-v-7cbc9828="" class="thumb"
-																data-src="https://dmmj3ljielax6.cloudfront.net/upload/profile/00f268b4-999f-4ff1-a81d-c3abe0e9d7fe.jpg"
-																lazy="loaded"
-																style="background-image: url(&quot;https://dmmj3ljielax6.cloudfront.net/upload/profile/00f268b4-999f-4ff1-a81d-c3abe0e9d7fe.jpg&quot;);"></div>
-															<div data-v-7cbc9828="" class="review">
-																<img data-v-7cbc9828=""
-																	src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im03LjQ5NiAxLjU5NiAxLjQwNyAyLjc0MiAzLjE0NS40NGMuOTEuMTI3IDEuMjc1IDEuMjA0LjYxNSAxLjgyMmwtMi4yNzYgMi4xMzQuNTM4IDMuMDE1Yy4xNTUuODcyLS43OTcgMS41MzgtMS42MTIgMS4xMjZMNi41IDExLjQ1MmwtMi44MTMgMS40MjNjLS44MTUuNDEyLTEuNzY3LS4yNTQtMS42MTItMS4xMjZsLjUzOC0zLjAxNUwuMzM3IDYuNmMtLjY2LS42MTgtLjI5Ni0xLjY5NS42MTUtMS44MjJsMy4xNDUtLjQ0IDEuNDA3LTIuNzQyQzUuOTEyLjggNy4wODguOCA3LjQ5NiAxLjU5NiIgZmlsbD0iI0ZGQ0UyMSIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo="><span
-																	data-v-7cbc9828="" class="rate">5.0</span>
-															</div>
-															</section>
-															<p data-v-7cbc9828="" class="name">김병섭</p>
-															</section>
-															<section data-v-7cbc9828="" class="sub-info" style="margin-top: 40px">
-															<span data-v-7cbc9828="">경력 15년</span>
-															</section>
-														</div></a>
-												</div>
-											</div>
-											<div data-v-e4caeaf8="" tabindex="-1" data-index="10"
-												aria-hidden="false" class="slick-slide slick-active"
-												style="outline: none; width: 198px;">
-												<div data-v-e4caeaf8="">
-													<a data-v-7cbc9828="" data-v-9e560958=""
-														href="/profile/users/5052846?from=main_best_pro" class=""
-														tabindex="-1" data-v-e4caeaf8=""
-														style="width: 100%; display: inline-block;"><div
-															data-v-7cbc9828="" data-testid="main-pro-card"
-															class="main-pro-card">
-															<section data-v-7cbc9828="" class="header">
-															<div data-v-7cbc9828="" class="thumb"
-																data-src="https://dmmj3ljielax6.cloudfront.net/upload/profile/7fae6172-277c-4e30-b495-ec518de26fdd.jpg"
-																lazy="loaded"
-																style="background-image: url(&quot;https://dmmj3ljielax6.cloudfront.net/upload/profile/7fae6172-277c-4e30-b495-ec518de26fdd.jpg&quot;);"></div>
-															<div data-v-7cbc9828="" class="review">
-																<img data-v-7cbc9828=""
-																	src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im03LjQ5NiAxLjU5NiAxLjQwNyAyLjc0MiAzLjE0NS40NGMuOTEuMTI3IDEuMjc1IDEuMjA0LjYxNSAxLjgyMmwtMi4yNzYgMi4xMzQuNTM4IDMuMDE1Yy4xNTUuODcyLS43OTcgMS41MzgtMS42MTIgMS4xMjZMNi41IDExLjQ1MmwtMi44MTMgMS40MjNjLS44MTUuNDEyLTEuNzY3LS4yNTQtMS42MTItMS4xMjZsLjUzOC0zLjAxNUwuMzM3IDYuNmMtLjY2LS42MTgtLjI5Ni0xLjY5NS42MTUtMS44MjJsMy4xNDUtLjQ0IDEuNDA3LTIuNzQyQzUuOTEyLjggNy4wODguOCA3LjQ5NiAxLjU5NiIgZmlsbD0iI0ZGQ0UyMSIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo="><span
-																	data-v-7cbc9828="" class="rate">5.0</span>
-															</div>
-															</section>
-															<p data-v-7cbc9828="" class="name">이경표</p>
-															<section data-v-7cbc9828="" class="chips"><!---->
-															</section>
-															<section data-v-7cbc9828="" class="sub-info">
-															<span data-v-7cbc9828="">경력 15년</span>
-															</section>
-														</div></a>
-												</div>
-											</div>
-											<div data-v-e4caeaf8="" tabindex="-1" data-index="11"
-												aria-hidden="false" class="slick-slide slick-active"
-												style="outline: none; width: 198px;">
-												<div data-v-e4caeaf8="">
-													<a data-v-7cbc9828="" data-v-9e560958=""
-														href="/profile/users/5129759?from=main_best_pro" class=""
-														tabindex="-1" data-v-e4caeaf8=""
-														style="width: 100%; display: inline-block;"><div
-															data-v-7cbc9828="" data-testid="main-pro-card"
-															class="main-pro-card">
-															<section data-v-7cbc9828="" class="header">
-															<div data-v-7cbc9828="" class="thumb"
-																data-src="https://dmmj3ljielax6.cloudfront.net/upload/profile/58b03768-f20f-4a89-b324-1742dd20b7cf.jpg"
-																lazy="loaded"
-																style="background-image: url(&quot;https://dmmj3ljielax6.cloudfront.net/upload/profile/58b03768-f20f-4a89-b324-1742dd20b7cf.jpg&quot;);"></div>
-															<div data-v-7cbc9828="" class="review">
-																<img data-v-7cbc9828=""
-																	src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im03LjQ5NiAxLjU5NiAxLjQwNyAyLjc0MiAzLjE0NS40NGMuOTEuMTI3IDEuMjc1IDEuMjA0LjYxNSAxLjgyMmwtMi4yNzYgMi4xMzQuNTM4IDMuMDE1Yy4xNTUuODcyLS43OTcgMS41MzgtMS42MTIgMS4xMjZMNi41IDExLjQ1MmwtMi44MTMgMS40MjNjLS44MTUuNDEyLTEuNzY3LS4yNTQtMS42MTItMS4xMjZsLjUzOC0zLjAxNUwuMzM3IDYuNmMtLjY2LS42MTgtLjI5Ni0xLjY5NS42MTUtMS44MjJsMy4xNDUtLjQ0IDEuNDA3LTIuNzQyQzUuOTEyLjggNy4wODguOCA3LjQ5NiAxLjU5NiIgZmlsbD0iI0ZGQ0UyMSIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo="><span
-																	data-v-7cbc9828="" class="rate">5.0</span>
-															</div>
-															</section>
-															<p data-v-7cbc9828="" class="name">이건인테리어 배곧점_품질 좋고
-																실력 좋습니다:)</p>
-															<section data-v-7cbc9828="" class="chips">
-															</section>
-															<section data-v-7cbc9828="" class="sub-info">
-															<span data-v-7cbc9828="">경력 13년</span>
-															</section>
-														</div></a>
-												</div>
-											</div>
-											<div data-v-e4caeaf8="" tabindex="-1" data-index="12"
-												aria-hidden="false" class="slick-slide slick-active"
-												style="outline: none; width: 198px;">
-												<div data-v-e4caeaf8="">
-													<a data-v-7cbc9828="" data-v-9e560958=""
-														href="/profile/users/3827061?from=main_best_pro" class=""
-														tabindex="-1" data-v-e4caeaf8=""
-														style="width: 100%; display: inline-block;"><div
-															data-v-7cbc9828="" data-testid="main-pro-card"
-															class="main-pro-card">
-															<section data-v-7cbc9828="" class="header">
-															<div data-v-7cbc9828="" class="thumb"
-																data-src="https://dmmj3ljielax6.cloudfront.net/upload/profile/a3285393-742d-4557-b36c-5a975fc80371.jpg"
-																lazy="loaded"
-																style="background-image: url(&quot;https://dmmj3ljielax6.cloudfront.net/upload/profile/a3285393-742d-4557-b36c-5a975fc80371.jpg&quot;);"></div>
-															<div data-v-7cbc9828="" class="review">
-																<img data-v-7cbc9828=""
-																	src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im03LjQ5NiAxLjU5NiAxLjQwNyAyLjc0MiAzLjE0NS40NGMuOTEuMTI3IDEuMjc1IDEuMjA0LjYxNSAxLjgyMmwtMi4yNzYgMi4xMzQuNTM4IDMuMDE1Yy4xNTUuODcyLS43OTcgMS41MzgtMS42MTIgMS4xMjZMNi41IDExLjQ1MmwtMi44MTMgMS40MjNjLS44MTUuNDEyLTEuNzY3LS4yNTQtMS42MTItMS4xMjZsLjUzOC0zLjAxNUwuMzM3IDYuNmMtLjY2LS42MTgtLjI5Ni0xLjY5NS42MTUtMS44MjJsMy4xNDUtLjQ0IDEuNDA3LTIuNzQyQzUuOTEyLjggNy4wODguOCA3LjQ5NiAxLjU5NiIgZmlsbD0iI0ZGQ0UyMSIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo="><span
-																	data-v-7cbc9828="" class="rate">5.0</span>
-															</div>
-															</section>
-															<p data-v-7cbc9828="" class="name">도배킹</p>
-															<section data-v-7cbc9828="" class="chips"><!---->
-															</section>
-															<section data-v-7cbc9828="" class="sub-info">
-															<span data-v-7cbc9828="">경력 5년</span>
-															</section>
-														</div></a>
-												</div>
-											</div>
-											<div data-v-e4caeaf8="" tabindex="-1" data-index="12"
-												aria-hidden="false" class="slick-slide slick-active"
-												style="outline: none; width: 198px;">
-												<div data-v-e4caeaf8="">
-													<a data-v-7cbc9828="" data-v-9e560958=""
-														href="/profile/users/3827061?from=main_best_pro" class=""
-														tabindex="-1" data-v-e4caeaf8=""
-														style="width: 100%; display: inline-block;"><div
-															data-v-7cbc9828="" data-testid="main-pro-card"
-															class="main-pro-card">
-															<section data-v-7cbc9828="" class="header">
-															<div data-v-7cbc9828="" class="thumb"
-																data-src="https://dmmj3ljielax6.cloudfront.net/upload/profile/a3285393-742d-4557-b36c-5a975fc80371.jpg"
-																lazy="loaded"
-																style="background-image: url(&quot;https://dmmj3ljielax6.cloudfront.net/upload/profile/a3285393-742d-4557-b36c-5a975fc80371.jpg&quot;);"></div>
-															<div data-v-7cbc9828="" class="review">
-																<img data-v-7cbc9828=""
-																	src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im03LjQ5NiAxLjU5NiAxLjQwNyAyLjc0MiAzLjE0NS40NGMuOTEuMTI3IDEuMjc1IDEuMjA0LjYxNSAxLjgyMmwtMi4yNzYgMi4xMzQuNTM4IDMuMDE1Yy4xNTUuODcyLS43OTcgMS41MzgtMS42MTIgMS4xMjZMNi41IDExLjQ1MmwtMi44MTMgMS40MjNjLS44MTUuNDEyLTEuNzY3LS4yNTQtMS42MTItMS4xMjZsLjUzOC0zLjAxNUwuMzM3IDYuNmMtLjY2LS42MTgtLjI5Ni0xLjY5NS42MTUtMS44MjJsMy4xNDUtLjQ0IDEuNDA3LTIuNzQyQzUuOTEyLjggNy4wODguOCA3LjQ5NiAxLjU5NiIgZmlsbD0iI0ZGQ0UyMSIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo="><span
-																	data-v-7cbc9828="" class="rate">5.0</span>
-															</div>
-															</section>
-															<p data-v-7cbc9828="" class="name">도배킹</p>
-															<section data-v-7cbc9828="" class="chips"><!---->
-															</section>
-															<section data-v-7cbc9828="" class="sub-info">
-															<span data-v-7cbc9828="">경력 5년</span>
-															</section>
-														</div></a>
-												</div>
-											</div>
+									
+							<!-- 주니어 들어오는곳 -->
+								<section id="content-wrap-junior">
+								        <ul>
+								        </ul>		
 											
-										</div>
-									</div>
+											
 									
 								</div>
 							</div>
 						</div>
 					
-					</div>	<!--인기있는 주니어 베너 끝-->
-					<div data-v-078941e3="" data-v-38e68602="" class="main-app-banner container"></div>
+					</div> --%>	<!--인기있는 주니어 베너 끝-->
 					
+						<!-- 주니어 들어오는곳 -->
+							<section id="content-wrap-js">
+						        <ul style="text-align: center;">
+						        </ul>
+						    </section>
 					
 					<!-- 분야 -->
 					<div data-v-a9f85b62="" data-v-38e68602=""
@@ -512,7 +445,6 @@
 									</div>
 								</div>
 							</div>
-							
 						</div>
 					</div><!-- 전문가로 활동하시나요? 주니어 가입 끝-->
 
@@ -525,7 +457,8 @@
 <script src="${pageContext.request.contextPath}/static/js/mainpageSeo/board.js"></script>
 <script>
 	let boards = `${boards}`;
-	console.log(boards);
+	let boardsJunior = `${JSON.stringify(boardsJunior)}`;
+	/* let boardsJunior = `${boardsJunior}`; */
 	let contextPath = `${pageContext.request.contextPath}`;
 	
 	let $form = $("form[name='page-form']");
@@ -536,6 +469,7 @@
 	});
 	</script>
 <script src="${pageContext.request.contextPath}/static/js/mainpageSeo/list.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mainpageSeo/juniorlist.js"></script>
 
 <script src="/static/js/mainpageSeo/main-page.js"></script>
 </html>
