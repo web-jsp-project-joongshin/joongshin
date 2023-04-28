@@ -115,6 +115,9 @@
 								</div>
 
 								<article class="community-feed-list">
+								<ul>
+								
+								</ul>
 								<!-- 게시글 forEach자리 
 									<ul class="feed-list">
 										<li class="feed-item">
@@ -227,8 +230,18 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
 <script>
-let boards =`${boards}`; </script>
+let boards = `${boards}`;
+console.log(boards);
+let contextPath = `${pageContext.request.contextPath}`;
+
+let $form = $("form[name='page-form']");
+$("a.change-page").on("click", function(e){
+	e.preventDefault();
+	$form.find("input[name='page']").val($(this).attr("href"));
+	$form.submit();
+});
+</script>
 <!-- <script src="../../static/js/community-wmoon/modal.js"></script>-->
 <script src="${pageContext.request.contextPath}/static/js/mainpageSeo/board.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/mainpageSeo/board-list.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mainpageSeo/community-board-list.js"></script>
 </html>
