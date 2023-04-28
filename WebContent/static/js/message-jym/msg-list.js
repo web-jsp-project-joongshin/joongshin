@@ -6,10 +6,10 @@ let messagesJSONArray;
 
 receive = receive ? receive : false;
 console.log(messages);
+
 if(messages) {
 	messagesJSONArray = JSON.parse(messages);
-	
-	showMessageList();	
+	showMessageList();
 } else {
 	location.href = "/messageListOk.message?receive=" + receive;
 }
@@ -58,7 +58,7 @@ function showMessageList() {
 	                    </div>
 	                </section>
 	                <div class="row last-message">
-	                    <p>${msg.messageContents.substr(0, (msg.messageContents <= 30 ? msg.messageContents.length : 30))}</p>
+	                    <p>${msg.contentsList[0].substr(0, (msg.contentsList[0].length <= 30 ? msg.contentsList[0].length : 30) )}</p>
 	                </div>
 	                <div class="divider"></div>
 	                <div class="row quote-info">

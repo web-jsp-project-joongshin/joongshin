@@ -88,10 +88,9 @@
 	const $userTypeText = $('span.user-type');
 	const $userNameText = $('span.name-length');
 	const $userEmailText = $('span.id-length');
-	console.log(userInfo);
 
 	$userTypeText.prop("innerText", userType == 0 ? '고객님' : '고수님');
-	$userNameText.prop("innerText", userInfo.username);
+	$userNameText.prop("innerText", userInfo.userName);
 	$userEmailText.prop("innerText", userInfo.userEmail);
 </script>
 <script src="${pageContext.request.contextPath}/static/js/mypage-jin/mypage-main.js"></script>

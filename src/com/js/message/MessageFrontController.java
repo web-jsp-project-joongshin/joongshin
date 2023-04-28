@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.js.Result;
 import com.js.message.controller.MessageListOkController;
 import com.js.message.controller.MessageOkController;
+import com.js.message.controller.WriteOkController;
 import com.js.util.Branch;
 import com.js.util.FrontControllerAdapter;
 
@@ -25,5 +26,10 @@ public class MessageFrontController extends FrontControllerAdapter<MessageFrontC
 	@Branch
 	public Result messageOk(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		return new MessageOkController().execute(req, resp);
+	}
+	
+	@Branch
+	public Result writeOk(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		return new WriteOkController().execute(req, resp);
 	}
 }
