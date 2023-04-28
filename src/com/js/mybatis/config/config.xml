@@ -19,6 +19,9 @@
 
 		<typeAlias type="com.js.user.domain.UserVO" alias="userVO"/>
 		
+		<typeAlias type="com.js.comment.domain.BoardCommentVO" alias="commentVO"/>
+		<typeAlias type="com.js.comment.domain.BoardCommentDTO" alias="commentDTO"/>
+		
 
 	</typeAliases>
 
@@ -40,6 +43,7 @@
 		<mapper resource="com/js/mybatis/mapper/boardMapper.xml"/>
 		<mapper resource="com/js/mybatis/mapper/messageMapper.xml"/>
 		<mapper resource="com/js/mybatis/mapper/juniorMapper.xml"/>
+		<mapper resource="com/js/mybatis/mapper/mypageMapper.xml"/>
 	</mappers>
 </configuration>
 

@@ -30,7 +30,7 @@
 									<span class="d-block form-file-text" style="pointer-events: none;">No file chosen</span>
 								</label>
 							</div>
-							<span class="image-count sg-text-body2 sg-font-regular">0/15</span>
+							<span class="image-count sg-text-body2 sg-font-regular"></span>
 						</div>
 					</div>
 					<div class="editor-body-container is-bottom-margin">
@@ -81,6 +81,8 @@
 <script>
 	const $textArea = $("textarea");
 	const $placeholder = $(".editor-contents-textarea-placeholder");
+	const $imageCount = $('.image-count');
+	var count = 0;
 	
 	$(document).ready(function() {
 		$textArea.on('input', function() {
@@ -91,6 +93,8 @@
 			}
 		});
 	});
+	
+	$imageCount.prop('innerText', count+"/5");
 	
 	
 </script>
