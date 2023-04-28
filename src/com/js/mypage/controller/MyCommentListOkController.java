@@ -6,6 +6,7 @@ import java.util.HashMap;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -21,7 +22,9 @@ public class MyCommentListOkController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MypageDAO mypageDAO = new MypageDAO();
 		Result result = new Result();
-		Long userId = Long.valueOf(req.getParameter("userId"));
+		HttpSession session = req.getSession();
+
+		Long userId = (Long)session.getAttribute("userId");
 		String temp = req.getParameter("page");
 		int page = temp == null ? 1 : Integer.parseInt(temp);
 		
@@ -36,7 +39,7 @@ public class MyCommentListOkController implements Action {
 		JSONArray jsonArray = new JSONArray();
 		mypageDAO.selectAllCommentList(pagable).stream().map(item -> new JSONObject(item)).forEach(jsonArray::put);
 		req.setAttribute("myCommentList", jsonArray.toString());
-		req.setAttribute("userId", userId);
+		
 		req.setAttribute("total", mypageDAO.getTotalCommentList(userId));
 		req.setAttribute("page", page);
 		req.setAttribute("startPage", commentCriteria.getStartPage());

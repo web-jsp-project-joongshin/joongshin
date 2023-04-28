@@ -15,13 +15,13 @@
 <link href="../../static/css/mypage-css-jin/withdrawal.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<%@ include file="../mainpageSeo/header.jsp" %>
+<%@ include file="../mainpageSeo/loginHeader.jsp" %>
 
 	<div id="app-body">
 		<div class="container container-md">
 			<main class="account-info-container">
 				<h1>계정 탈퇴</h1>
-				<form action="${pageContext.request.contextPath}/myWithdrawalOk.mypage?userId=${userId}" name="deleteUser" method="post">
+				<form action="${pageContext.request.contextPath}/myWithdrawalOk.mypage" name="deleteUser" method="post">
 				<section>
 					<article>
 						<h3>숨고 탈퇴 전 꼭 확인해 주세요</h3>
@@ -110,8 +110,6 @@
 <jsp:include page="../mainpageSeo/footer.jsp"/>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
-	const userId = `${userId}`;
-	
 	/* 버튼 클릭하면 숨겨져있는 요소들 보임 */
 	const radioButtons = document.getElementsByName("radio-button");
 	const hiddenDivs = document.querySelectorAll('[id^="hidden-div-"]');

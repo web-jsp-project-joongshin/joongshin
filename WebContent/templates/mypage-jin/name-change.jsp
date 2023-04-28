@@ -24,10 +24,20 @@
 
 </head>
 <body>
-<%@ include file="../mainpageSeo/header.jsp" %>
+<c:set var="userId" value="${sessionScope.userId}"/>
+
+<c:choose>
+  <c:when test="${not empty userId}">
+    <jsp:include page="../mainpageSeo/loginHeader.jsp"/>
+  </c:when>
+  <c:otherwise>
+    <jsp:include page="../mainpageSeo/header.jsp"/>
+  </c:otherwise>
+</c:choose>
+
 	<div id="app-body">
 		<div class="container container-md">
-			<form class="account-info-container" action="${pageContext.request.contextPath}/myNameChangeOk.mypage?userId=${userId}" name="updateName" method="post">
+			<form class="account-info-container" action="${pageContext.request.contextPath}/myNameChangeOk.mypage" name="updateName" method="post">
 				<h1>이름 수정</h1>
 				<div  
 					class="sign-container secondary lg">
@@ -63,7 +73,6 @@
 <jsp:include page="../mainpageSeo/footer.jsp"/>
 <script>
 	var pass = false;
-	const userId = `${userId}`;
 	
 	function onClickchangeName() {
 		if(pass) {

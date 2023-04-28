@@ -18,9 +18,12 @@
 		<typeAlias type="com.js.adminUser.domain.AdminUserDTO" alias="AdminUserDTO"/>
 
 		<typeAlias type="com.js.user.domain.UserVO" alias="userVO"/>
+		<typeAlias type="com.js.juniorUser.domain.JuniorUserVO" alias="juniorUserVO"/>
 		
 		<typeAlias type="com.js.comment.domain.BoardCommentVO" alias="commentVO"/>
 		<typeAlias type="com.js.comment.domain.BoardCommentDTO" alias="commentDTO"/>
+		
+		<typeAlias type="com.js.file.domain.ResumeFileVO" alias="resumeFileVO"/>
 		
 
 	</typeAliases>
@@ -44,6 +47,7 @@
 		<mapper resource="com/js/mybatis/mapper/messageMapper.xml"/>
 		<mapper resource="com/js/mybatis/mapper/juniorMapper.xml"/>
 		<mapper resource="com/js/mybatis/mapper/mypageMapper.xml"/>
+		<mapper resource="com/js/mybatis/mapper/resumeFileMapper.xml"/>
 	</mappers>
 </configuration>
 

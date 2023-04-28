@@ -7,6 +7,8 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.js.board.domain.BoardDTO;
 import com.js.comment.domain.BoardCommentDTO;
+import com.js.file.domain.ResumeFileVO;
+import com.js.juniorUser.domain.JuniorUserVO;
 import com.js.mybatis.config.MyBatisConfig;
 import com.js.user.domain.UserVO;
 
@@ -68,4 +70,15 @@ public class MypageDAO {
 	public void deleteUser(String userId) {
 		sqlSession.delete("mypage.deleteUser", userId);
 	}
+	
+//	이력서 조회
+	public JuniorUserVO selectResume(Long userId) {
+		return sqlSession.selectOne("mypage.selectResume", userId);
+	}
+	
+//	이력서 수정
+	public void updateResume(JuniorUserVO juniorUserVO) {
+		sqlSession.update("mypage.updateResume", juniorUserVO);
+	}
+
 }

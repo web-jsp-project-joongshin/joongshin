@@ -16,7 +16,16 @@
 
 </head>
 <body>
-<%@ include file="../mainpageSeo/header.jsp" %>
+<c:set var="userId" value="${sessionScope.userId}"/>
+
+<c:choose>
+  <c:when test="${not empty userId}">
+    <jsp:include page="../mainpageSeo/loginHeader.jsp"/>
+  </c:when>
+  <c:otherwise>
+    <jsp:include page="../mainpageSeo/header.jsp"/>
+  </c:otherwise>
+</c:choose>
 
 	<div id="app-body">
 		<div  class="my-page-community-activity-container">
@@ -29,7 +38,7 @@
 					<li class="tab router-link-exact-active router-link-active sg-text-subhead4 sg-font-bold sg-text-gray-900 selected">
 						작성 글</li>
 					<li class="tab sg-text-body2 sg-font-regular sg-text-gray-400">
-					<a href="${pageContext.request.contextPath}/myCommentListOk.mypage?userId=${userId}" style="text-decoration: none; color: #2e2e2e; font-weight: 700;">
+					<a href="${pageContext.request.contextPath}/myCommentListOk.mypage" style="text-decoration: none; color: #2e2e2e; font-weight: 700;">
 						작성 댓글</a></li>
 				</ul>
 				<article class="pro-knowhow-list">
@@ -57,7 +66,6 @@
 <jsp:include page="../mainpageSeo/footer.jsp"/>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
-	const userId = `${userId}`; // 위 jsp내에서 ${userId} 하고 사용하고 싶다면 이렇게 아래에서 선언해주어야 합니다.
 	const myBoardList = JSON.parse(`${myBoardList}`);
 	console.log(myBoardList);
 </script>
