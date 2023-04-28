@@ -19,7 +19,7 @@ import com.js.board.domain.BoardDTO;
 import com.js.board.domain.Criteria;
 import com.js.board.domain.Search;
 
-public class ListOkCommunityController implements Action {
+public class comuListOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -42,7 +42,7 @@ public class ListOkCommunityController implements Action {
 		pagable.put("types", search.getTypes());
 		pagable.put("keyword", search.getKeyword());
 		
-		boardDAO.selectComuAll(pagable).stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
+		boardDAO.comuSelectAll(pagable).stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
 		req.setAttribute("boards", jsonArray.toString());
 
 

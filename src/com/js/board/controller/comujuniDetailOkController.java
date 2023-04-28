@@ -10,7 +10,7 @@ import com.js.Action;
 import com.js.Result;
 import com.js.board.dao.BoardDAO;
 
-public class DetailOkController implements Action {
+public class comujuniDetailOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {

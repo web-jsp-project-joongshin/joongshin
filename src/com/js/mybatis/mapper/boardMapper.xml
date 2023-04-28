@@ -55,13 +55,22 @@
 			order by board_id desc
 			limit 0, 3
 	</select>
-	
-	<select id="selectComuAll" resultType="boardDTO">
+	<!-- 커뮤에서 일반 유저 게시물 조회 -->
+	<select id="comuSelectAll" resultType="boardDTO">
 		select board_id, b.user_id, m.user_name, board_title, board_content
 		from tbl_user m join tbl_board b
 			on m.user_id = b.user_id
 			order by board_id desc
 	</select>
+	
+	<!-- 커뮤에서 주니어 유저 게시물 조회 -->
+	<select id="comuSelectAll" resultType="boardDTO">
+		select board_id, b.user_id, m.user_name, board_title, board_content
+		from tbl_user m join tbl_board b
+			on m.user_id = b.user_id
+			order by board_id desc
+	</select>
+	
 
 	 <insert id="insert">
 	 	insert into tbl_board

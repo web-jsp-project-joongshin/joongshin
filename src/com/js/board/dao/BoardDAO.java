@@ -22,9 +22,14 @@ public class BoardDAO {
 	public List<BoardDTO> selectAll(HashMap<String, Object> pagable){
 		return sqlSession.selectList("board.selectAll", pagable);
 	}
-//	게시판에서 전체 조회	
-	public List<BoardDTO> selectComuAll(HashMap<String, Object> pagable){
-		return sqlSession.selectList("board.selectComuAll", pagable);
+//	게시판에서 이용자 유저 전체 조회	
+	public List<BoardDTO> comuSelectAll(HashMap<String, Object> pagable){
+		return sqlSession.selectList("board.comuSelectAll", pagable);
+	}
+	
+//	게시판에서 주니어 유저 전체 조회	
+	public List<BoardDTO> comujuniSelectAll(HashMap<String, Object> pagable){
+		return sqlSession.selectList("board.comuSelectAll", pagable);
 	}
 
 	public List<BoardDTO> boardSelectAll() {
