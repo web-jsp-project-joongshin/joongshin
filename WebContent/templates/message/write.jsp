@@ -13,6 +13,7 @@
 <body>
 	<%@ include file="../mainpageSeo/header.jsp" %>
 	<div id="app-body">
+		
 		<div class="community-container container">
 			<div class="soomgo-life-container">
 				<section class="write-post-container">

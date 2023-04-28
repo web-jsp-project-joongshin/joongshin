@@ -5,12 +5,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import com.js.Action;
 import com.js.Result;
 import com.js.message.dao.MessageDAO;
@@ -25,9 +29,12 @@ public class MessageListOkController implements Action{
 		MessageDAO dao = new MessageDAO();
 		Result result = new Result();
 		Map<String, Object> data = new HashMap<>();
+		HttpSession session = req.getSession();
+		
+		session.setAttribute("userId", 3);
 		
 		//TODO user id by session
-		Long userId = Long.valueOf(Optional.ofNullable("3").orElse("0"));
+		Long userId = Long.valueOf(Optional.ofNullable(String.valueOf(session.getAttribute("userId"))).orElse("0"));
 		Boolean receive = Boolean.valueOf(req.getParameter("receive"));
 		String keyword = Optional.ofNullable(req.getParameter("keyword")).orElse("");
 		

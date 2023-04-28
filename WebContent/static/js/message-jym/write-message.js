@@ -7,7 +7,6 @@ function send() {
 		url: "/writeOk.message",
 		data: { 
 			contents: contents,
-			sendUserId: 3,
 			receiveUserId: 6 
 		},
 		success: function(result) {
