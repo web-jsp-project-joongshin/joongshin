@@ -22,8 +22,10 @@ public class BoardDAO {
 	public List<BoardDTO> selectAll(HashMap<String, Object> pagable){
 		return sqlSession.selectList("board.selectAll", pagable);
 	}
-	
-
+//	게시판에서 전체 조회	
+	public List<BoardDTO> selectComuAll(HashMap<String, Object> pagable){
+		return sqlSession.selectList("board.selectComuAll", pagable);
+	}
 
 	public List<BoardDTO> boardSelectAll() {
 		return sqlSession.selectList("board.boardSelectAll");
@@ -31,10 +33,7 @@ public class BoardDAO {
 //	전체 게시글 개수 조회
 	public int getTotal(Search search) {
 		return sqlSession.selectOne("board.getTotal", search);
-
 	}
-	
-
 	//게시글 추가
 		public void insert(BoardVO boardVO) {
 			sqlSession.insert("board.insert", boardVO);

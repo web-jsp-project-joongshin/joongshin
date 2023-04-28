@@ -42,7 +42,7 @@ public class ListOkCommunityController implements Action {
 		pagable.put("types", search.getTypes());
 		pagable.put("keyword", search.getKeyword());
 		
-		boardDAO.selectAll(pagable).stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
+		boardDAO.selectComuAll(pagable).stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
 		req.setAttribute("boards", jsonArray.toString());
 
 

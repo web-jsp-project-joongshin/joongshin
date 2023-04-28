@@ -10,8 +10,7 @@
 		private String boardTitle;
 		private String boardContent;
 		private Long userId;
-		private String userName;
-		
+		private String userName;		
 		public BoardDTO() {;}
 	
 		public Long getBoardId() {

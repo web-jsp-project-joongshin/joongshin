@@ -13,7 +13,7 @@
 		<typeAlias type="com.js.board.domain.BoardDTO" alias="boardDTO"/>
 		<typeAlias type="com.js.message.domain.MessageVO" alias="messageVO"/>
 		<typeAlias type="com.js.message.domain.MessageDTO" alias="messageDTO"/>
-
+		
 		<typeAlias type="com.js.juniorUser.domain.JuniorUserDTO" alias="juniorUserDTO"/>
 		<typeAlias type="com.js.adminUser.domain.AdminUserDTO" alias="AdminUserDTO"/>
 
