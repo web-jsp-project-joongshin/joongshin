@@ -11,7 +11,7 @@ function showList(){
 	juniors.forEach(board => {
 		text += `
 			<tr>	
-                <td><input type="checkbox" class="checkbox"/></td>
+                <td><input type="checkbox" class="pcheckbox"/></td>
                 <td>${board.userId}</td>
                 <td><a href="javascript:location.href='${contextPath}/templates/manager-doeunn/juniorBoardDetail.jsp'">${board.userName}</a></td>
                 <td>${board.userResume}</td>

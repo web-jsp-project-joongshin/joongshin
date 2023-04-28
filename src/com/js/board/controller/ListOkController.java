@@ -34,6 +34,7 @@ public class ListOkController implements Action {
 		boardDAO.selectAll().stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
 		req.setAttribute("boards", jsonArray.toString());
 		result.setPath("templates/board/list.jsp");
+		
 		return result;
 	}
 }

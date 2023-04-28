@@ -3,7 +3,7 @@ const $naviTitle = $('.navi-title');
 const $boardList = $('.board-list li');
 const $inquiriesList = $('.inquiries-list li');
 const $checkboxTop = $('.check-top');
-const $checkboxes = $('.checkbox');
+const $checkboxes = $('.pcheckbox');
 
 // 사이드 바 이벤트 관련 코드
 $arrows.eq(0).css('transform', 'rotate(180deg)')

@@ -35,7 +35,7 @@
                         <div class="arrow"></div>
                     </div>
                     <ul class="inquiries-list list">
-                        <li onclick="location.href='inquiriesList.jsp'">전체 문의목록</li>
+                        <li onclick="location.href='/listBoardOk.admin'">전체 문의목록</li>
                     </ul>
                </section>
             </div>

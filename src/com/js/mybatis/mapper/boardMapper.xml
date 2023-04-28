@@ -41,7 +41,7 @@
 	 </insert> -->
 	 
 	 <select id="boardSelectAll" resultType="boardDTO">
-		select board_id, board_title, board_content, board_creation_date, board_reply_date, board_type, m.user_id, m.user_name
+		select board_id, board_title, board_content, board_creation_date, board_reply_date, board_type, board_status, m.user_id, m.user_name
 		from tbl_user m join tbl_board b
 		on m.user_id = b.user_id
 	</select>
@@ -57,9 +57,15 @@
 	
 	<insert id="insert">
 		insert into tbl_board
-		(board_id, board_title, board_content, board_creation_date, board_reply_date, user_id)
-		values(#{boardId}, #{boardTitle}, #{boardContent}, #{boardCreationDate}, #{boardReplyDate}, #{userId})
+		(board_id, board_title, board_content, board_creation_date, board_reply_date, board_status, user_id)
+		values(#{boardId}, #{boardTitle}, #{boardContent}, #{boardCreationDate}, #{boardReplyDate}, #{boardStatus}, #{userId})
 	</insert>
+	
+	<update id="updateBoard">
+		update tbl_board 
+		set 
+		where
+	</update>
 	
 	<delete id="deleteAll">
 		delete * from tbl_board;

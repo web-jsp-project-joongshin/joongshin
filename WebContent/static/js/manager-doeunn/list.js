@@ -11,13 +11,13 @@ function showList(){
 	boards1.forEach(board => {
 		text += `
 			<tr>	
-		        <td><input type="checkbox" class="checkbox"/></td>
+		        <td><input type="checkbox" class="pcheckbox"/></td>
 		        <td>${board.userId}</td>
 		        <td><a href="javascript:location.href='${contextPath}/templates/manager-doeunn/inquiriesAnswer.jsp'">${board.boardTitle}</a></td>
 		        <td>${board.boardContent}</td>
 				<td class="date">` + elapsedTime(board.boardCreationDate)+`</td>
 		        <td>${board.boardReplyDate}</td>
-		        <td class="pending">답변완료</td>
+		        <td class="pending">${board.boardStatus}</td>
 						 
 			`;
 			/*if(files[board.boardId]){

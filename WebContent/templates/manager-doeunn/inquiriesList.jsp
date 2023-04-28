@@ -25,8 +25,8 @@
                         <div class="arrow"></div>
                     </div>
                     <ul class="board-list list">
-                        <li onclick="location.href='userBoardList.jsp'">이용자 게시판</li>
-						<li onclick="location.href='juniorBoardList.jsp'">주니어 게시판</li>
+                        <li onclick="location.href='/'">이용자 게시판</li>
+						<li onclick="location.href='/listJuniorOk.junior'">주니어 게시판</li>
                     </ul>
                </section>
 
@@ -37,7 +37,7 @@
                         <div class="arrow"></div>
                     </div>
                     <ul class="inquiries-list list">
-                        <li onclick="location.href='inquiriesList.jsp'">전체 문의목록</li>
+                        <li onclick="location.href='/listBoardOk.admin'">전체 문의목록</li>
                     </ul>
                </section>
             </div>
@@ -71,7 +71,7 @@
 	                        </tr>
 	                    </thead>
 		                    <tr>
-		                        <td><input type="checkbox" class="checkbox"/></td>
+		                        <td><input type="checkbox" class="pcheckbox"/></td>
 		                        <td>1</td>
 		                        <td>제목이 들어갈 자리입니다</td>
 		                        <td>내용이 들어갈 자리입니다</td>

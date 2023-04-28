@@ -14,6 +14,7 @@
 		private Long boardReadCount;
 		private Long userId;
 		private String userName;
+		private String boardStatus;
 		
 		public BoardDTO() {;}
 		
@@ -86,12 +87,23 @@
 		public void setUserName(String userName) {
 			this.userName = userName;
 		}
+		
+		public String getBoardStatus() {
+			return boardStatus;
+		}
+
+		public void setBoardStatus(String boardStatus) {
+			this.boardStatus = boardStatus;
+		}
+
+		
 
 		@Override
 		public String toString() {
 			return "BoardDTO [boardId=" + boardId + ", boardTitle=" + boardTitle + ", boardContent=" + boardContent
 					+ ", boardCreationDate=" + boardCreationDate + ", boardReplyDate=" + boardReplyDate
-					+ ", boardReadCount=" + boardReadCount + ", userId=" + userId + ", userName=" + userName + "]";
+					+ ", boardReadCount=" + boardReadCount + ", userId=" + userId + ", userName=" + userName
+					+ ", boardStatus=" + boardStatus + "]";
 		}
 
 		@Override
