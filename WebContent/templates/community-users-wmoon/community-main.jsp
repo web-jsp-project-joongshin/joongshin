@@ -27,7 +27,7 @@
 											<button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-primary" id="__BVID__785__BV_toggle_" onclick="location.href='http://localhost:8090/joongshin/templates/community-users-wmoon/write.jsp'">글쓰기</button>
 											<ul role="menu" tabindex="-1" class="dropdown-menu dropdown-menu-right" aria-labelledby="__BVID__785__BV_toggle_">
 												<li class="dropdown-menu-item">
-													<a href="https://soomgo.com/community/soomgo-life/post/write?topicId=all" class="dropdown-item" role="menuitem" targer="_self">
+													<a href="/" class="dropdown-item" role="menuitem" targer="_self">
 														<div class="dropdown-menu-item-wrapper">
 															<div class="dropdown-menu-item-text">
 																<span class="dropdown-menu-item-title sg-text-subhead5 sg-font-medium sg-text-gray-900">이용자 게시글</span>
@@ -38,7 +38,7 @@
 													</a>
 												</li>
 												<li role="presentation" class="dropdown-menu-item">
-													<a href="https://soomgo.com/community/soomgo-life/all" class="dropdown-item">
+													<a href="/" class="dropdown-item">
 														<div class="dropdown-menu-item-wrapper">
 															<div class="dropdown-menu-item-text">
 																<span class="dropdown-menu-item-title sg-text-subhead5 sg-font-medium sg-text-gray-900">주니어 게시글</span>
@@ -88,13 +88,7 @@
 													<span class="sg-text-subhead4 sg-font-bold sg-text-gray-900">전체</span>
 												</a>
 											</li>
-											<li></li>
-											<li></li>
-											<li></li>
-											<li></li>
-											<li></li>
-											<li></li>
-											<li></li>
+									
 										</ul>
 									</section>
 								</div>
@@ -114,38 +108,21 @@
 									</form>
 								</div>
 
-								<article class="community-feed-list">
-								<!-- 게시글 forEach자리 
+
+
+
+							
+								<section class="community-feed-list">
 									<ul class="feed-list">
-										<li class="feed-item">
-											<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/view-detail.jsp" class>
-												<div class="feed-content service-address-info">
-													<div>
-														<section class="item-wrapper">
-															<h3 class="sg-text-subhead5 sg-font-medium sg-text-gray-900">${board.boardTitle}</h3>
-															<p class="content sg-text-body2 sg-font-regular sg-text-gray-500">sql이나 Java 자격증 찾습니다 전문가</p>
-														</section>
-														<p data-v-23814058="" class="sub-information sg-text-description sg-font-regular sg-text-gray-500"></p>
-													</div>
-											
-												</div>
-												<div class="feed-footer">
-													<div class="user-interaction">
-														<span class="like sg-text-description sg-font-regular sg-text-gray-300">2</span>
-														<span class="comment sg-text-description sg-font-regular sg-text-gray-300">1</span>
-													</div>
-													<span class="sg-text-description sg-font-regular sg-text-gray-300 time">25분 전</span>
-												</div>
-											</a>
-										</li>
+										
 										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
+								
 									</ul>
-								-->
-									<div></div>
-								</article>
+								</section>
+								
+								
+								
+								
 							</div>
 						</div>
 						<a></a>
@@ -227,8 +204,18 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
 <script>
-let boards =`${boards}`; </script>
+let boards = `${boards}`;
+console.log(boards);
+let contextPath = `${pageContext.request.contextPath}`;
+
+let $form = $("form[name='page-form']");
+$("a.change-page").on("click", function(e){
+	e.preventDefault();
+	$form.find("input[name='page']").val($(this).attr("href"));
+	$form.submit();
+});
+</script>
 <!-- <script src="../../static/js/community-wmoon/modal.js"></script>-->
 <script src="${pageContext.request.contextPath}/static/js/mainpageSeo/board.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/mainpageSeo/board-list.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/community-wmoon/board-list.js"></script>
 </html>

@@ -31,8 +31,7 @@
   	<url-pattern>*.adminUser</url-pattern>
   </servlet-mapping>
   
-  
-
+ 
 <servlet>
   	<servlet-name>JuniorUser</servlet-name>
   	<servlet-class>com.js.juniorUser.JuniorUserFrontController</servlet-class>

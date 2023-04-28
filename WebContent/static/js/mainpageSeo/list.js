@@ -21,6 +21,7 @@ function showList(){
 		                    </h6>
 		                </section>
 			`;
+			
 			/*if(files[board.boardId]){
 				text += `<img src="${contextPath}/upload/${files[board.boardId].fileSystemName}" class="preview">`;
 			}*/
