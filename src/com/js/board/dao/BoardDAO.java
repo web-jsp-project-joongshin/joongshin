@@ -10,6 +10,8 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.js.board.domain.BoardDTO;
+import com.js.board.domain.BoardVO;
+import com.js.board.domain.Search;
 import com.js.mybatis.config.MyBatisConfig;
 
 public class BoardDAO {
@@ -32,7 +34,19 @@ public SqlSession sqlSession;
 	//아이디 검사
 	public boolean checkId(String boardId) {
 		return (Integer)sqlSession.selectOne("user_id", boardId) == 1;
-	} 
+	}
+	
+	public void delete(Long boardId) {
+		sqlSession.delete("board.delete", boardId);
+	}
+	
+	public int getTotal(Search search) {
+		return sqlSession.selectOne("board.getTotal", search);
+	}
+	
+	public void insert(BoardVO boardVO) {
+		sqlSession.insert("board.insert", boardVO);
+	}
 }
 
 

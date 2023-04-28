@@ -52,7 +52,7 @@
                     </div>
                     <button type="button" class="delete-btn">게시물 삭제</button>
                 </section>
-                <table border="1" id="content-wrap">
+                <table border="1" id="content-wraps">
                     <thead>
                         <tr>
                             <th><input type="checkbox" class="check-top"/></th>

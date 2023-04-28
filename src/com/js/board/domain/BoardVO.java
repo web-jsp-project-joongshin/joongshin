@@ -15,6 +15,8 @@ public class BoardVO {
 	private String boardTitle;
 	private String boardContent;
 	private String boardType;
+	private String boardCreationDate;
+	private String boardReplyDate;
 	
 	public BoardVO() {;}
 
@@ -58,10 +60,29 @@ public class BoardVO {
 		this.boardType = boardType;
 	}
 
+	public String getBoardCreationDate() {
+		return boardCreationDate;
+	}
+
+	public void setBoardCreationDate(String boardCreationDate) {
+		this.boardCreationDate = boardCreationDate;
+	}
+
+	public String getBoardReplyDate() {
+		return boardReplyDate;
+	}
+
+	public void setBoardReplyDate(String boardReplyDate) {
+		this.boardReplyDate = boardReplyDate;
+	}
+	
+	
+
 	@Override
 	public String toString() {
 		return "BoardVO [boardId=" + boardId + ", userId=" + userId + ", boardTitle=" + boardTitle + ", boardContent="
-				+ boardContent + ", boardType=" + boardType + "]";
+				+ boardContent + ", boardType=" + boardType + ", boardCreationDate=" + boardCreationDate
+				+ ", boardReplyDate=" + boardReplyDate + "]";
 	}
 
 	@Override

@@ -5,7 +5,7 @@ function showList(){
 	console.log(juniors);
 	juniors = JSON.parse(juniors);
 	//files = JSON.parse(files);
-	const $table = $("#content-wrap");
+	const $table = $("#content-wraps");
 	let text = "";
 	
 	juniors.forEach(board => {
@@ -13,7 +13,7 @@ function showList(){
 			<tr>	
                 <td><input type="checkbox" class="checkbox"/></td>
                 <td>${board.userId}</td>
-                <td>${board.userName}</td>
+                <td><a href="javascript:location.href='${contextPath}/templates/manager-doeunn/juniorBoardDetail.jsp'">${board.userName}</a></td>
                 <td>${board.userResume}</td>
                 <td>${board.userCareerYears}</td>
                 <td>${board.boardRegisterDate}</td>

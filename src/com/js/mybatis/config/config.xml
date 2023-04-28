@@ -14,6 +14,7 @@
 		<typeAlias type="com.js.message.domain.MessageVO" alias="messageVO"/>
 		<typeAlias type="com.js.message.domain.MessageDTO" alias="messageDTO"/>
 		<typeAlias type="com.js.juniorUser.domain.JuniorUserDTO" alias="juniorUserDTO"/>
+		<typeAlias type="com.js.juniorUser.domain.JuniorUserDTO" alias="userVO"/>
 	</typeAliases>
 
 	<environments default="mysql">

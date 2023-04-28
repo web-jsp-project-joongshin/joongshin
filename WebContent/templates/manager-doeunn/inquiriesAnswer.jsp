@@ -48,13 +48,13 @@
                 <div class="line">
                     <h4>회원 번호</h4>
                     <div class="item-box">
-                        <div class="info-box"></div>
+                        <div class="info-box">${board.user_id}</div>
                     </div>
                 </div>
                 <div class="line">
                     <h4>질문 등록일</h4>
                     <div class="item-box">
-                        <div class="info-box"></div>
+                        <div class="info-box">${creationDate}</div>
                     </div>
                 </div>
                 <div class="line">

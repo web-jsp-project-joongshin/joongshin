@@ -6,20 +6,62 @@
  컬럼을 조회하는 내용이다.  -->
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="board">
+	
+	
+	<sql id="search">
+		<trim prefixOverrides="or">
+			<foreach item="type" collection="types">
+				<trim prefix="or">
+					<choose>
+						<when test="type == 'title'.toString()">
+							board_title like concat('%', #{keyword}, '%')
+						</when>
+						<when test="type == 'content'.toString()">
+							board_content like concat('%', #{keyword}, '%')
+						</when>
+						<when test="type == 'writer'.toString()">
+							user_name like concat('%', #{keyword}, '%')
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</sql>
+	
+	
 	<select id="selectAll" resultType="boardDTO">
 		select board_id, board_title, board_content, board_type, m.user_id, user_name 
 		from tbl_user m join tbl_board b 
 		on m.user_id = b.user_id
 	</select>
-	 <insert id="insert">
+	 <!-- <insert id="insert">
 	 	insert into test.tbl_test
 	 	board_title, board_content, board_register_date, board_update_date, user_
 	 	values(#{boardTitle}, #{boardContent},#{boardDate},#{userNumber});
-	 </insert>
+	 </insert> -->
 	 
 	 <select id="boardSelectAll" resultType="boardDTO">
-		select board_id, board_title, board_content, board_type, m.user_id, m.user_name
+		select board_id, board_title, board_content, board_creation_date, board_reply_date, board_type, m.user_id, m.user_name
 		from tbl_user m join tbl_board b
 		on m.user_id = b.user_id
 	</select>
+	
+	<select id="getTotal" resultType="_int">
+		select distinct count(board_id)
+		from tbl_user m join tbl_board b
+		<trim suffixOverrides="and"> 
+			on m.user_id = b.user_id and
+			<include refid="search"/>
+		</trim>
+	</select>
+	
+	<insert id="insert">
+		insert into tbl_board
+		(board_id, board_title, board_content, board_creation_date, board_reply_date, user_id)
+		values(#{boardId}, #{boardTitle}, #{boardContent}, #{boardCreationDate}, #{boardReplyDate}, #{userId})
+	</insert>
+	
+	<delete id="deleteAll">
+		delete * from tbl_board;
+	</delete>
 </mapper>

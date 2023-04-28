@@ -19,7 +19,7 @@ public class JuniorUserDAO {
 	}
 	
 	public List<JuniorUserDTO> selectJuniorAll() {
-		return sqlSession.selectList("user.selectJuniorAll");
+		return sqlSession.selectList("junior.selectJuniorAll");
 	} 
 }
 

@@ -85,5 +85,11 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="../../static/js/manager-doeunn/user-board-list.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/manager-doeunn/user-board-list.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/manager-doeunn/board.js"></script>
+<script>
+	let users = `${users}`;
+	let contextPath = `${pageContext.request.contextPath}`;
+</script>
+<script src="${pageContext.request.contextPath}/static/js/manager-doeunn/user-list.js"></script>
 </html>

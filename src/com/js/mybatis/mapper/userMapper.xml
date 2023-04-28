@@ -22,17 +22,17 @@ Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 �
 	</select>
 	
 	
-	<select id="selectUserAll" resultType="AdminUserDTO">
+	<select id="selectUserAll" resultType="userVO">
 		select user_career_years, user_resume, m.user_id, m.user_name  
 		from tbl_user m join tbl_junior_user j
 		on m.user_id = j.user_id
 	</select>
 	
-	<select id="selectJuniorAll" resultType="JuniorUserDTO">
-		select user_career_years, user_resume, m.user_id, m.user_name  
-		from tbl_user m join tbl_junior_user j
-		on m.user_id = j.user_id
-	</select>
+	<delete id="delete">
+		delete from tbl_board
+		where board_id = #{boardId}
+	</delete>
+	
 </mapper>
 
 

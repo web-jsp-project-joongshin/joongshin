@@ -9,14 +9,14 @@
 		private Long boardId;
 		private String boardTitle;
 		private String boardContent;
-		private String boardRegisterDate;
-		private String boardUpdateDate;
+		private String boardCreationDate;
+		private String boardReplyDate;
 		private Long boardReadCount;
 		private Long userId;
 		private String userName;
 		
 		public BoardDTO() {;}
-	
+		
 		public Long getBoardId() {
 			return boardId;
 		}
@@ -41,21 +41,6 @@
 			this.boardContent = boardContent;
 		}
 	
-		public String getBoardRegisterDate() {
-			return boardRegisterDate;
-		}
-	
-		public void setBoardRegisterDate(String boardRegisterDate) {
-			this.boardRegisterDate = boardRegisterDate;
-		}
-	
-		public String getBoardUpdateDate() {
-			return boardUpdateDate;
-		}
-	
-		public void setBoardUpdateDate(String boardUpdateDate) {
-			this.boardUpdateDate = boardUpdateDate;
-		}
 	
 		public Long getBoardReadCount() {
 			return boardReadCount;
@@ -81,13 +66,34 @@
 			this.userName = userName;
 		}
 	
+	
+		public String getBoardCreationDate() {
+			return boardCreationDate;
+		}
+
+		public void setBoardCreationDate(String boardCreationDate) {
+			this.boardCreationDate = boardCreationDate;
+		}
+
+		public String getBoardReplyDate() {
+			return boardReplyDate;
+		}
+
+		public void setBoardReplyDate(String boardReplyDate) {
+			this.boardReplyDate = boardReplyDate;
+		}
+
+		public void setUserName(String userName) {
+			this.userName = userName;
+		}
+
 		@Override
 		public String toString() {
 			return "BoardDTO [boardId=" + boardId + ", boardTitle=" + boardTitle + ", boardContent=" + boardContent
-					+ ", boardRegisterDate=" + boardRegisterDate + ", boardUpdateDate=" + boardUpdateDate
+					+ ", boardCreationDate=" + boardCreationDate + ", boardReplyDate=" + boardReplyDate
 					+ ", boardReadCount=" + boardReadCount + ", userId=" + userId + ", userName=" + userName + "]";
 		}
-	
+
 		@Override
 		public int hashCode() {
 			final int prime = 31;
