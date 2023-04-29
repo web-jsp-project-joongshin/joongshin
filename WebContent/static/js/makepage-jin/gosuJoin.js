@@ -126,8 +126,9 @@ const passwordNumberRegex =/[0-9]/g;
 const passwordEnglishRegex = /[a-z]/ig;
 const emailFirstRegex =  /[`~!@#$%^&*|\\\'\";:\/?]/;
 const emailLastRegex = /[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+// 이미 사용중인 아이디 입니다. 다른 아이디를 입력해주세요.
 let joinBlurMessages = ["비밀번호를 입력하세요.", "비밀번호 확인을 위해 한번 더 입력하세요.", "이메일을 입력하세요."];
-let joinRegexMessages = ["비밀번호를 입력해주세요.", "위 비밀번호와 일치하지 않습니다. 다시 입력해주세요.", "이메일 주소를 확인해주세요.", "이메일 주소를 확인해주세요."];
+let joinRegexMessages = ["공백 제외 영어 및 숫자, 특수문자 모두 포함하여 10~20자로 입력해주세요.", "위 비밀번호와 일치하지 않습니다. 다시 입력해주세요.", "이메일 주소를 확인해주세요.", "이메일 주소를 확인해주세요."];
 const $joinHelp = $("div.join p.help");
 let joinCheck;
 let joinCheckAll = [false, false, false, false];
@@ -156,10 +157,10 @@ $joinInputs.on("blur", function(){
             let englishCheck = value.search(passwordEnglishRegex);
 
             var condition1 = (numberCheck >= 0 && englishCheck >= 0)
-            var condition2 = value.length > 0 && value.length < 21;
+            var condition2 = value.length > 9 && value.length < 21;
             var condition3 = value.search(/\s/) < 0;
             
-            joinCheck = condition1 && condition2 || condition3;
+            joinCheck = condition1 || condition2 || condition3;
             break;
         case 1:
             joinCheck = $joinInputs.eq(i-1).val() == value;
@@ -188,7 +189,12 @@ $joinInputs.on("blur", function(){
 		return;
 	}
 
-	
+	if(i != 0) {
+	    $joinHelp.eq(i).text("");
+	    showHelp($(this), "pass.png");
+	}else{
+		
+	}
 });
 
 $("select.email").on("change", function(){
@@ -214,7 +220,7 @@ $("select.email").on("change", function(){
 			checkEmail = false;
 			result = JSON.parse(result);
 			if(result.check){
-				$help.text("사용가능");
+				$help.text("멋진 이메일이네요!");
 				$help.css('color', '#2bb673');
     			showHelp($(".email-wrap input[type=text]"), "pass.png");
 				checkEmail = true;

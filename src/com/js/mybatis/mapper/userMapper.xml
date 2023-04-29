@@ -34,21 +34,3 @@ Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 �
 		on m.user_id = j.user_id
 	</select>
 </mapper>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

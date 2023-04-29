@@ -53,7 +53,7 @@
 		from tbl_user m join tbl_board b
 			on m.user_id = b.user_id
 			order by board_id desc
-			limit 0, 3
+			limit 0, 5
 	</select>
 	<!-- 커뮤에서 일반 유저 게시물 조회 -->
 	<select id="comuSelectAll" resultType="boardDTO">
