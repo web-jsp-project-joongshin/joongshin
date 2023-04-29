@@ -17,7 +17,8 @@ import com.js.mypage.controller.MyNameChangeController;
 import com.js.mypage.controller.MyNameChangeOkController;
 import com.js.mypage.controller.MyPasswordChangeController;
 import com.js.mypage.controller.MyPasswordChangeOkController;
-import com.js.mypage.controller.MyResumeController;
+import com.js.mypage.controller.MyResumeChangeOkController;
+import com.js.mypage.controller.MyResumeOkController;
 import com.js.mypage.controller.WithdrawalController;
 import com.js.mypage.controller.WithdrawalOkController;
 
@@ -51,8 +52,10 @@ public class MypageFrontController extends HttpServlet {
 			result = new WithdrawalController().execute(req, resp);
 		} else if (target.equals("myWithdrawalOk")) {
 			result = new WithdrawalOkController().execute(req, resp);
-		} else if (target.equals("myResumeChange")) {
-			result = new MyResumeController().execute(req, resp);
+		} else if (target.equals("myResumeOk")) {
+			result = new MyResumeOkController().execute(req, resp);
+		} else if (target.equals("myResumeChangeOk")) {
+			result = new MyResumeChangeOkController().execute(req, resp);
 		}
 		
 		if(result != null) {

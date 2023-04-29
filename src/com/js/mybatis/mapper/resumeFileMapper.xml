@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="resumeFile">
+	<select id="selectByUserId" resultType="resumeFileVO">
+		select file_id, file_system_name, file_original_name, file_size, user_id
+		from tbl_junior_resume_file
+		where user_id = #{userId}
+	</select>
+	
+	<insert id="insert">
+		insert into tbl_junior_resume_file
+		(file_system_name, file_original_name, file_size, user_id)
+		values(#{fileSystemName}, #{fileOriginalName}, #{fileSize}, #{userId})
+	</insert>
+</mapper>

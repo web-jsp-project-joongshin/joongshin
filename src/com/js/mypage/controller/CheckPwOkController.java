@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -19,10 +20,13 @@ public class CheckPwOkController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MypageDAO mypageDAO = new MypageDAO();
-		Long userId = Long.valueOf(req.getParameter("userId"));
+		HttpSession session = req.getSession();
+
+		Long userId = (Long)session.getAttribute("userId");
 		
 //		사용자가 입력한 기존 비밀번호
 		String inputUserPassword = req.getParameter("inputUserPassword");
+		System.out.println(inputUserPassword);
 //		조회한 기존 비밀번호
 		String userPassword = mypageDAO.selectPassword(userId);
 		
