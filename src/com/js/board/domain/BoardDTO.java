@@ -2,12 +2,17 @@ package com.js.board.domain;
 
 public class BoardDTO {
 	private Long boardId;
-	private String boardTitle;
-	private String boardContent;
 	private Long userId;
 	private String userName;
-	
-	public BoardDTO() {;}
+	private String boardTitle;
+	private String boardContent;
+	private String boardStatus;
+	private String boardRegisterDate;
+	private String boardType;
+
+	public BoardDTO() {
+		;
+	}
 
 	public Long getBoardId() {
 		return boardId;
@@ -15,6 +20,22 @@ public class BoardDTO {
 
 	public void setBoardId(Long boardId) {
 		this.boardId = boardId;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getBoardTitle() {
@@ -33,27 +54,35 @@ public class BoardDTO {
 		this.boardContent = boardContent;
 	}
 
-
-	public Long getUserId() {
-		return userId;
+	public String getBoardStatus() {
+		return boardStatus;
 	}
 
-	public void setUserId(Long userId) {
-		this.userId = userId;
+	public void setBoardStatus(String boardStatus) {
+		this.boardStatus = boardStatus;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getBoardRegisterDate() {
+		return boardRegisterDate;
 	}
 
-	public void setuserName(String userName) {
-		this.userName = userName;
+	public void setBoardRegisterDate(String boardRegisterDate) {
+		this.boardRegisterDate = boardRegisterDate;
+	}
+
+	public String getBoardType() {
+		return boardType;
+	}
+
+	public void setBoardType(String boardType) {
+		this.boardType = boardType;
 	}
 
 	@Override
 	public String toString() {
-		return "BoardDTO [boardId=" + boardId + ", boardTitle=" + boardTitle + ", boardContent=" + boardContent
-				+ ", userId=" + userId + ", userName=" + userName + "]";
+		return "BoardDTO [boardId=" + boardId + ", userId=" + userId + ", userName=" + userName + ", boardTitle="
+				+ boardTitle + ", boardContent=" + boardContent + ", boardStatus=" + boardStatus
+				+ ", boardRegisterDate=" + boardRegisterDate + ", boardType=" + boardType + "]";
 	}
 
 	@Override
@@ -70,7 +99,7 @@ public class BoardDTO {
 			return true;
 		if (obj == null)
 			return false;
-		if (getClass() != obj.getClass())
+		if (getClass() != obj.getClass()) 
 			return false;
 		BoardDTO other = (BoardDTO) obj;
 		if (boardId == null) {

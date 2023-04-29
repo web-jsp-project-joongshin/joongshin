@@ -54,4 +54,16 @@
 		delete from tbl_user
 		where user_id = #{userId}
 	</delete>
+	
+	<select id="selectResume" resultType="JuniorUserVO">
+		select user_id, user_career_years, user_resume
+		from tbl_junior_user
+		where user_id = #{userId}
+	</select>
+	
+	<update id="updateResume">
+		update tbl_junior_user
+		set user_resume = #{userResume}, user_career_years = #{userCareerYears}
+		where user_id = #{userId}
+	</update>
 </mapper>

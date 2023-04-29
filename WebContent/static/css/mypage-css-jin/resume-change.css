@@ -502,6 +502,19 @@ textarea {
     z-index: -1;
 }
 
+#preview {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+}
+
+#preview img {
+	display: inline-block;
+  	max-width: 100px;
+ 	max-height: 100px;
+ 	margin-right: 10px;
+}
 input, textarea {
 	outline: none;
 }

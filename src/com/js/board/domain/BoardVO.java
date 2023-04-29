@@ -1,13 +1,16 @@
 package com.js.board.domain;
 
 public class BoardVO {
-	private Long boardId;
-	private Long userId;
-	private String boardTitle;
-	private String boardContent;
+		
+	private Long boardId; 
+	private Long userId ;
+	private String boardTitle ;
+	private String boardContent ;
+	private String boardStatus;/*문의게시판 필요*/
+	private String boardRegisterDate ; 
 	private String boardType;
 	
-	public BoardVO() {;}
+	public BoardVO() {}
 
 	public Long getBoardId() {
 		return boardId;
@@ -41,6 +44,22 @@ public class BoardVO {
 		this.boardContent = boardContent;
 	}
 
+	public String getBoardStatus() {
+		return boardStatus;
+	}
+
+	public void setBoardStatus(String boardStatus) {
+		this.boardStatus = boardStatus;
+	}
+
+	public String getBoardRegisterDate() {
+		return boardRegisterDate;
+	}
+
+	public void setBoardRegisterDate(String boardRegisterDate) {
+		this.boardRegisterDate = boardRegisterDate;
+	}
+
 	public String getBoardType() {
 		return boardType;
 	}
@@ -52,7 +71,8 @@ public class BoardVO {
 	@Override
 	public String toString() {
 		return "BoardVO [boardId=" + boardId + ", userId=" + userId + ", boardTitle=" + boardTitle + ", boardContent="
-				+ boardContent + ", boardType=" + boardType + "]";
+				+ boardContent + ", boardStatus=" + boardStatus + ", boardRegisterDate=" + boardRegisterDate
+				+ ", boardType=" + boardType + "]";
 	}
 
 	@Override
@@ -79,6 +99,11 @@ public class BoardVO {
 			return false;
 		return true;
 	}
+	
+	
+
+
+	
 
 	
 }

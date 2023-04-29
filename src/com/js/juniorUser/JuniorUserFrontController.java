@@ -1,7 +1,5 @@
-/*
- 유저 프론트 컨트롤러 => 요청에 맞는 컨트롤러나 뷰를 호출,필요한 처리 수행 
- * */
 package com.js.juniorUser;
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -10,11 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.js.Result;
+import com.js.juniorUser.controller.JuniorJoinOkController;
+import com.js.juniorUser.controller.JuniorLoginController;
+import com.js.juniorUser.controller.JuniorLoginOkController;
+import com.js.juniorUser.controller.JuniorLogoutController;
 import com.js.user.controller.CheckEmailOkController;
-import com.js.user.controller.JoinOkController;
-import com.js.user.controller.LoginController;
-import com.js.user.controller.LoginOkController;
-import com.js.user.controller.LogoutController;
 
 public class JuniorUserFrontController extends HttpServlet {
 
@@ -25,25 +23,32 @@ public class JuniorUserFrontController extends HttpServlet {
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
-//		if(target.equals("checkEmailOk")) {
-//			result = new CheckEmailOkController().execute(req, resp);
-//			
-//		} else if(target.equals("join")){
-//			result = new Result();
-//			result.setPath("templates/member/join.jsp");
-//			
-//		} else if(target.equals("joinOk")){
-//			result = new JoinOkController().execute(req, resp);
-//			
-//		} else if(target.equals("login")){
-//			result = new LoginController().execute(req, resp);
-//			
-//		} else if(target.equals("loginOk")) {
-//			result = new LoginOkController().execute(req, resp);
-//			
-//		} else if(target.equals("logout")) {
-//			result = new LogoutController().execute(req, resp);
-//		}
+		if(target.equals("checkEmailOk")) {
+			System.out.println("1");
+			result = new CheckEmailOkController().execute(req, resp);
+		} 
+		else if(target.equals("gosuJoin")){
+			System.out.println("2");
+			result = new Result();
+			result.setPath("templates/makepage-hsw/gosuJoin.jsp");
+			
+		}
+		else if(target.equals("joinOk")){
+			System.out.println("3");
+			result = new JuniorJoinOkController().execute(req, resp);
+			
+		} else if(target.equals("gosuLogin")){
+			System.out.println("4");
+			result = new JuniorLoginController().execute(req, resp);
+			
+		} else if(target.equals("loginOk")) {
+			System.out.println("5");
+			result = new JuniorLoginOkController().execute(req, resp);
+			
+		} else if(target.equals("logout")) {
+			System.out.println("6");
+			result = new JuniorLogoutController().execute(req, resp);
+		}
 		
 		if(result != null) {
 			if(result.isRedirect()) {

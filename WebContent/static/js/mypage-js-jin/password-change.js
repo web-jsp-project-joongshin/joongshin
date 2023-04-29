@@ -20,7 +20,7 @@ function validatePassword() {
 		checkPw = false;
 		$.ajax({
 			url: "checkPwOk.mypage",
-			data: {userId: userId, inputUserPassword: currentPasswordInput.value},
+			data: {inputUserPassword: currentPasswordInput.value},
 			async: false,
 			success: function(result) {
 				result = JSON.parse(result);

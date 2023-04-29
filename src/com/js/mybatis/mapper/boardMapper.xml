@@ -53,13 +53,29 @@
 		from tbl_user m join tbl_board b
 			on m.user_id = b.user_id
 			order by board_id desc
-			limit 0, 3
+			limit 0, 5
 	</select>
+	<!-- 커뮤에서 일반 유저 게시물 조회 -->
+	<select id="comuSelectAll" resultType="boardDTO">
+		select board_id, b.user_id, m.user_name, board_title, board_content
+		from tbl_user m join tbl_board b
+			on m.user_id = b.user_id
+			order by board_id desc
+	</select>
+	
+	<!-- 커뮤에서 주니어 유저 게시물 조회 -->
+	<select id="comuSelectAll" resultType="boardDTO">
+		select board_id, b.user_id, m.user_name, board_title, board_content
+		from tbl_user m join tbl_board b
+			on m.user_id = b.user_id
+			order by board_id desc
+	</select>
+	
 
 	 <insert id="insert">
-	 	insert into test.tbl_test
-	 	board_title, board_content, board_register_date, board_update_date, user_
-	 	values(#{boardTitle}, #{boardContent},#{boardDate},#{userNumber});
+	 	insert into tbl_board
+	 	(board_id, board_title, board_content, board_register_date, user_id, board_type)
+	 	values(#{boardId}, #{boardTitle}, #{boardContent},#{boardRegisterDate},#{userId},#{boardType);
 	 </insert>
 	 
 	 <select id="boardSelectAll" resultType="boardDTO">
@@ -68,7 +84,6 @@
 		on m.user_id = b.user_id
 	</select>
 	
-
 	<select id="getTotal" resultType="_int">
 		select distinct count(board_id)
 		from tbl_user m join tbl_board b
