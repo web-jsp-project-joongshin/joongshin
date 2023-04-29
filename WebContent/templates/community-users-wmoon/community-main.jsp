@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>숨고:숨은고수 - 800만명이 선택한 전국민 생활 솔루션</title>
+<title>중신:주니어의 스펙업사이트 </title>
+<link href="../../static/image/logo/logo.png" rel="shortcut icon" type="image/x-icon">
 <link rel="stylesheet" href="../../static/css/users-wmoon/community-main.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +30,7 @@
 													<a href="https://soomgo.com/community/soomgo-life/post/write?topicId=all" class="dropdown-item" role="menuitem" targer="_self">
 														<div class="dropdown-menu-item-wrapper">
 															<div class="dropdown-menu-item-text">
-																<span class="dropdown-menu-item-title sg-text-subhead5 sg-font-medium sg-text-gray-900">숨고생활</span>
+																<span class="dropdown-menu-item-title sg-text-subhead5 sg-font-medium sg-text-gray-900">이용자 게시글</span>
 																<span class="sg-text-description sg-font-regular sg-text-gray-500">정보와 소식을 담은 자유 게시글 작성하기</span>
 															</div>
 															<i class="dropdown-menu-item-icon"></i>
@@ -40,8 +41,8 @@
 													<a href="https://soomgo.com/community/soomgo-life/all" class="dropdown-item">
 														<div class="dropdown-menu-item-wrapper">
 															<div class="dropdown-menu-item-text">
-																<span class="dropdown-menu-item-title sg-text-subhead5 sg-font-medium sg-text-gray-900">고수의 노하우</span>
-																<span class="sg-text-description sg-font-regular sg-text-gray-500">고수의 전문 서비스에 대한 노하우 작성하기</span>
+																<span class="dropdown-menu-item-title sg-text-subhead5 sg-font-medium sg-text-gray-900">주니어 게시글</span>
+																<span class="sg-text-description sg-font-regular sg-text-gray-500">주니어의 전문 서비스에 대한 노하우 작성하기</span>
 															</div>
 															<i class="dropdown-menu-item-icon"></i>
 														</div>
@@ -55,10 +56,10 @@
 						</div>
 						<ul class="category">
 							<li class="sg-text-subhead4 sg-font-bold lg:sg-text-subhead2 lg:sg-font-bold sg-text-gray-900 selected">
-								<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/community-main.jsp" class="link-text router-link-active"> 숨고생활 </a>
+								<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/community-main.jsp" class="link-text router-link-active"> 이용자 게시글 </a>
 							</li>
 							<li class="sg-text-body2 sg-font-regular lg:sg-text-body1 lg:sg-font-regular sg-text-gray-400">
-								<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/community-pic.jsp" class="link-text"> 고수의 노하우 </a>
+								<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/community-main-juni.jsp" class="link-text"> 주니어 게시글 </a>
 							</li>
 						</ul>
 						<div class="community-layout">
@@ -112,82 +113,21 @@
 										</div>
 									</form>
 								</div>
-								<section class="curation" style="margin-left: 3px; margin-top: 40px;">
-									<div class="curation-header">
-										<h2 class="sg-text-headline sg-font-bold sg-text-gray-900">지금 가장 뜨거운 숨고픽🔥</h2>
-									</div>
-									<div dir="ltr" class="slick-slider slick-initialized">
-										<button type="button" data-role="none" class="slick-arrow slick-prev slick-disabled" style="display: block;">Previous</button>
-										<div class="slick-list" style="margin-left: -9px;">
-											<div class="slick-track" style="width: 1020px; opacity: 1; transform: translate3d(0px, 0px, 0px); display: flex;">
-												<div tabindex="-1" data-index="0" aria-hidden="false" class="slick-slide slick-active slick-current" style="outline: none; width: 192px; margin: 0 10px 0 0;">
-													<div>
-														<a href="https://soomgo.com/community/soomgo-life/posts/63db8b3ad1becfebc58891bc-%EC%88%A8%EA%B3%A0%EC%83%9D%ED%99%9C-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8---" class style="width: 100%; display: inline-block;">
-															<div class="curation-item admin-post">
-																<p class="topic sg-text-subhead7 sg-font-medium sg-text-gray-500 yu">공지사항</p>
-																<h3 class="sg-text-subhead2 sg-font-bold sg-text-gray-900 are" style="font-size: 16px;">주니어와 이용자들의 생각 🤝</h3>
-																<p class="user-name sg-text-description sg-font-regular sg-text-white"> Soomgo </p>
-															</div>
-														</a>
-													</div>
-												</div>
-												<div tabindex="-1" data-index="0" aria-hidden="false" class="slick-slide slick-active" style="outline: none; width: 192px; margin: 0 10px 0 0;">
-													<div>
-														<a href="https://soomgo.com/community/soomgo-life/posts/63db8b3ad1becfebc58891bc-%EC%88%A8%EA%B3%A0%EC%83%9D%ED%99%9C-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8---" class style="width: 100%; display: inline-block;">
-															<div class="curation-item admin-post">
-																<p class="topic sg-text-subhead7 sg-font-medium sg-text-gray-500 yu">공지사항</p>
-																<h3 class="sg-text-subhead2 sg-font-bold sg-text-gray-900 are" style="font-size: 16px;">포인트 50만 캐시와 쿠폰 받으세요🎁</h3>
-																<p class="user-name sg-text-description sg-font-regular sg-text-white"> Soomgo </p>
-															</div>
-														</a>
-													</div>
-												</div>
-												<div tabindex="-1" data-index="0" aria-hidden="false" class="slick-slide slick-active" style="outline: none; width: 192px;">
-													<div>
-														<a href="https://soomgo.com/community/soomgo-life/posts/63db8b3ad1becfebc58891bc-%EC%88%A8%EA%B3%A0%EC%83%9D%ED%99%9C-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8---" class style="width: 100%; display: inline-block;">
-															<div class="curation-item admin-post">
-																<p class="topic sg-text-subhead7 sg-font-medium sg-text-gray-500 yu">공지사항</p>
-																<h3 class="sg-text-subhead2 sg-font-bold sg-text-gray-900 are" style="font-size: 16px;">💌내가 오늘 주인공이 되어보세요!</h3>
-																<p class="user-name sg-text-description sg-font-regular sg-text-white"> Soomgo </p>
-															</div>
-														</a>
-													</div>
-												</div>
-												<div></div>
-												<div></div>
-											</div>
-										</div>
-										<!-- <button type="button" data-role="none" class="slick-arrow slick-next" style="display: block;">Next</button> -->
-									</div>
-									<div class="mobile-curation-list d-md-none">
-										<a></a>
-										<a></a>
-										<a></a>
-										<a></a>
-										<a></a>
-									</div>
-								</section>
-								<div class="observer-container d-lg-none" style="height: 54px;">
-									<div id="observer-db27803f-bc9f-494a-b9ce-c2082983e8fa"></div>
-								</div>
-								<section class="service-area-filter all fixed" style="margin-top: 80px;">
-									<button type="button" class="btn btn-none chip-btn filter-btn btn-open-popup">
-										<span>서비스</span>
-									</button>
-								</section>
+
 								<article class="community-feed-list">
+								<!-- 게시글 forEach자리 
 									<ul class="feed-list">
 										<li class="feed-item">
 											<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/view-detail.jsp" class>
-												<p class="topic-name sg-text-description sg-font-regular sg-text-gray-500">고수찾아요 · 컴퓨터 자격증</p>
 												<div class="feed-content service-address-info">
 													<div>
 														<section class="item-wrapper">
-															<h3 class="sg-text-subhead5 sg-font-medium sg-text-gray-900">컴퓨터 자격증 가지고 있는 주니어분들 찾습니다</h3>
-															<p class="content sg-text-body2 sg-font-regular sg-text-gray-500">sql이나 Java 자격증 찾습니다 전문가 </p>
+															<h3 class="sg-text-subhead5 sg-font-medium sg-text-gray-900">${board.boardTitle}</h3>
+															<p class="content sg-text-body2 sg-font-regular sg-text-gray-500">sql이나 Java 자격증 찾습니다 전문가</p>
 														</section>
-														<p class="sub-information sg-text-description sg-font-regular sg-text-gray-500">인천/서구</p>
+														<p data-v-23814058="" class="sub-information sg-text-description sg-font-regular sg-text-gray-500"></p>
 													</div>
+											
 												</div>
 												<div class="feed-footer">
 													<div class="user-interaction">
@@ -203,33 +143,7 @@
 										<li></li>
 										<li></li>
 									</ul>
-									<ul class="feed-list">
-										<li class="feed-item">
-											<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/view-detail.jsp" class>
-												<p class="topic-name sg-text-description sg-font-regular sg-text-gray-500">고수찾아요 · 컴퓨터 자격증</p>
-												<div class="feed-content service-address-info">
-													<div>
-														<section class="item-wrapper">
-															<h3 class="sg-text-subhead5 sg-font-medium sg-text-gray-900">컴퓨터 자격증 가지고 있는 주니어분들 찾습니다</h3>
-															<p class="content sg-text-body2 sg-font-regular sg-text-gray-500">sql이나 Java 자격증 찾습니다 전문가 </p>
-														</section>
-														<p class="sub-information sg-text-description sg-font-regular sg-text-gray-500">인천/서구</p>
-													</div>
-												</div>
-												<div class="feed-footer">
-													<div class="user-interaction">
-														<span class="like sg-text-description sg-font-regular sg-text-gray-300">2</span>
-														<span class="comment sg-text-description sg-font-regular sg-text-gray-300">1</span>
-													</div>
-													<span class="sg-text-description sg-font-regular sg-text-gray-300 time">25분 전</span>
-												</div>
-											</a>
-										</li>
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
+								-->
 									<div></div>
 								</article>
 							</div>
@@ -310,5 +224,11 @@
 	</div>
 	<%@ include file="../mainpageSeo/footer.jsp" %>
 </body>
-<script src="../../static/js/community-wmoon/modal.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+<script>
+let boards =`${boards}`; </script>
+<!-- <script src="../../static/js/community-wmoon/modal.js"></script>-->
+<script src="${pageContext.request.contextPath}/static/js/mainpageSeo/board.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mainpageSeo/board-list.js"></script>
 </html>

@@ -21,20 +21,6 @@
 		<div class="community-container container">
 			<div class="soomgo-life-container">
 				<section class="write-post-container">
-					<div class="select-subject-header">
-						<div class="subject-header-wrapper">
-							<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgZmlsbD0iIzMyMzIzMiIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTYuNDMuNDNsMS4xMzEgMS4xMzEtNy40MzQgNy40MzUgNy40MzQgNy40MzQtMS4xMzEgMS4xMzEtNy40MzUtNy40MzQtNy40MzQgNy40MzRMLjQzIDE2LjQzbDcuNDM0LTcuNDM0TC40MyAxLjU2MSAxLjU2MS40M2w3LjQzNCA3LjQzNEwxNi40My40M3oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMzcgLTExNCkgdHJhbnNsYXRlKDAgOTQpIHRyYW5zbGF0ZSgzMzcgMjApIi8+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=" alt="뒤로 가기" class="back-button">
-							<select class="post-subject-select-box custom-select sg-text-subhead3 sg-font-medium" id="__BVID__93">
-								<option disabled="disabled" value> 주제 선택 </option>
-								<option value="provider-square"> 고수광장 </option>
-								<option value="qna"> 궁금해요 </option>
-								<option value="how-much"> 얼마예요 </option>
-								<option value="together"> 함께해요 </option>
-								<option value="provider-news"> 고수소식 </option>
-							</select>
-							<button type="button" disabled="disabled" class="btn btn-secondary disabled write-post-submit">등록</button>
-						</div>
-					</div>
 					<div class="attach-file-wrapper">
 						<div class="attach-file-area">
 							<div class="add-image-icon"></div>
@@ -44,28 +30,27 @@
 									<span class="d-block form-file-text" style="pointer-events: none;">No file chosen</span>
 								</label>
 							</div>
-							<span class="image-count sg-text-body2 sg-font-regular">0/15</span>
+							<span class="image-count sg-text-body2 sg-font-regular"></span>
 						</div>
 					</div>
 					<div class="editor-body-container is-bottom-margin">
 						<div class="editor-body-wrapper">
-							<div class="editor-title-wrapper">
-								<div class="editor-title-container">
-									<label for="post-title-input" class="editor-title-label">
-										<input id="post-title-input" type="text" placeholder="제목을 입력해주세요." value class="post-title-input sg-text-subhead5 sg-font-medium sg-text-gray-900">
-									</label>
-								</div>
-							</div>
 							<div class="divider-wrapper">
 								<hr class="hr-divider">
 							</div>
 							<div class="service-region-wrapper">
-								<button class="category-select-box">
-									<span class="text">(선택) 서비스</span>
-								</button>
-								<button class="category-select-box">
-									<span class="text">(선택) 지역</span>
-								</button>
+								<div class="category-select-box">
+									<label for="experience">경력:</label>
+									<select id="experience">
+										<option value="0">0년</option>
+										<option value="1">1년</option>
+										<option value="2">2년</option>
+										<option value="3">3년 이상</option>
+									</select>
+								</div>
+							</div>
+							<div class="divider-wrapper">
+								<hr class="hr-divider">
 							</div>
 							<div class="divider-wrapper">
 								<hr class="hr-divider">
@@ -81,7 +66,10 @@
 								</span>
 							</div>
 						</div>
-					</div>		
+					</div>
+					<div class="submit-btn-wrapper">
+						<button type="button" class="submit-btn">수정하기</button>	
+					</div>
 				</section>
 			</div>
 		</div>
@@ -89,4 +77,25 @@
 
 </body>
 <jsp:include page="../mainpageSeo/footer.jsp"/>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+	const $textArea = $("textarea");
+	const $placeholder = $(".editor-contents-textarea-placeholder");
+	const $imageCount = $('.image-count');
+	var count = 0;
+	
+	$(document).ready(function() {
+		$textArea.on('input', function() {
+			if($textArea.val()) {
+				$placeholder.css('display', 'none');
+			} else {
+				$placeholder.css('display', 'inline-block');
+			}
+		});
+	});
+	
+	$imageCount.prop('innerText', count+"/5");
+	
+	
+</script>
 </html>

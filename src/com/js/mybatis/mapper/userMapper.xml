@@ -8,8 +8,8 @@ Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 �
 	
 	<insert id="insert">
 		insert into tbl_user
-		(user_username, user_email, user_password)
-		values(${userUsername}, ${userEmail}, ${userPassword})
+		(user_name, user_email, user_password, user_phonenumber)
+		values(#{userName}, #{userEmail}, #{userPassword}, #{userPhonenumber})
 	</insert>
 	
 	<select id="selectEmail" resultType="string">

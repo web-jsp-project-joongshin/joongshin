@@ -80,3 +80,9 @@ public class Criteria {
 		this.next = next;
 	}
 }
+
+
+
+
+
+

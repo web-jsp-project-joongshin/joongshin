@@ -11,7 +11,7 @@ package com.js.board.domain;
 
 public class BoardVO {
 	private Long boardId;
-	private String userId;
+	private Long userId;
 	private String boardTitle;
 	private String boardContent;
 	private String boardType;
@@ -28,11 +28,11 @@ public class BoardVO {
 		this.boardId = boardId;
 	}
 
-	public String getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 

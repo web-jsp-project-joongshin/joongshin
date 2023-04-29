@@ -1,5 +1,10 @@
 package com.js.message.domain;
 
+import java.util.Arrays;
+import java.util.List;
+
+import org.json.JSONObject;
+
 public class MessageDTO{
 	private Long messageId;
 	private Long sendUserId;
@@ -7,6 +12,7 @@ public class MessageDTO{
 	private String userName;
 	private boolean isSender;
 	private String messageContents;
+	private String messageUpdateDatetime;
 	
 	public MessageDTO() {;}
 
@@ -57,23 +63,28 @@ public class MessageDTO{
 	public void setSender(boolean isSender) {
 		this.isSender = isSender;
 	}
-
-	@Override
-	public String toString() {
-		return "MessageDTO [messageId=" + messageId + ", sendUserId=" + sendUserId + ", recieveUserId=" + recieveUserId
-				+ ", userName=" + userName + ", isSender=" + isSender + ", messageContents=" + messageContents + "]";
+	
+	public String getMessageUpdateDatetime() {
+		return messageUpdateDatetime;
 	}
 
+	public void setMessageUpdateDatetime(String messageUpdateDatetime) {
+		this.messageUpdateDatetime = messageUpdateDatetime;
+	}
+	
+	public List<String> getContentsByLine() {
+		return Arrays.asList(messageContents.split("\\r\\n"));
+	}
+	
+	public JSONObject toJSON() {
+		return new JSONObject(this);
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + (isSender ? 1231 : 1237);
-		result = prime * result + ((messageContents == null) ? 0 : messageContents.hashCode());
 		result = prime * result + ((messageId == null) ? 0 : messageId.hashCode());
-		result = prime * result + ((recieveUserId == null) ? 0 : recieveUserId.hashCode());
-		result = prime * result + ((sendUserId == null) ? 0 : sendUserId.hashCode());
-		result = prime * result + ((userName == null) ? 0 : userName.hashCode());
 		return result;
 	}
 
@@ -86,33 +97,19 @@ public class MessageDTO{
 		if (getClass() != obj.getClass())
 			return false;
 		MessageDTO other = (MessageDTO) obj;
-		if (isSender != other.isSender)
-			return false;
-		if (messageContents == null) {
-			if (other.messageContents != null)
-				return false;
-		} else if (!messageContents.equals(other.messageContents))
-			return false;
 		if (messageId == null) {
+			
 			if (other.messageId != null)
 				return false;
 		} else if (!messageId.equals(other.messageId))
 			return false;
-		if (recieveUserId == null) {
-			if (other.recieveUserId != null)
-				return false;
-		} else if (!recieveUserId.equals(other.recieveUserId))
-			return false;
-		if (sendUserId == null) {
-			if (other.sendUserId != null)
-				return false;
-		} else if (!sendUserId.equals(other.sendUserId))
-			return false;
-		if (userName == null) {
-			if (other.userName != null)
-				return false;
-		} else if (!userName.equals(other.userName))
-			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "MessageDTO [messageId=" + messageId + ", sendUserId=" + sendUserId + ", recieveUserId=" + recieveUserId
+				+ ", userName=" + userName + ", isSender=" + isSender + ", messageContents=" + messageContents
+				+ ", messageUpdateDatetime=" + messageUpdateDatetime + "]";
 	}
 }

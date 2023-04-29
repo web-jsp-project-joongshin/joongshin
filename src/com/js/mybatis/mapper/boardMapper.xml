@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- namespace 속성을 이용해 board라는 namespace를 가지고 있다. 
-  이 파일 내에는 SQL문이 작성되며,
- SQL문은 selectAll이라는 id를 가진 쿼리문이 주석 처리되어 있다. 
- 이 쿼리문은 tbl_member 테이블과 tbl_board 테이블을 join하여
- 컬럼을 조회하는 내용이다.  -->
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="board">
-	
-	
 	<sql id="search">
 		<trim prefixOverrides="or">
 			<foreach item="type" collection="types">
@@ -28,24 +21,35 @@
 		</trim>
 	</sql>
 	
-	
+	<sql id="order">
+		order by
+		<choose>
+			<when test="sort=='recent'.toString()">
+				board_id
+			</when>
+			<otherwise>
+				board_read_count
+			</otherwise>
+		</choose>
+		desc
+	</sql>
+
+
 	<select id="selectAll" resultType="boardDTO">
-		select board_id, board_title, board_content, board_type, m.user_id, user_name 
-		from tbl_user m join tbl_board b 
-		on m.user_id = b.user_id
+		select board_id, b.user_id, m.user_name, board_title, board_content, board_type
+		from tbl_user m join tbl_board b
+			on m.user_id = b.user_id
+			order by board_id desc
+			limit 0, 3
 	</select>
-	 <!-- <insert id="insert">
-	 	insert into test.tbl_test
-	 	board_title, board_content, board_register_date, board_update_date, user_
-	 	values(#{boardTitle}, #{boardContent},#{boardDate},#{userNumber});
-	 </insert> -->
+
+	
 	 
 	 <select id="boardSelectAll" resultType="boardDTO">
 		select board_id, board_title, board_content, board_creation_date, board_reply_date, board_type, board_status, m.user_id, m.user_name
 		from tbl_user m join tbl_board b
 		on m.user_id = b.user_id
 	</select>
-	
 	<select id="getTotal" resultType="_int">
 		select distinct count(board_id)
 		from tbl_user m join tbl_board b
@@ -70,4 +74,34 @@
 	<delete id="deleteAll">
 		delete * from tbl_board;
 	</delete>
+
+	<select id="getTotal" resultType="_int">
+		select distinct count(board_id)
+		from tbl_user m join tbl_board b
+			on m.user_id = b.user_id
+	</select>
+	
+	<!-- <insert id="insert">
+		insert into tbl_board
+		(board_id, board_title, board_content, user_id)
+		values(#{boardId}, #{boardTitle}, #{boardContent}, #{userId})
+	</insert> -->
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

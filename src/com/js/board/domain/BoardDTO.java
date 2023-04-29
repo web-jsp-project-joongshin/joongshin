@@ -96,7 +96,7 @@
 			this.boardStatus = boardStatus;
 		}
 
-		
+	
 
 		@Override
 		public String toString() {

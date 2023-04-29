@@ -1,16 +1,20 @@
 package com.js.message.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Map;
+import java.util.Optional;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import org.apache.tomcat.util.json.JSONParser;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
+
 import com.js.Action;
 import com.js.Result;
 import com.js.message.dao.MessageDAO;
@@ -24,26 +28,47 @@ public class MessageListOkController implements Action{
 		List<MessageDTO> messages = null;
 		MessageDAO dao = new MessageDAO();
 		Result result = new Result();
+		Map<String, Object> data = new HashMap<>();
+		HttpSession session = req.getSession();
 		
-		//TODO ���ǿ��� user id ��������
-		Long userId = Long.valueOf(req.getParameter("userId"));
-		Boolean isReceivedMsgList = Boolean.valueOf(req.getParameter("receive"));
+		session.setAttribute("userId", 3);
 		
-		messages = isReceivedMsgList 
-				? dao.selectListByReceiveUserId(userId)
-				: dao.selectListBySendUserId(userId);
+		//TODO user id by session
+		Long userId = Long.valueOf(Optional.ofNullable(String.valueOf(session.getAttribute("userId"))).orElse("0"));
+		Boolean receive = Boolean.valueOf(req.getParameter("receive"));
+		String keyword = Optional.ofNullable(req.getParameter("keyword")).orElse("");
 		
-		JSONArray jsonResult = new JSONArray(messages.stream()
-				.map(message -> new JSONObject(message))
-				.collect(Collectors.toList())
-		);
+		data.put("userId", userId);
+		data.put("receive", receive);
+		data.put("keyword", keyword);
+		
+		messages = dao.selectList(data);
+		
+//		System.out.println(userId);
+//		System.out.println(receive);
+//		System.out.println(keyword);
+//		System.out.println(messages);
+		
+		JSONArray jsonResult = new JSONArray();
+				
+		messages.stream().map(message -> {
+			JSONObject json = new JSONObject(message);
+			try {
+				json.put("contentsList", new JSONArray(message.getContentsByLine()));
+				json.remove("messageContents");
+			} catch (JSONException e) {e.printStackTrace();}
+			
+			return json;
+		}).forEach(jsonResult::put);
 		
 		req.setAttribute("messages", jsonResult.toString());
-		req.setAttribute("receive", isReceivedMsgList.toString());
-		//System.out.println(userId);
+		req.setAttribute("receive", receive.toString());
+		if(!keyword.isEmpty()) req.setAttribute("keyword", keyword);
+		
+		//System.out.println(jsonResult);
 		//System.out.println(req.getParameter("receive"));
 		
-		result.setPath("/templates/message/msg-list.jsp");
+		result.setPath("templates/message/msg-list.jsp");
 		
 		return result;
 	}

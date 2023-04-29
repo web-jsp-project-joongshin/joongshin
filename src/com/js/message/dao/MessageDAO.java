@@ -1,6 +1,7 @@
 package com.js.message.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -19,12 +20,12 @@ public class MessageDAO {
 		sqlSession.insert("message.insert", messageVO);
 	}
 	
-	public MessageDTO selectOne(Long messageId) {
-		return sqlSession.selectOne("message.selectOne", messageId);
+	public MessageDTO selectOne(Map<String, Object> messageData) {
+		return sqlSession.selectOne("message.selectOne", messageData);
 	}
 	
-	public List<MessageDTO> selectListBySendUserId(Long sendUserId) {
-		return sqlSession.selectList("message.selectListBySendUserId", sendUserId);
+	public List<MessageDTO> selectList(Map<String, Object> searchData) {
+		return sqlSession.selectList("message.selectList", searchData);
 	}
 	
 	public List<MessageDTO> selectListByReceiveUserId(Long receiveUserId) {

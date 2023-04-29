@@ -25,25 +25,25 @@ public class JuniorUserFrontController extends HttpServlet {
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
-		if(target.equals("checkEmailOk")) {
-			result = new CheckEmailOkController().execute(req, resp);
-			
-		} else if(target.equals("join")){
-			result = new Result();
-			result.setPath("templates/member/join.jsp");
-			
-		} else if(target.equals("joinOk")){
-			result = new JoinOkController().execute(req, resp);
-			
-		} else if(target.equals("login")){
-			result = new LoginController().execute(req, resp);
-			
-		} else if(target.equals("loginOk")) {
-			result = new LoginOkController().execute(req, resp);
-			
-		} else if(target.equals("logout")) {
-			result = new LogoutController().execute(req, resp);
-		}
+//		if(target.equals("checkEmailOk")) {
+//			result = new CheckEmailOkController().execute(req, resp);
+//			
+//		} else if(target.equals("join")){
+//			result = new Result();
+//			result.setPath("templates/member/join.jsp");
+//			
+//		} else if(target.equals("joinOk")){
+//			result = new JoinOkController().execute(req, resp);
+//			
+//		} else if(target.equals("login")){
+//			result = new LoginController().execute(req, resp);
+//			
+//		} else if(target.equals("loginOk")) {
+//			result = new LoginOkController().execute(req, resp);
+//			
+//		} else if(target.equals("logout")) {
+//			result = new LogoutController().execute(req, resp);
+//		}
 		
 		if(result != null) {
 			if(result.isRedirect()) {
