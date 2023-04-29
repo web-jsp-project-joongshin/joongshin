@@ -30,7 +30,7 @@
 						<nav data-v-5f10666f="">
 							<ul data-v-5f10666f="" class="nav-list">
 								<li data-v-5f10666f="" class="nav-item left-section-item"><a
-									data-v-5f10666f="" href="${pageContext.request.contextPath}/templates/community-users-wmoon/community-main.jsp">
+									data-v-5f10666f="" href="${pageContext.request.contextPath}/comulistOk.board">
 									<span data-v-5f10666f="">커뮤니티</span></a></li>
 								<li data-v-5f10666f="" class="nav-item left-section-item"><a
 									data-v-5f10666f="" href="${pageContext.request.contextPath}/templates/request-board/request-board.jsp">

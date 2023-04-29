@@ -45,6 +45,10 @@ public class UserFrontController extends HttpServlet {
 			
 		} else if(target.equals("logout")) {
 			result = new LogoutController().execute(req, resp);
+		} 
+		 else if(target.equals("findPassword")) {
+			result = new Result();
+			result.setPath("templates/makepage-hsw/findPassword.jsp");
 		}
 		
 		if(result != null) {

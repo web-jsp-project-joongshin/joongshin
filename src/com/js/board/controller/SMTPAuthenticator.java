@@ -1,12 +1,20 @@
-//import javax.mail.Authenticator;
-//import javax.mail.PasswordAuthentication;
-//
-//public class SMTPAuthenticator extends Authenticator{
-//	
-//	
-//	@Override
-//    protected PasswordAuthentication getPasswordAuthentication() {
-//        return new PasswordAuthentication("didwodn8822@gmail.com","****암호*****");
-//    }
-//
-//}
+package com.js.board.controller;
+
+import javax.mail.PasswordAuthentication;
+import javax.mail.Authenticator;
+ 
+/**
+ * @author viper9
+ *
+ */
+public class SMTPAuthenticator extends Authenticator {
+    public SMTPAuthenticator() {
+        super();
+    }
+ 
+    public PasswordAuthentication getPasswordAuthentication() {
+        String username = "asdzxc9822@gmail.com";
+        String password = "01098224849";
+        return new PasswordAuthentication(username, password);
+    }
+}
