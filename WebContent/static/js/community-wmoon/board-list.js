@@ -24,10 +24,10 @@ function showList(){
 												</div>
 												<div class="feed-footer">
 													<div class="user-interaction">
-														<span class="like sg-text-description sg-font-regular sg-text-gray-300">2</span>
+														<span class="like sg-text-description sg-font-regular sg-text-gray-300">${board.userName}</span>
 														<span class="comment sg-text-description sg-font-regular sg-text-gray-300">1</span>
 													</div>
-													<span class="sg-text-description sg-font-regular sg-text-gray-300 time">${board.userName}</span>
+													<span class="sg-text-description sg-font-regular sg-text-gray-300 time">`+ elapsedTime(board.boardRegisterDate) +`</span>
 												</div>
 											</a>
 										</li>

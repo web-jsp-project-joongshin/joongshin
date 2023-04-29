@@ -112,13 +112,13 @@
 
 
 							
-								<section class="community-feed-list">
+								<article class="community-feed-list">
 									<ul class="feed-list">
 										
 										<li></li>
 								
 									</ul>
-								</section>
+								</article>
 								
 								
 								
