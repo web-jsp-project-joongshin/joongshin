@@ -127,7 +127,7 @@ const passwordEnglishRegex = /[a-z]/ig;
 const emailFirstRegex =  /[`~!@#$%^&*|\\\'\";:\/?]/;
 const emailLastRegex = /[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 let joinBlurMessages = ["비밀번호를 입력하세요.", "비밀번호 확인을 위해 한번 더 입력하세요.", "이메일을 입력하세요."];
-let joinRegexMessages = ["비밀번호를 입력해주세요.", "위 비밀번호와 일치하지 않습니다. 다시 입력해주세요.", "이메일 주소를 확인해주세요.", "이메일 주소를 확인해주세요."];
+let joinRegexMessages = ["8자리 이상의 비밀번호를 입력하세요.", "위 비밀번호와 일치하지 않습니다. 다시 입력해주세요.", "이메일 주소를 확인해주세요.", "이메일 주소를 확인해주세요."];
 const $joinHelp = $("div.join p.help");
 let joinCheck;
 let joinCheckAll = [false, false, false, false];
@@ -135,31 +135,25 @@ checkEmail = false;
 
 $joinInputs.on("blur", function(){
     let i = $joinInputs.index($(this));
-	console.log();
     let value = $(this).val();
 
     $(this).next().hide();
     $(this).next().fadeIn(500);
 
     if(!value){
-        $joinHelp.eq(i).text(joinBlurMessages[i]);
-        showHelp($(this), "error.png");
         joinCheck = false;
-        joinCheckAll[i] = joinCheck;
-        return;
-    }
-
-    switch(i){
+	} else {
+    	switch(i){
         
         case 0:
             let numberCheck = value.search(passwordNumberRegex);
             let englishCheck = value.search(passwordEnglishRegex);
 
             var condition1 = (numberCheck >= 0 && englishCheck >= 0)
-            var condition2 = value.length > 0 && value.length < 21;
+            var condition2 = value.length > 8 && value.length < 21;
             var condition3 = value.search(/\s/) < 0;
             
-            joinCheck = condition1 && condition2 || condition3;
+            joinCheck = condition1 && condition2 && condition3;
             break;
         case 1:
             joinCheck = $joinInputs.eq(i-1).val() == value;
@@ -173,15 +167,20 @@ $joinInputs.on("blur", function(){
             joinCheck = condition1 && condition2;
             break;
     }
+    
 
-    joinCheckAll[i] = joinCheck;
+}
 
-    if(!joinCheck){
-        $joinHelp.eq(i).text(joinRegexMessages[i]);
-		$joinHelp.eq(i).css('color', 'red')
-        showHelp($(this), "error.png");
-        return;
-    }
+joinCheckAll[i] = joinCheck;
+
+if(!joinCheck){
+    $joinHelp.eq(i).text(joinRegexMessages[i]);
+    $joinHelp.eq(i).css('color', 'red');
+} else {
+    $joinHelp.eq(i).text("");
+}
+    
+   
 
 	if(i == 2) {
 		$("select.email").trigger("change");
@@ -193,7 +192,7 @@ $joinInputs.on("blur", function(){
 
 $("select.email").on("change", function(){
     $("div.email-last input").val($(this).val());
-    $joinInputs.eq(4).trigger("blur");
+    $joinInputs.eq(3).trigger("blur");
     if(!$(this).val()){
         $("div.email-last input").prop("readonly", false);
         return;
@@ -239,23 +238,3 @@ function send(){
 
     document.join.submit();
 }
-
-$("div#back").click(function(){
-    step--;
-
-    switch(step){
-        case 1:
-            $("div.info").hide();
-            $("div.term").show();
-            $("div#back").hide();
-            break;
-        case 2:
-            $("div.term").hide();
-            $("div.join").hide();
-            $("div.info").show();
-            break;
-    }
-    $([document.documentElement,document.body]).animate({
-        scrollTop:0
-    },300);
-});

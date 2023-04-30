@@ -35,33 +35,27 @@
             </div>
         </div>
         <section id="join-container">
-            <article>
                 <h2 id="title">
                     아이디 재설정
                 </h2>
-            <form action="${pageContext.request.contextPath}/SendMail" method="post">
-                <div class="info">
-                    <div class="info-container">
-                        <span style="margin-bottom: 5%;">
-                            <input maxlength="30" id="email" name="email" type="email" autocomplete="off" placeholder="example@joongsin.com">
-                        </span>
-                        <small class="notice">가입하신 이메일 주소를 입력해주시면 <br>새로운
-							비밀번호를 설정 가능한 링크를 보내드립니다.
-						</small>
-                        <p class="help"></p>
-                    </div>
-                </div>
-                
-                <div class="join">
-                    <button type="submit" class="next1">이메일 전송하기</button>
-                </div>
-            </form>
             
-            
-            
-            </article>
-        </section>
-    </main>
+	<h1>비밀번호 찾기</h1>
+	<form action="/SendMail.board" method="post">	
+		<div class="info">
+			<div class="info-container">
+				<span style="margin-bottom: 5%;">
+					<input maxlength="30" id="email" name="email" type="email" autocomplete="off" placeholder="example@joongsin.com">
+				</span>
+				<small class="notice">가입하신 이메일 주소를 입력해주시면 새로운 비밀번호를 설정 가능한 링크를 보내드립니다.</small>
+				<p class="help"></p>
+			</div>
+		</div>
+		<div class="join">
+			<button type="submit" class="next1">이메일 전송하기</button>
+		</div>
+	</form>
+	</section>
+	</main>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>let contextPath = "${pageContext.request.contextPath}"</script>
