@@ -54,6 +54,13 @@
                             </span>
                             <p class="help"></p>
                         </div>
+                        <div class="info-container">
+                            <label>주소</label>
+                            <span>
+                                <input type="text" id="address" name="userAddress" autocomplete="off" placeholder="서울, 경기 등">
+                            </span>
+                            <p class="help"></p>
+                        </div>
                         <button type="button" class="next1" onclick="goJoin()">다음</button>
                     </div>
                     <div class="join">
@@ -64,6 +71,9 @@
                                 <dd></dd>
                                 
                                 <dt>휴대폰 번호</dt>
+                                <dd></dd>
+                                
+                                <dt>주소</dt>
                                 <dd></dd>
                             </dl>
                         </div>

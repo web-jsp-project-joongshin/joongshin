@@ -32,10 +32,10 @@
             <article>
                 <div class="login">
                     <h2 id="title">
-                        중신 로그인
+                        중신 주니어 로그인
                     </h2>
                 </div>
-                <form action="${pageContext.request.contextPath}/loginOk.user" name="login" method="post">
+                <form action="${pageContext.request.contextPath}/loginOk.juniorUser" name="login" method="post">
                     <div class="login">
                         <div class="info-container info-container-first">
                             <span>
@@ -53,18 +53,17 @@
                         </div>
                         
                         <button type="button" class="login" onclick="send()">로그인</button>
-                        <button type="button" class="join" style="margin-top: 15px;" onclick="location.href='${pageContext.request.contextPath}/join.user'">회원가입</button>
+                        <button type="button" class="join" style="margin-top: 15px;" onclick="location.href='${pageContext.request.contextPath}/gosuJoin.juniorUser'">회원가입</button>
                     </div>
                 </form>
             </article>
-            <button class="login" onclick="location.href='${pageContext.request.contextPath}/findPassword.user'">아이디 찾기</button>
         </section>
     </main>
 </body>
 <%@ include file="../mainpageSeo/footer.jsp" %>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/static/js/makepage-jin/modal.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/makepage-jin/login.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/makepage-jin/gosuLogin.js"></script>
 <script type="text/javascript">
 </script>
 </html>

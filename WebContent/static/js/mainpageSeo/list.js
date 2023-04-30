@@ -11,8 +11,9 @@ function showList(){
 	boards.forEach(board => {
 		text += `
 			<li>
-		        <div>
-		            <a href="javascript:location.href='${contextPath}/detailOk.board?boardId=${board.boardId}'">
+			
+					        <div>
+		            <a href="javascript:location.href='${contextPath}/comuDetailOkController.board?boardId=${board.boardId}'">
 		                <section class="content-container">
 		                        <h6 class="writer">${board.userName}</h6>
 		                    <h4 class="title">${board.boardTitle}</h4>

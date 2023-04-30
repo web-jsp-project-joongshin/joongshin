@@ -29,19 +29,46 @@
                 <div id="content-wrap"></div>
             </div>
         </div>
-		<label style="justify-content: center; font-size: 30px; margin-bottom: 10px">중신에 오신 것을 환영합니다</label>
         <section id="join-container">
             <article>
-                <form action="${pageContext.request.contextPath}/joinOk.member" name="join" method="post">
-                    <div class="join">
-                        <div class="info-container info-container-first">
+                <h2 id="title">
+                        중신 주니어 회원가입
+                    </h2>
+                
+                
+                <form action="${pageContext.request.contextPath}/joinOk.juniorUser" name="join" method="post">
+                    
+                    <div class="info">
+                        <div class="info-container">
                             <label>이름</label>
                             <span>
-                                <input type="text" id="id" name="userUsername" autocomplete="off" placeholder="이름">
+                                <input type="text" id="name" name="userName" autocomplete="off" placeholder="영문 혹은 한글, 2~20자">
                             </span>
                             <p class="help"></p>
                         </div>
+                        
                         <div class="info-container">
+                            <label>휴대폰 번호</label>
+                            <span>
+                                <input type="text" id="phone" name="userPhonenumber" autocomplete="off" placeholder="예) 01000000000">
+                            </span>
+                            <p class="help"></p>
+                        </div>
+                        <button type="button" class="next1" onclick="goJoin()">다음</button>
+                    </div>
+                    <div class="join">
+                        <div class="basic-info-container">
+                            <h3>기본 정보</h3>
+                            <dl>
+                                <dt>이름</dt>
+                                <dd></dd>
+                                
+                                <dt>휴대폰 번호</dt>
+                                <dd></dd>
+                            </dl>
+                        </div>
+
+                        <div class="info-container info-container-first">
                             <label>비밀번호</label>
                             <span>
                                 <div class="password">
@@ -78,18 +105,22 @@
                                     <option value="hotmail.com">hotmail.com</option>
                                     <option value="gmail.com">gmail.com</option>
                                 </select>
-                                <img src="${pageContext.request.contextPath}/static/image/icons/arrow.png" width="16px" style="display: inline-block;">
                             </div>
                             <p class="help"></p>
+                        </div>
+                            
+                            
+                            
                             <div id="selfProduce" class="col-12">
-							<fieldset class="form-group">
+							<fieldset class="form-group" style="border-radius: 10px;">
 								<legend class="legen-text">간편 이력서</legend>
 								<textarea rows="3" cols="25"
-									placeholder="300자 내외 자신의 경력을 작성해주세요." class="textbox"></textarea>
+									placeholder="300자 내외 자신의 경력을 작성해주세요." class="textbox"
+									style="width: 100%; height: 6.25em; border: none; resize: none;"></textarea>
 							</fieldset>
 						</div>
-                        </div>
                         <button type="button" class="next1" onclick="send()">완료</button>
+                        </div>
                     </div>
                 </form>
             </article>
@@ -100,7 +131,7 @@
 <script>let contextPath = "${pageContext.request.contextPath}"</script>
 <script src="${pageContext.request.contextPath}/static/js/makepage-jin/check.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/makepage-jin/modal.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/makepage-jin/join.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/makepage-jin/gosuJoin.js"></script>
 
 <%@ include file="../mainpageSeo/footer.jsp" %>
 </html>

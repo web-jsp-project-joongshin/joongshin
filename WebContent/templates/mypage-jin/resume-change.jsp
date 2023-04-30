@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,24 +16,36 @@
 <link href="../../static/css/mypage-css-jin/resume-change.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<%@ include file="../mainpageSeo/header.jsp" %>
+<c:set var="userId" value="${sessionScope.userId}"/>
+
+<c:choose>
+  <c:when test="${not empty userId}">
+    <jsp:include page="../mainpageSeo/loginHeader.jsp"/>
+  </c:when>
+  <c:otherwise>
+    <jsp:include page="../mainpageSeo/header.jsp"/>
+  </c:otherwise>
+</c:choose>
+
 <!-- 우람님 글쓰기 페이지 가져옴 -->
 	<div id="app-body">
 		<div class="community-container container">
 			<div class="soomgo-life-container">
-				<section class="write-post-container">
+				<form class="write-post-container" action="${pageContext.request.contextPath}/myResumeChangeOk.mypage" name="updateResume" method="post" enctype="multipart/form-data">
 					<div class="attach-file-wrapper">
 						<div class="attach-file-area">
 							<div class="add-image-icon"></div>
 							<div class="custom-file b-form-file file-input" aria-required="false" aria-invalid="false" id="__BVID__95__BV_file_outer_">
-								<input type="file" name="uploadFile" multiple="multiple" class="custom-file-input" id="__BVID__95" style="z-index: -5;"> 
+								<input type="file" name="uploadFile" multiple="multiple" class="custom-file-input" id="fileInput" style="z-index: -5;"> 
 								<label data-browse="Browse" class="custom-file-label" for="__BVID__95">
 									<span class="d-block form-file-text" style="pointer-events: none;">No file chosen</span>
 								</label>
 							</div>
 							<span class="image-count sg-text-body2 sg-font-regular"></span>
 						</div>
+						
 					</div>
+					<div id="preview"></div>
 					<div class="editor-body-container is-bottom-margin">
 						<div class="editor-body-wrapper">
 							<div class="divider-wrapper">
@@ -41,7 +54,7 @@
 							<div class="service-region-wrapper">
 								<div class="category-select-box">
 									<label for="experience">경력:</label>
-									<select id="experience">
+									<select id="experience" id="userCareerYears", name="userCareerYears">
 										<option value="0">0년</option>
 										<option value="1">1년</option>
 										<option value="2">2년</option>
@@ -57,20 +70,16 @@
 							</div>
 							<div class="editor-contents">
 								<span class="sg-text-body2 sg-font-regular sg-text-gray-900">
-									<textarea name="post-content" class="editor-contents-textarea"></textarea>
+									<textarea name="userResume" id="userResume" class="editor-contents-textarea"><c:out value="${resume.userResume}" /></textarea>
 								</span>
-								<span class="editor-contents-textarea-placeholder sg-text-body2 sg-font-regular sg-text-gray-500">
-									고객이 궁금해하는 요청 서비스 정보나 고수님의 전문성을 보여주는 글을 작성해 보세요.
-									글을 통해 고수님의 지정요청을 높일 수 있어요!
-									주제에 맞지 않는 글이나 커뮤니티 이용정책에 위배되어 일정 수 이상 신고를 받는 경우 글이 숨김 및 삭제될 수 있습니다.
-								</span>
+								
 							</div>
 						</div>
 					</div>
 					<div class="submit-btn-wrapper">
-						<button type="button" class="submit-btn">수정하기</button>	
+						<button class="submit-btn">수정하기</button>	
 					</div>
-				</section>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -82,6 +91,9 @@
 	const $textArea = $("textarea");
 	const $placeholder = $(".editor-contents-textarea-placeholder");
 	const $imageCount = $('.image-count');
+	const $experience = $('#experience');
+	const $fileInput = $('#fileInput');
+	const $preview = $('#preview');
 	var count = 0;
 	
 	$(document).ready(function() {
@@ -94,8 +106,30 @@
 		});
 	});
 	
-	$imageCount.prop('innerText', count+"/5");
+	$experience.val(`${resume.userCareerYears}`).prop("selected", true);
 	
 	
+    // 카메라 아이콘 클릭 시 파일 업로드 창 열기
+    $(".add-image-icon").click(function() {
+	    $fileInput.click();
+    });
+    
+	$(document).ready(function() {
+		  // 파일 선택 시 미리보기
+		  $fileInput.on('change', function() {
+		    $preview.empty();
+		    var files = $(this)[0].files;
+		    for (var i = 0; i < files.length; i++) {
+		      var file = files[i];
+		      var reader = new FileReader();
+		      reader.onload = function(e) {
+		        var img = $("<img>");
+		        img.attr("src", e.target.result);
+		        $preview.append(img);
+		      }
+		      reader.readAsDataURL(file);
+		    }
+		})
+	});
 </script>
 </html>

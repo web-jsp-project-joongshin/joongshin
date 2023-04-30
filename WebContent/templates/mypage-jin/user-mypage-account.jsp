@@ -17,7 +17,16 @@
 
 </head>
 <body>
-<%@ include file="../mainpageSeo/header.jsp" %>
+<c:set var="userId" value="${sessionScope.userId}"/>
+
+<c:choose>
+  <c:when test="${not empty userId}">
+    <jsp:include page="../mainpageSeo/loginHeader.jsp"/>
+  </c:when>
+  <c:otherwise>
+    <jsp:include page="../mainpageSeo/header.jsp"/>
+  </c:otherwise>
+</c:choose>
 
 <!-- 계정 설정 -->
 	<div id="app-body">
@@ -37,7 +46,7 @@
 				<section>
 					<ul class="account-info">
 						<div class="item">
-							<a href="${pageContext.request.contextPath}/myNameChange.mypage?userId=${userId}" class="item-container"><div
+							<a href="${pageContext.request.contextPath}/myNameChange.mypage" class="item-container"><div
 									class="item">
 									<div class="item-title">이름</div>
 									<div class="item-info info-name"></div>
@@ -53,7 +62,7 @@
 										<span class="info-email" style="color: rgb(160, 160, 160)"></span>
 									</div>
 								</div>
-								<a href="${pageContext.request.contextPath}/myPwChange.mypage?userId=${userId}" class="item-container">
+								<a href="${pageContext.request.contextPath}/myPwChange.mypage" class="item-container">
 								<div class="item">
 									<div class="item-title">비밀번호</div>
 									<div class="item-info">•••••••</div>
@@ -68,7 +77,7 @@
 						<li class="junior-resume">
 						</li>
 						<li>
-							<a href="${pageContext.request.contextPath}/myWithdrawal.mypage?userId=${userId}" class="item-container">
+							<a href="${pageContext.request.contextPath}/myWithdrawal.mypage" class="item-container">
 								<div data-testid="delete-account-text" class="item">계정 탈퇴</div>
 								<div>
 									<img src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
@@ -85,7 +94,6 @@
 <jsp:include page="../mainpageSeo/footer.jsp"/>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
-	const userId = `${userId}`;
 	const userInfo = JSON.parse(`${userInfo}`);
 	const userType = `${userType}`;
 	let text = "";
@@ -100,7 +108,7 @@
 	// 주니어일 경우 이력서 수정 부분 추가
 	if(userType == 1) {
 		text += `
-			<a href="${pageContext.request.contextPath}/myResumeChange.mypage?userId=${userId}" class="item-container">
+			<a href="${pageContext.request.contextPath}/myResumeOk.mypage" class="item-container">
 				<div data-testid="resume-account-text" class="item">이력서 수정</div>
 				<div>
 					<img src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">

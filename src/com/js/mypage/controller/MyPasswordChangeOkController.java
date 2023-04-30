@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.js.Action;
 import com.js.Result;
@@ -15,7 +16,9 @@ public class MyPasswordChangeOkController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MypageDAO mypageDAO = new MypageDAO();
 		Result result = new Result();
-		String userId = req.getParameter("userId");
+		HttpSession session = req.getSession();
+
+		String userId = (String)session.getAttribute("userId");
 		
 		mypageDAO.updatePassword(req.getParameter("newPassword"), userId);
 		

@@ -49,26 +49,26 @@
 	</select> -->
 	
 	<select id="selectAll" resultType="boardDTO">
-		select board_id, b.user_id, m.user_name, board_title, board_content, board_type
-		from tbl_user m join tbl_board b
+	select board_id, b.user_id, m.user_name, board_title, board_content, board_type, board_status, board_register_date
+	from tbl_user m join tbl_board b
 			on m.user_id = b.user_id
 			order by board_id desc
-			limit 0, 3
+			limit 0, 5
 	</select>
 	
 	
-	<!-- 커뮤에서 일반 유저 게시물 조회 -->
-	<select id="comuSelectAll" resultType="boardDTO">
-		select board_id, b.user_id, m.user_name, board_title, board_content, board_status, board_Register_date, board_type
-		from tbl_user m join tbl_board b
-			on m.user_id = b.user_id
-			where board_type ="구인"
-			order by board_id desc
-	</select>
+<!-- 커뮤에서 일반 유저 게시물 조회 -->
+   <select id="comuSelectAll" resultType="boardDTO">
+      select board_id, b.user_id, m.user_name, board_title, board_content, board_status, board_Register_date, board_type
+      from tbl_user m join tbl_board b
+         on m.user_id = b.user_id
+         where board_type ="구인"
+         order by board_id desc
+   </select>
 	
-	<!-- 커뮤에서 주니어 유저 게시물 조회 -->		
-	<select id="comujuniSelectAll" resultType="boardDTO">
-		select board_id, b.user_id, m.user_name, board_title, board_content, board_status, board_Register_date, board_type
+	<!-- 커뮤에서 주니어 유저 게시물 조회 -->
+ 	<select id="comujuniSelectAll" resultType="boardDTO">
+		 select board_id, b.user_id, m.user_name, board_title, board_content, board_status, board_Register_date, board_type
 		from tbl_user m join tbl_board b
 			on m.user_id = b.user_id
 			where board_type ="구직"

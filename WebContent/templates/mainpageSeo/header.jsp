@@ -19,9 +19,9 @@
 				class="h-global-navigation-bar">
 				<!-- 섹션태그때문에 이미지가 나오지 않아서 없애버렸어요 -->
 				<div data-v-5f10666f="" class="h-desktop-header">
-					<div data-v-5f10666f="" class="left-section">
+					<div data-v-5f10666f="" class="left-section" style="margin-right: 250px">
 						<div data-v-5f10666f="" class="logo">
-							<a data-v-5f10666f="" href="/?from=logo" class=""> <img
+							<a data-v-5f10666f="" href="${pageContext.request.contextPath}/listOk.board" class=""> <img
 								data-v-5f10666f=""
 								src="../../static/image/logo/JOONGSHIN.svg"
 								alt="숨고, 숨은고수">
@@ -30,17 +30,17 @@
 						<nav data-v-5f10666f="">
 							<ul data-v-5f10666f="" class="nav-list">
 								<li data-v-5f10666f="" class="nav-item left-section-item"><a
-									data-v-5f10666f="" href="/category-home?from=web_gnb"
-									class="gnb-link"><span data-v-5f10666f="">커뮤니티</span></a></li>
+									data-v-5f10666f="" href="${pageContext.request.contextPath}/comulistOk.board">
+									<span data-v-5f10666f="">커뮤니티</span></a></li>
 								<li data-v-5f10666f="" class="nav-item left-section-item"><a
-									data-v-5f10666f="" href="/search/pro?from=web_gnb"
-									class="gnb-link"><span data-v-5f10666f="">문의 게시판</span></a></li>
+									data-v-5f10666f="" href="${pageContext.request.contextPath}/">
+									<span data-v-5f10666f="">문의 게시판</span></a></li>
 						
 							</ul>
 						</nav>
 					</div>
 					<!--  					 로고,문자열 네개까지 ↑ -->
-					<div data-v-5f10666f="" class="search-container center-section">
+					<%-- <div data-v-5f10666f="" class="search-container center-section">
 						<div data-v-63f85165="" data-v-5f10666f=""
 							class="h-service-searcher-desktop">
 							<form action="${pageContext.request.contextPath}/listOk.board"
@@ -65,22 +65,22 @@
 								</div>
 							</form>
 						</div>
-					</div>
+					</div> --%>
 					<!-- 로그인 회원가입 고수가입 전↑ -->
 					<div data-v-5f10666f="" class="right-section">
 						<nav data-v-5f10666f="">
 							<ul data-v-5f10666f="" class="nav-list">
-								<li data-v-5f10666f="" class="nav-item right-section-item" style="margin-right: 10px;"><a
+								<li data-v-5f10666f="" class="nav-item right-section-item" style="margin-right: 40px;"><a
 									data-v-5f10666f="" href="/login.user" class="gnb-link"><span
 										data-v-5f10666f="">로그인</span></a> <!----></li>
-								<li data-v-5f10666f="" class="nav-item right-section-item" style="margin-right: 10px;"><a
+								<li data-v-5f10666f="" class="nav-item right-section-item" style="margin-right: 40px;"><a
 									href="/join.user"
 									class="gnb-link"><span data-v-5f10666f="">회원가입</span></a> <!----></li>
 							</ul>
 						</nav>
 						<button data-v-5f10666f="" type="button"
 							class="h-btn pro-signup-h-btn right-section-item h-btn-primary h-btn-primary2">
-							<a data-v-5f10666f="" href="/join.juniorUser" class="">주니어 가입</a>
+							<a data-v-5f10666f="" href="/gosuLogin.juniorUser" class="">주니어 가입</a>
 						</button>
 						<!---->
 					</div>

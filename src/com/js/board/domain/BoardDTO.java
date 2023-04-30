@@ -7,12 +7,12 @@
 	
 	public class BoardDTO {
 		private Long boardId; 
-		private Long userId ;
+		private Long userId;
 		private String userName;
 		private String boardTitle ;
 		private String boardContent ;
 		private String boardStatus;/*문의게시판 필요*/
-		private String boardRegisterDate ; 
+		private String boardRegisterDate;
 		private String boardType;
 		
 		public BoardDTO() {;}

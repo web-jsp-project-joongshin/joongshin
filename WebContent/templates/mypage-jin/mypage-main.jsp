@@ -16,14 +16,24 @@
 <link href="../../static/css/mypage-css-jin/mypage-main.css" rel="stylesheet" type="text/css" />
 
 <body>
-<%@ include file="../mainpageSeo/header.jsp" %>
+
+<c:set var="userId" value="${sessionScope.userId}"/>
+
+<c:choose>
+  <c:when test="${not empty userId}">
+    <jsp:include page="../mainpageSeo/loginHeader.jsp"/>
+  </c:when>
+  <c:otherwise>
+    <jsp:include page="../mainpageSeo/header.jsp"/>
+  </c:otherwise>
+</c:choose>
 
 	<div id="app-body" style="padding: 30px">
 		<div class="container container-md">
 			<div class="mypage-container">
 				<h1 class="mypage-title">마이페이지</h1>
 				<div class="profile-container underline">
-					<a href="${pageContext.request.contextPath}/myAccountOk.mypage?userId=${userId}" class=""><div class="thumb">
+					<a href="${pageContext.request.contextPath}/myAccountOk.mypage" class=""><div class="thumb">
 							<div class="user-profile-picture h-100">
 								<div data-name="image" class="is-square"
 									data-src="https://dmmj3ljielax6.cloudfront.netNone?h=320&amp;w=320"
@@ -48,7 +58,7 @@
 					<li class="main-menu">커뮤니티 <a role="button"> </a>
 					</li>
 					<li class="sub-menu-container soomgo-life-activities">
-						<a href="${pageContext.request.contextPath}/myBoardListOk.mypage?userId=${userId}" class="sub-menu-list">
+						<a href="${pageContext.request.contextPath}/myBoardListOk.mypage" class="sub-menu-list">
 							<div class="sub-content">
 								<div class="sub-menu">
 									<span class="sub-menu-title">숨고생활 작성글</span>

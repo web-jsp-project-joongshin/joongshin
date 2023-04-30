@@ -23,7 +23,7 @@
 			class="h-global-navigation-bar">
 			<!-- 섹션태그때문에 이미지가 나오지 않아서 없애버렸어요 -->
 			<div  class="h-desktop-header">
-				<div  class="left-section" style="display: flex;">
+				<div  class="left-section" style="display: flex; margin-right: 300px">
 					<div  class="logo" style="margin: auto;">
 						<a  href="${pageContext.request.contextPath}/listOk.board" class=""> <img
 							 src="../../static/image/logo/JOONGSHIN.svg"
@@ -31,15 +31,15 @@
 						</a>
 					</div>
 						<ul class="nav-list" style="margin-right: 20px;">
-							<li  class="nav-item left-section-item"><a href="${pageContext.request.contextPath}/templates/community-users-wmoon/community-main.jsp">
+							<li  class="nav-item left-section-item"><a href="${pageContext.request.contextPath}/comulistOk.board">
 								<span>커뮤니티</span></li></a>
 							<li class="nav-item left-section-item"><a
-								href="${pageContext.request.contextPath}/templates/request-board/request-board.jsp">
+								href="${pageContext.request.contextPath}/">
 								<span >문의 게시판</span></a></li>
 						</ul>
 				</div>
 				<!--  					 로고,문자열 네개까지 ↑ -->
-				
+				<%-- 
 				<div  class="search-container center-section">
 					<div  
 						class="h-service-searcher-desktop">
@@ -66,7 +66,7 @@
 							</div>
 						</form>
 					</div>
-				</div>
+				</div> --%>
 				<!-- 로그인 회원가입 고수가입 전↑ -->
 
 
@@ -77,19 +77,20 @@
 				<div  class="right-section" style="display: flex; margin-left: 20px;">
 					<nav >
 						<ul  class="nav-list">
-						<form action="${pageContext.request.contextPath}/listOk.board"
+						<a href="${pageContext.request.contextPath}/messagelistOk.message"
 							class="message1" name="message" style="font-size: 17px; margin: auto;">
 							<li  class="nav-item right-section-item"><span 
 									>채팅</span>
 							<!----></li>
-							</form>
-							<form action="${pageContext.request.contextPath}/listOk.board"
-							class="mypage1" name="search-form" style="margin: auto 10px;">
-							<li  class="nav-item right-section-item" ><a
-								 href="/profile" class="gnb-link"><span style="font-size: 17px;"
-									>마이페이지</span></a>
+							</a>
+							<a href="${pageContext.request.contextPath}/myMainOk.mypage"
+							class="mypage1" name="search-form" style="margin: auto 40px;">
+							<li  class="nav-item right-section-item" >
+							<span style="font-size: 17px;"
+									>마이페이지</span>
 							<!----></li>
 							</form>
+							</a>
 							<li  class="nav-item right-section-item">
 							<a href="${pageContext.request.contextPath}/logout.user"><span style="font-size: 17px;"
 									>로그아웃</span></a>

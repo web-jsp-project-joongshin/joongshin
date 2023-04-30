@@ -16,7 +16,16 @@
 
 </head>
 <body>
-<%@ include file="../mainpageSeo/header.jsp" %>
+<c:set var="userId" value="${sessionScope.userId}"/>
+
+<c:choose>
+  <c:when test="${not empty userId}">
+    <jsp:include page="../mainpageSeo/loginHeader.jsp"/>
+  </c:when>
+  <c:otherwise>
+    <jsp:include page="../mainpageSeo/header.jsp"/>
+  </c:otherwise>
+</c:choose>
 
 	<div id="app-body">
 		<div class="my-page-community-activity-container">
@@ -27,7 +36,7 @@
 				</section>
 				<ul class="tab-list">
 					<li class="tab router-link-exact-active router-link-active sg-text-subhead4 sg-font-bold sg-text-gray-900">
-						<a href="${pageContext.request.contextPath}/myBoardListOk.mypage?userId=${userId}" style="text-decoration: none; color: #2e2e2e; font-weight: 700;" >
+						<a href="${pageContext.request.contextPath}/myBoardListOk.mypage" style="text-decoration: none; color: #2e2e2e; font-weight: 700;" >
 						작성 글</a></li>
 					<li class="tab sg-text-body2 sg-font-regular sg-text-gray-400 selected">
 					<a href="javascript:void(0)" style="text-decoration: none; color: #2e2e2e; font-weight: 700;" >
@@ -38,7 +47,7 @@
 						</ul>
 						<div id="paging-wrap">
 						<c:if test="${prev}">
-							<a href="${pageContext.request.contextPath}/myCommentListOk.mypage?userId=${userId}&page=${startPage - 1}" class="paging paging-move"><img src="/static/image/prev.png" width="15px"></a>
+							<a href="${pageContext.request.contextPath}/myCommentListOk.mypage?page=${startPage - 1}" class="paging paging-move"><img src="/static/image/prev.png" width="15px"></a>
 						</c:if>
 						<c:forEach var="i" begin="${startPage}" end="${endPage}">
                 		<c:choose>
@@ -46,12 +55,12 @@
 			                	<a href="javascript:void(0)" class="paging paging-checked"><c:out value="${i}"/></a>
                 			</c:when>
                 			<c:otherwise>
-			                    <a href="${pageContext.request.contextPath}/myCommentListOk.mypage?userId=${userId}&page=${i}" class="paging"><c:out value="${i}"/></a>
+			                    <a href="${pageContext.request.contextPath}/myCommentListOk.mypage?page=${i}" class="paging"><c:out value="${i}"/></a>
                 			</c:otherwise>
                 		</c:choose>
                 	</c:forEach>
                 	<c:if test="${next}">
-						<a href="${pageContext.request.contextPath}/myCommentListOk.mypage?userId=${userId}&page=${endPage + 1}" class="paging paging-move"><img src="/static/image/next.png" width="15px"></a>
+						<a href="${pageContext.request.contextPath}/myCommentListOk.mypage?page=${endPage + 1}" class="paging paging-move"><img src="/static/image/next.png" width="15px"></a>
 					</c:if>
 						</div>
 						<div></div>
@@ -65,7 +74,6 @@
 <jsp:include page="../mainpageSeo/footer.jsp"/>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
-	const userId = `${userId}`;
 	const myCommentList = JSON.parse(`${myCommentList}`);
 	const contextPath = `${pageContext.request.contextPath}`;
 </script>
