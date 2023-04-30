@@ -21,7 +21,7 @@
 				<div data-v-5f10666f="" class="h-desktop-header">
 					<div data-v-5f10666f="" class="left-section" style="margin-right: 250px">
 						<div data-v-5f10666f="" class="logo">
-							<a data-v-5f10666f="" href="${pageContext.request.contextPath}/templates/mainpageSeo/main-page.jsp" class=""> <img
+							<a data-v-5f10666f="" href="${pageContext.request.contextPath}/listOk.board" class=""> <img
 								data-v-5f10666f=""
 								src="../../static/image/logo/JOONGSHIN.svg"
 								alt="숨고, 숨은고수">
@@ -33,7 +33,7 @@
 									data-v-5f10666f="" href="${pageContext.request.contextPath}/comulistOk.board">
 									<span data-v-5f10666f="">커뮤니티</span></a></li>
 								<li data-v-5f10666f="" class="nav-item left-section-item"><a
-									data-v-5f10666f="" href="${pageContext.request.contextPath}/templates/request-board/request-board.jsp">
+									data-v-5f10666f="" href="${pageContext.request.contextPath}/">
 									<span data-v-5f10666f="">문의 게시판</span></a></li>
 						
 							</ul>

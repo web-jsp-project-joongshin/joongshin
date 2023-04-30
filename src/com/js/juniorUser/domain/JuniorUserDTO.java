@@ -9,6 +9,7 @@ public class JuniorUserDTO {
 	private String userName;
 	private String userAddress;
 	private String userPhonenumber;
+	private int userCareerYears;
 	private String userResume;
 	
 	public JuniorUserDTO() {;}
@@ -60,6 +61,14 @@ public class JuniorUserDTO {
 	public void setUserPhonenumber(String userPhonenumber) {
 		this.userPhonenumber = userPhonenumber;
 	}
+	
+	public int getUserCareerYears() {
+		return userCareerYears;
+	}
+
+	public void setUserCareerYears(int userCareerYears) {
+		this.userCareerYears = userCareerYears;
+	}
 
 	public String getUserResume() {
 		return userResume;
@@ -99,7 +108,7 @@ public class JuniorUserDTO {
 	public String toString() {
 		return "JuniorUserDTO [userId=" + userId + ", userEmail=" + userEmail + ", userPassword=" + userPassword
 				+ ", userName=" + userName + ", userAddress=" + userAddress + ", userPhonenumber=" + userPhonenumber
-				+ ", userResume=" + userResume + "]";
+				+ ", userCareerYears=" + userCareerYears +  ", userResume=" + userResume + "]";
 	}
 	
 	
