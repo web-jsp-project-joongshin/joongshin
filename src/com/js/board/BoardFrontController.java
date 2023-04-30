@@ -10,9 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 import com.js.Result;
 import com.js.board.controller.comuDetailOkController;
 import com.js.board.controller.comuListOkController;
+import com.js.board.controller.comuWriteController;
 import com.js.board.controller.comujuniListOkController;
 import com.js.board.controller.ListOkController;
-import com.js.board.controller.SendMail;
+//import com.js.board.controller.SendMail;
 
 public class BoardFrontController extends HttpServlet {
 	@Override
@@ -25,27 +26,27 @@ public class BoardFrontController extends HttpServlet {
 		if (target.equals("listOk")) {
 			result = new ListOkController().execute(req, resp);
 
-		} else if (target.equals("write")) {
+		} else if (target.equals("comuwrite")) {
 			result = new Result();
 			result.setPath("templates/community-users-wmoon/write.jsp");
 
-		} else if (target.equals("writeOk")) {
-			//result = new WriteOkController().execute(req, resp);
-
-		} else if (target.equals("detailOk")) {
+		} else if (target.equals("comudetailOk")) {
 			result = new comuDetailOkController().execute(req, resp);
 
 		} else if (target.equals("comulistOk")) {
+			System.out.println("일반유저");
 			result = new comuListOkController().execute(req, resp);
+
 		} else if (target.equals("comujunilistOk")) {
+			System.out.println("주니어유저");
 			result = new comujuniListOkController().execute(req, resp);
 		}
-		else if (target.equals("SendMail")) {
-			System.out.println("이메일 보내기");
-			SendMail sendMail = new SendMail();
-		    sendMail.doPost(req, resp);  // doPost() 메소드를 직접 호출
-		}
-
+//		else if (target.equals("SendMail")) {
+//			System.out.println("이메일 보내기");
+//			SendMail sendMail = new SendMail();
+//		    sendMail.doPost(req, resp);  // doPost() 메소드를 직접 호출
+//		}
+		
 		if (result != null) {
 			if (result.isRedirect()) {
 				resp.sendRedirect(result.getPath());

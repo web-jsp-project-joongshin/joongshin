@@ -23,9 +23,9 @@
 
 <body>
 <%@ page import="java.util.Properties" %>
-<%@ page import="javax.mail.*" %>
+<%-- <%@ page import="javax.mail.*" %>
 <%@ page import="javax.mail.internet.*" %>
-
+ --%>
 <%@ include file="../mainpageSeo/header.jsp" %>
 
 <main id="join">
