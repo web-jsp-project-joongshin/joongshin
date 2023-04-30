@@ -14,7 +14,7 @@ import com.js.board.domain.BoardVO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
-public class comujuniWriteOkController implements Action {
+public class comuWriteController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -32,7 +32,7 @@ public class comujuniWriteOkController implements Action {
 		boardVO.setBoardContent(multipartRequest.getParameter("boardContent"));
 		boardVO.setUserId((Long)session.getAttribute("userId"));
 
-		boardDAO.insert(boardVO);
+		boardDAO.comuinsert(boardVO);
 		result.setPath(req.getContextPath() + "/listOk.board");
 		result.setRedirect(true);
 		

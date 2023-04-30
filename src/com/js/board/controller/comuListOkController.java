@@ -57,7 +57,7 @@ public class comuListOkController implements Action {
 		req.setAttribute("total", boardDAO.getTotal(search));
 		
 
-		System.out.println("hi");
+		System.out.println("이사ㅣㄴㅇㄹㄴㅇㄹ");
 		result.setPath("templates/community-users-wmoon/community-main.jsp");
 
 		return result;

@@ -55,6 +55,8 @@
 			order by board_id desc
 			limit 0, 3
 	</select>
+	
+	
 	<!-- 커뮤에서 일반 유저 게시물 조회 -->
 	<select id="comuSelectAll" resultType="boardDTO">
 		select board_id, b.user_id, m.user_name, board_title, board_content, board_status, board_Register_date, board_type
@@ -74,11 +76,12 @@
 	</select>
 	
 
-	 <insert id="insert">
+	 <insert id="comuinsert">
 	 	insert into tbl_board
 	 	(board_id, board_title, board_content, board_register_date, user_id, board_type)
 	 	values(#{boardId}, #{boardTitle}, #{boardContent},#{boardRegisterDate},#{userId},#{boardType);
 	 </insert>
+	 
 	 
 	 <select id="boardSelectAll" resultType="boardDTO">
 		select board_id, board_title, board_content, board_type, m.user_id, m.user_name
