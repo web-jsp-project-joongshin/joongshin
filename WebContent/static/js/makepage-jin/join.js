@@ -227,6 +227,10 @@ $("select.email").on("change", function(){
 	});
 });
 
+
+ 
+
+
 function send(){
     $joinInputs.trigger("blur");
     if(joinCheckAll.filter(check => check).length != $joinInputs.length){
@@ -234,7 +238,9 @@ function send(){
         showWarnModal(modalMessage);
         return;
     }
-	
 
     document.join.submit();
 }
+
+
+
