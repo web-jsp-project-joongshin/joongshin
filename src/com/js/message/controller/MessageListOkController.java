@@ -41,7 +41,6 @@ public class MessageListOkController implements Action{
 		data.put("userId", userId);
 		data.put("receive", receive);
 		data.put("keyword", keyword);
-		
 		messages = dao.selectList(data);
 		
 //		System.out.println(userId);

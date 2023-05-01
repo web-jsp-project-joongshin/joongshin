@@ -13,8 +13,17 @@ public class MessageDTO{
 	private boolean isSender;
 	private String messageContents;
 	private String messageUpdateDatetime;
+	private String userProfileImage;
 	
 	public MessageDTO() {;}
+	
+	public String getUserProfileImage() {
+		return userProfileImage;
+	}
+	
+	public void setUserProfileImage(String userProfileImage) {
+		this.userProfileImage = userProfileImage;
+	}
 
 	public Long getMessageId() {
 		return messageId;
@@ -110,6 +119,7 @@ public class MessageDTO{
 	public String toString() {
 		return "MessageDTO [messageId=" + messageId + ", sendUserId=" + sendUserId + ", recieveUserId=" + recieveUserId
 				+ ", userName=" + userName + ", isSender=" + isSender + ", messageContents=" + messageContents
-				+ ", messageUpdateDatetime=" + messageUpdateDatetime + "]";
+				+ ", messageUpdateDatetime=" + messageUpdateDatetime + ", userProfileImage=" + userProfileImage + "]";
 	}
+
 }

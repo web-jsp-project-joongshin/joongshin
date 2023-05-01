@@ -49,34 +49,38 @@
 	</select> -->
 	
 	<select id="selectAll" resultType="boardDTO">
-		select board_id, b.user_id, m.user_name, board_title, board_content, board_type
-		from tbl_user m join tbl_board b
+	select board_id, b.user_id, m.user_name, board_title, board_content, board_type, board_status, board_register_date
+	from tbl_user m join tbl_board b
 			on m.user_id = b.user_id
 			order by board_id desc
 			limit 0, 5
 	</select>
-	<!-- 커뮤에서 일반 유저 게시물 조회 -->
-	<select id="comuSelectAll" resultType="boardDTO">
-		select board_id, b.user_id, m.user_name, board_title, board_content
-		from tbl_user m join tbl_board b
-			on m.user_id = b.user_id
-			order by board_id desc
-	</select>
+	
+	
+<!-- 커뮤에서 일반 유저 게시물 조회 -->
+   <select id="comuSelectAll" resultType="boardDTO">
+      select board_id, b.user_id, m.user_name, board_title, board_content, board_status, board_Register_date, board_type
+      from tbl_user m join tbl_board b
+         on m.user_id = b.user_id
+         where board_type ="구인"
+         order by board_id desc
+   </select>
 	
 	<!-- 커뮤에서 주니어 유저 게시물 조회 -->
-	<select id="comuSelectAll" resultType="boardDTO">
-		select board_id, b.user_id, m.user_name, board_title, board_content
+ 	<select id="comujuniSelectAll" resultType="boardDTO">
+		 select board_id, b.user_id, m.user_name, board_title, board_content, board_status, board_Register_date, board_type
 		from tbl_user m join tbl_board b
 			on m.user_id = b.user_id
+			where board_type ="구직"
 			order by board_id desc
 	</select>
 	
-
-	 <insert id="insert">
-	 	insert into tbl_board
-	 	(board_id, board_title, board_content, board_register_date, user_id, board_type)
-	 	values(#{boardId}, #{boardTitle}, #{boardContent},#{boardRegisterDate},#{userId},#{boardType);
-	 </insert>
+<!-- 커뮤에서 유저 게시물 추가-->
+	 <insert id="comuinsert">
+  		insert into tbl_board
+  		(board_id, board_title, board_content, board_register_date, user_id, board_type)
+  		values(#{boardId}, #{boardTitle}, #{boardContent}, #{boardRegisterDate}, #{userId}, #{boardType})
+	</insert>
 	 
 	 <select id="boardSelectAll" resultType="boardDTO">
 		select board_id, board_title, board_content, board_type, m.user_id, m.user_name

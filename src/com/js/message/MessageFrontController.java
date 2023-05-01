@@ -12,7 +12,11 @@ import com.js.message.controller.MessageOkController;
 import com.js.message.controller.WriteOkController;
 import com.js.util.Branch;
 import com.js.util.FrontControllerAdapter;
-
+/**
+ * /messageListOk.message
+ * /messageOk.message
+ * /writeOk.message
+ */
 public class MessageFrontController extends FrontControllerAdapter<MessageFrontController>{
 
 	@Override

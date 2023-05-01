@@ -12,6 +12,8 @@
 </head>
 <body>
 	<%@ include file="../mainpageSeo/header.jsp" %>
+	<form id="boardForm" action="${pageContext.request.contextPath}/comuWriteOk.board" method="post">
+	
 	<div id="app-body">
 		<div class="community-container container">
 			<div class="soomgo-life-container">
@@ -19,15 +21,18 @@
 					<div class="select-subject-header">
 						<div class="subject-header-wrapper">
 							<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgZmlsbD0iIzMyMzIzMiIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTYuNDMuNDNsMS4xMzEgMS4xMzEtNy40MzQgNy40MzUgNy40MzQgNy40MzQtMS4xMzEgMS4xMzEtNy40MzUtNy40MzQtNy40MzQgNy40MzRMLjQzIDE2LjQzbDcuNDM0LTcuNDM0TC40MyAxLjU2MSAxLjU2MS40M2w3LjQzNCA3LjQzNEwxNi40My40M3oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMzcgLTExNCkgdHJhbnNsYXRlKDAgOTQpIHRyYW5zbGF0ZSgzMzcgMjApIi8+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=" alt="뒤로 가기" class="back-button">
-							<select class="post-subject-select-box custom-select sg-text-subhead3 sg-font-medium" id="__BVID__93">
-								<option disabled="disabled" value> 주제 선택 </option>
-								<option value="provider-square"> 고수광장 </option>
-								<option value="qna"> 궁금해요 </option>
-								<option value="how-much"> 얼마예요 </option>
+							<form>
+							<select class="post-subject-select-box custom-select sg-text-subhead3 sg-font-medium" id="__BVID__93" onchange="handleSubjectChange(this)" name = "boardType" >
+								<option disabled="disabled" value ="" > 주제 선택 </option>
+								<option value="provider-square"> 구직 </option>
+								  <option value="qna"> 구인 </option>
+								<!-- <option value="how-much"> 얼마예요 </option>
 								<option value="together"> 함께해요 </option>
-								<option value="provider-news"> 고수소식 </option>
+								<option value="provider-news"> 고수소식 </option>-->
 							</select>
-							<button type="submit" id="submit" style="background: white; border: none;" disabled="disabled">등록</button>
+							</form>
+							<button type="submit" id="submit" style="background: white; border: none;" >등록</button>
+					
 						</div>
 					</div>
 					<div class="attach-file-wrapper">
@@ -47,26 +52,27 @@
 							<div class="editor-title-wrapper">
 								<div class="editor-title-container">
 									<label for="post-title-input" class="editor-title-label">
-										<input id="post-title-input" type="text" placeholder="제목을 입력해주세요." value class="post-title-input sg-text-subhead5 sg-font-medium sg-text-gray-900">
+										<input id="post-title-input" type="text" placeholder="제목을 입력해주세요." class="post-title-input sg-text-subhead5 sg-font-medium sg-text-gray-900" name="boardTitle">
 									</label>
 								</div>
 							</div>
 							<div class="divider-wrapper">
 								<hr class="hr-divider">
 							</div>
-							<div class="service-region-wrapper">
+							<!-- <div class="service-region-wrapper">
 								<button class="category-select-box">
 									<span class="text">(선택) 서비스</span>
 								</button>
-							</div>
+							</div> -->
 							<div class="divider-wrapper">
 								<hr class="hr-divider">
 							</div>
 							<div class="editor-contents">
+								
 								<span class="sg-text-body2 sg-font-regular sg-text-gray-900">
 									<textarea id="reco" onfocus="this.span=''" class="editor-contents-textarea" placeholder="고객이 궁금해하는 요청 서비스 정보나 고수님의 전문성을 보여주는 글을 작성해 보세요.
 글을 통해 고수님의 지정요청을 높일 수 있어요!
-주제에 맞지 않는 글이나 커뮤니티 이용정책에 위배되어 일정 수 이상 신고를 받는 경우 글이 숨김 및 삭제될 수 있습니다."></textarea>
+주제에 맞지 않는 글이나 커뮤니티 이용정책에 위배되어 일정 수 이상 신고를 받는 경우 글이 숨김 및 삭제될 수 있습니다." name ="boardContent"></textarea>
 								</span>
 							</div>
 						</div>
@@ -76,8 +82,10 @@
 			</div>
 		</div>
 	</div>
+	</form>
 	<%@ include file="../mainpageSeo/footer.jsp" %>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="../../static/js/community-wmoon/write.js"></script>
+<script src="../../static/js/community-wmoon/typewrite.js"></script>
 </html>

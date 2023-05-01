@@ -69,4 +69,7 @@
 	let receive = `${receive}`;
 </script>
 <script src="/static/js/message-jym/msg-list.js"></script>
+<script type="text/javascript">
+	
+</script>
 </html>

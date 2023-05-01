@@ -2,14 +2,11 @@ const $msgContainer = $('.page-body .container ul.row');
 const $selectionTabs = $('.chat-filter .chat-filter-item');
 const $search = $('input.form-search-text-input');
 
-let messagesJSONArray;
-
 receive = receive ? receive : false;
 console.log(messages);
 
 if(messages) {
-	messagesJSONArray = JSON.parse(messages);
-	showMessageList();
+	showMessageList(JSON.parse(messages));
 } else {
 	location.href = "/messageListOk.message?receive=" + receive;
 }
@@ -34,11 +31,33 @@ $msgList.each(function(i, li) {
 	});
 });
 
-function showMessageList() {
+//더보기 로딩 
+
+let page = 1;
+
+$('더보기').on('click', function() {
+	$.ajax({
+		url: "messageListAppendOk.message",
+		data: { 
+			start: page,
+			keyword: keyword,
+			receive: receive	
+		},
+		async: false,
+		success: function(result) {
+			showMessageList(JSON.parse(result));
+		}
+	});
+	page++;
+});
+
+// 리스트 불러오기
+
+function showMessageList(jsonArray) {
 	//console.log(messages);
 	let text = '';
 	
-	messagesJSONArray.forEach(msg => {
+	jsonArray.forEach(msg => {
 		text += `
 			<li data-name="chat-list" class="col-12">
 	            <div class="chat-item">
