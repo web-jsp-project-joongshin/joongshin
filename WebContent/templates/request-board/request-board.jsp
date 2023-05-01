@@ -61,10 +61,9 @@
 							<!-- 본문 리스트 -->
 							<div class="questions-content-layout">
 								<!-- 문의 게시판 내부 검색창 -->
-								<div class="search-questions d-none">
+								<!-- <div class="search-questions d-none">
 									<form class="search-form">
-										<div role="group" class="input-group">
-											<!---->
+										 <div role="group" class="input-group">
 											<div class="input-group-prepend">
 												<img
 													src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMSkiIHN0cm9rZT0iI0M1QzVDNSIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBjeD0iNi42MTEiIGN5PSI2LjYxMSIgcj0iNS44NjEiLz4KICAgICAgICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Im0xNS4yNSAxNS4yNS00LjI0My00LjI0MyIvPgogICAgPC9nPgo8L3N2Zz4K"
@@ -72,16 +71,15 @@
 											</div>
 											<input type="text" placeholder="키워드와 #태그 모두 검색할 수 있어요."
 												autocomplete="off" class="search-input form-control"
-												maxlength="15" id="__BVID__4795" name="searchKeyword">
+												maxlength="15" id="__BVID__4795" name="searchKeyword">  
 											<div class="input-group-append">
 												<img
 													src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMgMykiPgogICAgICAgICAgICA8Y2lyY2xlIGZpbGw9IiNDNUM1QzUiIGN4PSI5IiBjeT0iOSIgcj0iOSIvPgogICAgICAgICAgICA8cGF0aCBzdHJva2U9IiNGRkYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Im02IDYgNi4wMDUgNi4wMDZNMTIuMDA1IDYgNiAxMi4wMDYiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo="
 													alt="검색어 삭제 아이콘" class="reset" style="display: none;">
 											</div>
-											<!---->
-										</div>
+										</div>  
 									</form>
-								</div>
+								</div> -->	
 								<!-- 베너 '지금 가장 뜨거운 숨고픽' -->
 								<!-- <section class="curation">
 									<div class="curation-header">
