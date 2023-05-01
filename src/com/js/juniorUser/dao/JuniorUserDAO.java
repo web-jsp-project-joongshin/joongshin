@@ -27,20 +27,7 @@ public class JuniorUserDAO {
 //	회원가입
 	public String insert(JuniorUserDTO juniorUserDTO, JuniorUserDTO2 juniorUserDTO2) {
 //		sqlSession.insert("juniorUser.insert", juniorUserDTO);
-//			  return new SQL() {{
-//			    INSERT_INTO("tbl_user");
-//			    VALUES("user_email", "#{userEmail}");
-//			    VALUES("user_password", "#{userPassword}");
-//			    VALUES("user_name", "#{userName}");
-//			    VALUES("user_address", "#{userAddress}");
-//			    VALUES("user_phonenumber", "#{userPhonenumber}");
-//			  }}.toString() + ";" +
-//			  new SQL() {{
-//			    INSERT_INTO("tbl_junior_user");
-//			    VALUES("user_id", "LAST_INSERT_ID()");
-//			    VALUES("user_career_years", "#{userCareerYears}");
-//			    VALUES("user_resume", "#{userResume}");
-//			  }}.toString();
+
 		
 		  sqlSession.insert("juniorUser.insertUser", juniorUserDTO2);
 		  sqlSession.insert("juniorUser.insertJuniorUser", juniorUserDTO);
