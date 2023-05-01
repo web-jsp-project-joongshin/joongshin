@@ -11,7 +11,8 @@ function showList(){
 	boards.forEach(board => {
 		text += `
 			<li>
-		        <div>
+			
+					        <div>
 		            <a href="javascript:location.href='${contextPath}/detailOk.board?boardId=${board.boardId}'">
 		                <section class="content-container">
 		                        <h6 class="writer">${board.userName}</h6>
@@ -21,6 +22,7 @@ function showList(){
 		                    </h6>
 		                </section>
 			`;
+			
 			/*if(files[board.boardId]){
 				text += `<img src="${contextPath}/upload/${files[board.boardId].fileSystemName}" class="preview">`;
 			}*/

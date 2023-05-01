@@ -5,6 +5,7 @@
 
 package com.js.board.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -25,27 +26,62 @@ public SqlSession sqlSession;
 	public List<BoardDTO> selectAll(){
 		return sqlSession.selectList("board.selectAll");
 	}
+//	게시판에서 이용자 유저 전체 조회	
+	public List<BoardDTO> comuSelectAll(HashMap<String, Object> pagable){
+		return sqlSession.selectList("board.comuSelectAll", pagable);
+	}
 	
-	
+//	게시판에서 주니어 유저 전체 조회	
+	public List<BoardDTO> comujuniSelectAll(HashMap<String, Object> pagable){
+		return sqlSession.selectList("board.comuSelectAll", pagable);
+	}
+
 	public List<BoardDTO> boardSelectAll() {
 		return sqlSession.selectList("board.boardSelectAll");
 	}
 	
-	//아이디 검사
-	public boolean checkId(String boardId) {
-		return (Integer)sqlSession.selectOne("user_id", boardId) == 1;
-	}
-	
-	public void delete(Long boardId) {
-		sqlSession.delete("board.delete", boardId);
-	}
 	
 	public int getTotal(Search search) {
 		return sqlSession.selectOne("board.getTotal", search);
 	}
 	
+	
+	//게시글 추가
 	public void insert(BoardVO boardVO) {
 		sqlSession.insert("board.insert", boardVO);
+	}
+
+	//게시글 조회
+	public BoardDTO select(Long boardId) {
+		return sqlSession.selectOne("board.select", boardId);
+	}
+
+	//게시글 수정
+	public void update(BoardVO boardVO) {
+		sqlSession.update("board.update", boardVO);
+	}
+
+	//게시글 삭제
+	public void delete(Long boardId) {
+		sqlSession.delete("board.delete", boardId);
+	}
+
+	// 아이디 검사
+	public boolean checkId(Long boardId) {
+		return (Integer) sqlSession.selectOne("user_id", boardId) == 1;
+	}
+	
+	//답변 상태
+	public void updateBoard(BoardVO boardVO) {
+		sqlSession.update("board.updateBoard", boardVO);
+	}
+	
+	public List<BoardDTO> listSelectUser(HashMap<String, Object> pagable){
+		return sqlSession.selectList("board.listSelectUser", pagable);
+	} 
+	
+	public List<BoardDTO> listjuniSelectAll(HashMap<String, Object> pagable){
+		return sqlSession.selectList("board.listjuniSelectAll", pagable);
 	}
 }
 

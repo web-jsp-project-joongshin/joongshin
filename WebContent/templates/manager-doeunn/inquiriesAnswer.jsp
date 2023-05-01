@@ -44,7 +44,7 @@
             <div class="main-title-box">
                 <h3>1:1 문의 답변 등록하기</h3>
             </div>
-            <form class="main-container">
+            <form class="main-container" action="${pageContext.request.contextPath}/updateOk.admin?boardId=${boardId}" name="update" method="post">
                 <div class="line">
                     <h4>회원 번호</h4>
                     <div class="item-box">
@@ -82,12 +82,16 @@
                     </div>
                 </div>
                 <div class="line">
-                    <button class="answer-btn">답변 완료</button>
+                    <button class="answer-btn" type="submit">답변 완료</button>
                 </div>
             </form>
         </main>
    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+	const boardId = `${boardId}`;
+	console.log(boardId);
+</script>
 <script src="../../static/js/manager-doeunn/inquiries-answer.js"></script>
 </html>

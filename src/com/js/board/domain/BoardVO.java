@@ -10,15 +10,15 @@
 package com.js.board.domain;
 
 public class BoardVO {
-	private Long boardId;
-	private Long userId;
-	private String boardTitle;
-	private String boardContent;
+	private Long boardId; 
+	private Long userId ;
+	private String boardTitle ;
+	private String boardContent ;
+	private String boardStatus;/*문의게시판 필요*/
+	private String boardRegisterDate ; 
 	private String boardType;
-	private String boardCreationDate;
-	private String boardReplyDate;
 	
-	public BoardVO() {;}
+	public BoardVO() {}
 
 	public Long getBoardId() {
 		return boardId;
@@ -52,6 +52,22 @@ public class BoardVO {
 		this.boardContent = boardContent;
 	}
 
+	public String getBoardStatus() {
+		return boardStatus;
+	}
+
+	public void setBoardStatus(String boardStatus) {
+		this.boardStatus = boardStatus;
+	}
+
+	public String getBoardRegisterDate() {
+		return boardRegisterDate;
+	}
+
+	public void setBoardRegisterDate(String boardRegisterDate) {
+		this.boardRegisterDate = boardRegisterDate;
+	}
+
 	public String getBoardType() {
 		return boardType;
 	}
@@ -59,30 +75,16 @@ public class BoardVO {
 	public void setBoardType(String boardType) {
 		this.boardType = boardType;
 	}
-
-	public String getBoardCreationDate() {
-		return boardCreationDate;
-	}
-
-	public void setBoardCreationDate(String boardCreationDate) {
-		this.boardCreationDate = boardCreationDate;
-	}
-
-	public String getBoardReplyDate() {
-		return boardReplyDate;
-	}
-
-	public void setBoardReplyDate(String boardReplyDate) {
-		this.boardReplyDate = boardReplyDate;
-	}
 	
+	
+
 	
 
 	@Override
 	public String toString() {
 		return "BoardVO [boardId=" + boardId + ", userId=" + userId + ", boardTitle=" + boardTitle + ", boardContent="
-				+ boardContent + ", boardType=" + boardType + ", boardCreationDate=" + boardCreationDate
-				+ ", boardReplyDate=" + boardReplyDate + "]";
+				+ boardContent + ", boardStatus=" + boardStatus + ", boardRegisterDate=" + boardRegisterDate
+				+ ", boardType=" + boardType + "]";
 	}
 
 	@Override
@@ -109,6 +111,11 @@ public class BoardVO {
 			return false;
 		return true;
 	}
+	
+	
+
+
+	
 
 	
 }

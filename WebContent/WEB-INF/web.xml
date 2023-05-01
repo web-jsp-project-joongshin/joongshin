@@ -31,8 +31,7 @@
   	<url-pattern>*.adminUser</url-pattern>
   </servlet-mapping>
   
-  
-
+ 
 <servlet>
   	<servlet-name>JuniorUser</servlet-name>
   	<servlet-class>com.js.juniorUser.JuniorUserFrontController</servlet-class>
@@ -40,7 +39,7 @@
   
    <servlet-mapping>
   	<servlet-name>JuniorUser</servlet-name>
-  	<url-pattern>*.JuniorUser</url-pattern>
+  	<url-pattern>*.juniorUser</url-pattern>
   </servlet-mapping>   
    
   <servlet>
@@ -72,6 +71,17 @@
    <servlet-mapping>
   	<servlet-name>JuniorBoard</servlet-name>
   	<url-pattern>*.junior</url-pattern>
+  </servlet-mapping>
+
+  
+  <servlet>
+  	<servlet-name>UserList</servlet-name>
+  	<servlet-class>com.js.user.UserListFrontcontroller</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  	<servlet-name>UserList</servlet-name>
+  	<url-pattern>*.userlist</url-pattern>
   </servlet-mapping>
   
 

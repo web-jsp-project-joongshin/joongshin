@@ -12,11 +12,11 @@ function showList(){
 		text += `
 			<tr>	
                 <td><input type="checkbox" class="pcheckbox"/></td>
-                <td>${board.userId}</td>
-                <td><a href="javascript:location.href='${contextPath}/templates/manager-doeunn/juniorBoardDetail.jsp'">${board.userName}</a></td>
-                <td>${board.userResume}</td>
-                <td>${board.userCareerYears}</td>
-                <td>${board.boardRegisterDate}</td>
+                <td>${board.userName}</td>
+                <td><a href="javascript:location.href='${contextPath}/templates/manager-doeunn/juniorBoardDetail.jsp'">${board.boardTitle}</a></td>
+                <td>${board.boardContent}</td>
+				<td class="date">` + elapsedTime(board.boardRegisterDate)+`</td>
+                <td>${board.boardType}</td>
 			`;
 			/*if(files[board.boardId]){
 				text += `<img src="${contextPath}/upload/${files[board.boardId].fileSystemName}" class="preview">`;

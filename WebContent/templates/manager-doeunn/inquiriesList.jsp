@@ -25,8 +25,8 @@
                         <div class="arrow"></div>
                     </div>
                     <ul class="board-list list">
-                        <li onclick="location.href='/'">이용자 게시판</li>
-						<li onclick="location.href='/listJuniorOk.junior'">주니어 게시판</li>
+                        <li onclick="location.href='/listUserOk.admin'">이용자 게시판</li>
+						<li onclick="location.href='/listJuniorOk.admin'">주니어 게시판</li>
                     </ul>
                </section>
 
@@ -65,8 +65,8 @@
 	                            <th>문의 번호</th>
 	                            <th>제목</th>
 	                            <th>내용</th>
+	                            <th>답변</th>
 	                            <th>작성날짜</th>
-	                            <th>답변날짜</th>
 	                            <th>상태</th>
 	                        </tr>
 	                    </thead>
@@ -75,7 +75,6 @@
 		                        <td>1</td>
 		                        <td>제목이 들어갈 자리입니다</td>
 		                        <td>내용이 들어갈 자리입니다</td>
-		                        <td>2023-04-19</td>
 		                        <td>2023-04-19</td>
 		                        <td class="pending">답변완료</td>
 		                    </tr>              

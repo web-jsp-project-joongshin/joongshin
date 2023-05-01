@@ -10,18 +10,18 @@ import com.js.Action;
 import com.js.Result;
 import com.js.board.dao.BoardDAO;
 
-public class DetailOkController implements Action {
+public class comujuniDeleteOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		BoardDAO boardDAO = new BoardDAO();
 		Result result = new Result();
-		Long boardId = Long.valueOf(req.getParameter("boardId"));
-//		boardDAO.updateReadCount(boardId);
-//
-//		req.setAttribute("board", boardDAO.select(boardId));
 		
-		result.setPath("templates/junior-board/junior-article-view.jsp");
+		boardDAO.delete(Long.valueOf(req.getParameter("boardId")));
+		
+		result.setPath(req.getContextPath() + "/listOk.board");
+		result.setRedirect(true);
+		
 		return result;
 	}
 

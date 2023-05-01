@@ -1,9 +1,7 @@
 package com.js.board.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -15,12 +13,10 @@ import org.json.JSONObject;
 import com.js.Action;
 import com.js.Result;
 import com.js.board.dao.BoardDAO;
-import com.js.board.domain.BoardDTO;
 import com.js.board.domain.Criteria;
 import com.js.board.domain.Search;
 
-public class ListOkCommunityJuniController implements Action {
-
+public class ListJuniorBoardOkController implements Action{
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		BoardDAO boardDAO = new BoardDAO();
@@ -32,36 +28,29 @@ public class ListOkCommunityJuniController implements Action {
 		String type = req.getParameter("type");
 		String keyword = req.getParameter("keyword");
 		
-		sort = sort == null ? "recent" : sort; 
-		
 		Search search = new Search(type, keyword);
-//		Criteria criteria = new Criteria(page, boardDAO.getTotal(search), sort);
+		Criteria criteria = new Criteria(page, boardDAO.getTotal(search), sort);
 		HashMap<String, Object> pagable = new HashMap<String, Object>();
 		pagable.put("types", search.getTypes());
 		pagable.put("keyword", search.getKeyword());
+		pagable.put("offset", criteria.getOffset());
+		pagable.put("rowCount", criteria.getRowCount());
 		pagable.put("sort", sort);
 		
-//		boardDAO.selectAll(pagable).stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
-		req.setAttribute("boards", jsonArray.toString());
-
-
-//		req.setAttribute("total", boardDAO.getTotal(search));
+		boardDAO.listjuniSelectAll(pagable).stream().map(junior -> new JSONObject(junior)).forEach(jsonArray::put);
+		req.setAttribute("juniors", jsonArray.toString());
+		req.setAttribute("total", boardDAO.getTotal(search));
 		req.setAttribute("page", page);
+		req.setAttribute("startPage", criteria.getStartPage());
+		req.setAttribute("endPage", criteria.getEndPage());
+		req.setAttribute("prev", criteria.isPrev());
+		req.setAttribute("next", criteria.isNext());
 		req.setAttribute("sort", sort);
 		req.setAttribute("type", type);
-		req.setAttribute("keyword", keyword);
+		req.setAttribute("keyword", keyword);				
+		req.setAttribute("page", page);
+		result.setPath("templates/manager-doeunn/juniorBoardList.jsp");
 		
-		result.setPath("templates/community-users-wmoon/community-main-juni.jsp");
-
-		return result;
+		return result;		
 	}
 }
-
-
-
-
-
-
-
-
-

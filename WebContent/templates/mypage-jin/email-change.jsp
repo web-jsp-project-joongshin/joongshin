@@ -22,7 +22,16 @@
 
 </head>
 <body>
-<%@ include file="../mainpageSeo/header.jsp" %>
+<c:set var="userId" value="${sessionScope.userId}"/>
+
+<c:choose>
+  <c:when test="${not empty userId}">
+    <jsp:include page="../mainpageSeo/loginHeader.jsp"/>
+  </c:when>
+  <c:otherwise>
+    <jsp:include page="../mainpageSeo/header.jsp"/>
+  </c:otherwise>
+</c:choose>
 
 	<div id="app-body" style="padding: 30px;">
 		<div class="container container-md">

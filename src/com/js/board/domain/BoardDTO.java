@@ -6,105 +6,124 @@
 	package com.js.board.domain;
 	
 	public class BoardDTO {
-		private Long boardId;
-		private String boardTitle;
-		private String boardContent;
-		private String boardCreationDate;
-		private String boardReplyDate;
-		private Long boardReadCount;
-		private Long userId;
+		
+		private Long boardId; 
+		private Long userId ;
 		private String userName;
-		private String boardStatus;
+		private String boardTitle ;
+		private String boardContent ;
+		private String boardStatus;/*문의게시판 필요*/
+		private String boardRegisterDate ; 
+		private String boardType;
 		
 		public BoardDTO() {;}
 		
+		
+
 		public Long getBoardId() {
 			return boardId;
 		}
-	
+
+
+
 		public void setBoardId(Long boardId) {
 			this.boardId = boardId;
 		}
-	
-		public String getBoardTitle() {
-			return boardTitle;
-		}
-	
-		public void setBoardTitle(String boardTitle) {
-			this.boardTitle = boardTitle;
-		}
-	
-		public String getBoardContent() {
-			return boardContent;
-		}
-	
-		public void setBoardContent(String boardContent) {
-			this.boardContent = boardContent;
-		}
-	
-	
-		public Long getBoardReadCount() {
-			return boardReadCount;
-		}
-	
-		public void setBoardReadCount(Long boardReadCount) {
-			this.boardReadCount = boardReadCount;
-		}
-	
+
+
+
 		public Long getUserId() {
 			return userId;
 		}
-	
+
+
+
 		public void setUserId(Long userId) {
 			this.userId = userId;
 		}
-	
+
+
+
 		public String getUserName() {
 			return userName;
 		}
-	
-		public void setuserName(String userName) {
-			this.userName = userName;
-		}
-	
-	
-		public String getBoardCreationDate() {
-			return boardCreationDate;
-		}
 
-		public void setBoardCreationDate(String boardCreationDate) {
-			this.boardCreationDate = boardCreationDate;
-		}
 
-		public String getBoardReplyDate() {
-			return boardReplyDate;
-		}
-
-		public void setBoardReplyDate(String boardReplyDate) {
-			this.boardReplyDate = boardReplyDate;
-		}
 
 		public void setUserName(String userName) {
 			this.userName = userName;
 		}
-		
+
+
+
+		public String getBoardTitle() {
+			return boardTitle;
+		}
+
+
+
+		public void setBoardTitle(String boardTitle) {
+			this.boardTitle = boardTitle;
+		}
+
+
+
+		public String getBoardContent() {
+			return boardContent;
+		}
+
+
+
+		public void setBoardContent(String boardContent) {
+			this.boardContent = boardContent;
+		}
+
+
+
 		public String getBoardStatus() {
 			return boardStatus;
 		}
+
+
 
 		public void setBoardStatus(String boardStatus) {
 			this.boardStatus = boardStatus;
 		}
 
-	
 
+
+		public String getBoardRegisterDate() {
+			return boardRegisterDate;
+		}
+
+
+
+		public void setBoardRegisterDate(String boardRegisterDate) {
+			this.boardRegisterDate = boardRegisterDate;
+		}
+
+
+
+		public String getBoardType() {
+			return boardType;
+		}
+
+
+
+		public void setBoardType(String boardType) {
+			this.boardType = boardType;
+		}
+
+		
+		
 		@Override
 		public String toString() {
-			return "BoardDTO [boardId=" + boardId + ", boardTitle=" + boardTitle + ", boardContent=" + boardContent
-					+ ", boardCreationDate=" + boardCreationDate + ", boardReplyDate=" + boardReplyDate
-					+ ", boardReadCount=" + boardReadCount + ", userId=" + userId + ", userName=" + userName
-					+ ", boardStatus=" + boardStatus + "]";
+			return "BoardDTO [boardId=" + boardId + ", userId=" + userId + ", userName=" + userName + ", boardTitle="
+					+ boardTitle + ", boardContent=" + boardContent + ", boardStatus=" + boardStatus
+					+ ", boardRegisterDate=" + boardRegisterDate + ", boardType=" + boardType + "]";
 		}
+
+
 
 		@Override
 		public int hashCode() {
@@ -113,7 +132,7 @@
 			result = prime * result + ((boardId == null) ? 0 : boardId.hashCode());
 			return result;
 		}
-	
+
 		@Override
 		public boolean equals(Object obj) {
 			if (this == obj)
@@ -130,4 +149,6 @@
 				return false;
 			return true;
 		}
+	
+		
 	}

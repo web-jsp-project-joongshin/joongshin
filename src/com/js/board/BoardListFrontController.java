@@ -1,5 +1,5 @@
 package com.js.board;
-
+//http://localhost://listBoardOk.admin
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -8,8 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.js.Result;
+import com.js.board.controller.BoardDeleteOKController;
 import com.js.board.controller.ListBoardOkController;
-import com.js.board.controller.ListOkController;
+import com.js.board.controller.ListJuniorBoardOkController;
+import com.js.board.controller.ListUserBoardOkController;
+import com.js.board.controller.UpdateBoardListController;
+import com.js.board.controller.UpdateBoardOkController;
 
 public class BoardListFrontController extends HttpServlet{
 	@Override
@@ -22,7 +26,22 @@ public class BoardListFrontController extends HttpServlet{
 		if(target.equals("listBoardOk")) {
 			result = new ListBoardOkController().execute(req, resp);
 			
-		} 
+		} else if(target.equals("updateBoardList")) {
+			result = new UpdateBoardListController().execute(req, resp);
+			
+		} else if(target.equals("updateOk")) {
+			result = new UpdateBoardOkController().execute(req, resp);
+			
+		} else if(target.equals("deleteBoard")) {
+			result = new BoardDeleteOKController().execute(req, resp);
+			
+		} else if (target.equals("listJuniorOk")) {
+			result = new ListJuniorBoardOkController().execute(req, resp);
+		
+		} else if (target.equals("listUserOk")) {
+			result = new ListUserBoardOkController().execute(req, resp);
+		}
+
 		
 		if(result != null) {
 			if(result.isRedirect()) {

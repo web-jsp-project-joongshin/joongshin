@@ -1,5 +1,5 @@
 package com.js.board.controller;
-
+//http://localhost:8090/deleteBoard.admin
 import java.io.IOException;
 
 import javax.servlet.ServletException;

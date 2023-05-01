@@ -26,7 +26,7 @@ public class BoardRecommendController implements Action {
 		//out.print(result.toString());
 		out.close();
 		
-		return null;
+		return result;
 	}
 
 }

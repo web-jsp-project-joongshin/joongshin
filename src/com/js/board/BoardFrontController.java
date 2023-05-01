@@ -8,9 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.js.Result;
-import com.js.board.controller.DetailOkController;
-import com.js.board.controller.ListOkCommunityController;
-import com.js.board.controller.ListOkCommunityJuniController;
+import com.js.board.controller.comuDetailOkController;
+import com.js.board.controller.comuListOkController;
+import com.js.board.controller.comujuniListOkController;
+import com.js.board.controller.ListBoardOkController;
 import com.js.board.controller.ListOkController;
 
 public class BoardFrontController extends HttpServlet {
@@ -32,14 +33,14 @@ public class BoardFrontController extends HttpServlet {
 			//result = new WriteOkController().execute(req, resp);
 
 		} else if (target.equals("detailOk")) {
-			result = new DetailOkController().execute(req, resp);
+			result = new comuDetailOkController().execute(req, resp);
 
-		} else if (target.equals("listcommunityOk")) {
-			result = new ListOkCommunityController().execute(req, resp);
-		} else if (target.equals("listcommunityjuniOk")) {
-			result = new ListOkCommunityJuniController().execute(req, resp);
+		} else if (target.equals("comulistOk")) {
+			result = new comuListOkController().execute(req, resp);
+		} else if (target.equals("comujunilistOk")) {
+			result = new comujuniListOkController().execute(req, resp);
+			
 		}
-
 		if (result != null) {
 			if (result.isRedirect()) {
 				resp.sendRedirect(result.getPath());
