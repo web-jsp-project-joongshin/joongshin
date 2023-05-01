@@ -75,13 +75,12 @@
 			order by board_id desc
 	</select>
 	
-
+<!-- 커뮤에서 유저 게시물 추가-->
 	 <insert id="comuinsert">
-	 	insert into tbl_board
-	 	(board_id, board_title, board_content, board_register_date, user_id, board_type)
-	 	values(#{boardId}, #{boardTitle}, #{boardContent},#{boardRegisterDate},#{userId},#{boardType);
-	 </insert>
-	 
+  		insert into tbl_board
+  		(board_id, board_title, board_content, board_register_date, user_id, board_type)
+  		values(#{boardId}, #{boardTitle}, #{boardContent}, #{boardRegisterDate}, #{userId}, #{boardType})
+	</insert>
 	 
 	 <select id="boardSelectAll" resultType="boardDTO">
 		select board_id, board_title, board_content, board_type, m.user_id, m.user_name

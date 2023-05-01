@@ -39,7 +39,7 @@ public class BoardDAO {
 	public int getTotal(Search search) {
 		return sqlSession.selectOne("board.getTotal", search);
 	}
-// 	효석: 게시글 추가
+// 	효석: 게시글 작성
 		public void comuinsert(BoardVO boardVO) {
 			sqlSession.insert("board.comuinsert", boardVO);
 		}

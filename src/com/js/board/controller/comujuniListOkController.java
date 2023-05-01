@@ -1,5 +1,5 @@
 package com.js.board.controller;
-
+//http://localhost:8090/comujunilistOk.board
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
