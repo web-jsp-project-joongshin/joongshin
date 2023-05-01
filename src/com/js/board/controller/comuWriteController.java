@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.js.Action;
 import com.js.Result;
@@ -19,16 +20,17 @@ public class comuWriteController implements Action {
 		BoardDAO boardDAO = new BoardDAO();
 		Result result = new Result();
 		
-		//HttpSession session = req.getSession();
+		
 		//String root = req.getServletContext().getRealPath("/") + "upload/";
 
 
 		boardVO.setBoardTitle(req.getParameter("boardTitle"));
 		boardVO.setBoardContent(req.getParameter("boardContent"));
-//		boardVO.setUserId((Long)session.getAttribute("userId"));
+		HttpSession session = req.getSession();
+		Long userId = (Long)session.getAttribute("userId");
 		System.out.println(req.getParameter("boardTitle"));
 		System.out.println(req.getParameter("boardContent"));
-		boardVO.setUserId(1L);
+		boardVO.setUserId(userId);
 		boardVO.setBoardType(req.getParameter("boardType"));
 		
 		result.setPath(req.getContextPath() + "/comulistOk.board");
