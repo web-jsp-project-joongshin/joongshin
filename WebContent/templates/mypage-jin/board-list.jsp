@@ -42,19 +42,37 @@
 						작성 댓글</a></li>
 				</ul>
 				<article class="pro-knowhow-list">
-						<ul>
+						
 							<li class="pro-knowhow-list-item">
 								<section class="item-wrapper">
-									<a href="https://soomgo.com/community/pro-knowhow/752--%EC%8B%9C%EA%B0%84-%EA%B0%80%EB%8A%94-%EC%A4%84-%EB%AA%A8%EB%A5%B4%EB%8A%94-%EC%88%98%EC%97%85--%EB%A7%8C%EB%93%9C%EB%8A%94-%EA%B3%A0%EC%88%98">
-										<figure class= "image-wrapper">
-											<img alt="커버 이미지" class="content-image" src="https://static.cdn.soomgo.com/upload/talkboard/f075fba9-b4bd-4611-b21b-3dfda78f4c05.jpg" lazy="loaded">
-										</figure>
-										<h3 class="content-title">'시간 가는 줄 모르는 수업' 만드는 고수</h3>
-										<p class="content-writer">권지안</p>
-									</a>
-								</section>
+									<ul class="board-box">
+									</ul>
+								</section>		
 							</li>
+					
+						<article class="pro-knowhow-list">
+						<ul class="comment-box">
 						</ul>
+						<div id="paging-wrap">
+						<c:if test="${prev}">
+							<a href="${pageContext.request.contextPath}/myBoardListtOk.mypage?page=${startPage - 1}" class="paging paging-move"><img src="/static/image/prev.png" width="15px"></a>
+						</c:if>
+						<c:forEach var="i" begin="${startPage}" end="${endPage}">
+                		<c:choose>
+                			<c:when test="${i eq page}">
+			                	<a href="javascript:void(0)" class="paging paging-checked"><c:out value="${i}"/></a>
+                			</c:when>
+                			<c:otherwise>
+			                    <a href="${pageContext.request.contextPath}/myBoardListtOk.mypage?page=${i}" class="paging"><c:out value="${i}"/></a>
+                			</c:otherwise>
+                		</c:choose>
+                	</c:forEach>
+                	<c:if test="${next}">
+						<a href="${pageContext.request.contextPath}/myBoardListtOk.mypage?page=${endPage + 1}" class="paging paging-move"><img src="/static/image/next.png" width="15px"></a>
+					</c:if>
+						</div>
+						<div></div>
+					</article>
 						<div></div>
 					</article>
 				</section>
@@ -67,7 +85,7 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
 	const myBoardList = JSON.parse(`${myBoardList}`);
-	console.log(myBoardList);
+	const contextPath = `${pageContext.request.contextPath}`;
 </script>
-<script src="${pageContext.request.contextPath}/static/js/mypage-jin/board-list.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mypage-js-jin/board-list.js"></script>
 </html>

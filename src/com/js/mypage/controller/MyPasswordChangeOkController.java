@@ -18,7 +18,7 @@ public class MyPasswordChangeOkController implements Action {
 		Result result = new Result();
 		HttpSession session = req.getSession();
 
-		String userId = (String)session.getAttribute("userId");
+		Long userId = (Long)session.getAttribute("userId");
 		
 		mypageDAO.updatePassword(req.getParameter("newPassword"), userId);
 		

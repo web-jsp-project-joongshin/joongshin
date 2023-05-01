@@ -21,7 +21,7 @@ public class JuniorUserDAO {
 	}
 
 	public List<JuniorUserDTO> selectJuniorAll() {
-		return sqlSession.selectList("juniorUser.selectJuniorAll");
+		return sqlSession.selectList("junior.selectJuniorAll");
 	} 
 
 //	회원가입

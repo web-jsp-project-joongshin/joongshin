@@ -20,8 +20,13 @@ public class MypageDAO {
 	}
 	
 //	내가 쓴 글 조회
-	public List<BoardDTO> selectAllBoardList(Long userId) {
-		return sqlSession.selectList("mypage.selectAllBoardList", userId);
+	public List<BoardDTO> selectAllBoardList(HashMap<String, Object> pagable) {
+		return sqlSession.selectList("mypage.selectAllBoardList", pagable);
+	}
+	
+//	내가 쓴 글 전체 개수 조회
+	public int getTotalBoardList(Long userId) {
+		return sqlSession.selectOne("mypage.getTotalBoardList", userId);
 	}
 	
 //	내가 쓴 댓글 조회
@@ -46,7 +51,7 @@ public class MypageDAO {
 	}
 	
 //	이름 변경
-	public void updateName(String changeName, String userId) {
+	public void updateName(String changeName, Long userId) {
 		HashMap<String, Object> changeMap = new HashMap<String, Object>();
 		changeMap.put("changeName", changeName);
 		changeMap.put("userId", userId);
@@ -59,7 +64,7 @@ public class MypageDAO {
 	}
 	
 //	비밀번호 변경
-	public void updatePassword(String newPassword, String userId) {
+	public void updatePassword(String newPassword, Long userId) {
 		HashMap<String, Object> changePwMap = new HashMap<String, Object>();
 		changePwMap.put("changePw", newPassword);
 		changePwMap.put("userId", userId);
@@ -67,7 +72,7 @@ public class MypageDAO {
 	}
 	
 //	회원 탈퇴
-	public void deleteUser(String userId) {
+	public void deleteUser(Long userId) {
 		sqlSession.delete("mypage.deleteUser", userId);
 	}
 	

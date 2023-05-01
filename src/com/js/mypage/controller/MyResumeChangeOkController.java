@@ -29,6 +29,7 @@ public class MyResumeChangeOkController implements Action {
 		ResumeFileVO resumeFileVO = new ResumeFileVO();
 		Result result = new Result();
 		HttpSession session = req.getSession();
+		
 		Long userId = (Long)session.getAttribute("userId");
 		Path path = null;
 		

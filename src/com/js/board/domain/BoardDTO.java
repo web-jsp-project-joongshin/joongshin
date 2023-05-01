@@ -77,20 +77,20 @@ public class BoardDTO {
 	public void setBoardType(String boardType) {
 		this.boardType = boardType;
 	}
-
-	@Override
-	public String toString() {
-		return "BoardDTO [boardId=" + boardId + ", userId=" + userId + ", userName=" + userName + ", boardTitle="
-				+ boardTitle + ", boardContent=" + boardContent + ", boardStatus=" + boardStatus
-				+ ", boardRegisterDate=" + boardRegisterDate + ", boardType=" + boardType + "]";
-	}
-
+		
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((boardId == null) ? 0 : boardId.hashCode());
 		return result;
+	}
+
+	@Override
+	public String toString() {
+		return "BoardDTO [boardId=" + boardId + ", userId=" + userId + ", userName=" + userName + ", boardTitle="
+				+ boardTitle + ", boardContent=" + boardContent + ", boardStatus=" + boardStatus
+				+ ", boardRegisterDate=" + boardRegisterDate + ", boardType=" + boardType + "]";
 	}
 
 	@Override
