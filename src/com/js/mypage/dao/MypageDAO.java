@@ -20,8 +20,13 @@ public class MypageDAO {
 	}
 	
 //	내가 쓴 글 조회
-	public List<BoardDTO> selectAllBoardList(Long userId) {
-		return sqlSession.selectList("mypage.selectAllBoardList", userId);
+	public List<BoardDTO> selectAllBoardList(HashMap<String, Object> pagable) {
+		return sqlSession.selectList("mypage.selectAllBoardList", pagable);
+	}
+	
+//	내가 쓴 글 전체 개수 조회
+	public int getTotalBoardList(Long userId) {
+		return sqlSession.selectOne("mypage.getTotalBoardList", userId);
 	}
 	
 //	내가 쓴 댓글 조회
