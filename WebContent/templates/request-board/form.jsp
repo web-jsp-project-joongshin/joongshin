@@ -58,7 +58,6 @@
                         <label for="request_email">문의 태그</label>
                         <input type="text" name="reqType" id="request_email"
                             aria-required="true">
-                        <div id="request_email_error" class="notification notification-error notification-inline"></div>
                     </div>
                     
                     <!-- 제목 입력  -->

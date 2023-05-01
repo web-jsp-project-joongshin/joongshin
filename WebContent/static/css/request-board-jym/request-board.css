@@ -149,6 +149,7 @@ ul {
 
 ul li {
     list-style: none;
+    margin-left: 1.125rem !important;
 }
 
 desktop-header .right-section {
