@@ -2,13 +2,13 @@
 showList();
 
 function showList(){
-	console.log(juniors);
-	juniors = JSON.parse(juniors);
+	console.log(users);
+	users = JSON.parse(users);
 	//files = JSON.parse(files);
 	const $table = $("#content-wraps");
 	let text = "";
 	
-	juniors.forEach(board => {
+	users.forEach(board => {
 		text += `
 			<tr>	
                 <td><input type="checkbox" class="pcheckbox"/></td>
@@ -26,7 +26,7 @@ function showList(){
 			`;
 	});
 	
-	if(juniors.length == 0){
+	if(users.length == 0){
 		text += `
 			<li>
 		        <div>

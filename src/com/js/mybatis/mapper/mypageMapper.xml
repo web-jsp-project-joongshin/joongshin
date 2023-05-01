@@ -2,9 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mypage">
 	<select id="selectAllBoardList" resultType="boardDTO">
-		select board_id, u.user_id, board_title, board_content, board_type, user_name 
+		select board_id, u.user_id,u.user_name, board_title, board_content, board_type, board_status, board_register_date
 		from tbl_user u join tbl_board b
 		on u.user_id = b.user_id and u.user_id = #{userId}
+		limit #{offset}, #{rowCount}
+	</select>
+	
+	<select id="getTotalBoardList" resultType="_int">
+		select count(board_id)
+		from tbl_board
+		where user_id = #{userId}
 	</select>
 	
 	<select id="selectAllCommentList" resultType="commentDTO">

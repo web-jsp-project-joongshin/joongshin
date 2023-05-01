@@ -7,6 +7,7 @@ public class Search {
 	public Search(String type, String keyword) {
 		this.type = type;
 		this.keyword = keyword;
+
 		
 	}
 	
@@ -29,7 +30,5 @@ public class Search {
 	public void setKeyword(String keyword) {
 		this.keyword = keyword;
 	}
-	
-	
-	
+
 }

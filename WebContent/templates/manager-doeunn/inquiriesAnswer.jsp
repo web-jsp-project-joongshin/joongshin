@@ -24,7 +24,7 @@
                     </div>
                     <ul class="board-list list">
                         <li onclick="location.href='userBoardList.jsp'">이용자 게시판</li>
-						<li onclick="location.href='juniorBoardList.jsp'">주니어 게시판</li>
+						<li onclick="location.href='/listJuniorOk.junior'">주니어 게시판</li>
                     </ul>
                </section>
 
@@ -35,7 +35,7 @@
                         <div class="arrow"></div>
                     </div>
                     <ul class="inquiries-list list">
-                        <li onclick="location.href='inquiriesList.jsp'">전체 문의목록</li>
+                        <li onclick="location.href='../../listBoardOk.admin'">전체 문의목록</li>
                     </ul>
                </section>
             </div>
@@ -44,17 +44,17 @@
             <div class="main-title-box">
                 <h3>1:1 문의 답변 등록하기</h3>
             </div>
-            <form class="main-container">
+            <form class="main-container" action="${pageContext.request.contextPath}/updateOk.admin?boardId=${boardId}" name="update" method="post">
                 <div class="line">
                     <h4>회원 번호</h4>
                     <div class="item-box">
-                        <div class="info-box"></div>
+                        <div class="info-box">${board.user_id}</div>
                     </div>
                 </div>
                 <div class="line">
                     <h4>질문 등록일</h4>
                     <div class="item-box">
-                        <div class="info-box"></div>
+                        <div class="info-box">${creationDate}</div>
                     </div>
                 </div>
                 <div class="line">
@@ -82,12 +82,16 @@
                     </div>
                 </div>
                 <div class="line">
-                    <button class="answer-btn">답변 완료</button>
+                    <button class="answer-btn" type="submit">답변 완료</button>
                 </div>
             </form>
         </main>
    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+	const boardId = `${boardId}`;
+	console.log(boardId);
+</script>
 <script src="../../static/js/manager-doeunn/inquiries-answer.js"></script>
 </html>
