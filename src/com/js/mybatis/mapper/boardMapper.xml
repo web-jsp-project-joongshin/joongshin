@@ -131,6 +131,21 @@
 
 =======
 	</select> -->
+	
+	<select id="reqSelectAll" resultType="boardDTO">
+		select board_id, board_title, board_content, m.user_id, user_name, board_register_date, b.board_type
+		from tbl_user m join tbl_board b 
+		on m.user_id = b.user_id
+		order by board_register_date
+		desc
+	</select>
+	
+	<select id="reqInsert">
+		insert into tbl_board
+		(board_id, user_id, board_type, board_title, board_content)
+		values(#{boardId}, #{userId}, #{boardType}, #{boardTitle}, #{boardContent})
+	</select>
+	
 </mapper>
 
 
