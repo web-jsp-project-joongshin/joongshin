@@ -35,9 +35,9 @@ public class FindPasswordController implements Action {
       String userEmail = userDAO.selectEmail(req.getParameter("userEmail"));
       HttpSession sessionE = req.getSession();      //다음페이지에서도 userEmail를 쓰기위해
       Result result = new Result();
-
+      
       result.setRedirect(true);
-
+      
       //      
        if(userEmail == null) {
     	  System.out.println("왜 null이냐");
@@ -49,19 +49,19 @@ public class FindPasswordController implements Action {
           sessionE.setAttribute("userEmail", userEmail);
           //메일 보내기 시작
             // 메일 인코딩
-          String path ="http://localhost:8090/.board";
-
+          String path ="http://localhost:8080/도은.board";
+          
             final String bodyEncoding = "UTF-8"; //콘텐츠 인코딩
-
+            
             //원하는 메일 제목 작성
             String subject = "비밀번호 재설정 본인확인";           
             String fromEmail = "joongshin@gmail.com";
             String fromUsername = "admin";
             String toEmail = userEmail; // 콤마(,)로 여러개 나열
-
+            
             final String username = "asdzxc9822@gmail.com"; //구글 계정 이름        
             final String password = "bfiwbhjomxtklszx";
-
+            
             // 메일에 출력할 텍스트
             String html = null;
             StringBuffer sb = new StringBuffer();
@@ -108,7 +108,7 @@ public class FindPasswordController implements Action {
           //메일보내기 끝
             result.setPath(req.getContextPath() + "/findPasswordOk2.board");
        }
-
+      
       return result;
    }
 
