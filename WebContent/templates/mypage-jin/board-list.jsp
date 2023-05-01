@@ -42,14 +42,14 @@
 						작성 댓글</a></li>
 				</ul>
 				<article class="pro-knowhow-list">
-						<ul>
+						
 							<li class="pro-knowhow-list-item">
 								<section class="item-wrapper">
 									<ul class="board-box">
 									</ul>
 								</section>		
 							</li>
-						</ul>
+					
 						<article class="pro-knowhow-list">
 						<ul class="comment-box">
 						</ul>

@@ -2,8 +2,6 @@
 const $ul = $('ul.comment-box');
 let text = "";
 
-console.log(myCommentList);
-
 myCommentList.forEach(comment => {
 	text += `
 		<li class="comment-item">
