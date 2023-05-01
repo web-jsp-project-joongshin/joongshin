@@ -22,10 +22,7 @@
 
 
 <body>
-<%@ page import="java.util.Properties" %>
-<%-- <%@ page import="javax.mail.*" %>
-<%@ page import="javax.mail.internet.*" %>
- --%>
+
 <%@ include file="../mainpageSeo/header.jsp" %>
 
 <main id="join">
@@ -40,11 +37,11 @@
                 </h2>
             
 	<h1>비밀번호 찾기</h1>
-	<form action="/SendMail.board" method="post">	
+	<form action="/FindPassword.board" method="post">	
 		<div class="info">
 			<div class="info-container">
 				<span style="margin-bottom: 5%;">
-					<input maxlength="30" id="email" name="email" type="email" autocomplete="off" placeholder="example@joongsin.com">
+					<input maxlength="30" id="email" name="userEmail" type="email" autocomplete="off" placeholder="example@joongsin.com">
 				</span>
 				<small class="notice">가입하신 이메일 주소를 입력해주시면 새로운 비밀번호를 설정 가능한 링크를 보내드립니다.</small>
 				<p class="help"></p>

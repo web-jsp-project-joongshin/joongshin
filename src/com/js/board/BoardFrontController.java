@@ -10,8 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 import com.js.Result;
 import com.js.board.controller.comuDetailOkController;
 import com.js.board.controller.comuListOkController;
-import com.js.board.controller.comuWriteController;
+//import com.js.board.controller.comuWriteController;
 import com.js.board.controller.comujuniListOkController;
+import com.js.board.controller.FindPasswordController;
+import com.js.board.controller.FindPasswordController2;
 import com.js.board.controller.ListOkController;
 //import com.js.board.controller.SendMail;
 
@@ -44,12 +46,16 @@ public class BoardFrontController extends HttpServlet {
 			System.out.println("주니어유저");
 			result = new comujuniListOkController().execute(req, resp);
 		}
-//		else if (target.equals("SendMail")) {
-//			System.out.println("이메일 보내기");
-//			SendMail sendMail = new SendMail();
-//		    sendMail.doPost(req, resp);  // doPost() 메소드를 직접 호출
-//		}
+		else if (target.equals("FindPassword")) {
+			System.out.println("이메일 보내기");
+			result = new FindPasswordController().execute(req, resp);
+		}
+	      else if(target.equals("findPasswordOk2")) { 
+	          result = new FindPasswordController2().execute(req, resp); 
+	       }
 		
+			
+			
 		if (result != null) {
 			if (result.isRedirect()) {
 				resp.sendRedirect(result.getPath());
@@ -58,6 +64,7 @@ public class BoardFrontController extends HttpServlet {
 			}
 		}
 	}
+	
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

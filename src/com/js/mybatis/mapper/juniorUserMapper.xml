@@ -5,19 +5,27 @@ Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 �
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- SQL 쿼리를 포함하고 있으며, 이를 Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 수 있도록 돕는다.  -->
 <mapper namespace="juniorUser">
-<insert id="insert">
-		insert into tbl_junior_user
-		(user_name, user_email, user_password, user_phonenumber, user_address, user_career_years, user_resume)
-		values(#{userName}, #{userEmail}, #{userPassword}, #{userPhonenumber}, #{userAddress}, #{userCareerYears}, #{userResume})
-</insert>
+
+  <insert id="insertUser">
+    INSERT INTO tbl_user (user_email, user_password, user_name, user_address, user_phonenumber) 
+    VALUES (#{userEmail}, #{userPassword}, #{userName}, #{userAddress}, #{userPhonenumber})
+  </insert>
+
+  <insert id="insertJuniorUser">
+    INSERT INTO tbl_junior_user (user_id, user_career_years, user_resume) 
+    VALUES (LAST_INSERT_ID(), #{userCareerYears}, #{userResume})
+  </insert>
 	
 	<select id="selectEmail" resultType="string">
 		select user_email from tbl_junior_user where user_email = #{userEmail}
 	</select>
 	
 	<select id="login" resultType="long">
-		select user_id from tbl_junior_user 
-		where user_email = #{userEmail} and user_password = #{userPassword}
+		select u.user_id, u.user_email, u.user_password, u.user_name, u.user_address, u.user_phonenumber, j.user_career_years, j.user_resume
+		from tbl_user u
+		left join tbl_junior_user j on u.user_id = j.user_id
+		where u.user_email = #{userEmail} and u.user_password = #{userPassword};
+
 	</select>
 	
 </mapper>
