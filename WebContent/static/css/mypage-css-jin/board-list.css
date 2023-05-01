@@ -103,6 +103,10 @@ ul li {
     list-style: none;
 }
 
+li {
+	list-style: none;
+}
+
 li.selected {
     padding: 0.625rem 0.25rem 0.75rem;
     border-bottom: 0.125rem solid #2d2d2d;
