@@ -26,10 +26,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
 	rel="stylesheet">
-<<<<<<< HEAD
 	
-=======
->>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
 <title>숨고</title>
 </head>
 
@@ -75,11 +72,7 @@
 											</div>
 											<input type="text" placeholder="키워드와 #태그 모두 검색할 수 있어요."
 												autocomplete="off" class="search-input form-control"
-<<<<<<< HEAD
 												maxlength="15" id="__BVID__4795" name="searchKeyword">
-=======
-												maxlength="15" id="__BVID__4795">
->>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
 											<div class="input-group-append">
 												<img
 													src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMgMykiPgogICAgICAgICAgICA8Y2lyY2xlIGZpbGw9IiNDNUM1QzUiIGN4PSI5IiBjeT0iOSIgcj0iOSIvPgogICAgICAgICAgICA8cGF0aCBzdHJva2U9IiNGRkYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Im02IDYgNi4wMDUgNi4wMDZNMTIuMDA1IDYgNiAxMi4wMDYiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo="
@@ -90,21 +83,13 @@
 									</form>
 								</div>
 								<!-- 베너 '지금 가장 뜨거운 숨고픽' -->
-<<<<<<< HEAD
 								<!-- <section class="curation">
-=======
-								<section class="curation">
->>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
 									<div class="curation-header">
 										<h2 class="sg-text-headline sg-font-bold sg-text-gray-900">지금
 											가장 뜨거운 숨고픽🔥</h2>
 										<span class="curation-page">1/2</span>
 									</div>
-<<<<<<< HEAD
 									배너
-=======
-									<!-- 배너 -->
->>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
 									<div class="slick-slider">
 										<button type="button" data-role="none"
 											class="slick-arrow slick-prev slick-disabled"
@@ -236,11 +221,7 @@
 											class="slick-arrow slick-next" style="display: block;">Next</button>
 									</div>
 								</section>
-<<<<<<< HEAD
  -->
-=======
-
->>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
 								<!-- 서비스/지역 필터 -->
 								<section class="service-area-filter all fixed">
 									<!---->
@@ -253,13 +234,8 @@
 									</button>
 								</section>
 								<!-- 피드 (게시글 목록) -->
-<<<<<<< HEAD
 								<article class="questions-feed-list">
 									<ul class="feed-list" id="content-wrap">
-=======
-								<article class="questions-feed-list" id="#content-wrap ul">
-									<ul class="feed-list">
->>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
 										<!-- <li class="feed-item">
 												<a href="" class="" data-testid="soomgo-life-feed-item">
 														<p class="topic-name">태그 들어갈 내용</p>
@@ -307,19 +283,11 @@
 	</form>
 </body>
 <!-- <script src="/static/js/request-board-js/main-board.js"></script> -->
-<<<<<<< HEAD
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-=======
->>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
 <script>
 	let boards = `${boards}`;
 	console.log(boards);
 </script>
-<<<<<<< HEAD
 <script type ="text/javascript" src="${pageContext.request.contextPath}/static/js/request-board-jym/timer.js"></script>
 <script type ="text/javascript" src="${pageContext.request.contextPath}/static/js/request-board-jym/addBoard.js"></script>
-=======
-<script
-	src="${pageContext.request.contextPath}/static/js/request-board-jym/test2.js"></script>
->>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
 </html>
