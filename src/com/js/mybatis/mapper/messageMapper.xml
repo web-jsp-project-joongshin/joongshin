@@ -13,12 +13,12 @@
 		FROM tbl_user u join tbl_message m
 		<choose>
 			<when test="receive">
-				on u.user_id = m.recieve_user_id
-				where send_user_id = #{userId}
-			</when>
-			<otherwise>
 				on u.user_id = m.send_user_id
 				where recieve_user_id = #{userId}
+			</when>
+			<otherwise>
+				on u.user_id = m.recieve_user_id
+				where send_user_id = #{userId}
 			</otherwise>
 		</choose>
 		<if test="keyword != ''.toString()">

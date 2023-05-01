@@ -3,6 +3,7 @@ const $selectionTabs = $('.chat-filter .chat-filter-item');
 const $search = $('input.form-search-text-input');
 let msgArray;
 let isFirstList = true;
+let page = 0;
 
 receive = receive ? receive : false;
 
@@ -12,8 +13,6 @@ if(messages) {
 } else {
 	location.href = "/messageListOk.message?receive=" + receive;
 }
-
-const $msgList = $('.page-body .container ul.row li.col-12');
 
 $search.on('search', function() {
 	location.href = `/messageListOk.message?receive=${receive}&keyword=` + this.value;
@@ -27,29 +26,26 @@ $selectionTabs.eq(1).on('click', function() {
 	location.href = "/messageListOk.message?receive=true";
 });
 
-$msgList.each(function(i, li) {
-	if(!$(li).is('#show-more') && !$(li).is('#no-list')) {
-		$(li).on('click', function() {
-			location.href = "/messageOk.message?receive=" + (i == 1) + "&messageId=" + msgArray[i].messageId;
-		});
-	}
-});
-
 //더보기 로딩 
 
-let page = 0;
-
+$(`.page-body .container ul.row li.append-page-${page}`).each(function(i, li) {
+	$(li).on('click', function() {
+		location.href = "/messageOk.message?receive=" + receive + "&messageId=" + msgArray[i].messageId;
+	});
+});
 // 리스트 불러오기
 clickMore();
 
 function clickMore() {
-	$('li#show-more').on('click', function() {
+	$('li#show-more').on('click', function(event) {
+		event.stopPropagation();
+		event.stopImmediatePropagation();
+		
 		page += 10;
 		
 		$('li#show-more').remove();
 		
-		
-		console.log("딸깍")
+		console.log("딸깍");
 		$.ajax({
 			url: "messageListAppendOk.message",
 			contentType: "charset=UTF-8",
@@ -60,22 +56,27 @@ function clickMore() {
 			},
 			async: false,
 			success: function(result) {
-				console.log(result);
 				msgArray = JSON.parse(result);
+				console.log(msgArray);
 				showMessageList(msgArray);
 			}
+		});
+		
+		$(`.page-body .container ul.row li.append-page-${page}`).each(function(i, li) {
+			if(!msgArray[i]) return;
+			$(li).on('click', function() {
+				location.href = "/messageOk.message?receive=" + receive + "&messageId=" + msgArray[i].messageId;
+			});
 		});
 	});
 }
 
 function showMessageList(jsonArray) {
-	
 	let text = '';
 	
 	jsonArray.forEach(msg => {
-		console.log(msg.contentsList);
 		text += `
-			<li data-name="chat-list" id="list-col" class="col-12">
+			<li data-name="chat-list" id="list-col" class="col-12 append-page-${page}">
 	            <div class="chat-item">
 	                <div class="badge-list"></div>
 
@@ -106,8 +107,6 @@ function showMessageList(jsonArray) {
 		`
 	});
 	
-	console.log(jsonArray.length);
-	
 	if(jsonArray.length == 0 && isFirstList){
 		text += `
 			<li id="no-list" class="col-12">
@@ -127,8 +126,8 @@ function showMessageList(jsonArray) {
 	}
 	
 	isFirstList = false;
-	
 	$msgContainer.append(text);
+	$('#app-body').css('min-height', `${$('div.page-header')[0].clientHeight + $('ul.row')[0].clientHeight + 100}px`);
 	clickMore();
 	
 }

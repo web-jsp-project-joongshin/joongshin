@@ -33,42 +33,42 @@ public class FindPasswordController implements Action {
    public Result execute(HttpServletRequest req, HttpServletResponse rep) throws IOException, ServletException {
 	  UserDAO userDAO = new UserDAO();
       String userEmail = userDAO.selectEmail(req.getParameter("userEmail"));
-      HttpSession sessionE = req.getSession();      //ë‹¤ìŒí˜ì´ì§€ì—ì„œë„ userEmailë¥¼ ì“°ê¸°ìœ„í•´
+      HttpSession sessionE = req.getSession();      //´ÙÀ½ÆäÀÌÁö¿¡¼­µµ userEmail¸¦ ¾²±âÀ§ÇØ
       Result result = new Result();
       
       result.setRedirect(true);
       
       //      
        if(userEmail == null) {
-    	  System.out.println("ì™œ nullì´ëƒ");
+    	  System.out.println("¿Ö nullÀÌ³Ä");
           result.setPath("/findPassword.user?email=false");
        }
-       // ì´ë©”ì¼ì„ ì°¾ì•˜ì„ë•Œ      
+       // ÀÌ¸ŞÀÏÀ» Ã£¾ÒÀ»¶§      
        else {
-    	   System.out.println("eë©”ì¼ ì°¾ì•˜ì–´ìš©");
+    	   System.out.println("e¸ŞÀÏ Ã£¾Ò¾î¿ë");
           sessionE.setAttribute("userEmail", userEmail);
-          //ë©”ì¼ ë³´ë‚´ê¸° ì‹œì‘
-            // ë©”ì¼ ì¸ì½”ë”©
-          String path ="http://localhost:8080/ë„ì€.board";
+          //¸ŞÀÏ º¸³»±â ½ÃÀÛ
+            // ¸ŞÀÏ ÀÎÄÚµù
+          String path ="http://localhost:8090/myNameChangeOk.mypage";
           
-            final String bodyEncoding = "UTF-8"; //ì½˜í…ì¸  ì¸ì½”ë”©
+            final String bodyEncoding = "UTF-8"; //ÄÜÅÙÃ÷ ÀÎÄÚµù
             
-            //ì›í•˜ëŠ” ë©”ì¼ ì œëª© ì‘ì„±
-            String subject = "ë¹„ë°€ë²ˆí˜¸ ì¬ì„¤ì • ë³¸ì¸í™•ì¸";           
+            //¿øÇÏ´Â ¸ŞÀÏ Á¦¸ñ ÀÛ¼º
+            String subject = "Áß½Å ºñ¹Ğ¹øÈ£ Àç¼³Á¤";           
             String fromEmail = "joongshin@gmail.com";
             String fromUsername = "admin";
-            String toEmail = userEmail; // ì½¤ë§ˆ(,)ë¡œ ì—¬ëŸ¬ê°œ ë‚˜ì—´
+            String toEmail = userEmail; // ÄŞ¸¶(,)·Î ¿©·¯°³ ³ª¿­
             
-            final String username = "asdzxc9822@gmail.com"; //êµ¬ê¸€ ê³„ì • ì´ë¦„        
+            final String username = "asdzxc9822@gmail.com"; //±¸±Û °èÁ¤ ÀÌ¸§        
             final String password = "bfiwbhjomxtklszx";
             
-            // ë©”ì¼ì— ì¶œë ¥í•  í…ìŠ¤íŠ¸
+            // ¸ŞÀÏ¿¡ Ãâ·ÂÇÒ ÅØ½ºÆ®
             String html = null;
             StringBuffer sb = new StringBuffer();
-            sb.append("<h3>ë¹„ë°€ë²ˆí˜¸ ì¬ì„¤ì • í˜ì´ì§€ ë§í¬ì…ë‹ˆë‹¤</h3>\n");
+            sb.append("<h3>ºñ¹Ğ¹øÈ£ Àç¼³Á¤ ÆäÀÌÁö ¸µÅ©ÀÔ´Ï´Ù</h3>\n");
             sb.append("<h4>" + path+ "</h4>");    
             html = sb.toString();
-            // ë©”ì¼ ì˜µì…˜ ì„¤ì •
+            // ¸ŞÀÏ ¿É¼Ç ¼³Á¤
             Properties props = new Properties();
             props.put("mail.smtp.starttls.enable", "true");
             props.put("mail.smtp.host", "smtp.gmail.com");
@@ -77,35 +77,35 @@ public class FindPasswordController implements Action {
             props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
             props.put("mail.smtp.ssl.protocols", "TLSv1.2");
             try {
-              // ë©”ì¼ ì„œë²„  ì¸ì¦ ê³„ì • ì„¤ì •
+              // ¸ŞÀÏ ¼­¹ö  ÀÎÁõ °èÁ¤ ¼³Á¤
               Authenticator auth = new Authenticator() {
                 protected PasswordAuthentication getPasswordAuthentication() {
                   return new PasswordAuthentication(username, password);
                 }
               };
-              // ë©”ì¼ ì„¸ì…˜ ìƒì„±
+              // ¸ŞÀÏ ¼¼¼Ç »ı¼º
               Session session = Session.getDefaultInstance(props, auth);
-              // ë©”ì¼ ì†¡/ìˆ˜ì‹  ì˜µì…˜ ì„¤ì •
+              // ¸ŞÀÏ ¼Û/¼ö½Å ¿É¼Ç ¼³Á¤
               Message message = new MimeMessage(session);
               message.setFrom(new InternetAddress(fromEmail, fromUsername));
               message.setRecipients(RecipientType.TO, InternetAddress.parse(toEmail, false));
               message.setSubject(subject);
               message.setSentDate(new Date());
-              // ë©”ì¼ ì½˜í…ì¸  ì„¤ì •
+              // ¸ŞÀÏ ÄÜÅÙÃ÷ ¼³Á¤
               Multipart mParts = new MimeMultipart();
               MimeBodyPart mTextPart = new MimeBodyPart();
               MimeBodyPart mFilePart = null;
-              // ë©”ì¼ ì½˜í…ì¸  - ë‚´ìš©
+              // ¸ŞÀÏ ÄÜÅÙÃ÷ - ³»¿ë
               mTextPart.setText(html, bodyEncoding, "html");
               mParts.addBodyPart(mTextPart);
-              // ë©”ì¼ ì½˜í…ì¸  ì„¤ì •
+              // ¸ŞÀÏ ÄÜÅÙÃ÷ ¼³Á¤
               message.setContent(mParts);
-              // ë©”ì¼ ë°œì†¡
+              // ¸ŞÀÏ ¹ß¼Û
               Transport.send( message );
             } catch ( Exception e ) {
               e.printStackTrace();
             }
-          //ë©”ì¼ë³´ë‚´ê¸° ë
+          //¸ŞÀÏº¸³»±â ³¡
             result.setPath(req.getContextPath() + "/findPasswordOk2.board");
        }
       

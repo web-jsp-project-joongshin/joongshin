@@ -82,7 +82,7 @@ public class MessageDTO{
 	}
 	
 	public List<String> getContentsByLine() {
-		return Arrays.asList(messageContents.split("\\r\\n"));
+		return Arrays.asList(messageContents.split("\\r\\n|\\n"));
 	}
 	
 	public JSONObject toJSON() {

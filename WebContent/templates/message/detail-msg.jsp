@@ -49,6 +49,7 @@
 			</div>
 		<span tabindex="0"></span>
 	</div>-->
+	<%@ include file="../mainpageSeo/loginHeader.jsp" %>
 	<!-- modal end -->
     <section data-observe="explanation" class="product-explanation aaa bbb" id="explanation">
     
@@ -88,6 +89,7 @@
             </div>
         </article>
     </section>
+    <%@ include file="../mainpageSeo/footer.jsp" %>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>

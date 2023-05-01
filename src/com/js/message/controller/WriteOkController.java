@@ -20,8 +20,8 @@ public class WriteOkController implements Action {
 		HttpSession session = req.getSession();
 		
 		String contents = req.getParameter("contents");
-		Long sendUserId = Long.parseLong(Optional.ofNullable(String.valueOf(session.getAttribute("userId"))).orElse("0"));
-		Long recieveUserId = Long.parseLong(Optional.ofNullable(req.getParameter("receiveUserId")).orElse("0"));
+		Long sendUserId = Long.parseLong(String.valueOf(Optional.ofNullable(session.getAttribute("userId")).orElse("3")));
+		Long recieveUserId = Long.parseLong(Optional.ofNullable(req.getParameter("receiveUserId")).orElse("6"));
 		
 		messageVO.setSendUserId(sendUserId);
 		messageVO.setRecieveUserId(recieveUserId);
