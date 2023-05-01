@@ -24,13 +24,13 @@
 		<if test="keyword != ''.toString()">
 			and (message_contents like concat('%', #{keyword}, '%') or u.user_name like concat('%', #{keyword}, '%'))
 		</if>
-		limit #{start} 10
+		limit #{start}, 10
 	</select>
 	
 	<select id="selectOne" resultType="messageDTO">
 		SELECT message_id, send_user_id, u.user_name, recieve_user_id, message_contents, message_update_datetime, u.user_profile_image
 		FROM tbl_user u join tbl_message m
-		on u.user_id =
+		on u.user_id = 
 		<choose>
 			<when test="receive">m.recieve_user_id</when>
 			<otherwise>m.send_user_id</otherwise>

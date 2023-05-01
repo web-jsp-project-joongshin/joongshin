@@ -1,17 +1,19 @@
 const $msgContainer = $('.page-body .container ul.row');
 const $selectionTabs = $('.chat-filter .chat-filter-item');
 const $search = $('input.form-search-text-input');
+let msgArray;
+let isFirstList = true;
 
 receive = receive ? receive : false;
-console.log(messages);
 
 if(messages) {
-	showMessageList(JSON.parse(messages));
+	msgArray = JSON.parse(messages)
+	showMessageList(msgArray);
 } else {
 	location.href = "/messageListOk.message?receive=" + receive;
 }
 
-const $msgList = $('.page-body .container ul.row li');
+const $msgList = $('.page-body .container ul.row li.col-12');
 
 $search.on('search', function() {
 	location.href = `/messageListOk.message?receive=${receive}&keyword=` + this.value;
@@ -26,47 +28,61 @@ $selectionTabs.eq(1).on('click', function() {
 });
 
 $msgList.each(function(i, li) {
-	$(li).on('click', function() {
-		location.href = "/messageOk.message?receive=" + (i == 1) + "&messageId=" + messagesJSONArray[i].messageId;
-	});
+	if(!$(li).is('#show-more') && !$(li).is('#no-list')) {
+		$(li).on('click', function() {
+			location.href = "/messageOk.message?receive=" + (i == 1) + "&messageId=" + msgArray[i].messageId;
+		});
+	}
 });
 
 //더보기 로딩 
 
-let page = 1;
-
-$('더보기').on('click', function() {
-	$.ajax({
-		url: "messageListAppendOk.message",
-		data: { 
-			start: page,
-			keyword: keyword,
-			receive: receive	
-		},
-		async: false,
-		success: function(result) {
-			showMessageList(JSON.parse(result));
-		}
-	});
-	page++;
-});
+let page = 0;
 
 // 리스트 불러오기
+clickMore();
+
+function clickMore() {
+	$('li#show-more').on('click', function() {
+		page += 10;
+		
+		$('li#show-more').remove();
+		
+		
+		console.log("딸깍")
+		$.ajax({
+			url: "messageListAppendOk.message",
+			contentType: "charset=UTF-8",
+			data: { 
+				start: page,
+				keyword: keyword,
+				receive: receive	
+			},
+			async: false,
+			success: function(result) {
+				console.log(result);
+				msgArray = JSON.parse(result);
+				showMessageList(msgArray);
+			}
+		});
+	});
+}
 
 function showMessageList(jsonArray) {
-	//console.log(messages);
+	
 	let text = '';
 	
 	jsonArray.forEach(msg => {
+		console.log(msg.contentsList);
 		text += `
-			<li data-name="chat-list" class="col-12">
+			<li data-name="chat-list" id="list-col" class="col-12">
 	            <div class="chat-item">
 	                <div class="badge-list"></div>
 
 	                <section class="row user-info align-items-start">
 						<div class="profile col-auto">
 							<div class="user-profile-picture">
-								<div style="background-image: url(&quot;https://dmmj3ljielax6.cloudfront.net/upload/profile/add3cf7b-807e-4d65-bc6d-d1781b93a3a0.jpg?h=320&amp;w=320&quot;);">
+								<div style="background-image: url(/WEB-INF/upload/user/${msg.userProfileImage});">
 								</div>
 							</div>
 						</div>
@@ -90,16 +106,30 @@ function showMessageList(jsonArray) {
 		`
 	});
 	
-	if(messages.length == 0){
+	console.log(jsonArray.length);
+	
+	if(jsonArray.length == 0 && isFirstList){
 		text += `
-			<li>
-		        <div>
-					쪽지 기록이 없습니다.
+			<li id="no-list" class="col-12">
+		        <div class="chat-item load-more">
+					<span>쪽지 기록이 없습니다.</span>
 				</div>
 			</li>
 		`
+	} else if(jsonArray.length >= 10){
+		text += `
+			<li id="show-more" class="col-12">
+	            <div class="chat-item load-more">
+	                <span>더보기</span>
+	            </div>
+	        </li>
+		`
 	}
 	
+	isFirstList = false;
+	
 	$msgContainer.append(text);
+	clickMore();
+	
 }
 

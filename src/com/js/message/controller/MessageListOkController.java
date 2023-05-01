@@ -38,9 +38,11 @@ public class MessageListOkController implements Action{
 		Boolean receive = Boolean.valueOf(req.getParameter("receive"));
 		String keyword = Optional.ofNullable(req.getParameter("keyword")).orElse("");
 		
-		data.put("userId", userId);
 		data.put("receive", receive);
+		data.put("userId", userId);
 		data.put("keyword", keyword);
+		data.put("start", 0);
+		
 		messages = dao.selectList(data);
 		
 //		System.out.println(userId);

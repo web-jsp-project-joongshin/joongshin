@@ -26,6 +26,7 @@ public class WriteOkController implements Action {
 		messageVO.setSendUserId(sendUserId);
 		messageVO.setRecieveUserId(recieveUserId);
 		messageVO.setMessageContents(contents);
+		messageVO.setMessageContents(contents);
 		dao.insert(messageVO);
 		resp.getWriter().print(true);
 		

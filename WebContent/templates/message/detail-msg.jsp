@@ -59,7 +59,7 @@
             <div class="row provider-overview no-gutters">
             	<div class="profile col-auto">
 					<div class="user-profile-picture">
-						<div style="background-image: url(&quot;https://dmmj3ljielax6.cloudfront.net/upload/profile/add3cf7b-807e-4d65-bc6d-d1781b93a3a0.jpg?h=320&amp;w=320&quot;);">
+						<div style="background-image: url(/WEB-INF/upload/user/`${userProfileImage}`);">
 						</div>
 					</div>
 				</div>
