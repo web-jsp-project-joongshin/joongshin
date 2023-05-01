@@ -9,7 +9,6 @@ public class Criteria {
 	private boolean next;
 	private String sort;
 	
-
 	
 	public Criteria(int page, int total, String sort) {
 		this(page, total);
@@ -80,17 +79,7 @@ public class Criteria {
 	public void setNext(boolean next) {
 		this.next = next;
 	}
-	
-
 }
-
-
-
-
-
-
-
-
 
 
 

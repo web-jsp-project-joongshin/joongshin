@@ -25,8 +25,8 @@
                         <div class="arrow"></div>
                     </div>
                     <ul class="board-list list">
-                        <li onclick="location.href='userBoardList.jsp'">이용자 게시판</li>
-						<li onclick="location.href='juniorBoardList.jsp'">주니어 게시판</li>
+                        <li onclick="location.href='/listUserOk.admin'">이용자 게시판</li>
+						<li onclick="location.href='/listJuniorOk.admin'">주니어 게시판</li>
                     </ul>
                </section>
 
@@ -37,7 +37,7 @@
                         <div class="arrow"></div>
                     </div>
                     <ul class="inquiries-list list">
-                        <li onclick="location.href='inquiriesList.jsp'">전체 문의목록</li>
+                        <li onclick="location.href='/listBoardOk.admin'">전체 문의목록</li>
                     </ul>
                </section>
             </div>
@@ -49,12 +49,12 @@
             <form class="main-container">
                 <section class="top-line">
                     <div class="search">
-                        <div class="search-icon"></div>
-                        <input placeholder="문의글 검색" name="search"/>
+                        <input placeholder="문의글 검색" name="keyword" value="${keyword}"/>
+                        <button type="submit" onlick="" class="search-icon"></button>
                     </div>
-                    <select name="select-option" class="select-option">
-                        <option value="all">전체</option>
-                        <option value="waiting">대기</option>
+                    <select name="select-option" class="select-option" name="type">
+                        <option value="all" selected="${type == null ? 'selected' : ''}">전체</option>
+                        <option value="waiting" selected="${type == 'waiting' ? 'selected' : ''}">대기</option>
                     </select>
                     <button type="button" class="delete-btn">문의글 삭제</button>
                 </section>
@@ -65,23 +65,46 @@
 	                            <th>문의 번호</th>
 	                            <th>제목</th>
 	                            <th>내용</th>
+	                            <th>답변</th>
 	                            <th>작성날짜</th>
-	                            <th>답변날짜</th>
 	                            <th>상태</th>
 	                        </tr>
 	                    </thead>
 		                    <tr>
-		                        <td><input type="checkbox" class="checkbox"/></td>
+		                        <td><input type="checkbox" class="pcheckbox"/></td>
 		                        <td>1</td>
 		                        <td>제목이 들어갈 자리입니다</td>
 		                        <td>내용이 들어갈 자리입니다</td>
 		                        <td>2023-04-19</td>
-		                        <td>2023-04-19</td>
 		                        <td class="pending">답변완료</td>
-		                    </tr>               
+		                    </tr>              
                 </table>
             </form>
+           <%--  <form action="${pageContext.request.contextPath}/listBoardOk.admin" name="page-form">
+		    	<input type="hidden" name="page" value="${page}">
+		    	<input type="hidden" name="sort" value="${sort}">
+		    	<input type="hidden" name="type" value="${type}">
+		    	<input type="hidden" name="keyword" value="${keyword}">
+			</form> --%>
         </main>
+        <div id="paging-wrap">
+             	<c:if test="${prev}">
+              	<a href="${startPage - 1}" class="paging paging-move change-page"><img src="/static/image/list/prev.png" width="15px"></a>
+             	</c:if>
+             	<c:forEach var="i" begin="${startPage}" end="${endPage}">
+             		<c:choose>
+             			<c:when test="${i eq page}">
+                	<a href="javascript:void(0)" class="paging paging-checked"><c:out value="${i}"/></a>
+             			</c:when>
+             			<c:otherwise>
+                    <a href="${i}" class="paging change-page"><c:out value="${i}"/></a>
+             			</c:otherwise>
+             		</c:choose>
+             	</c:forEach>
+             	<c:if test="${next}">
+                  <a href="${endPage + 1}" class="paging paging-move change-page"><img src="/static/image//list/next.png" width="15px"></a>
+             	</c:if>
+        </div>
    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

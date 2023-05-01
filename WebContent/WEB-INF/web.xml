@@ -72,6 +72,17 @@
   	<servlet-name>JuniorBoard</servlet-name>
   	<url-pattern>*.junior</url-pattern>
   </servlet-mapping>
+
+  
+  <servlet>
+  	<servlet-name>UserList</servlet-name>
+  	<servlet-class>com.js.user.UserListFrontcontroller</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  	<servlet-name>UserList</servlet-name>
+  	<url-pattern>*.userlist</url-pattern>
+  </servlet-mapping>
   
 
 

@@ -12,6 +12,7 @@ import com.js.board.controller.comuDetailOkController;
 import com.js.board.controller.comuListOkController;
 import com.js.board.controller.comuWriteController;
 import com.js.board.controller.comujuniListOkController;
+import com.js.board.controller.ListBoardOkController;
 import com.js.board.controller.ListOkController;
 import com.js.board.controller.ReqWriteOkController;
 import com.js.board.controller.FindPasswordController;
@@ -68,7 +69,6 @@ public class BoardFrontController extends HttpServlet {
 			result = new ReqWriteOkController().execute(req, resp);
 
 		}
-
 		if (result != null) {
 			if (result.isRedirect()) {
 				resp.sendRedirect(result.getPath());

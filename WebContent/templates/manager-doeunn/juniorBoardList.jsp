@@ -23,8 +23,8 @@
                         <div class="arrow"></div>
                     </div>
                     <ul class="board-list list">
-                        <li onclick="location.href='userBoardList.jsp'">이용자 게시판</li>
-						<li onclick="location.href='juniorBoardList.jsp'">주니어 게시판</li>
+                        <li onclick="location.href='/listUserOk.admin'">이용자 게시판</li>
+						<li onclick="location.href='/listJuniorOk.admin'">주니어 게시판</li>
                     </ul>
                </section>
 
@@ -35,7 +35,7 @@
                         <div class="arrow"></div>
                     </div>
                     <ul class="inquiries-list list">
-                        <li onclick="location.href='inquiriesList.jsp'">전체 문의목록</li>
+                        <li onclick="location.href='/listBoardOk.admin'">전체 문의목록</li>
                     </ul>
                </section>
             </div>
@@ -52,25 +52,17 @@
                     </div>
                     <button type="button" class="delete-btn">게시물 삭제</button>
                 </section>
-                <table border="1" id="content-wrap">
+                <table border="1" id="content-wraps">
                     <thead>
                         <tr>
                             <th><input type="checkbox" class="check-top"/></th>
-                            <th>게시물 번호</th>
                             <th>이름</th>
+                            <th>제목</th>
                             <th>내용</th>
-                            <th>작업년도</th>
-                            <th>작성날짜</th>
+                            <th>작업날짜</th>
+                            <th>주니어구직</th>
                         </tr>
                     </thead>
-                    <tr>
-                        <td><input type="checkbox" class="checkbox"/></td>
-                        <td>1</td>
-                        <td>제목이 들어갈 자리입니다</td>
-                        <td>내용이 들어갈 자리입니다</td>
-                        <td>2023-04-19</td>
-                        <td>21</td>
-                    </tr>
                 </table>
             </form>
         </main>

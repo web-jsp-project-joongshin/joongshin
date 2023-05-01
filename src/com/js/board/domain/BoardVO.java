@@ -10,7 +10,6 @@
 package com.js.board.domain;
 
 public class BoardVO {
-		
 	private Long boardId; 
 	private Long userId ;
 	private String boardTitle ;
@@ -76,6 +75,10 @@ public class BoardVO {
 	public void setBoardType(String boardType) {
 		this.boardType = boardType;
 	}
+	
+	
+
+	
 
 	@Override
 	public String toString() {
