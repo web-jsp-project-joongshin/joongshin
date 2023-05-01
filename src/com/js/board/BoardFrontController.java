@@ -27,9 +27,12 @@ public class BoardFrontController extends HttpServlet {
 			result = new ListOkController().execute(req, resp);
 
 		} else if (target.equals("comuwrite")) {
-			result = new Result();
-			result.setPath("templates/community-users-wmoon/write.jsp");
-
+			result = new Result();	
+			result.setPath("templates/community-users-wmoon/write.jsp");		
+			
+		}else if(target.equals("comuWriteOk")) {
+				result = new comuWriteController().execute(req, resp);				
+			 
 		} else if (target.equals("comudetailOk")) {
 			result = new comuDetailOkController().execute(req, resp);
 
