@@ -1,3 +1,5 @@
+<!-- gosuJoin.juniorUser -->
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -114,7 +116,7 @@
                             <div id="selfProduce" class="col-12">
 							<fieldset class="form-group" style="border-radius: 10px;">
 								<legend class="legen-text">간편 이력서</legend>
-								<textarea rows="3" cols="25"
+								<textarea rows="3" cols="25" name="userResume"
 									placeholder="300자 내외 자신의 경력을 작성해주세요." class="textbox"
 									style="width: 100%; height: 6.25em; border: none; resize: none;"></textarea>
 							</fieldset>
