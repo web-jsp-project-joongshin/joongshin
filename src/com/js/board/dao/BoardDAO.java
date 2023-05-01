@@ -26,16 +26,16 @@ public SqlSession sqlSession;
 	public List<BoardDTO> selectAll(){
 		return sqlSession.selectList("board.selectAll");
 	}
-//	게시판에서 이용자 유저 전체 조회	
+//	효석:게시판에서 이용자 유저 전체 조회	
 	public List<BoardDTO> comuSelectAll(HashMap<String, Object> pagable){
 		return sqlSession.selectList("board.comuSelectAll", pagable);
 	}
 	
-//	게시판에서 주니어 유저 전체 조회	
+//	효석:게시판에서 주니어 유저 전체 조회	
 	public List<BoardDTO> comujuniSelectAll(HashMap<String, Object> pagable){
-		return sqlSession.selectList("board.comuSelectAll", pagable);
+		return sqlSession.selectList("board.comujuniSelectAll", pagable);
 	}
-
+	
 	public List<BoardDTO> boardSelectAll() {
 		return sqlSession.selectList("board.boardSelectAll");
 	}
@@ -50,20 +50,30 @@ public SqlSession sqlSession;
 	public void insert(BoardVO boardVO) {
 		sqlSession.insert("board.insert", boardVO);
 	}
+	
+	// 	효석: 게시글 작성
+		public void comuinsert(BoardVO boardVO) {
+			sqlSession.insert("board.comuinsert", boardVO);
+		}
 
 	//게시글 조회
-	public BoardDTO select(Long boardId) {
-		return sqlSession.selectOne("board.select", boardId);
-	}
+		public BoardDTO select(Long boardId) {
+			return sqlSession.selectOne("board.select", boardId);
+		}
 
 	//게시글 수정
-	public void update(BoardVO boardVO) {
-		sqlSession.update("board.update", boardVO);
-	}
+		public void update(BoardVO boardVO) {
+			sqlSession.update("board.update", boardVO);
+		}
 
 	//게시글 삭제
-	public void delete(Long boardId) {
-		sqlSession.delete("board.delete", boardId);
+		public void delete(Long boardId) {
+			sqlSession.delete("board.delete", boardId);
+		}
+
+	// 아이디 검사
+	public boolean checkId(String boardId) {
+		return (Integer) sqlSession.selectOne("user_id", boardId) == 1;
 	}
 
 	// 아이디 검사
@@ -75,11 +85,23 @@ public SqlSession sqlSession;
 	public void updateBoard(BoardVO boardVO) {
 		sqlSession.update("board.updateBoard", boardVO);
 	}
+
+//	문의 게시글 추가
+	public void reqInsert(BoardVO boardVO) {
+		sqlSession.insert("board.reqInsert", boardVO);
+	}
+
+	//	문의 게시판 게시글 전체 조회
+	public List<BoardDTO> reqSelectAll(){
+		return sqlSession.selectList("board.reqSelectAll");
+	}
 	
+	// 우람: 문의게시판 유저 전체 조회
 	public List<BoardDTO> listSelectUser(HashMap<String, Object> pagable){
 		return sqlSession.selectList("board.listSelectUser", pagable);
 	} 
 	
+	// 우람: 문의게시판 주니어 전체 조회
 	public List<BoardDTO> listjuniSelectAll(HashMap<String, Object> pagable){
 		return sqlSession.selectList("board.listjuniSelectAll", pagable);
 	}

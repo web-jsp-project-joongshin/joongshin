@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 </head>
 <body>
-<%@ include file="../mainpageSeo/header.jsp" %>
+<%@ include file="../mainpageSeo/loginHeader.jsp" %>
 	<div class="app">
 		<div class="app-body">
 			<div class="community-container container">
@@ -24,31 +24,8 @@
 								<div>
 									<div class="write-button-desktop">
 										<div class="dropdown b-dropdown btn-group" id="__BVID__785">
-											<button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-primary" id="__BVID__785__BV_toggle_" onclick="location.href='http://localhost:8090/joongshin/templates/community-users-wmoon/write.jsp'">글쓰기</button>
-											<ul role="menu" tabindex="-1" class="dropdown-menu dropdown-menu-right" aria-labelledby="__BVID__785__BV_toggle_">
-												<li class="dropdown-menu-item">
-													<a href="/" class="dropdown-item" role="menuitem" targer="_self">
-														<div class="dropdown-menu-item-wrapper">
-															<div class="dropdown-menu-item-text">
-																<span class="dropdown-menu-item-title sg-text-subhead5 sg-font-medium sg-text-gray-900">이용자 게시글</span>
-																<span class="sg-text-description sg-font-regular sg-text-gray-500">정보와 소식을 담은 자유 게시글 작성하기</span>
-															</div>
-															<i class="dropdown-menu-item-icon"></i>
-														</div>
-													</a>
-												</li>
-												<li role="presentation" class="dropdown-menu-item">
-													<a href="/" class="dropdown-item">
-														<div class="dropdown-menu-item-wrapper">
-															<div class="dropdown-menu-item-text">
-																<span class="dropdown-menu-item-title sg-text-subhead5 sg-font-medium sg-text-gray-900">주니어 게시글</span>
-																<span class="sg-text-description sg-font-regular sg-text-gray-500">주니어의 전문 서비스에 대한 노하우 작성하기</span>
-															</div>
-															<i class="dropdown-menu-item-icon"></i>
-														</div>
-													</a>
-												</li>
-											</ul>
+											<button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-primary" id="__BVID__785__BV_toggle_" onclick="location.href='${pageContext.request.contextPath}/comuwrite.board'">글쓰기</button>
+											
 										</div>
 									</div>
 								</div>
@@ -56,10 +33,10 @@
 						</div>
 						<ul class="category">
 							<li class="sg-text-subhead4 sg-font-bold lg:sg-text-subhead2 lg:sg-font-bold sg-text-gray-900 selected">
-								<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/community-main.jsp" class="link-text router-link-active"> 이용자 게시글 </a>
+								<a href='${pageContext.request.contextPath}/comulistOk.board'" class="link-text router-link-active"> 이용자 게시글 </a>
 							</li>
 							<li class="sg-text-body2 sg-font-regular lg:sg-text-body1 lg:sg-font-regular sg-text-gray-400">
-								<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/community-main-juni.jsp" class="link-text"> 주니어 게시글 </a>
+								<a href='${pageContext.request.contextPath}/comujunilistOk.board'" class="link-text"> 주니어 게시글 </a>
 							</li>
 						</ul>
 						<div class="community-layout">
@@ -110,19 +87,16 @@
 
 
 
-
-							
-								<section class="community-feed-list">
+								<article class="community-feed-list">
 									<ul class="feed-list">
 										
 										<li></li>
 								
 									</ul>
-								</section>
+								</article>
 								
 								
-								
-								
+		
 							</div>
 						</div>
 						<a></a>

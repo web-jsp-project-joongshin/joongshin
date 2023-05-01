@@ -1,5 +1,5 @@
 package com.js.board.controller;
-
+//http://localhost:8090/comulistOk.board
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -57,7 +57,7 @@ public class comuListOkController implements Action {
 		req.setAttribute("total", boardDAO.getTotal(search));
 		
 
-		System.out.println("hi");
+		System.out.println("일반유저");
 		result.setPath("templates/community-users-wmoon/community-main.jsp");
 
 		return result;

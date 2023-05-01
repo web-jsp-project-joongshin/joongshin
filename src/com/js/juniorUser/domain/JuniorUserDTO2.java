@@ -1,7 +1,7 @@
 /*유저 기본 속성 정보 창고*/
 package com.js.juniorUser.domain;
 
-public class JuniorUserDTO {
+public class JuniorUserDTO2 {
 	
 	private Long userId;
 	private String userEmail;
@@ -9,10 +9,8 @@ public class JuniorUserDTO {
 	private String userName;
 	private String userAddress;
 	private String userPhonenumber;
-	private int userCareerYears;
-	private String userResume;
 	
-	public JuniorUserDTO() {;}
+	public JuniorUserDTO2() {;}
 
 	public Long getUserId() {
 		return userId;
@@ -61,22 +59,7 @@ public class JuniorUserDTO {
 	public void setUserPhonenumber(String userPhonenumber) {
 		this.userPhonenumber = userPhonenumber;
 	}
-	
-	public int getUserCareerYears() {
-		return userCareerYears;
-	}
 
-	public void setUserCareerYears(int userCareerYears) {
-		this.userCareerYears = userCareerYears;
-	}
-
-	public String getUserResume() {
-		return userResume;
-	}
-
-	public void setUserResume(String userResume) {
-		this.userResume = userResume;
-	}
 
 
 	@Override
@@ -95,7 +78,7 @@ public class JuniorUserDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		JuniorUserDTO other = (JuniorUserDTO) obj;
+		JuniorUserDTO2 other = (JuniorUserDTO2) obj;
 		if (userId == null) {
 			if (other.userId != null)
 				return false;
@@ -108,7 +91,7 @@ public class JuniorUserDTO {
 	public String toString() {
 		return "JuniorUserDTO [userId=" + userId + ", userEmail=" + userEmail + ", userPassword=" + userPassword
 				+ ", userName=" + userName + ", userAddress=" + userAddress + ", userPhonenumber=" + userPhonenumber
-				+ ", userCareerYears=" + userCareerYears +  ", userResume=" + userResume + "]";
+				 + "]";
 	}
 	
 	

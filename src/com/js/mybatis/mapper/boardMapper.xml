@@ -36,19 +36,22 @@
 
 
 	<select id="selectAll" resultType="boardDTO">
-		select board_id, b.user_id, m.user_name, board_title, board_content, board_type
-		from tbl_user m join tbl_board b
+	select board_id, b.user_id, m.user_name, board_title, board_content, board_type, board_status, board_register_date
+	from tbl_user m join tbl_board b
 			on m.user_id = b.user_id
 			order by board_id desc
 			limit 0, 5
 	</select>
-	<!-- 커뮤에서 일반 유저 게시물 조회 -->
-	<select id="comuSelectAll" resultType="boardDTO">
-		select board_id, b.user_id, m.user_name, board_title, board_content
-		from tbl_user m join tbl_board b
-			on m.user_id = b.user_id
-			order by board_id desc
-	</select>
+	
+	
+<!-- 커뮤에서 일반 유저 게시물 조회 -->
+   <select id="comuSelectAll" resultType="boardDTO">
+      select board_id, b.user_id, m.user_name, board_title, board_content, board_status, board_Register_date, board_type
+      from tbl_user m join tbl_board b
+         on m.user_id = b.user_id
+         where board_type ="구인"
+         order by board_id desc
+   </select>
 	
 	
 	 <!-- <insert id="insert">
@@ -56,6 +59,22 @@
 	 	(board_id, board_title, board_content, board_register_date, user_id, board_type)
 	 	values(#{boardId}, #{boardTitle}, #{boardContent},#{boardRegisterDate},#{userId},#{boardType);
 	 </insert> -->
+	 
+	<!-- 커뮤에서 주니어 유저 게시물 조회 -->
+ 	<select id="comujuniSelectAll" resultType="boardDTO">
+		 select board_id, b.user_id, m.user_name, board_title, board_content, board_status, board_Register_date, board_type
+		from tbl_user m join tbl_board b
+			on m.user_id = b.user_id
+			where board_type ="구직"
+			order by board_id desc
+	</select>
+	
+<!-- 커뮤에서 유저 게시물 추가-->
+	 <insert id="comuinsert">
+  		insert into tbl_board
+  		(board_id, board_title, board_content, board_register_date, user_id, board_type)
+  		values(#{boardId}, #{boardTitle}, #{boardContent}, #{boardRegisterDate}, #{userId}, #{boardType})
+	</insert>
 	 
 	 <select id="boardSelectAll" resultType="boardDTO">
 		select board_id, board_title, board_content, board_register_date, board_type, board_status, m.user_id, m.user_name
@@ -99,7 +118,7 @@
 		values(#{boardId}, #{boardTitle}, #{boardContent}, #{userId})
 	</insert> -->
 	
-	<!-- 커뮤에서 주니어 유저 게시물 조회 -->
+	<!-- 문의 게시판에서 주니어 유저 게시물 조회 -->
 	<select id="listjuniSelectAll" resultType="boardDTO">
        select board_id, b.user_id, m.user_name, board_title, board_content, board_status, board_Register_date, board_type
       from tbl_user m join tbl_board b
@@ -108,7 +127,7 @@
          order by board_id desc
    </select>
    
-   <!-- 커뮤에서 일반 유저 게시물 조회 -->
+   <!-- 문의 게시판에서 일반 유저 게시물 조회 -->
    <select id="listSelectUser" resultType="boardDTO">
       select board_id, b.user_id, m.user_name, board_title, board_content, board_status, board_Register_date, board_type
       from tbl_user m join tbl_board b
@@ -116,6 +135,50 @@
          where board_type ="구인"
          order by board_id desc
    </select>
+	<!-- <select id="select" resultType="boardDTO">
+		select board_id, board_title, board_content, board_register_date, board_update_date, board_read_count, m.user_id, user_name 
+		from tbl_user m join tbl_board b
+		on m.user_id = b.user_id and board_id = #{boardId}
+
+	</select>
+	
+	<update id="update">
+		update tbl_board
+		set board_title = #{boardTitle}, board_content = #{boardContent}
+		where board_id = #{boardId}
+	</update>
+	
+	<delete id="delete">
+		delete from tbl_board
+		where board_id = #{boardId}
+	</delete>
+	
+	<update id="updateReadCount">
+		update tbl_board
+		set board_read_count = board_read_count + 1
+		where board_id = #{board_id}
+	</update> -->
+	
+	<!-- <select id="selectCurrentSequence" resultType="long">
+		select last_insert_id()
+	</select>
+
+	</select> -->
+	
+	<select id="reqSelectAll" resultType="boardDTO">
+		select board_id, board_title, board_content, m.user_id, user_name, board_register_date, b.board_type
+		from tbl_user m join tbl_board b 
+		on m.user_id = b.user_id
+		order by board_register_date
+		desc
+	</select>
+	
+	<select id="reqInsert">
+		insert into tbl_board
+		(board_id, user_id, board_type, board_title, board_content)
+		values(#{boardId}, #{userId}, #{boardType}, #{boardTitle}, #{boardContent})
+	</select>
+	
 </mapper>
 
 

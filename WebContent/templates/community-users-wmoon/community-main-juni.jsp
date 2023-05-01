@@ -24,42 +24,18 @@
 								<div>
 									<div class="write-button-desktop">
 										<div class="dropdown b-dropdown btn-group" id="__BVID__785">
-											<button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-primary" id="__BVID__785__BV_toggle_" onclick="location.href='http://localhost:8090/joongshin/templates/community-users-wmoon/write.jsp'">글쓰기</button>
-											<ul role="menu" tabindex="-1" class="dropdown-menu dropdown-menu-right" aria-labelledby="__BVID__785__BV_toggle_">
-												<li class="dropdown-menu-item">
-													<a href="https://soomgo.com/community/soomgo-life/post/write?topicId=all" class="dropdown-item" role="menuitem" targer="_self">
-														<div class="dropdown-menu-item-wrapper">
-															<div class="dropdown-menu-item-text">
-																<span class="dropdown-menu-item-title sg-text-subhead5 sg-font-medium sg-text-gray-900">이용자 게시글</span>
-																<span class="sg-text-description sg-font-regular sg-text-gray-500">정보와 소식을 담은 자유 게시글 작성하기</span>
-															</div>
-															<i class="dropdown-menu-item-icon"></i>
-														</div>
-													</a>
-												</li>
-												<li role="presentation" class="dropdown-menu-item">
-													<a href="https://soomgo.com/community/soomgo-life/all" class="dropdown-item">
-														<div class="dropdown-menu-item-wrapper">
-															<div class="dropdown-menu-item-text">
-																<span class="dropdown-menu-item-title sg-text-subhead5 sg-font-medium sg-text-gray-900">주니어 게시글</span>
-																<span class="sg-text-description sg-font-regular sg-text-gray-500">주니어의 전문 서비스에 대한 노하우 작성하기</span>
-															</div>
-															<i class="dropdown-menu-item-icon"></i>
-														</div>
-													</a>
-												</li>
-											</ul>
+<button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-primary" id="__BVID__785__BV_toggle_" onclick="location.href='${pageContext.request.contextPath}/comuwrite.board'">글쓰기</button>									
 										</div>
 									</div>
 								</div>
 							</section>
 						</div>
 						<ul class="category">
-							<li class="sg-text-subhead4  lg:sg-text-subhead2 lg:sg-font-bold sg-text-gray-900">
-								<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/community-main.jsp" class="link-text router-link-active"> 이용자 게시글 </a>
+							<li class="sg-text-body2 sg-font-regular lg:sg-text-body1 lg:sg-font-regular sg-text-gray-400">
+								<a href='${pageContext.request.contextPath}/comulistOk.board'" class="link-text "> 이용자 게시글 </a>
 							</li>
-							<li class="sg-text-body2 sg-font-regular sg-font-bold lg:sg-text-body1 lg:sg-font-regular sg-text-gray-400 selected">
-								<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/community-main-juni.jsp" class="link-text"> 주니어 게시글 </a>
+							<li class="sg-text-subhead4 sg-font-bold lg:sg-text-subhead2 lg:sg-font-bold sg-text-gray-900 selected">
+								<a href='${pageContext.request.contextPath}/comujunilistOk.board'" class="link-text router-link-active"> 주니어 게시글 </a>
 							</li>
 						</ul>
 						<div class="community-layout">
@@ -87,14 +63,7 @@
 													</div>
 													<span class="sg-text-subhead4 sg-font-bold sg-text-gray-900">전체</span>
 												</a>
-											</li>
-											<li></li>
-											<li></li>
-											<li></li>
-											<li></li>
-											<li></li>
-											<li></li>
-											<li></li>
+			
 										</ul>
 									</section>
 								</div>
@@ -113,60 +82,20 @@
 										</div>
 									</form>
 								</div>
+								
+								
+								
 
 								<article class="community-feed-list">
 									<ul class="feed-list">
-										<li class="feed-item">
-											<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/view-detail.jsp" class>
-												<div class="feed-content service-address-info">
-													<div>
-														<section class="item-wrapper">
-															<h3 class="sg-text-subhead5 sg-font-medium sg-text-gray-900">컴퓨터 자격증 가지고 있는 주니어분들 찾습니다</h3>
-															<p class="content sg-text-body2 sg-font-regular sg-text-gray-500">sql이나 Java 자격증 찾습니다 전문가 </p>
-														</section>
-													</div>
-												</div>
-												<div class="feed-footer">
-													<div class="user-interaction">
-														<span class="like sg-text-description sg-font-regular sg-text-gray-300">2</span>
-														<span class="comment sg-text-description sg-font-regular sg-text-gray-300">1</span>
-													</div>
-													<span class="sg-text-description sg-font-regular sg-text-gray-300 time">25분 전</span>
-												</div>
-											</a>
-										</li>
+										
 										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
+								
 									</ul>
-									<ul class="feed-list">
-										<li class="feed-item">
-											<a href="http://localhost:8090/joongshin/templates/community-users-wmoon/view-detail.jsp" class>
-												<div class="feed-content service-address-info">
-													<div>
-														<section class="item-wrapper">
-															<h3 class="sg-text-subhead5 sg-font-medium sg-text-gray-900">컴퓨터 자격증 가지고 있는 주니어분들 찾습니다</h3>
-															<p class="content sg-text-body2 sg-font-regular sg-text-gray-500">sql이나 Java 자격증 찾습니다 전문가 </p>
-														</section>
-													</div>
-												</div>
-												<div class="feed-footer">
-													<div class="user-interaction">
-														<span class="like sg-text-description sg-font-regular sg-text-gray-300">2</span>
-														<span class="comment sg-text-description sg-font-regular sg-text-gray-300">1</span>
-													</div>
-													<span class="sg-text-description sg-font-regular sg-text-gray-300 time">25분 전</span>
-												</div>
-											</a>
-										</li>
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									<div></div>
 								</article>
+								
+								
+								
 							</div>
 						</div>
 						<a></a>
@@ -245,5 +174,21 @@
 	</div>
 	<%@ include file="../mainpageSeo/footer.jsp" %>
 </body>
-<script src="../../static/js/community-wmoon/modal.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+<script>
+let boards = `${boards}`;
+console.log(boards);
+let contextPath = `${pageContext.request.contextPath}`;
+
+let $form = $("form[name='page-form']");
+$("a.change-page").on("click", function(e){
+	e.preventDefault();
+	$form.find("input[name='page']").val($(this).attr("href"));
+	$form.submit();
+});
+</script>
+<!-- <script src="../../static/js/community-wmoon/modal.js"></script>-->
+<script src="${pageContext.request.contextPath}/static/js/mainpageSeo/board.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/community-wmoon/board-list.js"></script>
 </html>

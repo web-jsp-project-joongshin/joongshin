@@ -29,7 +29,7 @@ function showListJS() {
     text += `
       <li>
         <div>
-          현재 게시글이 없습니다. 게시글 작성을 해보세요!
+          현재 인기 주니어가 없습니다
         </div>
       </li>
     `;

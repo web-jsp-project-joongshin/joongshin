@@ -63,25 +63,3 @@ public class JuniorLoginOkController implements Action {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
