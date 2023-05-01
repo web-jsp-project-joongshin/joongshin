@@ -8,18 +8,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.js.Result;
-<<<<<<< HEAD
 import com.js.board.controller.comuDetailOkController;
 import com.js.board.controller.comuListOkController;
 import com.js.board.controller.comuWriteController;
 //import com.js.board.controller.comuWriteController;
 import com.js.board.controller.comujuniListOkController;
-=======
-import com.js.board.controller.DetailOkController;
+/*import com.js.board.controller.DetailOkController;*/
 import com.js.board.controller.ListOkController;
 import com.js.board.controller.ReqWriteOkController;
-import com.js.board.controller.WriteOkController;
->>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
+/*import com.js.board.controller.WriteOkController;*/
 
 import com.js.board.controller.FindPasswordController2;
 import com.js.board.controller.ListOkController;
@@ -39,13 +36,12 @@ public class BoardFrontController extends HttpServlet {
 			result = new ListOkController().execute(req, resp);
 
 		} else if (target.equals("comuwrite")) {
-			result = new Result();	
-			result.setPath("templates/community-users-wmoon/write.jsp");		
-			
-<<<<<<< HEAD
-		}else if(target.equals("comuWriteOk")) {
-				result = new comuWriteController().execute(req, resp);				
-			 
+			result = new Result();
+			result.setPath("templates/community-users-wmoon/write.jsp");
+
+		} else if (target.equals("comuWriteOk")) {
+			result = new comuWriteController().execute(req, resp);
+
 		} else if (target.equals("comudetailOk")) {
 			result = new comuDetailOkController().execute(req, resp);
 
@@ -56,11 +52,11 @@ public class BoardFrontController extends HttpServlet {
 		} else if (target.equals("comujunilistOk")) {
 			System.out.println("주니어유저");
 			result = new comujuniListOkController().execute(req, resp);
-<<<<<<< HEAD
-		} else if (target.equals("FindPassword")) {
-			System.out.println("이메일 보내기");
-			result = new FindPasswordController().execute(req, resp);
-		} else if (target.equals("findPasswordOk2")) {
+		} /*
+			 * else if (target.equals("FindPassword")) { System.out.println("이메일 보내기");
+			 * result = new FindPasswordController().execute(req, resp); }
+			 */ 
+			else if (target.equals("findPasswordOk2")) {
 			result = new FindPasswordController2().execute(req, resp);
 		} else if (target.equals("reqBoard")) {
 			result = new ReqOkController().execute(req, resp);
@@ -68,46 +64,20 @@ public class BoardFrontController extends HttpServlet {
 		} else if (target.equals("reqWrite")) {
 			result = new Result();
 			result.setPath("templates/request-board/form.jsp");
-			
+
 		} else if (target.equals("reqWriteOk")) {
-			result = new ReqWriteOkController().execute(req,resp);
+			result = new ReqWriteOkController().execute(req, resp);
 
-		}
-
-=======
-		}
-
-	      else if(target.equals("findPasswordOk2")) { 
-	          result = new FindPasswordController2().execute(req, resp); 
-	       }
-=======
-		} else if(target.equals("reqWrite")) {
-			result = new Result();
-			result.setPath("templates/request-board/form.jsp");
-			
-		} else if(target.equals("reqBoard")) {
-			result = new Result();
-			result.setPath("templates/request-board/request-board.jsp");
-			
-		}else if(target.equals("writeOk")) {
-			result = new WriteOkController().execute(req, resp);
-			
-		} else if(target.equals("detailOk")) {
-			result = new DetailOkController().execute(req, resp);
-			
 		} 
->>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
-		
-			
-			
->>>>>>> 81ff4a2c574a095be06da32b445e85ebdeceaf94
-		if (result != null) {
-			if (result.isRedirect()) {
-				resp.sendRedirect(result.getPath());
-			} else {
-				req.getRequestDispatcher(result.getPath()).forward(req, resp);
-			}
+
+	if(result!=null)
+	{
+		if (result.isRedirect()) {
+			resp.sendRedirect(result.getPath());
+		} else {
+			req.getRequestDispatcher(result.getPath()).forward(req, resp);
 		}
+	}
 	}
 
 	@Override

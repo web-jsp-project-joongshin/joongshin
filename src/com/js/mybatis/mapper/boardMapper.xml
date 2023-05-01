@@ -142,8 +142,8 @@
 	
 	<select id="reqInsert">
 		insert into tbl_board
-		(board_id, user_id, board_type, board_title, board_content, board_email, board_user_phonenumber)
-		values(#{boardId}, #{userId}, #{boardType}, #{boardTitle}, #{boardContent}, #{boardEmail}, #{boardUserPhoneNumber})
+		(board_id, user_id, board_type, board_title, board_content)
+		values(#{boardId}, #{userId}, #{boardType}, #{boardTitle}, #{boardContent})
 	</select>
 	
 </mapper>
