@@ -17,7 +17,7 @@
         <!-- 홈화면으로 돌아가는 로고 버튼 -->
         <div class="logo">
             <a href="https://soomgo.com/">
-                <img src='new_logo.svg'
+                <img src='${pageContext.request.contextPath}/new_logo.svg'
                     alt="로고">
             </a>
         </div>
@@ -64,7 +64,11 @@
                     <!-- 제목 입력  -->
                     <div class="form-field string  required  request_subject">
                         <label id="request_subject_label" for="request_subject">제목</label>
+<<<<<<< HEAD
                         <input type="text" name="reqTitle" id="request_subject" maxlength="150" size="150"
+=======
+                        <input type="text" name="boardTitle" id="request_subject" maxlength="150" size="150"
+>>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
                             aria-required="true" aria-labelledby="request_subject_label">
                         <div id="request_subject_error" class="notification notification-error notification-inline"></div>
                     </div>
@@ -74,7 +78,11 @@
                     <div class="form-field required  request_description">
                         <label id="request_description_label" for="request_description">설명</label>
                         
+<<<<<<< HEAD
                         <textarea type="text" name="reqContent" id="request_description" class="request_description" style="border-radius: 4px;"></textarea>
+=======
+                        <textarea type="text" name="boardContent" id="request_description" class="request_description" style="border-radius: 4px;"></textarea>
+>>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
                         
                         <div id="request_description_error" class="notification notification-error notification-inline"></div>
                         <p id="request_description_hint">요청에 관한 세부 정보를 입력하세요.</p>

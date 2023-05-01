@@ -20,6 +20,7 @@ public class ReqWriteOkController implements Action {
 		BoardDAO boardDAO = new BoardDAO();
 		Result result = new Result();
 		
+<<<<<<< HEAD
 		HttpSession session = req.getSession();
 		
 		session.setAttribute("userId", 1L);
@@ -38,6 +39,20 @@ public class ReqWriteOkController implements Action {
 		result.setRedirect(true);
 		
 		return result;
+=======
+		//HttpSession session = req.getSession();
+		
+		boardVO.setBoardTitle(req.getParameter("boardTitle"));
+		boardVO.setBoardContent(req.getParameter("boardContent"));
+		boardVO.setUserId(3L);
+
+		boardDAO.insert(boardVO);
+		
+		result.setPath(req.getContextPath() + "templates/request-board/request-board.jsp");
+		result.setRedirect(true);
+		
+		return null;
+>>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
 	}
 
 }

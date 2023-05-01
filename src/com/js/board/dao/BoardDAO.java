@@ -7,7 +7,11 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.js.board.domain.BoardVO;
 import com.js.board.domain.BoardDTO;
+<<<<<<< HEAD
 import com.js.board.domain.Search;
+=======
+import com.js.board.domain.BoardVO;
+>>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
 import com.js.mybatis.config.MyBatisConfig;
 
 public class BoardDAO {
@@ -61,6 +65,7 @@ public class BoardDAO {
 
 	// 아이디 검사
 	public boolean checkId(String boardId) {
+<<<<<<< HEAD
 		return (Integer) sqlSession.selectOne("user_id", boardId) == 1;
 	}
 
@@ -87,6 +92,14 @@ public class BoardDAO {
 	//	문의 게시판 게시글 전체 조회
 	public List<BoardDTO> reqSelectAll(){
 		return sqlSession.selectList("board.reqSelectAll");
+=======
+		return (Integer)sqlSession.selectOne("user_id", boardId) == 1;
+	} 
+	
+	//게시글 추가
+	public void insert(BoardVO boardVO) {
+		sqlSession.insert("board.insert",boardVO);
+>>>>>>> ea2f2b4945bbd37f22cdce408e8ec745bbd44535
 	}
 
 }
