@@ -15,7 +15,6 @@ public class WriteOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		Result result = new Result();
 		MessageDAO dao = new MessageDAO();
 		MessageVO messageVO = new MessageVO();
 		HttpSession session = req.getSession();
@@ -26,6 +25,7 @@ public class WriteOkController implements Action {
 		
 		messageVO.setSendUserId(sendUserId);
 		messageVO.setRecieveUserId(recieveUserId);
+		messageVO.setMessageContents(contents);
 		messageVO.setMessageContents(contents);
 		dao.insert(messageVO);
 		resp.getWriter().print(true);

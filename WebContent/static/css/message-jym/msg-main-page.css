@@ -409,9 +409,24 @@ section div .input-group .input-group-prepend {
     color: #999;
 }
 
-section div .input-group{
+section div .input-group {
     font-size: .875rem;
     line-height: 1.3125rem;
     font-weight: 400;
     letter-spacing: -.0125rem;
+}
+
+div.load-more {
+	height: 100%;
+	padding: 0;
+	border: 0;
+	align-items: center;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 700;
+	color: #6FB6C0;
+}
+
+li#show-more, li#no-list {
+	height: 50px;	
 }

@@ -39,6 +39,7 @@ public class MessageOkController implements Action {
 		
 		req.setAttribute("message", messageJSON.toString());
 		req.setAttribute("userName", messageDTO.getUserName());
+		req.setAttribute("userProfileImage", messageDTO.getUserProfileImage());
 		result.setPath("/templates/message/detail-msg.jsp");
 		return result;
 	}
