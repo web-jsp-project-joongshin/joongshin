@@ -29,7 +29,7 @@ public class MessageListAppendOkController implements Action{
 		Result result = new Result();
 		HttpSession session = req.getSession();
 		Integer page = Integer.parseInt(req.getParameter("start"));
-		Long userId = Long.valueOf(Optional.ofNullable(String.valueOf(session.getAttribute("userId"))).orElse("0"));
+		Long userId = Long.valueOf(Optional.ofNullable(String.valueOf(session.getAttribute("userId"))).orElse("1"));
 		Boolean receive = Boolean.valueOf(req.getParameter("receive"));
 		String keyword = Optional.ofNullable(req.getParameter("keyword")).orElse("");
 		Map<String, Object> data = new HashMap<>();
@@ -44,8 +44,9 @@ public class MessageListAppendOkController implements Action{
 		List<MessageDTO> messages = dao.selectList(data);
 		JSONArray jsonArray = new JSONArray();
 		messages.stream().map(message -> {
-			JSONObject json = new JSONObject(message);
+			JSONObject json = null; 
 			try {
+				json = new JSONObject(message);
 				json.put("contentsList", new JSONArray(message.getContentsByLine()));
 				json.remove("messageContents");
 			} catch (JSONException e) {e.printStackTrace();}

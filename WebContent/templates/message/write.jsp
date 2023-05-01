@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 </head>
 <body>
-	<%@ include file="../mainpageSeo/header.jsp" %>
+	<%@ include file="../mainpageSeo/loginHeader.jsp" %>
 	<div id="app-body">
 		
 		<div class="community-container container">

@@ -18,6 +18,7 @@
 <title>chat</title>
 </head>
 <body>
+<%@ include file="../mainpageSeo/loginHeader.jsp" %>
 	<div id="app-body">
 		<!-- 채팅페이지 바디 -->
 		<div class="chat-list">
@@ -64,6 +65,7 @@
 			</div>
 		</div>
 	</div>
+	<%@ include file="../mainpageSeo/footer.jsp" %>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>

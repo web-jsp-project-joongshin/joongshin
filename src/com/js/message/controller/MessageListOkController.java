@@ -31,10 +31,10 @@ public class MessageListOkController implements Action{
 		Map<String, Object> data = new HashMap<>();
 		HttpSession session = req.getSession();
 		
-		session.setAttribute("userId", 3);
+		session.setAttribute("userId", 3); //test용 세션 데이터
 		
 		//TODO user id by session
-		Long userId = Long.valueOf(Optional.ofNullable(String.valueOf(session.getAttribute("userId"))).orElse("0"));
+		Long userId = Long.valueOf(Optional.ofNullable(String.valueOf(session.getAttribute("userId"))).orElse("1"));
 		Boolean receive = Boolean.valueOf(req.getParameter("receive"));
 		String keyword = Optional.ofNullable(req.getParameter("keyword")).orElse("");
 		
