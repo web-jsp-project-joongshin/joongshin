@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../static/css/request-board-jym/form.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/request-board-jym/form.css">
     <title>문의</title>
 </head>
 
@@ -49,14 +49,14 @@
 
             <h1>문의 등록</h1>
             <div class="form">
-                <form id="new_request" class="request-form" name="request-form" data-form-type="request"
-                    action="/hc/ko/requests" accept-charset="UTF-8" method="post">
+                <form id="reqWrite" class="request-form" name="reqWritePage" data-form-type="request"
+                    action="${pageContext.request.contextPath}/reqWriteOk.board" accept-charset="UTF-8" method="post">
                     <input name="utf8" type="hidden" value="✓" autocomplete="off">
                     <!-- <input type="hidden" name="authenticity_token" value="hc:requests:client:x4NRfJjWvQZrLaWzqGxUx2akyeWMEdeNqQFX7JVHy6flsg_HUW8VUPyTwxQH_LmdGvkA_fizxIqNaV2L2IQxtA" data-hc-status="ready"> -->
 <!--                     이메일 주소 입력 창 -->
                     <div class="form-field string required request_email">
-                        <label for="request_email">이메일 주소</label>
-                        <input type="text" name="request[anonymous_requester_email]" id="request_email"
+                        <label for="request_email">문의 태그</label>
+                        <input type="text" name="reqType" id="request_email"
                             aria-required="true">
                         <div id="request_email_error" class="notification notification-error notification-inline"></div>
                     </div>
@@ -64,7 +64,7 @@
                     <!-- 제목 입력  -->
                     <div class="form-field string  required  request_subject">
                         <label id="request_subject_label" for="request_subject">제목</label>
-                        <input type="text" name="request[subject]" id="request_subject" maxlength="150" size="150"
+                        <input type="text" name="reqTitle" id="request_subject" maxlength="150" size="150"
                             aria-required="true" aria-labelledby="request_subject_label">
                         <div id="request_subject_error" class="notification notification-error notification-inline"></div>
                     </div>
@@ -74,7 +74,7 @@
                     <div class="form-field required  request_description">
                         <label id="request_description_label" for="request_description">설명</label>
                         
-                        <textarea type="text" name="request[description]" id="request_description" class="request_description" style="border-radius: 4px;"></textarea>
+                        <textarea type="text" name="reqContent" id="request_description" class="request_description" style="border-radius: 4px;"></textarea>
                         
                         <div id="request_description_error" class="notification notification-error notification-inline"></div>
                         <p id="request_description_hint">요청에 관한 세부 정보를 입력하세요.</p>
@@ -84,7 +84,7 @@
                     <div class="form-field string  required  request_custom_fields_70987527">
                         <label id="request_custom_fields" for="request_custom_fields_70987527">숨고 가입
                             이메일</label>
-                        <input type="text" name="request_email" id="request_email">
+                        <input type="text" name="reqEmail" id="reqEmail">
 						<div id="request_soomgo_email_error" class="notification notification-error notification-inline"></div>
                         <p id="request_custom_fields_70987527_hint">숨고 가입 이메일을 입력하세요.</p>
                     </div>
@@ -93,7 +93,7 @@
                     <div class="form-field string  required  request_custom_fields_71442508">
                         <label id="request_number" for="request_number">숨고 가입
                             휴대폰 번호</label>
-                        <input type="text" name="request_number" id="request_number"
+                        <input type="text" name="reqNumber" id="request_number"
                             aria-required="true">
                         <div id="request_soomgo_number_error" class="notification notification-error notification-inline"></div>
 			
@@ -101,7 +101,7 @@
                     </div>
 
                     <!-- 첨부파일 -->
-                    <div class="form-field">
+                    <!-- <div class="form-field">
                         <label for="request-attachments">첨부 파일</label>
                         <div id="upload-dropzone" class="upload-dropzone">
                             <input type="file" multiple="true" id="request-attachments" data-fileupload="true"
@@ -133,7 +133,7 @@
                                     <input type="hidden">
                                   </li>
                                   </script>
-                    </div>
+                    </div> -->
                     <footer><input type="submit" name="commit" value="제출" onclick="goJoin()"></footer>
                 </form>
             </div>

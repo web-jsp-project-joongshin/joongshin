@@ -76,6 +76,17 @@ public class BoardDAO {
 //		return sqlSession.selectOne("board.select", boardId);
 //	}
 	
+//	문의 게시글 추가
+	public void reqInsert(BoardVO boardVO) {
+		sqlSession.insert("board.reqInsert", boardVO);
+	}
+
 	
+	
+	
+	//	문의 게시판 게시글 전체 조회
+	public List<BoardDTO> reqSelectAll(){
+		return sqlSession.selectList("board.reqSelectAll");
+	}
 
 }

@@ -16,6 +16,8 @@ import com.js.board.controller.FindPasswordController;
 import com.js.board.controller.FindPasswordController2;
 import com.js.board.controller.ListOkController;
 //import com.js.board.controller.SendMail;
+import com.js.board.controller.ReqOkController;
+import com.js.board.controller.ReqWriteOkController;
 
 public class BoardFrontController extends HttpServlet {
 	@Override
@@ -42,17 +44,23 @@ public class BoardFrontController extends HttpServlet {
 		} else if (target.equals("comujunilistOk")) {
 			System.out.println("주니어유저");
 			result = new comujuniListOkController().execute(req, resp);
-		}
-		else if (target.equals("FindPassword")) {
+		} else if (target.equals("FindPassword")) {
 			System.out.println("이메일 보내기");
 			result = new FindPasswordController().execute(req, resp);
+		} else if (target.equals("findPasswordOk2")) {
+			result = new FindPasswordController2().execute(req, resp);
+		} else if (target.equals("reqBoard")) {
+			result = new ReqOkController().execute(req, resp);
+
+		} else if (target.equals("reqWrite")) {
+			result = new Result();
+			result.setPath("templates/request-board/form.jsp");
+			
+		} else if (target.equals("reqWriteOk")) {
+			result = new ReqWriteOkController().execute(req,resp);
+
 		}
-	      else if(target.equals("findPasswordOk2")) { 
-	          result = new FindPasswordController2().execute(req, resp); 
-	       }
-		
-			
-			
+
 		if (result != null) {
 			if (result.isRedirect()) {
 				resp.sendRedirect(result.getPath());
@@ -61,7 +69,6 @@ public class BoardFrontController extends HttpServlet {
 			}
 		}
 	}
-	
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
