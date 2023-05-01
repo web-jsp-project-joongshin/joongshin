@@ -101,8 +101,8 @@
 	const $li = $('li.junior-resume');
 	const $nameText = $('div.info-name');
 	const $emailText= $('span.info-email');
-	
-	$nameText.prop('innerText', userInfo.username);
+
+	$nameText.prop('innerText', userInfo.userName);
 	$emailText.prop('innerText', userInfo.userEmail);
 	
 	// 주니어일 경우 이력서 수정 부분 추가

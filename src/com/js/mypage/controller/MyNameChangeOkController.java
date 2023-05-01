@@ -19,9 +19,10 @@ public class MyNameChangeOkController implements Action {
 		Result result = new Result();
 		HttpSession session = req.getSession();
 
-		String userId = (String) session.getAttribute("userId");
+		Long userId = (Long)session.getAttribute("userId");
 		
-		mypageDAO.updateName(req.getParameter("changeName"), userId);
+		String newName = String.valueOf(req.getParameter("changeName"));
+		mypageDAO.updateName(newName, userId);
 		
 		result.setRedirect(true);
 		result.setPath(req.getContextPath() + "/myAccountOk.mypage?userId=" + userId);
