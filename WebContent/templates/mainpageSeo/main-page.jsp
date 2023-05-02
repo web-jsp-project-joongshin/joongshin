@@ -88,7 +88,7 @@
 				<h2 class="title" data-v-0b8ae29e="">게시판 목록</h2>
 
 				<a
-					href="${pageContext.request.contextPath}/templates/community-users-wmoon/community-main.jsp"
+					href="${pageContext.request.contextPath}/comulistOk.board"
 					data-testid="community-home" class="go-list" data-v-1b5b0368=""
 					data-v-0b8ae29e=""><span data-v-1b5b0368="">전체보기</span><img
 					src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAgMEgxNlYxNkgweiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwNTMuMDAwMDAwLCAtMjAyLjAwMDAwMCkgdHJhbnNsYXRlKDQ4NS4wMDAwMDAsIDE4OC4wMDAwMDApIHRyYW5zbGF0ZSg1NjguMDAwMDAwLCAxNC4wMDAwMDApIi8+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggc3Ryb2tlPSIjMDBDN0FFIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNMTEgMTNMNiA4IDExIDMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMDUzLjAwMDAwMCwgLTIwMi4wMDAwMDApIHRyYW5zbGF0ZSg0ODUuMDAwMDAwLCAxODguMDAwMDAwKSB0cmFuc2xhdGUoNTY4LjAwMDAwMCwgMTQuMDAwMDAwKSB0cmFuc2xhdGUoOC41MDAwMDAsIDguMDAwMDAwKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC04LjUwMDAwMCwgLTguMDAwMDAwKSIvPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"

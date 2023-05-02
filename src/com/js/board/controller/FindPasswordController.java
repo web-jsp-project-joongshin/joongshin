@@ -61,7 +61,7 @@ public class FindPasswordController implements Action {
           sessionE.setAttribute("userEmail", userEmail);
           //메일 보내기 시작
             // 메일 인코딩
-          String path ="http://localhost:8090/myNameChangeOk.mypage";
+          String path ="http://localhost:8090/myPwChangeLost.mypage";
           
             final String bodyEncoding = "UTF-8"; //콘텐츠 인코딩
             
