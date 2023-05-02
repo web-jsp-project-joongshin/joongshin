@@ -175,6 +175,8 @@
 
 	</select> -->
 	
+	
+	
 	<select id="reqSelectAll" resultType="boardDTO">
 		select board_id, board_title, board_content, m.user_id, user_name, board_register_date, b.board_type
 		from tbl_user m join tbl_board b 

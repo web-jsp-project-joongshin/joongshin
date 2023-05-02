@@ -33,6 +33,7 @@
 <body>
 	<form action="">
 		<div id="app" class="webp" data-is-loaded="true">
+		<%@ include file="../mainpageSeo/header.jsp" %>
 			<!-- 헤더 부분 -->
 			<!-- 바디 -->
 			<div id="app-body">
@@ -222,15 +223,15 @@
  -->
 								<!-- 서비스/지역 필터 -->
 								<section class="service-area-filter all fixed">
-									<!---->
 									<button type="button" class="btn btn-none chip-btn filter-btn">
-										<span data-v-130d9011="">서비스</span>
+										<a class="sort"><span data-v-130d9011="">내가 쓴 글</span></a>
 									</button>
-									<button type="button" class="btn btn-none chip-btn filter-btn"
+<!-- 									<button type="button" class="btn btn-none chip-btn filter-btn"
 										data-v-130d9011="">
 										<span data-v-130d9011="">지역</span>
 									</button>
-								</section>
+ -->								
+ 								</section>
 								<!-- 피드 (게시글 목록) -->
 								<article class="questions-feed-list">
 									<ul class="feed-list" id="content-wrap">
@@ -279,6 +280,7 @@
 		<div class="portal-target"></div>
 		</div>
 	</form>
+	<%@ include file="../mainpageSeo/footer.jsp" %>
 </body>
 <!-- <script src="/static/js/request-board-js/main-board.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>

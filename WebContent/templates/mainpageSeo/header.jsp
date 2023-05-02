@@ -33,7 +33,7 @@
 									data-v-5f10666f="" href="${pageContext.request.contextPath}/comulistOk.board">
 									<span data-v-5f10666f="">커뮤니티</span></a></li>
 								<li data-v-5f10666f="" class="nav-item left-section-item"><a
-									data-v-5f10666f="" href="${pageContext.request.contextPath}/">
+									data-v-5f10666f="" href="${pageContext.request.contextPath}/reqBoard.board">
 									<span data-v-5f10666f="">문의 게시판</span></a></li>
 						
 							</ul>
