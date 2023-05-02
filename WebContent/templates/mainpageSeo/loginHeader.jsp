@@ -34,7 +34,7 @@
 							<li  class="nav-item left-section-item"><a href="${pageContext.request.contextPath}/comulistOk.board">
 								<span>커뮤니티</span></li></a>
 							<li class="nav-item left-section-item"><a
-								href="${pageContext.request.contextPath}/">
+								href="${pageContext.request.contextPath}/reqBoard.board">
 								<span >문의 게시판</span></a></li>
 						</ul>
 				</div>
@@ -77,7 +77,7 @@
 				<div  class="right-section" style="display: flex; margin-left: 20px;">
 					<nav >
 						<ul  class="nav-list">
-						<a href="${pageContext.request.contextPath}/messagelistOk.message"
+						<a href="${pageContext.request.contextPath}/messageListOk.message"
 							class="message1" name="message" style="font-size: 17px; margin: auto;">
 							<li  class="nav-item right-section-item"><span 
 									>채팅</span>
