@@ -52,10 +52,10 @@
                         <input placeholder="문의글 검색" name="keyword" value="${keyword}"/>
                         <button type="submit" onlick="" class="search-icon"></button>
                     </div>
-                    <select name="select-option" class="select-option" name="type">
+                    <%-- <select name="select-option" class="select-option" name="type">
                         <option value="all" selected="${type == null ? 'selected' : ''}">전체</option>
                         <option value="waiting" selected="${type == 'waiting' ? 'selected' : ''}">대기</option>
-                    </select>
+                    </select> --%>
                     <button type="button" class="delete-btn">문의글 삭제</button>
                 </section>
                 <table border="1" id="content-wrap">
@@ -70,15 +70,9 @@
 	                            <th>문의</th>
 	                        </tr>
 	                    </thead>
-		                    <tr>
-		                        <td><input type="checkbox" class="pcheckbox"/></td>
-		                        <td>1</td>
-		                        <td>제목이 들어갈 자리입니다</td>
-		                        <td>내용이 들어갈 자리입니다</td>
-		                        <td>날짜가 들어갈 자리입니다</td>
-		                        <td class="pending">답변완료</td>
-		                        <td>문의가 들어갈 자리입니다</td>
-		                    </tr>              
+	                    <tbody>
+	                    
+		                </tbody>              
                 </table>
             </form>
            <%--  <form action="${pageContext.request.contextPath}/listBoardOk.admin" name="page-form">
@@ -113,6 +107,7 @@
 <script src="${pageContext.request.contextPath}/static/js/manager-doeunn/board.js"></script>
 <script>
 	let boards1 = `${boards1}`;
+	let boardStatus = `${boardStatus}`;
 	let contextPath = `${pageContext.request.contextPath}`;
 </script>
 <script src="${pageContext.request.contextPath}/static/js/manager-doeunn/list.js"></script>

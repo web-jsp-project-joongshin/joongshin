@@ -48,7 +48,7 @@
 				<section class="top-line">
 					<div class="search">
 						<div class="search-icon"></div>
-						<input placeholder="게시글 검색" name="search"/>
+						<input placeholder="게시글 검색" name="keyword" value="${keyword}"/>
 					</div>
 					<button type="button" class="delete-btn">게시물 삭제</button>
 				</section>

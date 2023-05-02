@@ -29,6 +29,7 @@ function showList(){
 			`;
 			*/
 			if(board.boardStatus == null) {
+				console.log(board.boardStatus);
 				//css 속성
 				text += `
 
@@ -64,12 +65,14 @@ function showList(){
 	
 	if(boards1.length == 0){
 		text += `
-			<li>
-		        <div>
-					현재 게시글이 없습니다. 게시글 작성을 해보세요!
-				</div>
-			</li>
-		`
+			<table>
+				<tr rowspan='2'style="text-align:center">
+					<td>
+						현재 게시글이 없습니다. 게시글 작성을 해보세요!
+					</td>
+				</tr>
+			</table>
+		`;
 	}
 	
 	$table.append(text);
