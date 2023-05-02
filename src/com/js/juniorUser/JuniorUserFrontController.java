@@ -1,7 +1,5 @@
-/*
- 유저 프론트 컨트롤러 => 요청에 맞는 컨트롤러나 뷰를 호출,필요한 처리 수행 
- * */
 package com.js.juniorUser;
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;

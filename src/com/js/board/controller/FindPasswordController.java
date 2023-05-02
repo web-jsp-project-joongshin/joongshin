@@ -32,11 +32,13 @@ public class FindPasswordController implements Action {
    @Override
    public Result execute(HttpServletRequest req, HttpServletResponse rep) throws IOException, ServletException {
 	  UserDAO userDAO = new UserDAO();
+
 //      String userEmail = userDAO.selectEmail(req.getParameter("userEmail"));
-//      HttpSession sessionE = req.getSession();      //다음페이지에서도 userEmail를 쓰기위해
+//      HttpSession sessionE = req.getSession();      
 //      Result result = new Result();
 //      
 //      result.setRedirect(true);
+
       
 	   
 	  String userEmail = userDAO.selectEmail(req.getParameter("userEmail"));
@@ -59,19 +61,24 @@ public class FindPasswordController implements Action {
        else {
     	   System.out.println("e메일 찾았어용");
           sessionE.setAttribute("userEmail", userEmail);
+
           //메일 보내기 시작
             // 메일 인코딩
+
           String path ="http://localhost:8090/myNameChangeOk.mypage";
           
             final String bodyEncoding = "UTF-8"; //콘텐츠 인코딩
             
             //원하는 메일 제목 작성
             String subject = "중신 비밀번호 재설정";           
+
             String fromEmail = "joongshin@gmail.com";
             String fromUsername = "admin";
             String toEmail = userEmail; // 콤마(,)로 여러개 나열
             
-            final String username = "asdzxc9822@gmail.com"; //구글 계정 이름
+
+            final String username = "asdzxc9822@gmail.com"; //구글 계정 이름        
+
             final String password = "bfiwbhjomxtklszx";
             
             // 메일에 출력할 텍스트
