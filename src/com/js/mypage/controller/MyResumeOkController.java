@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.JSONObject;
 
@@ -20,9 +21,9 @@ public class MyResumeOkController implements Action {
 		MypageDAO mypageDAO = new MypageDAO();
 		Result result = new Result();
 		
-		Long userId = Long.valueOf(req.getParameter("userId"));
-		
-		req.setAttribute("userId", userId);
+		HttpSession session = req.getSession();
+
+		Long userId = (Long)session.getAttribute("userId");
 		req.setAttribute("resume", mypageDAO.selectResume(userId));
 		
 		result.setPath("templates/mypage-jin/resume-change.jsp");
