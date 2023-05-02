@@ -52,7 +52,7 @@
                         <div class="info-container">
                             <label>휴대폰 번호</label>
                             <span>
-                                <input type="text" id="phone" name="userPhonenumber" autocomplete="off" placeholder="예) 01000000000">
+                                <input type="text" id="phone" name="userPhonenumber" autocomplete="off" placeholder="예) 01098224849">
                             </span>
                             <p class="help"></p>
                         </div>
@@ -84,7 +84,7 @@
                             <label>비밀번호</label>
                             <span>
                                 <div class="password">
-                                    <input type="password" id="password" name="userPassword" placeholder="영어, 숫자, 특수문자 중 2가지 이상 10~20자">
+                                    <input type="password" id="password" name="userPassword" placeholder="영어와 숫자를 사용한 9~20자">
                                     <p class="help"></p>
                                 </div>
                                 <div class="password password-check">

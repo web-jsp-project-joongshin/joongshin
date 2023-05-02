@@ -127,7 +127,7 @@ const passwordEnglishRegex = /[a-z]/ig;
 const emailFirstRegex =  /[`~!@#$%^&*|\\\'\";:\/?]/;
 const emailLastRegex = /[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 let joinBlurMessages = ["비밀번호를 입력하세요.", "비밀번호 확인을 위해 한번 더 입력하세요.", "이메일을 입력하세요."];
-let joinRegexMessages = ["8자리 이상의 비밀번호를 입력하세요.", "위 비밀번호와 일치하지 않습니다. 다시 입력해주세요.", "이메일 주소를 확인해주세요.", "이메일 주소를 확인해주세요."];
+let joinRegexMessages = ["영어와 숫자를 포함한 9자리 이상의 비밀번호를 입력하세요.", "위 비밀번호와 일치하지 않습니다. 다시 입력해주세요.", "이메일 주소를 확인해주세요.", "이메일 주소를 확인해주세요."];
 const $joinHelp = $("div.join p.help");
 let joinCheck;
 let joinCheckAll = [false, false, false, false];

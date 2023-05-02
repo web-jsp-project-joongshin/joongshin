@@ -2,7 +2,6 @@
 showList();
 
 function showList(){
-	console.log(boards);
 	boards = JSON.parse(boards);
 	//files = JSON.parse(files);
 	const $ul = $("#content-wrap ul");
@@ -14,7 +13,7 @@ function showList(){
 			
 					        <div>
 		            <a href="javascript:location.href='${contextPath}/comuDetailOkController.board?boardId=${board.boardId}'">
-		                <section class="content-container">
+		                <section class="content-container" style="width: 480px;">
 		                        <h6 class="writer">${board.userName}</h6>
 		                    <h4 class="title">${board.boardTitle}</h4>
 		                    <h6 clss="board-info">
