@@ -181,14 +181,20 @@
 		select board_id, board_title, board_content, m.user_id, user_name, board_register_date, b.board_type
 		from tbl_user m join tbl_board b 
 		on m.user_id = b.user_id
+		where board_type = "문의"
 		order by board_register_date
 		desc
+		limit #{offset}, #{rowCount}
 	</select>
 	
 	<select id="reqInsert">
 		insert into tbl_board
 		(user_id, board_type, board_title, board_content)
-		values( #{userId}, #{boardType}, #{boardTitle}, #{boardContent})
+		values( #{userId}, "문의", #{boardTitle}, #{boardContent})
+	</select>
+	
+	<select id="getReqTotal" resultType="_int">
+		select count(board_id) from tbl_board
 	</select>
 	
 </mapper>
