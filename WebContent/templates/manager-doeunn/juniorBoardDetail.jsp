@@ -23,8 +23,8 @@
                         <div class="arrow"></div>
                     </div>
                     <ul class="board-list list">
-                        <li>이용자 게시판</li>
-                        <li>주니어 게시판</li>
+                        <li onclick="location.href='/listUserOk.admin'">이용자 게시판</li>
+						<li onclick="location.href='/listJuniorOk.admin'">주니어 게시판</li>
                     </ul>
                </section>
 
@@ -35,20 +35,20 @@
                         <div class="arrow"></div>
                     </div>
                     <ul class="inquiries-list list">
-                        <li>전체 문의목록</li>
+                        <li onclick="location.href='/listUserOk.admin'">전체 문의목록</li>
                     </ul>
                </section>
             </div>
         </header>
         <main>
             <div class="main-title-box">
-                <h4 onclick="location.href='juniorBoardList.jsp'">← 목록 화면으로 돌아가기</h3>
+                <h4 onclick="location.href='/listJuniorOk.admin'">← 목록 화면으로 돌아가기</h3>
             </div>
             <div class="main-container">
                 <section class="content">
                    <div class="line">
                     <div class="box title">제목</div>
-                    <div class="box item">제목이 들어갈 자리입니다.</div>
+                    <div class="box item">제목이 들어갈 자리입니다. ${boardContent}</div>
                    </div>
                    <div class="line">
                     <div class="box title">작성자</div>
@@ -74,5 +74,16 @@
    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+	const boardId = `${boardId}`;
+	const boardContent = `${boardContent}`;
+	const boardRegisterDate = `${boardRegisterDate}`;
+	const boardTitle = `${boardTitle}`
+	let boards1 = `${boards1}`;
+	console.log(boardId);
+	console.log(boardContent);
+	console.log(boards1);
+	console.log(boardTitle);
+</script>
 <script src="../../static/js/manager-doeunn/user-board-detail.js"></script>
 </html>
