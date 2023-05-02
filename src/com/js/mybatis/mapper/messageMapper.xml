@@ -24,6 +24,7 @@
 		<if test="keyword != ''.toString()">
 			and (message_contents like concat('%', #{keyword}, '%') or u.user_name like concat('%', #{keyword}, '%'))
 		</if>
+		order by message_update_datetime desc
 		limit #{start}, 10
 	</select>
 	
