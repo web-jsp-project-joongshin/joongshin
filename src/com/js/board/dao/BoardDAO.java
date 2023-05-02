@@ -105,6 +105,11 @@ public SqlSession sqlSession;
 	public List<BoardDTO> listjuniSelectAll(HashMap<String, Object> pagable){
 		return sqlSession.selectList("board.listjuniSelectAll", pagable);
 	}
+	
+	// 우람: 문의게시판 문의 전체 조회
+	public List<BoardDTO> listSelectAdmin(HashMap<String, Object> pagable){
+		return sqlSession.selectList("board.listSelectAdmin", pagable);
+	}
 }
 
 

@@ -38,8 +38,7 @@ public class ListBoardOkController implements Action {
 		pagable.put("rowCount", criteria.getRowCount());
 		pagable.put("sort", sort);
 		
-		boardDAO.boardSelectAll().stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
-		req.setAttribute("boards", jsonArray.toString());
+		boardDAO.listSelectAdmin(pagable).stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
 		req.setAttribute("total", boardDAO.getTotal(search));
 		req.setAttribute("page", page);
 		req.setAttribute("startPage", criteria.getStartPage());
