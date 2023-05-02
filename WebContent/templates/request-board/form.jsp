@@ -12,7 +12,6 @@
 </head>
 
 <body>
-    <%@ include file="../mainpageSeo/header.jsp" %>
     <div></div>
     <!-- <header class="header">
         홈화면으로 돌아가는 로고 버튼
@@ -138,7 +137,7 @@
 
     <!-- <iframe id="_hjSafeContext_74772397" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank"
         style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe> -->
-        <%@ include file="../mainpageSeo/footer.jsp" %>
+
 </body>
 
 
