@@ -227,6 +227,7 @@ $("select.email").on("change", function(){
 	});
 });
 
+
 function send(){
     $joinInputs.trigger("blur");
     if(joinCheckAll.filter(check => check).length != $joinInputs.length){
