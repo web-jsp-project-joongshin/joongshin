@@ -12,6 +12,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.js.board.domain.BoardDTO;
 import com.js.board.domain.BoardVO;
+import com.js.board.domain.Criteria;
 import com.js.board.domain.Search;
 import com.js.mybatis.config.MyBatisConfig;
 
@@ -92,8 +93,8 @@ public SqlSession sqlSession;
 	}
 
 	//	문의 게시판 게시글 전체 조회
-	public List<BoardDTO> reqSelectAll(){
-		return sqlSession.selectList("board.reqSelectAll");
+	public List<BoardDTO> reqSelectAll(Criteria criteria){
+		return sqlSession.selectList("board.reqSelectAll", criteria);
 	}
 	
 	// 우람: 문의게시판 유저 전체 조회
@@ -109,6 +110,11 @@ public SqlSession sqlSession;
 	// 우람: 문의게시판 문의 전체 조회
 	public List<BoardDTO> listSelectAdmin(HashMap<String, Object> pagable){
 		return sqlSession.selectList("board.listSelectAdmin", pagable);
+	}
+	
+	// 문의게시판 전체 게시글 개수 조회
+	public int getReqTotal() {
+		return sqlSession.selectOne("board.getReqTotal");
 	}
 }
 
