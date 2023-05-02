@@ -72,8 +72,8 @@
 <!-- 커뮤에서 유저 게시물 추가-->
 	 <insert id="comuinsert">
   		insert into tbl_board
-  		(board_id, board_title, board_content, board_register_date, user_id, board_type)
-  		values(#{boardId}, #{boardTitle}, #{boardContent}, #{boardRegisterDate}, #{userId}, #{boardType})
+  		(board_id, board_title, board_content, user_id, board_type)
+  		values(#{boardId}, #{boardTitle}, #{boardContent}, #{userId}, #{boardType})
 	</insert>
 	 
 	 <select id="boardSelectAll" resultType="boardDTO">
