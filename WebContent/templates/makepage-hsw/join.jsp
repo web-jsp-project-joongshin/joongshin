@@ -110,7 +110,7 @@
                             <p class="help"></p>
                             <div class="email-select-wrap">
                                 <select class="email">
-                                    <option value="">직접입력</option>
+                                    <!-- <option value="">직접입력</option> -->
                                     <option value="naver.com">naver.com</option>
                                     <option value="hanmail.net">hanmail.net</option>
                                     <option value="nate.com">nate.com</option>

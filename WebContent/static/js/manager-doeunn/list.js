@@ -39,6 +39,7 @@ function showList(){
 				        <td ${contextPath}/updateBoardList.admin?answer={board.boardContent}>${board.boardContent}</td>
 						<td class="date">` + elapsedTime(board.boardRegisterDate)+`</td>
 				        <td class="pending">답변대기</td>
+						<td>${board.boardType}</td>
 					</tr>
 				
 				`;
@@ -53,6 +54,7 @@ function showList(){
 					        <td name="answer">${board.boardContent}</td>
 							<td class="date">` + elapsedTime(board.boardRegisterDate)+`</td>
 					        <td class="success">${board.boardStatus}</td>
+							<td>${board.boardType}</td>
 						</tr>
 
 				`;

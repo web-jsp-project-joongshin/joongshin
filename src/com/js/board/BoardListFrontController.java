@@ -9,11 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.js.Result;
 import com.js.board.controller.BoardDeleteOKController;
+import com.js.board.controller.JuniorDetailController;
 import com.js.board.controller.ListBoardOkController;
 import com.js.board.controller.ListJuniorBoardOkController;
 import com.js.board.controller.ListUserBoardOkController;
 import com.js.board.controller.UpdateBoardListController;
 import com.js.board.controller.UpdateBoardOkController;
+import com.js.board.controller.UserDeatilController;
 
 public class BoardListFrontController extends HttpServlet{
 	@Override
@@ -40,6 +42,12 @@ public class BoardListFrontController extends HttpServlet{
 		
 		} else if (target.equals("listUserOk")) {
 			result = new ListUserBoardOkController().execute(req, resp);
+			
+		} else if (target.equals("listDetailOk")) {
+			result = new JuniorDetailController().execute(req, resp);
+			
+		} else if (target.equals("listUserDetailOk")) {
+			result = new UserDeatilController().execute(req, resp);
 		}
 
 		

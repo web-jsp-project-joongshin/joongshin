@@ -33,6 +33,13 @@ public class UserDAO {
 		
 		return sqlSession.selectOne("user.login", loginMap);
 	}
+	
+//	selectUserIdByEmail
+	public Long selectUserIdByEmail(String userEmail) {
+	    UserVO userVO = new UserVO();
+	    userVO.setUserEmail(userEmail);
+	    return sqlSession.selectOne("user.emailCheckId", userVO);
+	}
 }
 
 

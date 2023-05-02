@@ -39,4 +39,9 @@ Java 객체의 메서드와 연결하여 데이터베이스와 상호작용할 �
 		on m.user_id = j.user_id
 	</select>
 	
+	<select id="emailCheckId" resultType="long">
+	    select user_id from tbl_user 
+	    where user_email = #{userEmail}
+	</select>
+	
 </mapper>
