@@ -459,7 +459,7 @@
 	src="${pageContext.request.contextPath}/static/js/mainpageSeo/board.js"></script>
 <script>
 	let boards = `${boards}`;
-	let boardsJunior = `${JSON.stringify(boardsJunior)}`;
+	boards = boards.replace(/\n/g, "");
 	/* let boardsJunior = `${boardsJunior}`; */
 	let contextPath = `${pageContext.request.contextPath}`;
 
@@ -472,8 +472,6 @@
 </script>
 <script
 	src="${pageContext.request.contextPath}/static/js/mainpageSeo/list.js"></script>
-<script
-	src="${pageContext.request.contextPath}/static/js/mainpageSeo/juniorlist.js"></script>
 
 <script src="/static/js/mainpageSeo/main-page.js"></script>
 </html>
