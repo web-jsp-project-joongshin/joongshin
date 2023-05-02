@@ -9,34 +9,28 @@
 	</insert>
 	
 	<select id="selectList" resultType="messageDTO">
-		SELECT message_id, send_user_id, recieve_user_id, u.user_name, message_contents, message_update_datetime
+		SELECT message_id, send_user_id, recieve_user_id, u.user_name, message_contents, message_update_datetime, u.user_profile_image
 		FROM tbl_user u join tbl_message m
 		<choose>
 			<when test="receive">
-				on u.user_id = m.recieve_user_id
-				where send_user_id = #{userId}
-			</when>
-			<otherwise>
 				on u.user_id = m.send_user_id
 				where recieve_user_id = #{userId}
+			</when>
+			<otherwise>
+				on u.user_id = m.recieve_user_id
+				where send_user_id = #{userId}
 			</otherwise>
 		</choose>
 		<if test="keyword != ''.toString()">
 			and (message_contents like concat('%', #{keyword}, '%') or u.user_name like concat('%', #{keyword}, '%'))
 		</if>
-	</select>
-	
-	<select id="selectListByReceiveUserId" resultType="messageDTO">
-		SELECT message_id, send_user_id, s.user_name, recieve_user_id, message_contents, message_update_datetime
-		FROM tbl_user s join tbl_message m
-		on s.user_id = m.recieve_user_id
-		where recieve_user_id = #{receiveUserId}
+		limit #{start}, 10
 	</select>
 	
 	<select id="selectOne" resultType="messageDTO">
-		SELECT message_id, send_user_id, u.user_name, recieve_user_id, message_contents, message_update_datetime
+		SELECT message_id, send_user_id, u.user_name, recieve_user_id, message_contents, message_update_datetime, u.user_profile_image
 		FROM tbl_user u join tbl_message m
-		on u.user_id =
+		on u.user_id = 
 		<choose>
 			<when test="receive">m.recieve_user_id</when>
 			<otherwise>m.send_user_id</otherwise>

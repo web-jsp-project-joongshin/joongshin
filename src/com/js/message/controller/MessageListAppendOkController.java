@@ -20,57 +20,43 @@ import com.js.Result;
 import com.js.message.dao.MessageDAO;
 import com.js.message.domain.MessageDTO;
 
-public class MessageListOkController implements Action{
-
+public class MessageListAppendOkController implements Action{
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		resp.setContentType("text/html;charset=utf-8");
-		List<MessageDTO> messages = null;
-		MessageDAO dao = new MessageDAO();
+		resp.setCharacterEncoding("UTF-8");
+		req.setCharacterEncoding("UTF-8");
+		
 		Result result = new Result();
-		Map<String, Object> data = new HashMap<>();
 		HttpSession session = req.getSession();
-		
-		session.setAttribute("userId", 3); //test용 세션 데이터
-		
-		//TODO user id by session
+		Integer page = Integer.parseInt(req.getParameter("start"));
 		Long userId = Long.valueOf(Optional.ofNullable(String.valueOf(session.getAttribute("userId"))).orElse("1"));
 		Boolean receive = Boolean.valueOf(req.getParameter("receive"));
 		String keyword = Optional.ofNullable(req.getParameter("keyword")).orElse("");
+		Map<String, Object> data = new HashMap<>();
+		MessageDAO dao = new MessageDAO();
 		
 		data.put("receive", receive);
 		data.put("userId", userId);
 		data.put("keyword", keyword);
-		data.put("start", 0);
+		data.put("start", page);
+		System.out.println(data);
 		
-		messages = dao.selectList(data);
-		
-//		System.out.println(userId);
-//		System.out.println(receive);
-//		System.out.println(keyword);
-//		System.out.println(messages);
-		
-		JSONArray jsonResult = new JSONArray();
-				
+		List<MessageDTO> messages = dao.selectList(data);
+		JSONArray jsonArray = new JSONArray();
 		messages.stream().map(message -> {
-			JSONObject json = new JSONObject(message);
+			JSONObject json = null; 
 			try {
+				json = new JSONObject(message);
 				json.put("contentsList", new JSONArray(message.getContentsByLine()));
 				json.remove("messageContents");
 			} catch (JSONException e) {e.printStackTrace();}
 			
 			return json;
-		}).forEach(jsonResult::put);
+		}).forEach(jsonArray::put);
 		
-		req.setAttribute("messages", jsonResult.toString());
-		req.setAttribute("receive", receive.toString());
-		if(!keyword.isEmpty()) req.setAttribute("keyword", keyword);
+		System.out.println(jsonArray);
+		resp.getWriter().print(jsonArray);
 		
-		//System.out.println(jsonResult);
-		//System.out.println(req.getParameter("receive"));
-		
-		result.setPath("templates/message/msg-list.jsp");
-		
-		return result;
+		return null;
 	}
 }

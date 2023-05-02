@@ -1,5 +1,3 @@
-
-
 package com.js.board.controller;
 
 import java.io.IOException;
@@ -18,8 +16,6 @@ import com.js.board.dao.BoardDAO;
 import com.js.board.domain.Criteria;
 import com.js.board.domain.Search;
 
-
-//문우람임
 public class ListBoardOkController implements Action {
 
 	@Override

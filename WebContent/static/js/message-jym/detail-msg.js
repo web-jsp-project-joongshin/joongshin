@@ -6,22 +6,6 @@ message.contentsList.forEach(line => text += line + `<br>`);
 
 $p.append(text);
 
-$('.share-button-wrapper').on('click', function() {
-	
-});
-
-let modalCheck;
-
-function showShareModal(){
-    modalCheck = false;
-    $("div.warn-modal").css("animation", "popUp 0.5s");
-    $("div.modal").css("display", "flex").hide().fadeIn(500);
-    setTimeout(function(){modalCheck = true;}, 500);
-}
-
-$(".share-button-wrapper").on("click", function(){
-    if(modalCheck){
-        $("div.warn-modal").css("animation", "popDown 0.5s");
-        $("div.modal").fadeOut(500);
-    }
+$('button.reply').on('click', function(){
+	location.href = `/write.message?send_user_id=${message.sendUserId}7receive_user_id=${message.recieveUserId}`;
 });

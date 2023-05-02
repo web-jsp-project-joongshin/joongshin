@@ -22,7 +22,7 @@ public abstract class FrontControllerAdapter<FC> extends HttpServlet {
 		Result result = null;
 		
 		List<String> branches = Arrays.asList(getFrontController().getClass().getMethods()).stream()
-			.filter(method ->  method.isAnnotationPresent(Branch.class))
+			.filter(method -> method.isAnnotationPresent(Branch.class))
 			.map(method -> method.getName())
 			.collect(Collectors.toList());
 		
