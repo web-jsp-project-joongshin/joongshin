@@ -65,9 +65,9 @@
 	                            <th>문의 번호</th>
 	                            <th>제목</th>
 	                            <th>내용</th>
-	                            <th>답변</th>
 	                            <th>작성날짜</th>
-	                            <th>상태</th>
+	                            <th>답변</th>
+	                            <th>문의</th>
 	                        </tr>
 	                    </thead>
 		                    <tr>
@@ -75,8 +75,9 @@
 		                        <td>1</td>
 		                        <td>제목이 들어갈 자리입니다</td>
 		                        <td>내용이 들어갈 자리입니다</td>
-		                        <td>2023-04-19</td>
+		                        <td>날짜가 들어갈 자리입니다</td>
 		                        <td class="pending">답변완료</td>
+		                        <td>문의가 들어갈 자리입니다</td>
 		                    </tr>              
                 </table>
             </form>

@@ -13,7 +13,7 @@ function showList(){
 			<tr>	
                 <td><input type="checkbox" class="pcheckbox"/></td>
                 <td>${board.userName}</td>
-                <td><a href="javascript:location.href='${contextPath}/templates/manager-doeunn/juniorBoardDetail.jsp'">${board.boardTitle}</a></td>
+                <td><a href="javascript:location.href='${contextPath}/listUserDetailOk.admin?boardId=${board.boardId}'">${board.boardTitle}</a></td>
                 <td>${board.boardContent}</td>
 				<td class="date">` + elapsedTime(board.boardRegisterDate)+`</td>
                 <td>${board.boardType}</td>
