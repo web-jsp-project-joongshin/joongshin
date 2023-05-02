@@ -53,9 +53,7 @@ public class BoardFrontController extends HttpServlet {
 			
 		} else if (target.equals("findPasswordOk2")) {
 			result = new FindPasswordController2().execute(req, resp);
-		}
-
-		else if (target.equals("reqBoard")) {
+		} else if (target.equals("reqBoard")) {
 			result = new ReqOkController().execute(req, resp);
 
 		} else if (target.equals("reqWrite")) {
