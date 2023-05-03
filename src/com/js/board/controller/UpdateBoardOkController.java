@@ -20,12 +20,13 @@ public class UpdateBoardOkController implements Action{
 		
 		Long boardId = Long.valueOf(req.getParameter("boardId"));
 		String boardContent = req.getParameter("answer");
-		String boardStatus = "답변완료";
-		
+		String boardStatus = req.getParameter("boardStatus");
+		boardStatus = "답변완료";
 		boardVO.setBoardId(boardId);
 		boardVO.setBoardContent(boardContent);
 		boardVO.setBoardStatus(boardStatus);
 		boardDAO.updateBoard(boardVO);
+		
 		
 		result.setPath("/listBoardOk.admin");
 		return result;

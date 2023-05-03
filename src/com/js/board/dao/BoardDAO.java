@@ -98,18 +98,23 @@ public SqlSession sqlSession;
 	}
 	
 	// 우람: 문의게시판 유저 전체 조회
-	public List<BoardDTO> listSelectUser(HashMap<String, Object> pagable){
-		return sqlSession.selectList("board.listSelectUser", pagable);
+	public List<BoardDTO> listSelectUser(String keyword){
+		return sqlSession.selectList("board.listSelectUser", keyword);
 	} 
 	
 	// 우람: 문의게시판 주니어 전체 조회
-	public List<BoardDTO> listjuniSelectAll(HashMap<String, Object> pagable){
-		return sqlSession.selectList("board.listjuniSelectAll", pagable);
+	public List<BoardDTO> listjuniSelectAll(String keyword){
+		return sqlSession.selectList("board.listjuniSelectAll", keyword);
 	}
 	
+//	public List<BoardDTO> listSelectAdmin(HashMap<String, Object> pagable){
+//		return sqlSession.selectList("board.listSelectUser", pagable);
+//	}
+	
 	// 우람: 문의게시판 문의 전체 조회
-	public List<BoardDTO> listSelectAdmin(HashMap<String, Object> pagable){
-		return sqlSession.selectList("board.listSelectAdmin", pagable);
+	//select(동적쿼리)
+	public List<BoardDTO> selectInquiryList(String keyword) {
+		return sqlSession.selectList("board.selectInquiryList", keyword);
 	}
 	
 	// 문의게시판 전체 게시글 개수 조회

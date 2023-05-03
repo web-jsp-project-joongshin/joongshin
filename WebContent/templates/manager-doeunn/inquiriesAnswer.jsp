@@ -73,6 +73,9 @@
                 <div class="line">
                     <button class="answer-btn" type="submit">답변 완료</button>
                 </div>
+                <div class="line">
+                    <button class="rmb" onclick="location.href='/deleteBoard.admin?boardId=${boardId}'">삭제하기</button>
+                </div>
             </form>
         </main>
    </div>
@@ -80,12 +83,7 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/manager-doeunn/board.js"></script>
 <script>
-	const boardId = `${boardId}`;
-	const boardContent = `${boardContent}`;
-	const boardRegisterDate = `${boardRegisterDate}`;
 	let boards1 = `${boards1}`;
-	console.log(boardId);
-	console.log(boardContent);
 	console.log(boards1);
 </script>
 <script src="../../static/js/manager-doeunn/inquiries-answer.js"></script>

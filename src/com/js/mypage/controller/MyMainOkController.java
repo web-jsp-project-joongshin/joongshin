@@ -23,14 +23,12 @@ public class MyMainOkController implements Action {
 		Result result = new Result();
 		HttpSession session = req.getSession();
 
-		Long userId = (Long)session.getAttribute("userId");
+		Long userId = Long.parseLong(String.valueOf(session.getAttribute("userId")));
 		
 		req.setAttribute("userType", mypageDAO.getUserType(userId));
 		req.setAttribute("userInfo", new JSONObject(mypageDAO.getUserInfo(userId)).toString());
 		
 		result.setPath("templates/mypage-jin/mypage-main.jsp");
-		return result;
-		
+		return result;	
 	}
-
 }

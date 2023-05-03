@@ -22,13 +22,13 @@ public class UpdateBoardListController implements Action{
 		BoardVO boardVO = new BoardVO();
 		
 		Long boardId = Long.valueOf(req.getParameter("boardId"));
-		String boardContent = req.getParameter("boardContent");
-		String boardRegisterDate = String.valueOf(req.getParameter("boardRegisterDate"));
 		
-//		boardDTO = boardDAO.select(boardId);
+		boardDTO = boardDAO.select(boardId);
 		
+		String boardContent = boardDTO.getBoardContent();
+		String boardRegisterDate = boardDTO.getBoardRegisterDate();
+
 		req.setAttribute("boardId", boardId);
-		req.setAttribute("boardContent", boardDTO.getBoardContent());
 		req.setAttribute("boardContent", boardContent);
 		req.setAttribute("boardRegisterDate", boardRegisterDate);
 		

@@ -18,17 +18,20 @@ public class JuniorDetailController implements Action{
 		BoardDTO boardDTO = new BoardDTO();
 		Result result = new Result();
 		BoardVO boardVO = new BoardVO();
-		String boardContent = req.getParameter("boardContent");
-		String boardRegisterDate = String.valueOf(req.getParameter("boardRegisterDate"));
 		
 		
 		Long boardId = Long.valueOf(req.getParameter("boardId"));
 		
-//		boardDTO = boardDAO.select(boardId);
+		boardDTO = boardDAO.select(boardId);
+		String boardContent = boardDTO.getBoardContent();
+		String boardRegisterDate = boardDTO.getBoardRegisterDate();
+		String userName = boardDTO.getUserName();
+		String boardTitle = boardDTO.getBoardTitle();
 		
 		req.setAttribute("boardId", boardId);
-		req.setAttribute("boardContent", boardDTO.getBoardContent());
 		req.setAttribute("boardContent", boardContent);
+		req.setAttribute("userName", userName);
+		req.setAttribute("boardTitle", boardTitle);
 		req.setAttribute("boardRegisterDate", boardRegisterDate);
 		
 		result.setPath("templates/manager-doeunn/juniorBoardDetail.jsp");
