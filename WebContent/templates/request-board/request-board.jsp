@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/static/css/request-board-jym/request-board.css">
 <link
@@ -204,7 +205,6 @@
 									</div>
 								</section>
  -->
-								<div class="bingonggan"></div>
 								<div class="observer-container">
 									<section class="questions-header" id="questions-header">
 										<h1 class="questions-title">문의 게시판</h1>
@@ -275,20 +275,20 @@
 
 					<div id="paging-wrap">
                 	<c:if test="${prev}">
-	                	<a href="${startPage - 1}" class="paging-choose"><img src="/static/images/prev.png" width="15px"></a>
+	                	<a href="${pageContext.request.contextPath}/reqBoard.board?page=${startPage - 1}" class="paging-choose"><img src="/static/image/prev.png" width="15px"></a>
                 	</c:if>
                 	<c:forEach var="i" begin="${startPage}" end="${endPage}">
                 		<c:choose>
                 			<c:when test="${i eq page}">
-			                	<a href="${pageContext.request.contextPath}/reqBoard.board?page${i}" class="paging paging-checked"><c:out value="${i}"/></a>
+			                    <a href="javascript:void(0)" class="paging paging-checked"><c:out value="${i}"/></a>
                 			</c:when>
                 			<c:otherwise>
-			                    <a href="${i}" class="paging change-page"><c:out value="${i}"/></a>
+			                	<a href="${pageContext.request.contextPath}/reqBoard.board?page=${i}" class="paging"><c:out value="${i}"/></a>
                 			</c:otherwise>
                 		</c:choose>
                 	</c:forEach>
                 	<c:if test="${next}">
-	                    <a href="${endPage + 1}" class="paging-choose"><img src="/static/images/next.png" width="15px"></a>
+	                    <a href="${pageContext.request.contextPath}/reqBoard.board?page=${endPage + 1}" class="paging-choose"><img src="/static/image/next.png" width="15px"></a>
                 	</c:if>
                 </div>
 					
@@ -306,6 +306,7 @@
 </body>
 <!-- <script src="/static/js/request-board-js/main-board.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
 <script>
 	let boards = `${boards}`;
 	console.log(boards);

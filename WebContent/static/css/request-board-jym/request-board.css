@@ -19,9 +19,13 @@ div#paging-wrap {
     text-align: center;
 }
 
-a.paging-choose {
-    margin: 0px 10px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+a.paging {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
 }
 
 a.paging-checked {
@@ -30,20 +34,10 @@ a.paging-checked {
     font-weight: 700;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
-div#paging-wrap {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    text-align: center;
-}
 
-a.paging {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
+a.paging-move {
+    margin: 0px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #app {
