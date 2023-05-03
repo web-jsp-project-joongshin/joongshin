@@ -48,25 +48,25 @@
                 <section class="content">
                    <div class="line">
                     <div class="box title">제목</div>
-                    <div class="box item">제목이 들어갈 자리입니다. ${boardId}</div>
+                    <div class="box item">${boardTitle}</div>
                    </div>
                    <div class="line">
                     <div class="box title">작성자</div>
-                    <div class="box item">작성자</div>
+                    <div class="box item">${userName}</div>
                    </div>
                    <div class="line">
                     <div class="box title">작성날짜</div>
-                    <div class="box item">작성날짜</div>
+                    <div class="box item">${boardRegisterDate}</div>
                    </div>
                    <div class="line">
                     <div class="box title">내용</div>
-                    <div class="box item">내용이 들어갈 자리입니다.</div>
+                    <div class="box item">${boardContent}</div>
                    </div>
                    <div class="line">
-                    <button class="button go-to-post-btn">해당 게시물 페이지로 이동하기</button>
+                    <button class="button go-to-post-btn" onclick="location.href='/listUserOk.admin'">해당 게시물 페이지로 이동하기</button>
                    </div>
                    <div class="line">
-                    <button class="button remove-btn">삭제하기</button>
+                    <button class="button remove-btn" onclick="location.href='/deleteBoard.admin?boardId=${boardId}'">삭제하기</button>
                    </div>
                 </section>
             </form>

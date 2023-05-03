@@ -124,7 +124,10 @@
       from tbl_user m join tbl_board b
          on m.user_id = b.user_id
          where board_type ="구직"
-         order by board_id desc
+         <if test="keyword != ''.toString()">
+			and (board_title like concat('%', #{keyword}, '%') or m.user_name like concat('%', #{keyword}, '%'))
+		</if>
+		order by board_register_date desc
    </select>
    
    <!-- 문의 게시판에서 일반 유저 게시물 조회 -->
@@ -133,7 +136,10 @@
       from tbl_user m join tbl_board b
          on m.user_id = b.user_id
          where board_type ="구인"
-         order by board_id desc
+         <if test="keyword != ''.toString()">
+			and (board_title like concat('%', #{keyword}, '%') or m.user_name like concat('%', #{keyword}, '%'))
+		</if>
+		order by board_register_date desc
    </select>
    
    <!-- 문의 게시판에서 문의 게시판 조회 -->
@@ -145,25 +151,26 @@
          order by board_id desc
    </select>
    
-	<!-- <select id="select" resultType="boardDTO">
-		select board_id, board_title, board_content, board_register_date, board_update_date, board_read_count, m.user_id, user_name 
+	<select id="select" resultType="boardDTO">
+		select board_id, board_title, board_content, m.user_id, user_name, board_register_date, b.board_type, m.user_id 
 		from tbl_user m join tbl_board b
-		on m.user_id = b.user_id and board_id = #{boardId}
+		on m.user_id = b.user_id
+		where board_id = #{boardId}
 
 	</select>
 	
-	<update id="update">
+	<!--<update id="update">
 		update tbl_board
 		set board_title = #{boardTitle}, board_content = #{boardContent}
 		where board_id = #{boardId}
-	</update>
+	</update> -->
 	
 	<delete id="delete">
 		delete from tbl_board
 		where board_id = #{boardId}
 	</delete>
 	
-	<update id="updateReadCount">
+	<!-- <update id="updateReadCount">
 		update tbl_board
 		set board_read_count = board_read_count + 1
 		where board_id = #{board_id}
@@ -197,6 +204,16 @@
 		select count(board_id) from tbl_board
 	</select>
 	
+	<select id="selectInquiryList" resultType="boardDTO">
+		select board_type, board_id, board_title, board_content, m.user_id, m.user_name, board_status, board_register_date
+		from tbl_user m join tbl_board b
+		on m.user_id = b.user_id
+		where board_type = '문의'
+		<if test="keyword != ''.toString()">
+			and (board_title like concat('%', #{keyword}, '%') or m.user_name like concat('%', #{keyword}, '%'))
+		</if>
+		order by board_register_date desc
+	</select>
 </mapper>
 
 
