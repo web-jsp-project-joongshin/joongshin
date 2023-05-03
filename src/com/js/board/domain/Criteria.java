@@ -7,12 +7,10 @@ public class Criteria {
 	private int endPage;
 	private boolean prev;
 	private boolean next;
-	private String sort;
 	
 	
 	public Criteria(int page, int total, String sort) {
 		this(page, total);
-		this.sort = sort;
 	}
 	
 	public Criteria(int page, int total) {

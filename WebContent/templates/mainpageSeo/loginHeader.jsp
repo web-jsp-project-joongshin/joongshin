@@ -34,7 +34,7 @@
 							<li  class="nav-item left-section-item"><a href="${pageContext.request.contextPath}/comulistOk.board">
 								<span>커뮤니티</span></li></a>
 							<li class="nav-item left-section-item"><a
-								href="${pageContext.request.contextPath}/">
+								href="${pageContext.request.contextPath}/reqBoard.board">
 								<span >문의 게시판</span></a></li>
 						</ul>
 				</div>

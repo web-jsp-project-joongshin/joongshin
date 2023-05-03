@@ -27,9 +27,25 @@ public class ReqOkController implements Action {
 		BoardDAO boardDAO = new BoardDAO();
 		Result result = new Result();
 		JSONArray jsonArray = new JSONArray();
-						
-		boardDAO.reqSelectAll().stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
+		 
+		String temp = req.getParameter("page");
+		int page = temp ==null? 1 : Integer.parseInt(temp);
+		
+		Criteria criteria = new Criteria(page,boardDAO.getReqTotal());
+		
+		boardDAO.reqSelectAll(criteria).stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
 		req.setAttribute("boards", jsonArray.toString());
+		req.setAttribute("reqTotal", boardDAO.getReqTotal());
+		req.setAttribute("page", page);
+		req.setAttribute("startPage", criteria.getStartPage());
+		req.setAttribute("endPage", criteria.getEndPage());
+		req.setAttribute("prev", criteria.isPrev());
+		req.setAttribute("next", criteria.isNext());
+		
+		System.out.println(criteria.getEndPage());
+		System.out.println(criteria.getStartPage());
+		
+		
 		result.setPath("templates/request-board/request-board.jsp");
 		return result;
 	}

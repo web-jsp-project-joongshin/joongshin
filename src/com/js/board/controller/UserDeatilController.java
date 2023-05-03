@@ -1,7 +1,6 @@
 package com.js.board.controller;
-//http://localhost:8090/updateBoardList.admin
+
 import java.io.IOException;
-import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -13,17 +12,18 @@ import com.js.board.dao.BoardDAO;
 import com.js.board.domain.BoardDTO;
 import com.js.board.domain.BoardVO;
 
-public class UpdateBoardListController implements Action{
+public class UserDeatilController implements Action{
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		BoardDAO boardDAO = new BoardDAO();
 		BoardDTO boardDTO = new BoardDTO();
 		Result result = new Result();
 		BoardVO boardVO = new BoardVO();
-		
-		Long boardId = Long.valueOf(req.getParameter("boardId"));
 		String boardContent = req.getParameter("boardContent");
 		String boardRegisterDate = String.valueOf(req.getParameter("boardRegisterDate"));
+		
+		
+		Long boardId = Long.valueOf(req.getParameter("boardId"));
 		
 //		boardDTO = boardDAO.select(boardId);
 		
@@ -32,7 +32,7 @@ public class UpdateBoardListController implements Action{
 		req.setAttribute("boardContent", boardContent);
 		req.setAttribute("boardRegisterDate", boardRegisterDate);
 		
-		result.setPath("templates/manager-doeunn/inquiriesAnswer.jsp");
+		result.setPath("templates/manager-doeunn/userBoardDetail.jsp");
 		
 		return result;
 	}

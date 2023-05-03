@@ -227,8 +227,8 @@ img.preview {
 }
 
 ul > li {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 

@@ -35,7 +35,7 @@
                         <div class="arrow"></div>
                     </div>
                     <ul class="inquiries-list list">
-                        <li onclick="location.href='../../listBoardOk.admin'">전체 문의목록</li>
+                        <li onclick="location.href='/listBoardOk.admin'">전체 문의목록</li>
                     </ul>
                </section>
             </div>
@@ -48,33 +48,22 @@
                 <div class="line">
                     <h4>회원 번호</h4>
                     <div class="item-box">
-                        <div class="info-box">${board.user_id}</div>
+                        <div class="info-box">${boardId}</div>
                     </div>
                 </div>
                 <div class="line">
                     <h4>질문 등록일</h4>
                     <div class="item-box">
-                        <div class="info-box">${creationDate}</div>
+                        <div class="info-box">${boardRegisterDate}</div>
                     </div>
                 </div>
                 <div class="line">
                     <h4>질문</h4>
                     <div class="item-box">
-                        <div class="info-box long-info"></div>
+                        <div class="info-box long-info">${boardContent}</div>
                     </div>
                 </div>
-                <div class="line">
-                    <h4>답변 여부</h4>
-                    <div class="item-box">
-                        <div class="info-box"></div>
-                    </div>
-                </div>
-                <div class="line">
-                    <h4>최근 답변일</h4>
-                    <div class="item-box">
-                        <div class="info-box"></div>
-                    </div>
-                </div>
+                <hr>
                 <div class="line">
                     <h4>답변</h4>
                     <div class="item-box">
@@ -89,9 +78,16 @@
    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/manager-doeunn/board.js"></script>
 <script>
 	const boardId = `${boardId}`;
+	const boardContent = `${boardContent}`;
+	const boardRegisterDate = `${boardRegisterDate}`;
+	let boards1 = `${boards1}`;
 	console.log(boardId);
+	console.log(boardContent);
+	console.log(boards1);
 </script>
 <script src="../../static/js/manager-doeunn/inquiries-answer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/manager-doeunn/list.js"></script>
 </html>

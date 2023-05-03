@@ -26,13 +26,14 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
 	rel="stylesheet">
-	
+
 <title>숨고</title>
 </head>
 
 <body>
 	<form action="">
 		<div id="app" class="webp" data-is-loaded="true">
+			<%@ include file="../mainpageSeo/header.jsp"%>
 			<!-- 헤더 부분 -->
 			<!-- 바디 -->
 			<div id="app-body">
@@ -41,23 +42,6 @@
 						<section id="questions" class="questions">
 
 							<!-- 바디 페이지 헤더 부분 -->
-							<div class="observer-container">
-								<section class="questions-header" id="questions-header">
-									<h1 class="questions-title">문의 게시판</h1>
-									<div>
-										<div class="write-button-desktop">
-											<div class="dropdown b-dropdown btn-group">
-												<!---->
-												<button type="button"
-													class="btn dropdown-toggle btn-primary"
-													style="cursor: pointer;"
-													onClick="location.href='${pageContext.request.contextPath}/reqWrite.board'">글쓰기</button>
-											</div>
-										</div>
-									</div>
-
-								</section>
-							</div>
 							<!-- 본문 리스트 -->
 							<div class="questions-content-layout">
 								<!-- 문의 게시판 내부 검색창 -->
@@ -79,7 +63,7 @@
 											</div>
 										</div>  
 									</form>
-								</div> -->	
+								</div> -->
 								<!-- 베너 '지금 가장 뜨거운 숨고픽' -->
 								<!-- <section class="curation">
 									<div class="curation-header">
@@ -220,16 +204,35 @@
 									</div>
 								</section>
  -->
+								<div class="bingonggan"></div>
+								<div class="observer-container">
+									<section class="questions-header" id="questions-header">
+										<h1 class="questions-title">문의 게시판</h1>
+										<div>
+											<div class="write-button-desktop">
+												<div class="dropdown b-dropdown btn-group">
+													<!---->
+													<button type="button"
+														class="btn dropdown-toggle btn-primary"
+														style="cursor: pointer;"
+														onClick="location.href='${pageContext.request.contextPath}/reqWrite.board'">글쓰기</button>
+												</div>
+											</div>
+										</div>
+
+									</section>
+								</div>
+
 								<!-- 서비스/지역 필터 -->
 								<section class="service-area-filter all fixed">
-									<!---->
 									<button type="button" class="btn btn-none chip-btn filter-btn">
-										<span data-v-130d9011="">서비스</span>
+										<a class="sort"><span data-v-130d9011="">내가 쓴 글</span></a>
 									</button>
-									<button type="button" class="btn btn-none chip-btn filter-btn"
+									<!-- 									<button type="button" class="btn btn-none chip-btn filter-btn"
 										data-v-130d9011="">
 										<span data-v-130d9011="">지역</span>
 									</button>
+ -->
 								</section>
 								<!-- 피드 (게시글 목록) -->
 								<article class="questions-feed-list">
@@ -270,6 +273,25 @@
 					<!-- 글 상세보기에서 링크 이동할 부분 -->
 					<div class="v-portal" style="display: none;"></div>
 
+					<div id="paging-wrap">
+                	<c:if test="${prev}">
+	                	<a href="${startPage - 1}" class="paging-choose"><img src="/static/images/prev.png" width="15px"></a>
+                	</c:if>
+                	<c:forEach var="i" begin="${startPage}" end="${endPage}">
+                		<c:choose>
+                			<c:when test="${i eq page}">
+			                	<a href="${pageContext.request.contextPath}/reqBoard.board?page${i}" class="paging paging-checked"><c:out value="${i}"/></a>
+                			</c:when>
+                			<c:otherwise>
+			                    <a href="${i}" class="paging change-page"><c:out value="${i}"/></a>
+                			</c:otherwise>
+                		</c:choose>
+                	</c:forEach>
+                	<c:if test="${next}">
+	                    <a href="${endPage + 1}" class="paging-choose"><img src="/static/images/next.png" width="15px"></a>
+                	</c:if>
+                </div>
+					
 				</div>
 			</div>
 		</div>
@@ -278,7 +300,9 @@
 		<nav id="app-footer" class="footer-container"></nav>
 		<div class="portal-target"></div>
 		</div>
+		
 	</form>
+	<%@ include file="../mainpageSeo/footer.jsp"%>
 </body>
 <!-- <script src="/static/js/request-board-js/main-board.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
@@ -286,6 +310,8 @@
 	let boards = `${boards}`;
 	console.log(boards);
 </script>
-<script type ="text/javascript" src="${pageContext.request.contextPath}/static/js/request-board-jym/timer.js"></script>
-<script type ="text/javascript" src="${pageContext.request.contextPath}/static/js/request-board-jym/addBoard.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/static/js/request-board-jym/timer.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/static/js/request-board-jym/addBoard.js"></script>
 </html>

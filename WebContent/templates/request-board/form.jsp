@@ -13,26 +13,29 @@
 
 <body>
     <div></div>
-    <header class="header">
-        <!-- 홈화면으로 돌아가는 로고 버튼 -->
+    <!-- <header class="header">
+        홈화면으로 돌아가는 로고 버튼
         <div class="logo">
             <a href="https://soomgo.com/">
                 <img src='new_logo.svg'
                     alt="로고">
             </a>
         </div>
-        <!-- 게시글 목록으로 돌아가는 링크-->
+        게시글 목록으로 돌아가는 링크
         <div class="nav-wrapper">
             <span class="icon-menu"></span>
             <nav class="user-nav" id="user-nav">
                 <a title="홈" href="/hc/ko">자주묻는질문</a>
             </nav>
         </div>
-    </header>
+    </header> -->
 
 
     <main role="main">
-        <div class="container-divider"></div>
+    
+        <div class="container-divider">
+        	
+        </div>
         <div class="container">
             <nav class="sub-nav">
                 <ol class="breadcrumbs">
@@ -54,11 +57,11 @@
                     <input name="utf8" type="hidden" value="✓" autocomplete="off">
                     <!-- <input type="hidden" name="authenticity_token" value="hc:requests:client:x4NRfJjWvQZrLaWzqGxUx2akyeWMEdeNqQFX7JVHy6flsg_HUW8VUPyTwxQH_LmdGvkA_fizxIqNaV2L2IQxtA" data-hc-status="ready"> -->
 <!--                     이메일 주소 입력 창 -->
-                    <div class="form-field string required request_email">
+                    <!-- <div class="form-field string required request_email">
                         <label for="request_email">문의 태그</label>
                         <input type="text" name="reqType" id="request_email"
-                            aria-required="true">
-                    </div>
+                            aria-required="true" placeholer="문의">
+                    </div> -->
                     
                     <!-- 제목 입력  -->
                     <div class="form-field string  required  request_subject">
@@ -118,6 +121,7 @@
                 </form>
             </div>
         </div>
+        
     </main>
 
     <!-- / -->
@@ -133,6 +137,7 @@
 
     <!-- <iframe id="_hjSafeContext_74772397" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank"
         style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe> -->
+
 </body>
 
 

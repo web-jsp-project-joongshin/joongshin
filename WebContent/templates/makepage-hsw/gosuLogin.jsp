@@ -59,6 +59,7 @@
                     </div>
                 </form>
             </article>
+            <button class="login" onclick="location.href='${pageContext.request.contextPath}/findPassword.user'">비밀번호 재설정</button>
         </section>
     </main>
 </body>

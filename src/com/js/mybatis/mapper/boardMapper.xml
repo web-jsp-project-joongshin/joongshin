@@ -72,8 +72,8 @@
 <!-- 커뮤에서 유저 게시물 추가-->
 	 <insert id="comuinsert">
   		insert into tbl_board
-  		(board_id, board_title, board_content, board_register_date, user_id, board_type)
-  		values(#{boardId}, #{boardTitle}, #{boardContent}, #{boardRegisterDate}, #{userId}, #{boardType})
+  		(board_id, board_title, board_content, user_id, board_type)
+  		values(#{boardId}, #{boardTitle}, #{boardContent}, #{userId}, #{boardType})
 	</insert>
 	 
 	 <select id="boardSelectAll" resultType="boardDTO">
@@ -135,6 +135,16 @@
          where board_type ="구인"
          order by board_id desc
    </select>
+   
+   <!-- 문의 게시판에서 문의 게시판 조회 -->
+    <select id="listSelectAdmin" resultType="boardDTO">
+      select board_id, b.user_id, m.user_name, board_title, board_content, board_status, board_Register_date, board_type
+      from tbl_user m join tbl_board b
+         on m.user_id = b.user_id
+         where board_type ="문의"
+         order by board_id desc
+   </select>
+   
 	<!-- <select id="select" resultType="boardDTO">
 		select board_id, board_title, board_content, board_register_date, board_update_date, board_read_count, m.user_id, user_name 
 		from tbl_user m join tbl_board b
@@ -165,18 +175,26 @@
 
 	</select> -->
 	
+	
+	
 	<select id="reqSelectAll" resultType="boardDTO">
 		select board_id, board_title, board_content, m.user_id, user_name, board_register_date, b.board_type
 		from tbl_user m join tbl_board b 
 		on m.user_id = b.user_id
+		where board_type = "문의"
 		order by board_register_date
 		desc
+		limit #{offset}, #{rowCount}
 	</select>
 	
 	<select id="reqInsert">
 		insert into tbl_board
-		(board_id, user_id, board_type, board_title, board_content)
-		values(#{boardId}, #{userId}, #{boardType}, #{boardTitle}, #{boardContent})
+		(user_id, board_type, board_title, board_content)
+		values( #{userId}, "문의", #{boardTitle}, #{boardContent})
+	</select>
+	
+	<select id="getReqTotal" resultType="_int">
+		select count(board_id) from tbl_board
 	</select>
 	
 </mapper>
